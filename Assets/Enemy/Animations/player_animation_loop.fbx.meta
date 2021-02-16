@@ -1,0 +1,3883 @@
+fileFormatVersion: 2
+guid: cd02ae58914a6794e801b533db3e70bf
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Rthigh
+    100002: Lfoot
+    100004: Lcalf
+    100006: Lthigh
+    100010: Rweaponholder
+    100012: Rthumb
+    100014: Rfingers
+    100016: Rwrist
+    100018: Rforearm
+    100020: Rarm
+    100022: Rshoulder
+    100024: Lfingers
+    100026: Lthumb
+    100028: Lwrist
+    100030: Lforearm
+    100032: Larm
+    100034: Lshoulder
+    100036: head
+    100038: neck
+    100040: chest
+    100042: Ribs
+    100044: stomach
+    100046: pelvis
+    100050: Rcalf
+    100052: Rfoot
+    100054: //RootNode
+    100056: CameraTargetPos
+    100058: CameraTargetDir
+    400000: Rthigh
+    400002: Lfoot
+    400004: Lcalf
+    400006: Lthigh
+    400010: Rweaponholder
+    400012: Rthumb
+    400014: Rfingers
+    400016: Rwrist
+    400018: Rforearm
+    400020: Rarm
+    400022: Rshoulder
+    400024: Lfingers
+    400026: Lthumb
+    400028: Lwrist
+    400030: Lforearm
+    400032: Larm
+    400034: Lshoulder
+    400036: head
+    400038: neck
+    400040: chest
+    400042: Ribs
+    400044: stomach
+    400046: pelvis
+    400050: Rcalf
+    400052: Rfoot
+    400054: //RootNode
+    400056: CameraTargetPos
+    400058: CameraTargetDir
+    4300000: player_mesh
+    4300002: assrifleMesh002
+    4300004: Cube
+    4300006: w_snip01mesh
+    7400000: coverIdle
+    7400002: coverWalkL
+    7400004: coverIdleL
+    7400006: coverStrafeL
+    7400008: coverIdleCrouch
+    7400010: coverStrafeCrouchL
+    7400012: coverIdleCrouchL
+    7400014: coverStrafeCrouchR
+    7400016: coverWalkR
+    7400018: coverStrafeR
+    7400020: coverIdleR
+    7400022: coverIdleCrouchR
+    7400024: idle
+    7400026: runB
+    7400028: runF
+    7400030: runL
+    7400032: runR
+    7400034: walkB
+    7400036: walkF
+    7400038: walkL
+    7400040: walkR
+    7400042: Cover_shotR
+    7400044: Cover_blindshotR
+    7400046: coverAimCrouchL
+    7400048: coverAimIdleCrouch
+    7400050: coverAimIdleCrouchL
+    7400052: coverAimIdleCrouchR
+    7400054: coverAimIdleL
+    7400056: coverAimIdleR
+    7400058: coverIdleAimL
+    7400060: coverIdleAimR
+    7400062: coverAimLeftR
+    7400064: coverAimRightR
+    7400066: coverAimTopR
+    7400068: coverAimDownR
+    7400070: CoverStandIdleCenter
+    7400072: CoverStandWalkRight
+    7400074: CoverStandIdleRight
+    7400076: CoverStandStrafeRight
+    7400078: CoverCrouchIdleCenter
+    7400080: CoverCrouchStrafeRight
+    7400082: CoverCrouchIdleRight
+    7400084: CoverCrouchStrafeLeft
+    7400086: CoverStandWalkLeft
+    7400088: CoverStandStrafeLeft
+    7400090: CoverStandIdleLeft
+    7400092: CoverCrouchIdleLeft
+    7400094: Idle
+    7400096: RunB
+    7400098: RunF
+    7400100: RunL
+    7400102: RunR
+    7400104: WalkB
+    7400106: WalkF
+    7400108: WalkL
+    7400110: WalkR
+    7400112: CoverStandAimRightMaxL
+    7400114: CoverStandAimRightMaxR
+    7400116: CoverStandAimRightMaxU
+    7400118: CoverStandAimRightMaxD
+    7400120: CoverStandAimLeftMaxD
+    7400122: CoverStandAimLeftMaxU
+    7400124: CoveStandrAimLeftMaxL
+    7400126: CoverStandAimLeftMaxR
+    7400128: CoverCrouchAimRightMaxD
+    7400130: CoverCrouchAimRightMaxU
+    7400132: CoverCrouchAimRightMaxR
+    7400134: CoverCrouchAimRightMaxL
+    7400136: CoverCrouchAimLeftMaxD
+    7400138: CoverCrouchAimLeftMaxU
+    7400140: CoverCrouchAimLeftMaxL
+    7400142: CoveCrouchAimLeftMaxR
+    7400144: CoverCrouchAimCenterMaxU
+    7400146: CoverCrouchAimCenterMaxD
+    7400148: CoverCrouchAimCenterMaxL
+    7400150: CoverCrouchAimCenterMaxR
+    7400152: CoverStandAimLeftMaxL
+    7400154: CoverCrouchAimLeftMaxR
+    7400156: TurnR
+    7400158: TurnL
+    7400160: AimMaxD
+    7400162: AimMaxU
+    7400164: AimU
+    7400166: AimD
+    7400168: CoverStandEnter
+    7400170: CoverStandIdleRight 1
+    7400172: CoverCrouchIdleCenter 1
+    7400174: IdleDialog
+    7400176: WalkDialogF
+    7400178: WalkDialogB
+    7400180: WalkDialogL
+    7400182: WalkDialogR
+    7400184: CameraShakeLoop
+    7400186: SprintF
+    7400188: Fall
+    7400190: MenuIdle
+    7400192: AimU_bck
+    7400194: AimD_bck
+    7400196: Idle_camera
+    7400198: run_camera
+    7400200: RunF 1
+    7400202: Run_F
+    7400204: RunF_new
+    7400206: RunB 1
+    7400208: RunL 1
+    7400210: RunR 1
+    7400212: CoverStandIdleCenter 1
+    7400214: CoverStandIdleLeft 1
+    7400216: CoverCrouchStrafeRight 1
+    7400218: CoverCrouchStrafeLeft 1
+    7400220: CoverStandStrafeRight 1
+    7400222: CoverStandStrafeLeft 1
+    7400224: CoverStandStrafeRight 2
+    7400226: CoverStandStrafeLeft 2
+    7400228: CoverStandStrafeRight 3
+    7400230: CoverStandStrafeLeft 3
+    7400232: CoverStandStrafeRight 4
+    7400234: CoverStandStrafeLeft 4
+    7400236: CoverStandStrafeRight 5
+    7400238: CoverStandStrafeLeft 5
+    7400240: CoverStandStrafeRight 6
+    7400242: CoverStandStrafeLeft 6
+    7400244: Take 002
+    7400246: CoverCrouchStrafeLeft 2
+    7400248: CoverCrouchStrafeRight 2
+    7400250: CoverCrouchStrafeLeft 3
+    7400252: CoverCrouchStrafeRight 3
+    7400254: A
+    7400256: SprintF 1
+    7400258: SprintF 2
+    7400260: Idle 1
+    7400262: IdleFireRocket
+    7400264: RunFireRocket
+    7400266: CoverStandFireLeftRocket
+    7400268: CoverStandFireRightRocket
+    7400270: CoverCrouchFireLeftRocket
+    7400272: CoverCrouchFireCenterRocket
+    7400274: CoverCrouchFireRightRocket
+    7400276: CoverCrouchIdleLeft 1
+    7400278: CoverCrouchIdleRight 1
+    9500000: //RootNode
+    11100000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 3
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: 0.025
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 2
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: CoverStandAimRightMaxL
+      takeName: CoverStandAimRightMaxL
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CoverStandAimRightMaxR
+      takeName: CoverStandAimRightMaxR
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CoverStandAimRightMaxU
+      takeName: CoverStandAimRightMaxU
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CoverStandAimRightMaxD
+      takeName: CoverStandAimRightMaxD
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CoverStandAimLeftMaxD
+      takeName: CoverStandAimLeftMaxD
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CoverStandAimLeftMaxU
+      takeName: CoverStandAimLeftMaxU
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CoverStandAimLeftMaxL
+      takeName: CoverStandAimLeftMaxL
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CoverStandAimLeftMaxR
+      takeName: CoverStandAimLeftMaxR
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CoverCrouchAimRightMaxD
+      takeName: CoverCrouchAimRightMaxD
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CoverCrouchAimRightMaxU
+      takeName: CoverCrouchAimRightMaxU
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CoverCrouchAimRightMaxR
+      takeName: CoverCrouchAimRightMaxR
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CoverCrouchAimRightMaxL
+      takeName: CoverCrouchAimRightMaxL
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CoverCrouchAimLeftMaxL
+      takeName: CoverCrouchAimLeftMaxL
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CoverCrouchAimLeftMaxD
+      takeName: CoverCrouchAimLeftMaxD
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CoverCrouchAimLeftMaxU
+      takeName: CoverCrouchAimLeftMaxU
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CoverCrouchAimLeftMaxR
+      takeName: CoverCrouchAimLeftMaxR
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CoverCrouchAimCenterMaxR
+      takeName: CoverCrouchAimCenterMaxR
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CoverCrouchAimCenterMaxU
+      takeName: CoverCrouchAimCenterMaxU
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CoverCrouchAimCenterMaxD
+      takeName: CoverCrouchAimCenterMaxD
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CoverCrouchAimCenterMaxL
+      takeName: CoverCrouchAimCenterMaxL
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: WalkF
+      takeName: WalkF
+      firstFrame: 20
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 19.800001
+    - serializedVersion: 16
+      name: WalkB
+      takeName: WalkB
+      firstFrame: 23
+      lastFrame: 63
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 22.8
+    - serializedVersion: 16
+      name: WalkL
+      takeName: WalkL
+      firstFrame: 23
+      lastFrame: 63
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 22.8
+    - serializedVersion: 16
+      name: WalkR
+      takeName: WalkR
+      firstFrame: 23
+      lastFrame: 63
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 22.8
+    - serializedVersion: 16
+      name: SprintF
+      takeName: SprintF
+      firstFrame: 0
+      lastFrame: 16
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CoverStandIdleCenter
+      takeName: CoverStandIdleCenter
+      firstFrame: 0
+      lastFrame: 50
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CoverStandIdleRight
+      takeName: CoverStandIdleRight
+      firstFrame: 0
+      lastFrame: 50
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CoverCrouchIdleLeft
+      takeName: CoverCrouchIdleLeft
+      firstFrame: 0
+      lastFrame: 50
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CoverCrouchIdleCenter
+      takeName: CoverCrouchIdleCenter
+      firstFrame: 0
+      lastFrame: 50
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CoverCrouchIdleRight
+      takeName: CoverCrouchIdleRight
+      firstFrame: 0
+      lastFrame: 50
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CoverCrouchStrafeRight
+      takeName: CoverCrouchStrafeRight
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CoverCrouchStrafeLeft
+      takeName: CoverCrouchStrafeLeft
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CoverStandStrafeLeft
+      takeName: CoverStandStrafeLeft
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CoverStandStrafeRight
+      takeName: CoverStandStrafeRight
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: MenuIdle
+      takeName: MenuIdle
+      firstFrame: 0
+      lastFrame: 70
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Idle
+      takeName: Idle
+      firstFrame: 0
+      lastFrame: 50
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: AimU
+      takeName: AimU
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: AimD
+      takeName: AimD
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: RunF
+      takeName: RunF
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: RunB
+      takeName: RunB
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: RunL
+      takeName: RunL
+      firstFrame: 2
+      lastFrame: 22
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1.8
+    - serializedVersion: 16
+      name: RunR
+      takeName: RunR
+      firstFrame: 20
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 19.800001
+    - serializedVersion: 16
+      name: CoverStandIdleLeft
+      takeName: CoverStandIdleLeft
+      firstFrame: 0
+      lastFrame: 50
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CameraTargetDir
+        weight: 1
+      - path: CameraTargetPos
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 3
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
