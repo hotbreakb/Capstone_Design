@@ -347,10 +347,14 @@ public class AutomaticGunScriptLPFP : MonoBehaviour {
 			outOfAmmo = false;
 			//anim.SetBool ("Out Of Ammo", false);
 		}
-			
+
 		//AUtomatic fire
 		//Left click hold 
 		//----------------------Input.GetMouseButton(0) = 좌클릭 -> bool함수로 립모션이랑 연계필요 -------------------------------------
+
+		// isRunning도 필요없지 않을까?
+		// LeapmotionGesture.Update(); -> 립모션 코드 연결하기 (은지)
+		
 		if (Input.GetMouseButton (0) && !outOfAmmo && !isReloading && !isInspecting && !isRunning) 
 		{
 			//Shoot automatic

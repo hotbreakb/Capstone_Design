@@ -73,6 +73,7 @@ public class newGesture : MonoBehaviour
         }
     }
 
+
     private int getExtendedFingers()
     {
         int extendedFingers = 0;
