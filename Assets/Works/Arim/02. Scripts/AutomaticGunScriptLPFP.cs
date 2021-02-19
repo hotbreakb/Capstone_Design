@@ -177,8 +177,6 @@ public class AutomaticGunScriptLPFP : MonoBehaviour {
 	}
 	public soundClips SoundClips;
 
-	private bool soundHasPlayed = false;
-
 	private void Awake () {
 		
 		//Set the animator component
@@ -243,7 +241,6 @@ public class AutomaticGunScriptLPFP : MonoBehaviour {
 		anim.SetBool("Aim", true);
 		gunCamera.fieldOfView = Mathf.Lerp(gunCamera.fieldOfView, aimFov, fovSpeed * Time.deltaTime); //줌 더 땡겨 주는건데 할지 말지 고민해봐야할듯
 
-		
 		// 항상 Aiming한 상태이니까 if에 해당되는 것을 사용해야 할 것 같음
 
 		/*
