@@ -9,10 +9,8 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
-using UnityEngine;
 using Leap;
 
-// ----- Low Poly FPS Pack Free Version -----
 public class AutomaticGunScriptLPFP : MonoBehaviour {
 
 	//Animator component attached to weapon
@@ -63,17 +61,17 @@ public class AutomaticGunScriptLPFP : MonoBehaviour {
 	private bool isReloading;
 
 	//Holstering weapon
-	private bool hasBeenHolstered = false;
+	//private bool hasBeenHolstered = false;
 	//If weapon is holstered
-	private bool holstered;
+	//private bool holstered;
 	//Check if running
-	private bool isRunning;
+	//private bool isRunning;
 	//Check if aiming
-	private bool isAiming;
+	//private bool isAiming;
 	//Check if walking
-	private bool isWalking;
+	//private bool isWalking;
 	//Check if inspecting weapon
-	private bool isInspecting;
+	//private bool isInspecting;
 
 	//How much ammo is currently left
 	private int currentAmmo;
@@ -235,7 +233,9 @@ public class AutomaticGunScriptLPFP : MonoBehaviour {
 	
 	private void Update () {
 
-		if(!controller.IsConnected) Debug.Log("not connected"); // 스크립트 멈추는 거 추가하기
+		if(!controller.IsConnected) Debug.Log("not connected"); // 스크립트 멈추는 거 추가하기 (return;)
+
+		// if controller connected,
 
 		Frame frame = controller.Frame();           // The latest frame
 		Frame previous = controller.Frame(1);       // The previous frame
@@ -244,6 +244,8 @@ public class AutomaticGunScriptLPFP : MonoBehaviour {
 		gunCamera.fieldOfView = Mathf.Lerp(gunCamera.fieldOfView, aimFov, fovSpeed * Time.deltaTime); //줌 더 땡겨 주는건데 할지 말지 고민해봐야할듯
 
 		
+		// 항상 Aiming한 상태이니까 if에 해당되는 것을 사용해야 할 것 같음
+
 		/*
 		//Aiming
 		//Toggle camera FOV when right click is held down
@@ -335,7 +337,8 @@ public class AutomaticGunScriptLPFP : MonoBehaviour {
 		//---------수류탄-------------------------------------------------------------------------------
 		// 립모션과 연계 필요
 		//Throw grenade when pressing G key
-		if (Input.GetKeyDown (KeyCode.G) && !isInspecting) 
+		// if (Input.GetKeyDown (KeyCode.G) && !isInspecting) 
+		if (Input.GetKeyDown(KeyCode.G))
 		{
 			StartCoroutine (GrenadeSpawnDelay ());
 			//Play grenade throw animation
@@ -368,10 +371,10 @@ public class AutomaticGunScriptLPFP : MonoBehaviour {
 		//Left click hold 
 		//----------------------Input.GetMouseButton(0) = 좌클릭 -> bool함수로 립모션이랑 연계필요 -------------------------------------
 
-		// isRunning도 필요없지 않을까?
 		// LeapmotionGesture.Update(); -> 립모션 코드 연결하기 (은지)
-		
-		if (Input.GetMouseButton (0) && !outOfAmmo && !isReloading && !isInspecting && !isRunning) 
+
+		// if (Input.GetMouseButton (0) && !outOfAmmo && !isReloading && !isInspecting && !isRunning)
+		if (Input.GetMouseButton(0) && !outOfAmmo && !isReloading)
 		{
 			//Shoot automatic
 			if (Time.time - lastFired > 1 / fireRate) 
@@ -384,38 +387,38 @@ public class AutomaticGunScriptLPFP : MonoBehaviour {
 				shootAudioSource.clip = SoundClips.shootSound;
 				shootAudioSource.Play ();
 
-				if (!isAiming) //if not aiming
-				{
-					anim.Play ("Fire", 0, 0f);
-					//If random muzzle is false
-					if (!randomMuzzleflash && 
-						enableMuzzleflash == true) 
-					{
-						muzzleParticles.Emit (1);
-						//Light flash start
-						StartCoroutine(MuzzleFlashLight());
-					} 
-					else if (randomMuzzleflash == true)
-					{
-						//Only emit if random value is 1
-						if (randomMuzzleflashValue == 1) 
-						{
-							if (enableSparks == true) 
-							{
-								//Emit random amount of spark particles
-								sparkParticles.Emit (Random.Range (minSparkEmission, maxSparkEmission));
-							}
-							if (enableMuzzleflash == true) 
-							{
-								muzzleParticles.Emit (1);
-								//Light flash start
-								StartCoroutine (MuzzleFlashLight ());
-							}
-						}
-					}
-				} 
-				else //if aiming
-				{
+				//if (!isAiming) //if not aiming
+				//{
+				//	anim.Play ("Fire", 0, 0f);
+				//	//If random muzzle is false
+				//	if (!randomMuzzleflash && 
+				//		enableMuzzleflash == true) 
+				//	{
+				//		muzzleParticles.Emit (1);
+				//		//Light flash start
+				//		StartCoroutine(MuzzleFlashLight());
+				//	} 
+				//	else if (randomMuzzleflash == true)
+				//	{
+				//		//Only emit if random value is 1
+				//		if (randomMuzzleflashValue == 1) 
+				//		{
+				//			if (enableSparks == true) 
+				//			{
+				//				//Emit random amount of spark particles
+				//				sparkParticles.Emit (Random.Range (minSparkEmission, maxSparkEmission));
+				//			}
+				//			if (enableMuzzleflash == true) 
+				//			{
+				//				muzzleParticles.Emit (1);
+				//				//Light flash start
+				//				StartCoroutine (MuzzleFlashLight ());
+				//			}
+				//		}
+				//	}
+				//} 
+				//else //if aiming
+				//{
 					
 					anim.Play ("Aim Fire", 0, 0f);
 
@@ -442,7 +445,7 @@ public class AutomaticGunScriptLPFP : MonoBehaviour {
 							}
 						}
 					}
-				}
+				//}
 
 				//Spawn bullet from bullet spawnpoint
 				var bullet = (Transform)Instantiate (
@@ -463,7 +466,9 @@ public class AutomaticGunScriptLPFP : MonoBehaviour {
 
 		// 키보드 R누르면 Reload 재장전---------------------------------------------------------------------------------------------------------------
 		//립모션과 연계 필요
-		if (Input.GetKeyDown (KeyCode.R) && !isReloading && !isInspecting) 
+
+		//if (Input.GetKeyDown (KeyCode.R) && !isReloading && !isInspecting) 
+		if (Input.GetKeyDown(KeyCode.R) && !isReloading)
 		{
 			//Reload
 			Reload ();
@@ -472,10 +477,15 @@ public class AutomaticGunScriptLPFP : MonoBehaviour {
 
 		//------------------플레이어의 이동을 어떻게 할지 고민해 봐야할듯
 		//Walking when pressing down WASD keys
-		if (Input.GetKey (KeyCode.W) && !isRunning || 
-			Input.GetKey (KeyCode.A) && !isRunning || 
-			Input.GetKey (KeyCode.S) && !isRunning || 
-			Input.GetKey (KeyCode.D) && !isRunning) 
+		//if (Input.GetKey (KeyCode.W) && !isRunning || 
+		//	Input.GetKey (KeyCode.A) && !isRunning || 
+		//	Input.GetKey (KeyCode.S) && !isRunning || 
+		//	Input.GetKey (KeyCode.D) && !isRunning) 
+		//{
+		if (Input.GetKey(KeyCode.W) ||
+			Input.GetKey(KeyCode.A) ||
+			Input.GetKey(KeyCode.S) ||
+			Input.GetKey(KeyCode.D))
 		{
 			anim.SetBool ("Walk", true);
 		} else {
@@ -614,13 +624,13 @@ public class AutomaticGunScriptLPFP : MonoBehaviour {
 		}
 
 		//Check if inspecting weapon
-		if (anim.GetCurrentAnimatorStateInfo (0).IsName ("Inspect")) 
-		{
-			isInspecting = true;
-		} 
-		else 
-		{
-			isInspecting = false;
-		}
+		//if (anim.GetCurrentAnimatorStateInfo (0).IsName ("Inspect")) 
+		//{
+		//	isInspecting = true;
+		//} 
+		//else 
+		//{
+		//	isInspecting = false;
+		//}
 	}
 }
