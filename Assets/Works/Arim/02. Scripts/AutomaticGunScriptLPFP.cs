@@ -83,16 +83,18 @@ public class AutomaticGunScriptLPFP : MonoBehaviour
     private bool outOfAmmo;
 
     /* ---------------------------------------------- */
-    // Used LeapMotion
-    Controller controller;
-    List<Finger> fingers;
+    // Use LeapMotion
+    [Header("LeapMotion Settings")]
+    [Tooltip("leapmotion controller.")]
+    public Controller controller;
+    private List<Finger> fingers;
     public GameObject cube;
 
-    Hand hand;
-    Hand previous_hand;
+    private Hand hand;
+    private Hand previous_hand;
 
-    Vector handPalmPosition;
-    Vector prehandPalmPosition;
+    private Vector handPalmPosition;
+    private Vector prehandPalmPosition;
     /* ---------------------------------------------- */
 
     [Header("Bullet Settings")]
@@ -186,7 +188,7 @@ public class AutomaticGunScriptLPFP : MonoBehaviour
         //Set current ammo to total ammo value
         currentAmmo = ammo;
 
-        muzzleflashLight.enabled = false;
+        //muzzleflashLight.enabled = false; (에러나서 주석처리)
     }
 
     private void Start()
@@ -207,6 +209,7 @@ public class AutomaticGunScriptLPFP : MonoBehaviour
 
         /* ---------------------------------------------- */
         controller = new Controller();
+        controller.StartConnection();
         cube = GameObject.FindGameObjectWithTag("Cube"); // 임시 물체
         /* ---------------------------------------------- */
     }
@@ -234,8 +237,14 @@ public class AutomaticGunScriptLPFP : MonoBehaviour
 
     private void Update()
     {
+        if(controller == null)
+            Debug.Log("controller is null"); // 스크립트 멈추는 거 추가하기 (return;)
 
-        if (!controller.IsConnected) Debug.Log("not connected"); // 스크립트 멈추는 거 추가하기 (return;)
+        if (controller.IsConnected)
+        {
+            Invoke("QuitGame", 2.0f);
+            Debug.Log("not connected"); // 스크립트 멈추는 거 추가하기 (return;)
+        }
 
         Frame frame = controller.Frame();           // The latest frame
         Frame previous = controller.Frame(1);       // The previous frame
@@ -490,6 +499,18 @@ public class AutomaticGunScriptLPFP : MonoBehaviour
             //}
         } // end for
     } // end Update()
+
+    public void QuitGame()
+    {
+        // save any game data here
+#if UNITY_EDITOR
+        // Application.Quit() does not work in the editor so
+        // UnityEditor.EditorApplication.isPlaying need to be set to false to end the game
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+         Application.Quit();
+#endif
+    }
 
     // 펼쳐진 손가락의 개수를 확인하는 함수
     private int getExtendedFingers()

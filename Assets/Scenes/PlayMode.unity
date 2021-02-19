@@ -6200,10 +6200,58 @@ MonoBehaviour:
   m_GameObject: {fileID: 970626233}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34f8f1a512f0e734bbd146dfc59c9ea5, type: 3}
+  m_Script: {fileID: 11500000, guid: dd38df9a0796d9842adfbe580ed6042e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gunCamera: {fileID: 0}
+  fovSpeed: 15
+  defaultFov: 40
+  aimFov: 25
+  weaponName: 
+  weaponSway: 0
+  swayAmount: 0.02
+  maxSwayAmount: 0.06
+  swaySmoothValue: 4
+  fireRate: 0
+  autoReload: 0
+  autoReloadDelay: 0
+  ammo: 10
   cube: {fileID: 0}
+  bulletForce: 400
+  showBulletInMagDelay: 0.6
+  bulletInMagRenderer: {fileID: 0}
+  grenadeSpawnDelay: 0.35
+  randomMuzzleflash: 0
+  maxRandomValue: 5
+  enableMuzzleflash: 1
+  muzzleParticles: {fileID: 0}
+  enableSparks: 1
+  sparkParticles: {fileID: 0}
+  minSparkEmission: 1
+  maxSparkEmission: 7
+  muzzleflashLight: {fileID: 0}
+  lightDuration: 0.02
+  mainAudioSource: {fileID: 0}
+  shootAudioSource: {fileID: 0}
+  timescaleText: {fileID: 0}
+  currentWeaponText: {fileID: 0}
+  currentAmmoText: {fileID: 0}
+  totalAmmoText: {fileID: 0}
+  Prefabs:
+    bulletPrefab: {fileID: 0}
+    casingPrefab: {fileID: 0}
+    grenadePrefab: {fileID: 0}
+  Spawnpoints:
+    casingSpawnPoint: {fileID: 0}
+    bulletSpawnPoint: {fileID: 0}
+    grenadeSpawnPoint: {fileID: 0}
+  SoundClips:
+    shootSound: {fileID: 0}
+    takeOutSound: {fileID: 0}
+    holsterSound: {fileID: 0}
+    reloadSoundOutOfAmmo: {fileID: 0}
+    reloadSoundAmmoLeft: {fileID: 0}
+    aimSound: {fileID: 0}
 --- !u!1 &1065013637
 GameObject:
   m_ObjectHideFlags: 0
