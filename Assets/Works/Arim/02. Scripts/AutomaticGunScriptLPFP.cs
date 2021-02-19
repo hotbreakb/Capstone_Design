@@ -7,7 +7,10 @@
 
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine;
+using Leap;
 
 // ----- Low Poly FPS Pack Free Version -----
 public class AutomaticGunScriptLPFP : MonoBehaviour {
@@ -79,6 +82,19 @@ public class AutomaticGunScriptLPFP : MonoBehaviour {
 	public int ammo;
 	//Check if out of ammo
 	private bool outOfAmmo;
+
+	/* ---------------------------------------------- */
+	// Used LeapMotion
+	Controller controller;
+	List<Finger> fingers;
+	public GameObject cube;
+
+	Hand hand;
+	Hand previous_hand;
+
+	Vector handPalmPosition;
+	Vector prehandPalmPosition;
+	/* ---------------------------------------------- */
 
 	[Header("Bullet Settings")]
 	//Bullet
@@ -189,6 +205,11 @@ public class AutomaticGunScriptLPFP : MonoBehaviour {
 
 		//Set the shoot sound to audio source
 		shootAudioSource.clip = SoundClips.shootSound;
+
+		/* ---------------------------------------------- */
+		controller = new Controller();
+		cube = GameObject.FindGameObjectWithTag("Cube"); // 임시 물체
+		/* ---------------------------------------------- */
 	}
 
 	private void LateUpdate () {
@@ -214,9 +235,15 @@ public class AutomaticGunScriptLPFP : MonoBehaviour {
 	
 	private void Update () {
 
+		if(!controller.IsConnected) Debug.Log("not connected"); // 스크립트 멈추는 거 추가하기
+
+		Frame frame = controller.Frame();           // The latest frame
+		Frame previous = controller.Frame(1);       // The previous frame
+
 		anim.SetBool("Aim", true);
 		gunCamera.fieldOfView = Mathf.Lerp(gunCamera.fieldOfView, aimFov, fovSpeed * Time.deltaTime); //줌 더 땡겨 주는건데 할지 말지 고민해봐야할듯
 
+		
 		/*
 		//Aiming
 		//Toggle camera FOV when right click is held down
@@ -255,46 +282,10 @@ public class AutomaticGunScriptLPFP : MonoBehaviour {
 		*/
 
 		//If randomize muzzleflash is true, genereate random int values
-
 		if (randomMuzzleflash == true) 
 		{
 			randomMuzzleflashValue = Random.Range (minRandomValue, maxRandomValue);
 		}
-
-
-		/* 모션 속도 조절. 필요없음
-		//Timescale settings
-		//Change timescale to normal when 1 key is pressed
-		if (Input.GetKeyDown (KeyCode.Alpha1)) 
-		{
-			Time.timeScale = 1.0f;
-			timescaleText.text = "1.0";
-		}
-		//Change timesccale to 50% when 2 key is pressed
-		if (Input.GetKeyDown (KeyCode.Alpha2)) 
-		{
-			Time.timeScale = 0.5f;
-			timescaleText.text = "0.5";
-		}
-		//Change timescale to 25% when 3 key is pressed
-		if (Input.GetKeyDown (KeyCode.Alpha3)) 
-		{
-			Time.timeScale = 0.25f;
-			timescaleText.text = "0.25";
-		}
-		//Change timescale to 10% when 4 key is pressed
-		if (Input.GetKeyDown (KeyCode.Alpha4)) 
-		{
-			Time.timeScale = 0.1f;
-			timescaleText.text = "0.1";
-		}
-		//Pause game when 5 key is pressed
-		if (Input.GetKeyDown (KeyCode.Alpha5)) 
-		{
-			Time.timeScale = 0.0f;
-			timescaleText.text = "0.0";
-		}
-		*/
 
 		//Set current ammo text from ammo int
 		currentAmmoText.text = currentAmmo.ToString ();
@@ -303,19 +294,44 @@ public class AutomaticGunScriptLPFP : MonoBehaviour {
 		//is currently playing
 		AnimationCheck ();
 
-		/* 칼 공격. 필요없을듯?
-		//Play knife attack 1 animation when Q key is pressed
-		if (Input.GetKeyDown (KeyCode.Q) && !isInspecting) 
+		// 컨트롤러에 손이 인지될 때
+		for (int h = 0; h < frame.Hands.Count; h++)
 		{
-			anim.Play ("Knife Attack 1", 0, 0f);
+			hand = frame.Hands[0]; // 현재 나타나는 손
+			previous_hand = previous.Hands[0]; // 이전 프레임에 나타나는 손
+
+			handPalmPosition = hand.PalmPosition;   // 현재 손의 위치
+			prehandPalmPosition = previous_hand.PalmPosition;   // 이전 프레임의 손의 위치
+
+			fingers = hand.Fingers; // 현재 손가락의 개수
+
+			int _extendedFingers = getExtendedFingers();    // 함수를 호출하여 펼쳐진 손가락의 개수를 확인한다
+
+			// [Conditions to 'Shoot'] 총쏘기
+			//  1. Two straight fingers
+			//  2. Hands moving from top to bottom
+			if (hand.IsRight && _extendedFingers == 2 && System.Math.Abs(handPalmPosition.y - prehandPalmPosition.y) > 5 && System.Math.Abs(hand.PalmVelocity.y) > 30)
+			{
+				cube.GetComponent<MeshRenderer>().material.color = Color.red;
+			}
+			// [Condition for changing weapons] 무기전환(수류탄)
+			//  1. Hands moving from side to side (swipe)
+			else if (hand.IsRight && System.Math.Abs(handPalmPosition.x - prehandPalmPosition.x) > 5)
+			{
+				cube.GetComponent<MeshRenderer>().material.color = Color.green;
+			}
+			// [Condition to Load] 장전
+			//  1. Gripped left hand
+			else if (hand.IsLeft && hand.GrabStrength == 1)
+			{
+				cube.GetComponent<MeshRenderer>().material.color = Color.yellow;
+			}
+			else
+			{
+				cube.GetComponent<MeshRenderer>().material.color = Color.black;
+			}
 		}
-		//Play knife attack 2 animation when F key is pressed
-		if (Input.GetKeyDown (KeyCode.F) && !isInspecting) 
-		{
-			anim.Play ("Knife Attack 2", 0, 0f);
-		}
-		*/
-		
+
 		//---------수류탄-------------------------------------------------------------------------------
 		// 립모션과 연계 필요
 		//Throw grenade when pressing G key
@@ -445,45 +461,6 @@ public class AutomaticGunScriptLPFP : MonoBehaviour {
 			}
 		}
 
-		/* 총 관찰하는 모션인데 필요없음
-		//Inspect weapon when T key is pressed
-		if (Input.GetKeyDown (KeyCode.T)) 
-		{
-			anim.SetTrigger ("Inspect");
-		}
-		
-
-		//총 숨기는 모션인데 필요없음
-		//Toggle weapon holster when E key is pressed
-		if (Input.GetKeyDown (KeyCode.E) && !hasBeenHolstered) 
-		{
-			holstered = true;
-
-			mainAudioSource.clip = SoundClips.holsterSound;
-			mainAudioSource.Play();
-
-			hasBeenHolstered = true;
-		} 
-		else if (Input.GetKeyDown (KeyCode.E) && hasBeenHolstered) 
-		{
-			holstered = false;
-
-			mainAudioSource.clip = SoundClips.takeOutSound;
-			mainAudioSource.Play ();
-
-			hasBeenHolstered = false;
-		}
-		//Holster anim toggle
-		if (holstered == true) 
-		{
-			anim.SetBool ("Holster", true);
-		} 
-		else 
-		{
-			anim.SetBool ("Holster", false);
-		}
-		*/
-
 		// 키보드 R누르면 Reload 재장전---------------------------------------------------------------------------------------------------------------
 		//립모션과 연계 필요
 		if (Input.GetKeyDown (KeyCode.R) && !isReloading && !isInspecting) 
@@ -504,27 +481,24 @@ public class AutomaticGunScriptLPFP : MonoBehaviour {
 		} else {
 			anim.SetBool ("Walk", false);
 		}
-
-		/* 뛰는거 필요없음
-		//Running when pressing down W and Left Shift key
-		if ((Input.GetKey (KeyCode.W) && Input.GetKey (KeyCode.LeftShift))) 
-		{
-			isRunning = true;
-		} else {
-			isRunning = false;
-		}
-		
-		//Run anim toggle
-		if (isRunning == true) 
-		{
-			anim.SetBool ("Run", true);
-		} 
-		else 
-		{
-			anim.SetBool ("Run", false);
-		}*/
 	}
-	
+
+	// 펼쳐진 손가락의 개수를 확인하는 함수
+	private int getExtendedFingers()
+	{
+		int extendedFingers = 0;
+
+		for (int f = 0; f < fingers.Count; f++)
+		{
+			Finger digit = fingers[f];
+			if (digit.IsExtended)
+				extendedFingers++;
+		}
+
+		Debug.Log(extendedFingers);
+		return extendedFingers;
+	}
+
 	//수류탄 생성 관련 함수
 	private IEnumerator GrenadeSpawnDelay () {
 		
@@ -650,4 +624,3 @@ public class AutomaticGunScriptLPFP : MonoBehaviour {
 		}
 	}
 }
-// ----- Low Poly FPS Pack Free Version -----
