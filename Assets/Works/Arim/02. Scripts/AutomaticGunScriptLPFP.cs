@@ -238,11 +238,15 @@ public class AutomaticGunScriptLPFP : MonoBehaviour
     private void Update()
     {
         if(controller == null)
+        {
+            controller = new Controller(1);
             Debug.Log("controller is null"); // 스크립트 멈추는 거 추가하기 (return;)
 
-        if (controller.IsConnected)
+        }
+
+        if (!controller.IsConnected)
         {
-            Invoke("QuitGame", 2.0f);
+            Invoke("QuitGame", 10.0f);
             Debug.Log("not connected"); // 스크립트 멈추는 거 추가하기 (return;)
         }
 

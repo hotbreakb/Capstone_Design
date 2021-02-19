@@ -2853,6 +2853,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LeapHandController
       objectReference: {fileID: 0}
+    - target: {fileID: 166326, guid: b9c7aaf0d314cb847a3b2a20e893f1b6, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 432918, guid: b9c7aaf0d314cb847a3b2a20e893f1b6, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -6203,7 +6207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd38df9a0796d9842adfbe580ed6042e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gunCamera: {fileID: 0}
+  gunCamera: {fileID: 1648179732}
   fovSpeed: 15
   defaultFov: 40
   aimFov: 25
@@ -6216,7 +6220,7 @@ MonoBehaviour:
   autoReload: 0
   autoReloadDelay: 0
   ammo: 10
-  cube: {fileID: 0}
+  cube: {fileID: 1815564166}
   bulletForce: 400
   showBulletInMagDelay: 0.6
   bulletInMagRenderer: {fileID: 0}
