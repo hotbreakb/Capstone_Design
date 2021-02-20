@@ -323,14 +323,15 @@ public class AutomaticGunScriptLPFP : MonoBehaviour
 
 
             /* ---------------------- (1) 수류탄; 립모션 사용 ---------------------- */
-            
+
             //Throw grenade when pressing G key
 
             // [Condition for changing weapons] 무기전환(수류탄)
             //  1. Hands moving from side to side (swipe)
 
-            // if (Input.GetKeyDown (KeyCode.G) && !isInspecting)
-            if (hand.IsRight && System.Math.Abs(handPalmPosition.x - prehandPalmPosition.x) > 5)
+            //if (Input.GetKeyDown (KeyCode.G) && !isInspecting)
+            // if (hand.IsRight && System.Math.Abs(handPalmPosition.x - prehandPalmPosition.x) > 5)
+            if (Input.GetKeyDown(KeyCode.G))
             {
                 StartCoroutine(GrenadeSpawnDelay());
                 //Play grenade throw animation
@@ -339,7 +340,7 @@ public class AutomaticGunScriptLPFP : MonoBehaviour
                 cube.GetComponent<MeshRenderer>().material.color = Color.green;
             }
 
-            
+
 
             /* ---------------------- (2) 총쏘기; 립모션 사용 ---------------------- */
             //----------------------Input.GetMouseButton(0) = 좌클릭 -> bool함수로 립모션이랑 연계필요 -------------------------------------
@@ -348,8 +349,9 @@ public class AutomaticGunScriptLPFP : MonoBehaviour
             // [Conditions to 'Shoot'] 총쏘기
             //  1. Two straight fingers
             //  2. Hands moving from top to bottom
-
-            else if (hand.IsRight && _extendedFingers == 2 && System.Math.Abs(handPalmPosition.y - prehandPalmPosition.y) > 5 && System.Math.Abs(hand.PalmVelocity.y) > 30 && !outOfAmmo && !isReloading)
+           
+            if (Input.GetMouseButton (0) && !outOfAmmo && !isReloading)
+            // else if (hand.IsRight && _extendedFingers == 2 && System.Math.Abs(handPalmPosition.y - prehandPalmPosition.y) > 5 && System.Math.Abs(hand.PalmVelocity.y) > 30 && !outOfAmmo && !isReloading)
             {
                 //Shoot automatic
                 if (Time.time - lastFired < 1 / fireRate) continue;
@@ -451,7 +453,8 @@ public class AutomaticGunScriptLPFP : MonoBehaviour
             //  1. Gripped left hand
 
             //if (Input.GetKeyDown (KeyCode.R) && !isReloading && !isInspecting) 
-            else if (hand.IsLeft && hand.GrabStrength == 1 && !isReloading)
+            // else if (hand.IsLeft && hand.GrabStrength == 1 && !isReloading)
+            if (Input.GetKeyDown(KeyCode.R) && !isReloading)
             {
                 //Reload
                 Reload();
