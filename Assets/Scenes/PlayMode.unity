@@ -4880,6 +4880,18 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11407378, guid: 869d20cdda15af24aab9e72b5f2eec78, type: 3}
+      propertyPath: _palmRadius
+      value: 0.015
+      objectReference: {fileID: 0}
+    - target: {fileID: 11407378, guid: 869d20cdda15af24aab9e72b5f2eec78, type: 3}
+      propertyPath: _jointRadius
+      value: 0.008
+      objectReference: {fileID: 0}
+    - target: {fileID: 11407378, guid: 869d20cdda15af24aab9e72b5f2eec78, type: 3}
+      propertyPath: _cylinderRadius
+      value: 0.006
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 869d20cdda15af24aab9e72b5f2eec78, type: 3}
 --- !u!114 &876014577 stripped
@@ -6139,7 +6151,6 @@ GameObject:
   m_Component:
   - component: {fileID: 970626235}
   - component: {fileID: 970626234}
-  - component: {fileID: 970626236}
   m_Layer: 0
   m_Name: HandModels
   m_TagString: Untagged
@@ -6195,67 +6206,6 @@ Transform:
   m_Father: {fileID: 2110671096}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
---- !u!114 &970626236
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 970626233}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd38df9a0796d9842adfbe580ed6042e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gunCamera: {fileID: 1648179732}
-  fovSpeed: 15
-  defaultFov: 40
-  aimFov: 25
-  weaponName: 
-  weaponSway: 0
-  swayAmount: 0.02
-  maxSwayAmount: 0.06
-  swaySmoothValue: 4
-  fireRate: 0
-  autoReload: 0
-  autoReloadDelay: 0
-  ammo: 10
-  cube: {fileID: 1815564166}
-  bulletForce: 400
-  showBulletInMagDelay: 0.6
-  bulletInMagRenderer: {fileID: 0}
-  grenadeSpawnDelay: 0.35
-  randomMuzzleflash: 0
-  maxRandomValue: 5
-  enableMuzzleflash: 1
-  muzzleParticles: {fileID: 0}
-  enableSparks: 1
-  sparkParticles: {fileID: 0}
-  minSparkEmission: 1
-  maxSparkEmission: 7
-  muzzleflashLight: {fileID: 0}
-  lightDuration: 0.02
-  mainAudioSource: {fileID: 0}
-  shootAudioSource: {fileID: 0}
-  timescaleText: {fileID: 0}
-  currentWeaponText: {fileID: 0}
-  currentAmmoText: {fileID: 0}
-  totalAmmoText: {fileID: 0}
-  Prefabs:
-    bulletPrefab: {fileID: 0}
-    casingPrefab: {fileID: 0}
-    grenadePrefab: {fileID: 0}
-  Spawnpoints:
-    casingSpawnPoint: {fileID: 0}
-    bulletSpawnPoint: {fileID: 0}
-    grenadeSpawnPoint: {fileID: 0}
-  SoundClips:
-    shootSound: {fileID: 0}
-    takeOutSound: {fileID: 0}
-    holsterSound: {fileID: 0}
-    reloadSoundOutOfAmmo: {fileID: 0}
-    reloadSoundAmmoLeft: {fileID: 0}
-    aimSound: {fileID: 0}
 --- !u!1 &1065013637
 GameObject:
   m_ObjectHideFlags: 0
