@@ -1,0 +1,33 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Enemy : MonoBehaviour
+{
+
+    [SerializeField] GameObject bulletPrefab;   // 총알 프리팹 (현재 총알에셋 없이 TmpBullet으로 대체)
+    [SerializeField] GameObject bulletSpawn;     // 총구( 총알의 발사 위치)
+    [SerializeField] GameObject player;
+    
+    // Start is called before the first frame update
+    void Start()
+    {
+        Debug.Log(player);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        transform.LookAt(player.transform.position);
+        Shoot();        // 고민해봐야 할 게 적이 공격하는 조건에 대해서 생각하기
+    }
+
+
+    void Shoot()
+    {
+
+        Instantiate(bulletPrefab, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
+    }
+
+
+}
