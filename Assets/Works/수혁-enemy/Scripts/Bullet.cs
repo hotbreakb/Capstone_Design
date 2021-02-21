@@ -28,13 +28,13 @@ public class Bullet : MonoBehaviour
     void Update()
     {
         transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
-        Debug.Log(transform.position);
+    
     }
 
 
      void OnTriggerEnter(Collider other)
     {
-        other.SendMessage("OnHitBullet");       // 아림님 플레이어 코드 받고 그쪽에서도 OnHitBullet 메소드 만들기
+        // other.SendMessage("OnHitBullet");       // 아림님 플레이어 코드 받고 그쪽에서도 OnHitBullet 메소드 만들기
         Destroy(gameObject);
     }
 }

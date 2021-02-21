@@ -8,10 +8,13 @@ using UnityEngine.UI;
 public class PlayerDamage : MonoBehaviour
 {
     private const string bulletTag = "Bullet";
-    private float initHp = 100.0f;
+    private float initHp = 200.0f;
+    private Color currColor;
+    private readonly Color initColor = new Vector4(0, 1.0f, 0.0f, 1.0f);
     public float currHP;
 
     public Image bloodScreen;
+    public Image hpBar;
     //public delegate void PlayerDieHandler();
     //public static event PlayerDieHandler OnPlayerDie;
 
@@ -22,7 +25,7 @@ public class PlayerDamage : MonoBehaviour
             StartCoroutine(ShowBloodScreen());
             currHP -= 5.0f;
             Debug.Log("PlayerHP = " + currHP.ToString());
-
+            DisPlayHpbar();
             if (currHP <= 0.0f) //플레이어 죽었을때
             {
                 PlayerDie();
@@ -38,6 +41,9 @@ public class PlayerDamage : MonoBehaviour
     void Start()
     {
         currHP = initHp;
+
+        hpBar.color = initColor;
+        currColor = initColor;
     }
 
     // Update is called once per frame
@@ -51,5 +57,15 @@ public class PlayerDamage : MonoBehaviour
         bloodScreen.color = new Color(1, 0, 0,UnityEngine.Random.Range(0.2f, 0.3f));
         yield return new WaitForSeconds(0.1f);
         bloodScreen.color = Color.clear;
+    }
+
+    void DisPlayHpbar()
+    {
+        if ((currHP / initHp) > 0.5f)
+            currColor.r = (1 - (currHP / initHp)) * 2.0f;
+        else
+            currColor.g = (currHP / initHp) * 2.0f;
+        hpBar.color = currColor;
+        hpBar.fillAmount = (currHP / initHp);
     }
 }
