@@ -70,39 +70,38 @@ public class newGesture : MonoBehaviour
             //  1. Two straight fingers
             //  2. Hands moving from top to bottom
 
-            Debug.Log(System.Math.Abs(handPalmPosition.y - prehandPalmPosition.y));
-            //Debug.Log(System.Math.Abs(hand.PalmVelocity.y));
+            //Debug.Log(System.Math.Abs(handPalmPosition.y - prehandPalmPosition.y));
+            Debug.Log(System.Math.Abs(hand.PalmVelocity.y));
 
-            if (hand.IsRight && _extendedFingers == 2 && System.Math.Abs(handPalmPosition.y - prehandPalmPosition.y) > 5 && System.Math.Abs(hand.PalmVelocity.y) > 30)
+            if (_extendedFingers == 2 && System.Math.Abs(handPalmPosition.y - prehandPalmPosition.y) > 5 && System.Math.Abs(hand.PalmVelocity.y) > 10)
             {
-                StartCoroutine(timer());
+                StartCoroutine("timer");
                 cube.GetComponent<MeshRenderer>().material.color = Color.red;
                 isShoot = true;
             }
             // [Condition for changing weapons]
             //  1. Hands moving from side to side (swipe)
-            else if (hand.IsRight && System.Math.Abs(handPalmPosition.x - prehandPalmPosition.x) > 5)
+            else if (System.Math.Abs(handPalmPosition.x - prehandPalmPosition.x) > 5)
             {
-                StartCoroutine(timer());
+                StartCoroutine("timer");
                 cube.GetComponent<MeshRenderer>().material.color = Color.green;
                 isGrenade = true;
             }
             // [Condition to Load]
             //  1. Gripped left hand
-            else if (hand.IsRight && hand.GrabStrength == 1 || _extendedFingers == 0)
+            else if (hand.GrabStrength == 1 || _extendedFingers == 0)
             {
-                StartCoroutine(timer());
+                StartCoroutine("timer");
                 cube.GetComponent<MeshRenderer>().material.color = Color.yellow;
                 isLoading = true;
             }
             else
             {
-                StartCoroutine(timer());
+                StartCoroutine("timer");
                 cube.GetComponent<MeshRenderer>().material.color = Color.black;
             }
 
             //Debug.Log("isShoot: " + isShoot + " isGrenade" + isGrenade + "isLoading" + isLoading);
-            //StartCoroutine(timer());
             yield return null;
         } // end for
     }
