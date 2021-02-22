@@ -1365,7 +1365,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8647728248663983466, guid: 196e099b2c3b0cf4e9c71eb822d74d52,
     type: 3}
   bulletSpawn: {fileID: 239647741376151440}
-  player: {fileID: 4297236428456405247, guid: 64b56a8f4d0b9b049ba23f42b4479403, type: 3}
+  player: {fileID: 1313560067779992209, guid: fb4e1621daf7f4b47b3623f5cd71fcdd, type: 3}
   attackProbability: 0.34
 --- !u!1 &7675805510432256505
 GameObject:

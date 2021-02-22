@@ -22,7 +22,7 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         transform.LookAt(player.transform.position);
-
+        Debug.Log(player.transform.position);
 
         float random = Random.Range(0.0f, 0.4f);
 
