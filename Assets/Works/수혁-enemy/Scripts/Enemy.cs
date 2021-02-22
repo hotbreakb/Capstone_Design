@@ -5,6 +5,8 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
 
+    private const string bulletTag = "Bullet";
+
     [SerializeField] GameObject bulletPrefab;   // 총알 프리팹 (현재 총알에셋 없이 TmpBullet으로 대체)
     [SerializeField] GameObject bulletSpawn;     // 총구( 총알의 발사 위치)
     [SerializeField] GameObject player;
@@ -41,5 +43,12 @@ public class Enemy : MonoBehaviour
         Instantiate(bulletPrefab, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
     }
 
+    private void OnTriggerEnter(Collider coll)
+    {
+        if (coll.tag == bulletTag)
+        {
+            Debug.Log("적중");
+        }
+    }
 
 }
