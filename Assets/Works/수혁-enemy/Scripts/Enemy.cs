@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-
+    [SerializeField]
+    Animator animator;
     [SerializeField] GameObject bulletPrefab;   // 총알 프리팹 (현재 총알에셋 없이 TmpBullet으로 대체)
     [SerializeField] GameObject bulletSpawn;     // 총구( 총알의 발사 위치)
     [SerializeField] GameObject player;
@@ -15,31 +16,32 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(player);
+
     }
 
+    float a = 0.0f;
     // Update is called once per frame
     void Update()
     {
         transform.LookAt(player.transform.position);
 
+        float random = Random.Range(0.0f,0.4f);
 
-        float random = Random.Range(0.0f,0.7f);
-
-
-        if(random > (1.0f - attackProbability)){
-            Debug.Log("random = " +random);
-            Debug.Log("attack = " + attackProbability);
-            Debug.Log(0.1f - attackProbability);
+        if(random >  attackProbability){
             Shoot();
         }
+        else{
+            animator.SetBool("isShoot",false);
+        }
 
+
+        Debug.Log(animator.GetBool("isShoot"));
         //Shoot();        // 고민해봐야 할 게 적이 공격하는 조건에 대해서 생각하기
     }
 
     void Shoot()
-    {
-
+    {   
+        animator.SetBool("isShoot",true);
         Instantiate(bulletPrefab, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
     }
 

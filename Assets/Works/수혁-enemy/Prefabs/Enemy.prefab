@@ -1344,7 +1344,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: eb85e715f64c2b742843e64a1a84a3e4, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -1362,11 +1362,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af2700eb993105a4890ae42c2b24c886, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 7675805510441730635}
   bulletPrefab: {fileID: 8647728248663983466, guid: 196e099b2c3b0cf4e9c71eb822d74d52,
     type: 3}
   bulletSpawn: {fileID: 239647741376151440}
   player: {fileID: 4297236428456405247, guid: 64b56a8f4d0b9b049ba23f42b4479403, type: 3}
-  attackProbability: 0.34
+  attackProbability: 0.391
 --- !u!1 &7675805510432256505
 GameObject:
   m_ObjectHideFlags: 0
