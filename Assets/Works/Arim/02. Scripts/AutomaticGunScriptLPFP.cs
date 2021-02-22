@@ -8,10 +8,13 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System;
 
 // ----- Low Poly FPS Pack Free Version -----
 public class AutomaticGunScriptLPFP : MonoBehaviour
 {
+	//Use LeapmotionGesture.cs
+	LeapmotionGesture Leapmotion_guesture;
 
 	//Animator component attached to weapon
 	Animator anim;
@@ -19,7 +22,7 @@ public class AutomaticGunScriptLPFP : MonoBehaviour
 	[Header("Gun Camera")]  //카메라 이동
 							//Main gun camera
 	public Camera gunCamera;
-
+	
 	[Header("Gun Camera Options")]
 	//How fast the camera field of view changes when aiming 
 	[Tooltip("How fast the camera field of view changes when aiming.")]
@@ -168,13 +171,15 @@ public class AutomaticGunScriptLPFP : MonoBehaviour
 
 	private void Awake()
 	{
-
 		//Set the animator component
 		anim = GetComponent<Animator>();
 		//Set current ammo to total ammo value
 		currentAmmo = ammo;
 
 		muzzleflashLight.enabled = false;
+
+		//Use LeapmotionGesture.cs
+		Leapmotion_guesture = GameObject.Find("HandModels").GetComponent<LeapmotionGesture>();
 	}
 
 	private void Start()
@@ -196,7 +201,7 @@ public class AutomaticGunScriptLPFP : MonoBehaviour
 
 	private void LateUpdate()
 	{
-
+		
 		//Weapon sway
 		if (weaponSway == true)
 		{
@@ -263,7 +268,7 @@ public class AutomaticGunScriptLPFP : MonoBehaviour
 
 		if (randomMuzzleflash == true)
 		{
-			randomMuzzleflashValue = Random.Range(minRandomValue, maxRandomValue);
+			randomMuzzleflashValue = UnityEngine.Random.Range(minRandomValue, maxRandomValue);
 		}
 
 
@@ -321,15 +326,9 @@ public class AutomaticGunScriptLPFP : MonoBehaviour
 		}
 		*/
 
-		//---------수류탄-------------------------------------------------------------------------------
-		// 립모션과 연계 필요
-		//Throw grenade when pressing G key
-		if (Input.GetKeyDown(KeyCode.G) && !isInspecting)
-		{
-			StartCoroutine(GrenadeSpawnDelay());
-			//Play grenade throw animation
-			anim.Play("GrenadeThrow", 0, 0.0f);
-		}
+		Debug.Log("isShoot: " + Leapmotion_guesture.isShoot + " isGrenade" + Leapmotion_guesture.isGrenade + "isLoading" + Leapmotion_guesture.isLoading);
+
+		StartCoroutine("TakeAction");
 
 		//If out of ammo 남은 총알수가 0개면 자동 재장전. 
 		if (currentAmmo == 0)
@@ -353,99 +352,7 @@ public class AutomaticGunScriptLPFP : MonoBehaviour
 			//anim.SetBool ("Out Of Ammo", false);
 		}
 
-		//AUtomatic fire
-		//Left click hold 
-		//----------------------Input.GetMouseButton(0) = 좌클릭 -> bool함수로 립모션이랑 연계필요 -------------------------------------
-		if (Input.GetMouseButton(0) && !outOfAmmo && !isReloading && !isInspecting && !isRunning)
-		{
-			//Shoot automatic
-			if (Time.time - lastFired > 1 / fireRate)
-			{
-				lastFired = Time.time;
-
-				//Remove 1 bullet from ammo
-				currentAmmo -= 1;
-
-				shootAudioSource.clip = SoundClips.shootSound;
-				shootAudioSource.Play();
-
-				if (!isAiming) //if not aiming
-				{
-					anim.Play("Fire", 0, 0f);
-					//If random muzzle is false
-					if (!randomMuzzleflash &&
-						enableMuzzleflash == true)
-					{
-						muzzleParticles.Emit(1);
-						//Light flash start
-						StartCoroutine(MuzzleFlashLight());
-					}
-					else if (randomMuzzleflash == true)
-					{
-						//Only emit if random value is 1
-						if (randomMuzzleflashValue == 1)
-						{
-							if (enableSparks == true)
-							{
-								//Emit random amount of spark particles
-								sparkParticles.Emit(Random.Range(minSparkEmission, maxSparkEmission));
-							}
-							if (enableMuzzleflash == true)
-							{
-								muzzleParticles.Emit(1);
-								//Light flash start
-								StartCoroutine(MuzzleFlashLight());
-							}
-						}
-					}
-				}
-				else //if aiming
-				{
-
-					anim.Play("Aim Fire", 0, 0f);
-
-					//If random muzzle is false
-					if (!randomMuzzleflash)
-					{
-						muzzleParticles.Emit(1);
-						//If random muzzle is true
-					}
-					else if (randomMuzzleflash == true)
-					{
-						//Only emit if random value is 1
-						if (randomMuzzleflashValue == 1)
-						{
-							if (enableSparks == true)
-							{
-								//Emit random amount of spark particles
-								sparkParticles.Emit(Random.Range(minSparkEmission, maxSparkEmission));
-							}
-							if (enableMuzzleflash == true)
-							{
-								muzzleParticles.Emit(1);
-								//Light flash start
-								StartCoroutine(MuzzleFlashLight());
-							}
-						}
-					}
-				}
-
-				//Spawn bullet from bullet spawnpoint
-				var bullet = (Transform)Instantiate(
-					Prefabs.bulletPrefab,
-					Spawnpoints.bulletSpawnPoint.transform.position,
-					Spawnpoints.bulletSpawnPoint.transform.rotation);
-
-				//Add velocity to the bullet
-				bullet.GetComponent<Rigidbody>().velocity =
-					bullet.transform.forward * bulletForce;
-
-				//Spawn casing prefab at spawnpoint
-				Instantiate(Prefabs.casingPrefab,
-					Spawnpoints.casingSpawnPoint.transform.position,
-					Spawnpoints.casingSpawnPoint.transform.rotation);
-			}
-		}
+		
 
 		/* 총 관찰하는 모션인데 필요없음
 		//Inspect weapon when T key is pressed
@@ -486,15 +393,6 @@ public class AutomaticGunScriptLPFP : MonoBehaviour
 		}
 		*/
 
-		// 키보드 R누르면 Reload 재장전---------------------------------------------------------------------------------------------------------------
-		//립모션과 연계 필요
-		if (Input.GetKeyDown(KeyCode.R) && !isReloading && !isInspecting)
-		{
-			//Reload
-			Reload();
-		}
-
-
 		//------------------플레이어의 이동을 어떻게 할지 고민해 봐야할듯
 		//Walking when pressing down WASD keys
 		if (Input.GetKey(KeyCode.W) && !isRunning ||
@@ -527,6 +425,121 @@ public class AutomaticGunScriptLPFP : MonoBehaviour
 		{
 			anim.SetBool ("Run", false);
 		}*/
+	}
+
+	private IEnumerator TakeAction()
+	{
+		//AUtomatic fire
+		//Left click hold 
+		//----------------------Input.GetMouseButton(0) = 좌클릭 -> bool함수로 립모션이랑 연계필요 -------------------------------------
+		if ((Leapmotion_guesture.isShoot || Input.GetMouseButton(0)) && !outOfAmmo && !isReloading && !isInspecting && !isRunning)
+		{
+			//Shoot automatic
+			if (Time.time - lastFired > 1 / fireRate)
+			{
+				lastFired = Time.time;
+
+				//Remove 1 bullet from ammo
+				currentAmmo -= 1;
+
+				shootAudioSource.clip = SoundClips.shootSound;
+				shootAudioSource.Play();
+
+				if (!isAiming) //if not aiming
+				{
+					anim.Play("Fire", 0, 0f);
+					//If random muzzle is false
+					if (!randomMuzzleflash &&
+						enableMuzzleflash == true)
+					{
+						muzzleParticles.Emit(1);
+						//Light flash start
+						StartCoroutine(MuzzleFlashLight());
+					}
+					else if (randomMuzzleflash == true)
+					{
+						//Only emit if random value is 1
+						if (randomMuzzleflashValue == 1)
+						{
+							if (enableSparks == true)
+							{
+								//Emit random amount of spark particles
+								sparkParticles.Emit(UnityEngine.Random.Range(minSparkEmission, maxSparkEmission));
+							}
+							if (enableMuzzleflash == true)
+							{
+								muzzleParticles.Emit(1);
+								//Light flash start
+								StartCoroutine(MuzzleFlashLight());
+							}
+						}
+					}
+				}
+				else //if aiming
+				{
+
+					anim.Play("Aim Fire", 0, 0f);
+
+					//If random muzzle is false
+					if (!randomMuzzleflash)
+					{
+						muzzleParticles.Emit(1);
+						//If random muzzle is true
+					}
+					else if (randomMuzzleflash == true)
+					{
+						//Only emit if random value is 1
+						if (randomMuzzleflashValue == 1)
+						{
+							if (enableSparks == true)
+							{
+								//Emit random amount of spark particles
+								sparkParticles.Emit(UnityEngine.Random.Range(minSparkEmission, maxSparkEmission));
+							}
+							if (enableMuzzleflash == true)
+							{
+								muzzleParticles.Emit(1);
+								//Light flash start
+								StartCoroutine(MuzzleFlashLight());
+							}
+						}
+					}
+				}
+
+				//Spawn bullet from bullet spawnpoint
+				var bullet = (Transform)Instantiate(
+					Prefabs.bulletPrefab,
+					Spawnpoints.bulletSpawnPoint.transform.position,
+					Spawnpoints.bulletSpawnPoint.transform.rotation);
+
+				//Add velocity to the bullet
+				bullet.GetComponent<Rigidbody>().velocity =
+					bullet.transform.forward * bulletForce;
+
+				//Spawn casing prefab at spawnpoint
+				Instantiate(Prefabs.casingPrefab,
+					Spawnpoints.casingSpawnPoint.transform.position,
+					Spawnpoints.casingSpawnPoint.transform.rotation);
+			}
+		} // end isShoot
+
+		//---------수류탄-------------------------------------------------------------------------------
+		// 립모션과 연계 필요
+		//Throw grenade when pressing G key
+		else if ((Leapmotion_guesture.isGrenade || Input.GetKeyDown(KeyCode.G)) && !isInspecting)
+		{
+			StartCoroutine(GrenadeSpawnDelay());
+			//Play grenade throw animation
+			anim.Play("GrenadeThrow", 0, 0.0f);
+		}
+		// 키보드 R누르면 Reload 재장전---------------------------------------------------------------------------------------------------------------
+		//립모션과 연계 필요
+		else if ((Leapmotion_guesture.isLoading || Input.GetKeyDown(KeyCode.R)) && !isReloading && !isInspecting)
+		{
+			//Reload
+			Reload();
+		}
+		yield return new WaitForSeconds(5.0f);
 	}
 
 	//수류탄 생성 관련 함수
@@ -612,7 +625,6 @@ public class AutomaticGunScriptLPFP : MonoBehaviour
 		currentAmmo = ammo;
 		outOfAmmo = false;
 	}
-
 
 	//총알관련 함수들(이펙트)
 	//Enable bullet in mag renderer after set amount of time

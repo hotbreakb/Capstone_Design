@@ -9,9 +9,10 @@ public class LeapmotionGesture : MonoBehaviour
     private List<Finger> fingers;
     public GameObject cube;
 
-    private bool isShoot;   // 총쏘기
-    private bool isGrenade; // 수류탄
-    private bool isLoading; // 장전
+    /* AutomaticGunScriptLPFP.cs에서 사용하기 위해 public으로 선언 */
+    public bool isShoot;   // 총쏘기
+    public bool isGrenade; // 수류탄
+    public bool isLoading; // 장전
 
     void Start()
     {
