@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 // ----- Low Poly FPS Pack Free Version -----
@@ -22,48 +22,26 @@ public class BulletScript : MonoBehaviour {
 		//Start destroy timer
 		StartCoroutine (DestroyAfter ());
 	}
-	// 테스트를 위한 함수 추가 - 수혁
-
-	private void OnTriggerEnter(Collider other){
-		// Enemy 테스트를 위한 스크립트 - 수혁
-		if (other.transform.tag == "Enemy") 
-		{	
-			//Destroy bullet object
-			Debug.Log("성공~");
-		}
-
-
-	}
-
-
-
-
-
-
 
 
 
 	//If the bullet collides with anything
 	private void OnCollisionEnter (Collision collision) 
 	{	
-
+		if (collision.transform.tag == "Enemy") 
+		{
+			Debug.Log("되는건가");
+		}
 		//If destroy on impact is false, start 
 		//coroutine with random destroy timer
 		if (!destroyOnImpact) 
-		{
+		{ 
 			StartCoroutine (DestroyTimer ());
 		}
 		//Otherwise, destroy bullet on impact
 		else 
 		{
 			Destroy (gameObject);
-		}
-
-		Debug.Log("Collisoin");
-
-		if (collision.transform.tag == "Object")
-		{
-			Debug.Log("Object Tag");
 		}
 
 		//If bullet collides with "Metal" tag

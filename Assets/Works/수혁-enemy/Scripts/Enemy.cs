@@ -47,12 +47,19 @@ public class Enemy : MonoBehaviour
         Instantiate(bulletPrefab, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
     }
 
-    private void OnTriggerEnter(Collider coll)
-    {
-        if (coll.tag == bulletTag)
-        {
-            Debug.Log("적중");
+    private void OnTriggerEnter(Collider coll){
+        if(coll.transform.tag == bulletTag){
+            Debug.Log("제발...");
         }
     }
+    
+    // private void OnCollisionEnter(Collision col)
+    // {
+    //     if (col.transform.tag == bulletTag)
+    //     {   
+    //         Debug.Log(col.transform);
+    //         Debug.Log("적중");
+    //     }
+    // }
 
 }
