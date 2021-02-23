@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Cube
   - Bullet
+  - Enemy
+  - Metal
+  - ExplosiveBarrel
+  - Target
+  - Object
   layers:
   - Default
   - TransparentFX
