@@ -6,8 +6,9 @@ public class Enemy : MonoBehaviour
 {
 
 
-    [SerializeField]
-   private Animator animator;
+    
+   
+    Animator animator;
 
     private const string bulletTag = "Bullet";
 
@@ -18,12 +19,9 @@ public class Enemy : MonoBehaviour
     [Range(0.1f, 1.0f)]
     public float attackProbability = 0.5f; // 공격가능성
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        Debug.Log(player);
+    private void Awake(){
+        animator = GetComponent<Animator>();
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -34,11 +32,14 @@ public class Enemy : MonoBehaviour
 
 
         if (random > attackProbability)
-        {
+        {   
+            Debug.Log(animator);
+            animator.SetBool("isShoot",true);
             Shoot();
         }
-
-        //Shoot();        // 고민해봐야 할 게 적이 공격하는 조건에 대해서 생각하기
+        else{
+             animator.SetBool("isShoot",false);
+        }
     }
 
     void Shoot()
