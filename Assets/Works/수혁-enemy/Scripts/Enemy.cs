@@ -33,7 +33,6 @@ public class Enemy : MonoBehaviour
 
         if (random > attackProbability)
         {   
-            Debug.Log(animator);
             animator.SetBool("isShoot",true);
             Shoot();
         }
