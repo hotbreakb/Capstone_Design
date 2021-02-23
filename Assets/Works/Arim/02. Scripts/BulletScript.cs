@@ -22,10 +22,31 @@ public class BulletScript : MonoBehaviour {
 		//Start destroy timer
 		StartCoroutine (DestroyAfter ());
 	}
+	// 테스트를 위한 함수 추가 - 수혁
+
+	private void OnTriggerEnter(Collider other){
+		// Enemy 테스트를 위한 스크립트 - 수혁
+		if (other.transform.tag == "Enemy") 
+		{	
+			//Destroy bullet object
+			Debug.Log("성공~");
+		}
+
+
+	}
+
+
+
+
+
+
+
+
 
 	//If the bullet collides with anything
 	private void OnCollisionEnter (Collision collision) 
-	{
+	{	
+
 		//If destroy on impact is false, start 
 		//coroutine with random destroy timer
 		if (!destroyOnImpact) 
