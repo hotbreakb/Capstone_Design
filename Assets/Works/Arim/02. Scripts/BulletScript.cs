@@ -38,6 +38,13 @@ public class BulletScript : MonoBehaviour {
 			Destroy (gameObject);
 		}
 
+		Debug.Log("Collisoin");
+
+		if (collision.transform.tag == "Object")
+		{
+			Debug.Log("Object Tag");
+		}
+
 		//If bullet collides with "Metal" tag
 		if (collision.transform.tag == "Metal") 
 		{
