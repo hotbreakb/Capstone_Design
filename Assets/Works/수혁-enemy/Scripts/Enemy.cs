@@ -5,6 +5,10 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
 
+
+    [SerializeField]
+   private Animator animator;
+
     private const string bulletTag = "Bullet";
 
     [SerializeField] GameObject bulletPrefab;   // 총알 프리팹 (현재 총알에셋 없이 TmpBullet으로 대체)
