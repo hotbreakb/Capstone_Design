@@ -64,7 +64,7 @@ public class AutomaticGunScriptLPFP : MonoBehaviour
 	private bool isReloading;
 
 	//Holstering weapon
-	private bool hasBeenHolstered = false;
+	//private bool hasBeenHolstered = false;
 	//If weapon is holstered
 	private bool holstered;
 	//Check if running
@@ -166,8 +166,6 @@ public class AutomaticGunScriptLPFP : MonoBehaviour
 		public AudioClip aimSound;
 	}
 	public soundClips SoundClips;
-
-	private bool soundHasPlayed = false;
 
 	private void Awake()
 	{
