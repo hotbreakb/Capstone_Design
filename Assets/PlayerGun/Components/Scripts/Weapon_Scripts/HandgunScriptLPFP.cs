@@ -143,6 +143,10 @@ public class HandgunScriptLPFP : MonoBehaviour {
 
 	private bool soundHasPlayed = false;
 
+	private bool _isShoot = false;
+	private bool _isGrenade = false;
+	private bool _isLoading = false;
+
 	private void Awake () 
 	{
 		//Set the animator component
@@ -189,15 +193,14 @@ public class HandgunScriptLPFP : MonoBehaviour {
 	
 	private void Update () {
 
-		//Aiming
-		//Toggle camera FOV when right click is held down
+		_isShoot = GameObject.Find("HandModels").GetComponent<LeapmotionGesture>().isShoot;
+		_isGrenade = GameObject.Find("HandModels").GetComponent<LeapmotionGesture>().isGrenade;
+		_isLoading = GameObject.Find("HandModels").GetComponent<LeapmotionGesture>().isLoading;
 
 		if (!isReloading)
 		{
 			gunCamera.fieldOfView = Mathf.Lerp(gunCamera.fieldOfView,
 				aimFov, fovSpeed * Time.deltaTime);
-
-			//isAiming = true;
 
 			anim.SetBool("Aim", true);
 		}
@@ -216,43 +219,13 @@ public class HandgunScriptLPFP : MonoBehaviour {
 
 		checkAction();
 		movePlayer();
-		
-
-		//If out of ammo
-		if (currentAmmo == 0) 
-		{
-			//Show out of ammo text
-			currentWeaponText.text = "OUT OF AMMO";
-			//Toggle bool
-			outOfAmmo = true;
-			//Auto reload if true
-			if (autoReload == true && !isReloading) 
-			{
-				StartCoroutine (AutoReload ());
-			}
-				
-			//Set slider back
-			anim.SetBool ("Out Of Ammo Slider", true);
-			//Increase layer weight for blending to slider back pose
-			anim.SetLayerWeight (1, 1.0f);
-		} 
-		else 
-		{
-			//When ammo is full, show weapon name again
-			currentWeaponText.text = storedWeaponName.ToString ();
-			//Toggle bool
-			outOfAmmo = false;
-			//anim.SetBool ("Out Of Ammo", false);
-			anim.SetLayerWeight (1, 0.0f);
-		}
-
-		
+		checkAmmo();
 	}
 
 	private void checkAction()
 	{
 		//Shooting 
-		if (Input.GetMouseButtonDown(0) && !outOfAmmo && !isReloading)
+		if ((Input.GetMouseButtonDown(0) || _isShoot) && !outOfAmmo && !isReloading)
 		{
 			anim.Play("Aim Fire", 0, 0f);
 
@@ -291,16 +264,19 @@ public class HandgunScriptLPFP : MonoBehaviour {
 			StartCoroutine(MuzzleFlashLight());
 
 			makeBullet();
+
+			_isShoot = false;
 		}
 		//Throw grenade when pressing G key
-		else if (Input.GetKeyDown(KeyCode.G))
+		else if (Input.GetKeyDown(KeyCode.G) || _isGrenade)
 		{
 			StartCoroutine(GrenadeSpawnDelay());
 			//Play grenade throw animation
 			anim.Play("GrenadeThrow", 0, 0.0f);
+			_isGrenade = false;
 		}
 		//Reload 
-		else if (Input.GetKeyDown(KeyCode.R))
+		else if (Input.GetKeyDown(KeyCode.R) || _isLoading)
 		{
 			//Reload
 			Reload();
@@ -310,6 +286,38 @@ public class HandgunScriptLPFP : MonoBehaviour {
 				hasStartedSliderBack = true;
 				StartCoroutine(HandgunSliderBackDelay());
 			}
+			_isLoading = false;
+		}
+	}
+
+	private void checkAmmo()
+	{
+		//If out of ammo
+		if (currentAmmo == 0)
+		{
+			//Show out of ammo text
+			currentWeaponText.text = "OUT OF AMMO";
+			//Toggle bool
+			outOfAmmo = true;
+			//Auto reload if true
+			if (autoReload == true && !isReloading)
+			{
+				StartCoroutine(AutoReload());
+			}
+
+			//Set slider back
+			anim.SetBool("Out Of Ammo Slider", true);
+			//Increase layer weight for blending to slider back pose
+			anim.SetLayerWeight(1, 1.0f);
+		}
+		else
+		{
+			//When ammo is full, show weapon name again
+			currentWeaponText.text = storedWeaponName.ToString();
+			//Toggle bool
+			outOfAmmo = false;
+			//anim.SetBool ("Out Of Ammo", false);
+			anim.SetLayerWeight(1, 0.0f);
 		}
 	}
 
