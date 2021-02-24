@@ -141,8 +141,6 @@ public class HandgunScriptLPFP : MonoBehaviour {
 	}
 	public soundClips SoundClips;
 
-	private bool soundHasPlayed = false;
-
 	private bool _isShoot = false;
 	private bool _isGrenade = false;
 	private bool _isLoading = false;
