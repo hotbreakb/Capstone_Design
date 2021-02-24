@@ -11,8 +11,11 @@ public class EnemyDamage : MonoBehaviour
 
     public Image hpbar;
 
-    
+    void awake(){
+        hpbar.rectTransform.localScale = new Vector3(1f,1f,1f);
+    }
 
+    
     public void UpdateAfterReceiveAttack(){
         curHp-=25;
         Debug.Log("curHP" + curHp); 
