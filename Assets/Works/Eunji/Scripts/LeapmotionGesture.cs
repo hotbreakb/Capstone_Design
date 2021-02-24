@@ -69,6 +69,8 @@ public class LeapmotionGesture : MonoBehaviour
 
             isShoot = false; isGrenade = false; isLoading = false;
 
+            StartCoroutine("timer");
+
             // [Conditions to 'Shoot']
             //  1. Two straight fingers
             //  2. Hands moving from top to bottom
