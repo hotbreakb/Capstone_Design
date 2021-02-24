@@ -8,17 +8,21 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System;
 
 // ----- Low Poly FPS Pack Free Version -----
-public class AutomaticGunScriptLPFP : MonoBehaviour
+public class AutomaticGunScript_copy : MonoBehaviour
 {
+	//Use LeapmotionGesture.cs
+	LeapmotionGesture Leapmotion_guesture;
+
 	//Animator component attached to weapon
 	Animator anim;
 
 	[Header("Gun Camera")]  //카메라 이동
 							//Main gun camera
 	public Camera gunCamera;
-	
+
 	[Header("Gun Camera Options")]
 	//How fast the camera field of view changes when aiming 
 	[Tooltip("How fast the camera field of view changes when aiming.")]
@@ -91,7 +95,7 @@ public class AutomaticGunScriptLPFP : MonoBehaviour
 	public SkinnedMeshRenderer bulletInMagRenderer;
 
 	[Header("bulletHole Settings")]
-	public Sprite [] woodDecals;
+	public Sprite[] woodDecals;
 	public GameObject bulletHolePrefab;
 
 	[Header("Grenade Settings")]
@@ -169,10 +173,6 @@ public class AutomaticGunScriptLPFP : MonoBehaviour
 
 	private bool soundHasPlayed = false;
 
-	private bool _isShoot = false;
-	private bool _isGrenade = false;
-	private bool _isLoading = false;
-
 	private void Awake()
 	{
 		//Set the animator component
@@ -183,15 +183,11 @@ public class AutomaticGunScriptLPFP : MonoBehaviour
 		muzzleflashLight.enabled = false;
 
 		//Use LeapmotionGesture.cs
-		// Leapmotion_guesture = GameObject.Find("HandModels").GetComponent<LeapmotionGesture>();
+		Leapmotion_guesture = GameObject.Find("HandModels").GetComponent<LeapmotionGesture>();
 	}
 
 	private void Start()
 	{
-		_isShoot = GameObject.Find("isShoot").GetComponent<LeapmotionGesture>();
-		_isGrenade = GameObject.Find("isGrenade").GetComponent<LeapmotionGesture>();
-		_isLoading = GameObject.Find("isLoading").GetComponent<LeapmotionGesture>();
-
 
 		//Save the weapon name
 		storedWeaponName = weaponName;
@@ -209,6 +205,7 @@ public class AutomaticGunScriptLPFP : MonoBehaviour
 
 	private void LateUpdate()
 	{
+
 		//Weapon sway
 		if (weaponSway == true)
 		{
@@ -230,6 +227,7 @@ public class AutomaticGunScriptLPFP : MonoBehaviour
 
 	private void Update()
 	{
+
 		anim.SetBool("Aim", true);
 		gunCamera.fieldOfView = Mathf.Lerp(gunCamera.fieldOfView, aimFov, fovSpeed * Time.deltaTime); //줌 더 땡겨 주는건데 할지 말지 고민해봐야할듯
 
@@ -332,7 +330,7 @@ public class AutomaticGunScriptLPFP : MonoBehaviour
 		}
 		*/
 
-		Debug.Log("isShoot: " + _isShoot + " isGrenade" + _isGrenade + "isLoading" + _isLoading);
+		Debug.Log("isShoot: " + Leapmotion_guesture.isShoot + " isGrenade" + Leapmotion_guesture.isGrenade + "isLoading" + Leapmotion_guesture.isLoading);
 
 		StartCoroutine("TakeAction");
 
@@ -358,7 +356,7 @@ public class AutomaticGunScriptLPFP : MonoBehaviour
 			//anim.SetBool ("Out Of Ammo", false);
 		}
 
-		
+
 
 		/* 총 관찰하는 모션인데 필요없음
 		//Inspect weapon when T key is pressed
@@ -438,7 +436,7 @@ public class AutomaticGunScriptLPFP : MonoBehaviour
 		//AUtomatic fire
 		//Left click hold 
 		//----------------------Input.GetMouseButton(0) = 좌클릭 -> bool함수로 립모션이랑 연계필요 -------------------------------------
-		if ((_isShoot || Input.GetMouseButton(0)) && !outOfAmmo && !isReloading && !isInspecting && !isRunning)
+		if ((Leapmotion_guesture.isShoot || Input.GetMouseButton(0)) && !outOfAmmo && !isReloading && !isInspecting && !isRunning)
 		{
 			//Shoot automatic
 			if (Time.time - lastFired > 1 / fireRate)
@@ -529,14 +527,14 @@ public class AutomaticGunScriptLPFP : MonoBehaviour
 
 				Vector3 impactPoint = CastRay();
 				if (impactPoint != Vector3.zero) bullet.transform.LookAt(impactPoint);
-				
+
 			}
 		} // end isShoot
 
 		//---------수류탄-------------------------------------------------------------------------------
 		// 립모션과 연계 필요
 		//Throw grenade when pressing G key
-		else if ((_isGrenade || Input.GetKeyDown(KeyCode.G)) && !isInspecting)
+		else if ((Leapmotion_guesture.isGrenade || Input.GetKeyDown(KeyCode.G)) && !isInspecting)
 		{
 			StartCoroutine(GrenadeSpawnDelay());
 			//Play grenade throw animation
@@ -544,7 +542,7 @@ public class AutomaticGunScriptLPFP : MonoBehaviour
 		}
 		// 키보드 R누르면 Reload 재장전---------------------------------------------------------------------------------------------------------------
 		//립모션과 연계 필요
-		else if ((_isLoading || Input.GetKeyDown(KeyCode.R)) && !isReloading && !isInspecting)
+		else if ((Leapmotion_guesture.isLoading || Input.GetKeyDown(KeyCode.R)) && !isReloading && !isInspecting)
 		{
 			//Reload
 			Reload();
@@ -565,7 +563,7 @@ public class AutomaticGunScriptLPFP : MonoBehaviour
 			GameObject bulletHole = Instantiate(bulletHolePrefab, hit.point + hit.normal * 0.0001f, Quaternion.identity);
 			bulletHole.transform.LookAt(hit.point + hit.normal);
 			bulletHole.GetComponent<SpriteRenderer>().sprite = woodDecals[UnityEngine.Random.Range(0, woodDecals.Length)];
-			
+
 			return hit.point;
 		}
 

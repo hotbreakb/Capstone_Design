@@ -69,25 +69,27 @@ public class LeapmotionGesture : MonoBehaviour
 
             isShoot = false; isGrenade = false; isLoading = false;
 
+            StartCoroutine("timer");
+
             // [Conditions to 'Shoot']
             //  1. Two straight fingers
             //  2. Hands moving from top to bottom
 
-            if (_extendedFingers == 2 && System.Math.Abs(handPalmPosition.y - prehandPalmPosition.y) > 5)
+            if (_extendedFingers < 5 && System.Math.Abs(handPalmPosition.y - prehandPalmPosition.y) > 5)
             {
                 cube.GetComponent<MeshRenderer>().material.color = Color.red;
                 isShoot = true;
             }
             // [Condition for changing weapons]
             //  1. Hands moving from side to side (swipe)
-            else if (System.Math.Abs(handPalmPosition.x - prehandPalmPosition.x) > 5)
+            else if (_extendedFingers == 5 && System.Math.Abs(handPalmPosition.x - prehandPalmPosition.x) > 10)
             {
                 cube.GetComponent<MeshRenderer>().material.color = Color.green;
                 isGrenade = true;
             }
             // [Condition to Load]
             //  1. Gripped left hand
-            else if (hand.GrabStrength == 1 && _extendedFingers == 0)
+            else if (_extendedFingers == 0 && hand.GrabStrength == 1)
             {
                 cube.GetComponent<MeshRenderer>().material.color = Color.yellow;
                 isLoading = true;
@@ -132,11 +134,9 @@ public class LeapmotionGesture : MonoBehaviour
 
     IEnumerator timer()
     {
-        int time = 0;
-        while (true)
-        {
-            time++;
+        //while (true)
+        //{
             yield return new WaitForSeconds(5.0f); // delay 2 seconds
-        }
+        //}
     }
 }
