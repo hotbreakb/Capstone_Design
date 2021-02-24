@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9730,7 +9730,7 @@ GameObject:
   - component: {fileID: 1815564168}
   - component: {fileID: 1815564167}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: checkHandAction
   m_TagString: Cube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9804,8 +9804,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1815564166}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.56, y: 1, z: 7.99}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 8.85, y: 1, z: 10.92}
+  m_LocalScale: {x: 0.16368, y: 0.14303, z: 0.2018}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
