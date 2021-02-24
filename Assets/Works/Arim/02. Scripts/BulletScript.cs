@@ -23,11 +23,15 @@ public class BulletScript : MonoBehaviour {
 		StartCoroutine (DestroyAfter ());
 	}
 
-	// private void OnTriggerEnter(Collider collider){	// 수혁 일단 지금 필요없음 
-	// 	if(collider.tag == "Enemy"){
-	// 		Debug.Log("적중이요");
-	// 	}
-	// }
+	private void OnTriggerEnter(Collider collider){	// 수혁 일단 지금 필요없음 
+		if(collider.tag == "ExplosiveBarrel"){
+			//Toggle "explode" on explosive barrel object
+			collider.transform.gameObject.GetComponent
+				<ExplosiveBarrelScript>().explode = true;
+			//Destroy bullet object
+			Destroy(gameObject);
+		}
+	}
 
 	//If the bullet collides with anything
 	private void OnCollisionEnter (Collision collision) 
