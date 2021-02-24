@@ -23,15 +23,16 @@ public class BulletScript : MonoBehaviour {
 		StartCoroutine (DestroyAfter ());
 	}
 
-
+	// private void OnTriggerEnter(Collider collider){	// 수혁 일단 지금 필요없음 
+	// 	if(collider.tag == "Enemy"){
+	// 		Debug.Log("적중이요");
+	// 	}
+	// }
 
 	//If the bullet collides with anything
 	private void OnCollisionEnter (Collision collision) 
 	{	
-		if (collision.transform.tag == "Enemy") 
-		{
-			Debug.Log("되는건가");
-		}
+	
 		//If destroy on impact is false, start 
 		//coroutine with random destroy timer
 		if (!destroyOnImpact) 
