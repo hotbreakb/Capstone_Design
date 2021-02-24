@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1086664671600574}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1.09}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.025}
+  m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
   m_Children:
   - {fileID: 4931387532149536}
   - {fileID: 4397278263413714}
@@ -186,8 +186,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyAfter: 5
   destroyOnImpact: 1
-  minDestroyTime: 0.01
-  maxDestroyTime: 0.05
+  minDestroyTime: 10
+  maxDestroyTime: 10
   metalImpactPrefabs:
   - {fileID: 4458509032938956, guid: 79927c6543a058b4383885fac101fe2e, type: 3}
 --- !u!1 &1231345400216816
