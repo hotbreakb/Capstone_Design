@@ -51,19 +51,6 @@ public class HandgunScriptLPFP : MonoBehaviour {
 	//Check if reloading
 	private bool isReloading;
 
-	//Holstering weapon
-	private bool hasBeenHolstered = false;
-	//If weapon is holstered
-	private bool holstered;
-	//Check if running
-	private bool isRunning;
-	//Check if aiming
-	private bool isAiming;
-	//Check if walking
-	private bool isWalking;
-	//Check if inspecting weapon
-	private bool isInspecting;
-
 	//How much ammo is currently left
 	private int currentAmmo;
 	//Totalt amount of ammo
@@ -265,7 +252,7 @@ public class HandgunScriptLPFP : MonoBehaviour {
 	private void checkAction()
 	{
 		//Shooting 
-		if (Input.GetMouseButtonDown(0) && !outOfAmmo && !isReloading && !isInspecting && !isRunning)
+		if (Input.GetMouseButtonDown(0) && !outOfAmmo && !isReloading)
 		{
 			anim.Play("Aim Fire", 0, 0f);
 
@@ -306,7 +293,7 @@ public class HandgunScriptLPFP : MonoBehaviour {
 			makeBullet();
 		}
 		//Throw grenade when pressing G key
-		else if (Input.GetKeyDown(KeyCode.G) && !isInspecting)
+		else if (Input.GetKeyDown(KeyCode.G))
 		{
 			StartCoroutine(GrenadeSpawnDelay());
 			//Play grenade throw animation
@@ -347,10 +334,10 @@ public class HandgunScriptLPFP : MonoBehaviour {
 	private void movePlayer()
 	{
 		//Walking when pressing down WASD keys
-		if (Input.GetKey(KeyCode.W) && !isRunning ||
-			Input.GetKey(KeyCode.A) && !isRunning ||
-			Input.GetKey(KeyCode.S) && !isRunning ||
-			Input.GetKey(KeyCode.D) && !isRunning)
+		if (Input.GetKey(KeyCode.W) &&
+			Input.GetKey(KeyCode.A) &&
+			Input.GetKey(KeyCode.S) &&
+			Input.GetKey(KeyCode.D))
 		{
 			anim.SetBool("Walk", true);
 		}
@@ -484,16 +471,5 @@ public class HandgunScriptLPFP : MonoBehaviour {
 		{
 			isReloading = false;
 		}
-
-		//Check if inspecting weapon
-		if (anim.GetCurrentAnimatorStateInfo (0).IsName ("Inspect")) 
-		{
-			isInspecting = true;
-		} 
-		else 
-		{
-			isInspecting = false;
-		}
 	}
 }
-// ----- Low Poly FPS Pack Free Version -----
