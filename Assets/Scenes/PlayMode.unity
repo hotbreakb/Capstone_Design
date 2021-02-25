@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6984,6 +6984,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1713137923768018, guid: 1e16b4aae6cde6449958854237c37764, type: 3}
       propertyPath: m_Name
+      value: Chair
+      objectReference: {fileID: 0}
+    - target: {fileID: 1713137923768018, guid: 1e16b4aae6cde6449958854237c37764, type: 3}
+      propertyPath: m_TagString
       value: Chair
       objectReference: {fileID: 0}
     - target: {fileID: 4678627342382072, guid: 1e16b4aae6cde6449958854237c37764, type: 3}
