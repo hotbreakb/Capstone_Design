@@ -10,7 +10,8 @@ TagManager:
   - Metal
   - ExplosiveBarrel
   - Target
-  - Object
+  - Chair
+  - Tables
   layers:
   - Default
   - TransparentFX
