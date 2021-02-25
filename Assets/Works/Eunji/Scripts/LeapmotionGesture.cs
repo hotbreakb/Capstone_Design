@@ -84,7 +84,6 @@ public class LeapmotionGesture : MonoBehaviour
             //  1. Hands moving from side to side (swipe)
             else if (System.Math.Abs(handPalmPosition.x - prehandPalmPosition.x) > 10)
             {
-                Debug.Log(System.Math.Abs(handPalmPosition.x - prehandPalmPosition.x));
                 cube.GetComponent<MeshRenderer>().material.color = Color.green;
                 isGrenade = true;
             }
