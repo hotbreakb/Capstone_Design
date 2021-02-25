@@ -36,7 +36,7 @@ public class BulletScript : MonoBehaviour {
 	}
 
 	private void OnTriggerEnter(Collider other){    // 수혁 일단 지금 필요없음
-		Debug.Log("other.tag : " + other.tag);
+		//Debug.Log("other.tag : " + other.tag);
 		if(other.tag == "Chair"){
 			//Toggle "explode" on explosive barrel object
 			//collider.transform.gameObject.GetComponent<ExplosiveBarrelScript>().explode = true;
