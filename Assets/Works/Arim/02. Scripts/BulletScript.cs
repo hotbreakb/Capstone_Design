@@ -17,19 +17,36 @@ public class BulletScript : MonoBehaviour {
 	[Header("Impact Effect Prefabs")]
 	public Transform [] metalImpactPrefabs;
 
+	[Header("Throw Force")]
+	[Tooltip("Minimum throw force")]
+	public float minimumForce = 1500.0f;
+	[Tooltip("Maximum throw force")]
+	public float maximumForce = 2500.0f;
+	private float throwForce;
+
+	private void Awake()
+	{
+		throwForce = Random.Range
+			(minimumForce, maximumForce);
+	}
 	private void Start () 
 	{
 		//Start destroy timer
 		StartCoroutine (DestroyAfter ());
 	}
 
-	private void OnTriggerEnter(Collider collider){	// 수혁 일단 지금 필요없음 
-		if(collider.tag == "ExplosiveBarrel"){
+	private void OnTriggerEnter(Collider other){    // 수혁 일단 지금 필요없음
+		Debug.Log("other.tag : " + other.tag);
+		if(other.tag == "Chair"){
 			//Toggle "explode" on explosive barrel object
-			collider.transform.gameObject.GetComponent
-				<ExplosiveBarrelScript>().explode = true;
+			//collider.transform.gameObject.GetComponent<ExplosiveBarrelScript>().explode = true;
 			//Destroy bullet object
-			Destroy(gameObject);
+			other.attachedRigidbody.AddForce(other.transform.forward * throwForce);
+			Debug.Log("Chair collider");
+			//GameObject chair = other.gameObject;
+			//chair.GetComponent<Rigidbody>().AddForce(other.transform.forward * throwForce);
+			//collider.GetComponent<Rigidbody>().AddForce(collider.transform.forward * throwForce);
+			//Destroy(gameObject);
 		}
 	}
 

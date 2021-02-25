@@ -170,24 +170,6 @@ public class HandgunScriptLPFP : MonoBehaviour {
 		shootAudioSource.clip = SoundClips.shootSound;
 	}
 
-	private void LateUpdate () {
-		//Weapon sway
-		if (weaponSway == true) {
-			float movementX = -Input.GetAxis ("Mouse X") * swayAmount;
-			float movementY = -Input.GetAxis ("Mouse Y") * swayAmount;
-			//Clamp movement to min and max values
-			movementX = Mathf.Clamp 
-				(movementX, -maxSwayAmount, maxSwayAmount);
-			movementY = Mathf.Clamp 
-				(movementY, -maxSwayAmount, maxSwayAmount);
-			//Lerp local pos
-			Vector3 finalSwayPosition = new Vector3 
-				(movementX, movementY, 0);
-			transform.localPosition = Vector3.Lerp 
-				(transform.localPosition, finalSwayPosition + 
-				initialSwayPosition, Time.deltaTime * swaySmoothValue);
-		}
-	}
 	
 	private void Update () {
 
@@ -218,6 +200,27 @@ public class HandgunScriptLPFP : MonoBehaviour {
 		checkAction();
 		movePlayer();
 		checkAmmo();
+	}
+
+	private void LateUpdate()
+	{
+		//Weapon sway
+		if (weaponSway == true)
+		{
+			float movementX = -Input.GetAxis("Mouse X") * swayAmount;
+			float movementY = -Input.GetAxis("Mouse Y") * swayAmount;
+			//Clamp movement to min and max values
+			movementX = Mathf.Clamp
+				(movementX, -maxSwayAmount, maxSwayAmount);
+			movementY = Mathf.Clamp
+				(movementY, -maxSwayAmount, maxSwayAmount);
+			//Lerp local pos
+			Vector3 finalSwayPosition = new Vector3
+				(movementX, movementY, 0);
+			transform.localPosition = Vector3.Lerp
+				(transform.localPosition, finalSwayPosition +
+				initialSwayPosition, Time.deltaTime * swaySmoothValue);
+		}
 	}
 
 	private void checkAction()
@@ -262,8 +265,6 @@ public class HandgunScriptLPFP : MonoBehaviour {
 			StartCoroutine(MuzzleFlashLight());
 
 			makeBullet();
-
-			_isShoot = false;
 		}
 		//Throw grenade when pressing G key
 		else if (Input.GetKeyDown(KeyCode.G) || _isGrenade)
@@ -271,7 +272,6 @@ public class HandgunScriptLPFP : MonoBehaviour {
 			StartCoroutine(GrenadeSpawnDelay());
 			//Play grenade throw animation
 			anim.Play("GrenadeThrow", 0, 0.0f);
-			_isGrenade = false;
 		}
 		//Reload 
 		else if (Input.GetKeyDown(KeyCode.R) || _isLoading)
@@ -283,9 +283,10 @@ public class HandgunScriptLPFP : MonoBehaviour {
 			{
 				hasStartedSliderBack = true;
 				StartCoroutine(HandgunSliderBackDelay());
-			}
-			_isLoading = false;
+			}		
 		}
+
+		_isShoot = false; _isGrenade = false; _isLoading = false;
 	}
 
 	private void checkAmmo()
