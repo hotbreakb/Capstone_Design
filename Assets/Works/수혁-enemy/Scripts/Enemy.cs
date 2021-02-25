@@ -48,7 +48,7 @@ public class Enemy : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider coll){
-        if(coll.transform.tag == bulletTag){
+        if(coll.tag == bulletTag){
             this.SendMessage("UpdateAfterReceiveAttack");
             Debug.Log("제발...");
         }
