@@ -10,9 +10,9 @@ public class LeapmotionGesture : MonoBehaviour
     public GameObject cube;
 
     /* AutomaticGunScriptLPFP.cs에서 사용하기 위해 public으로 선언 */
-    public bool isShoot;   // 총쏘기
-    public bool isGrenade; // 수류탄
-    public bool isLoading; // 장전
+    public bool isShoot = false;   // 총쏘기
+    public bool isGrenade = false; // 수류탄
+    public bool isLoading = false; // 장전
 
     void Start()
     {
@@ -82,8 +82,9 @@ public class LeapmotionGesture : MonoBehaviour
             }
             // [Condition for changing weapons]
             //  1. Hands moving from side to side (swipe)
-            else if (System.Math.Abs(handPalmPosition.x - prehandPalmPosition.x) > 5)
+            else if (System.Math.Abs(handPalmPosition.x - prehandPalmPosition.x) > 10)
             {
+                Debug.Log(System.Math.Abs(handPalmPosition.x - prehandPalmPosition.x));
                 cube.GetComponent<MeshRenderer>().material.color = Color.green;
                 isGrenade = true;
             }
@@ -98,6 +99,8 @@ public class LeapmotionGesture : MonoBehaviour
             {
                 cube.GetComponent<MeshRenderer>().material.color = Color.black;
             }
+
+            // isShoot = false; isGrenade = false; isLoading = false;
 
             //Debug.Log("isShoot: " + isShoot + " isGrenade" + isGrenade + "isLoading" + isLoading);
             yield return new WaitForSeconds(5.0f);
