@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyDamagetest : MonoBehaviour
 {
-    private const string bulletTag = "BULLET";
+    private const string bulletTag = "Bullet";
     private GameObject bloodEffect;
     // Start is called before the first frame update
     void Start()
@@ -17,7 +17,7 @@ public class EnemyDamagetest : MonoBehaviour
     {
         
     }
-    private void OnCollisionEnter(Collision coll)
+    /*private void OnCollisionEnter(Collision coll)
     {
         if(coll.collider.tag == bulletTag)
         {
@@ -25,12 +25,22 @@ public class EnemyDamagetest : MonoBehaviour
             Destroy(coll.gameObject);
 
         }
-    }
-    private void ShowBloodEffect(Collision coll)
+    }*/
+
+    private void OnTriggerEnter(Collider coll)
     {
-        Vector3 pos = coll.contacts[0].point;
-        Vector3 _normal = coll.contacts[0].normal;
-        Quaternion rot = Quaternion.FromToRotation(-Vector3.forward, _normal);
+        if(coll.tag == bulletTag)
+        {
+            ShowBloodEffect(coll);
+            Destroy(coll.gameObject);
+        }
+    }
+    private void ShowBloodEffect(Collider coll)
+    {
+        //Vector3 pos = coll.contacts[0].point;
+        Vector3 pos = coll.GetComponent<Transform>().position;
+        //Vector3 _normal = coll.GetComponent<Transform>().normal;
+        Quaternion rot = Quaternion.FromToRotation(-Vector3.forward, pos);
 
         GameObject blood = Instantiate<GameObject>(bloodEffect, pos, rot);
         Destroy(blood, 1.0f);
