@@ -841,9 +841,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeSpeed: 0.02
   progressBar: {fileID: 127342089}
-  Spotlight: {fileID: 0}
-  Pointlight: {fileID: 0}
-  Fleshlight: {fileID: 0}
+  Spotlight: {fileID: 1854441326}
+  Pointlight: {fileID: 1270518474}
+  Fleshlight: {fileID: 543889826}
   delayTime: 10
   lightmanager: 0
 --- !u!1 &138992160
@@ -3009,6 +3009,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4678627342382072, guid: 1e16b4aae6cde6449958854237c37764,
     type: 3}
   m_PrefabInstance: {fileID: 543126983}
+  m_PrefabAsset: {fileID: 0}
+--- !u!108 &543889826 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 8011870786135470800, guid: d5064cc6c8eddf142ac571c4f0c2bdf3,
+    type: 3}
+  m_PrefabInstance: {fileID: 8011870787398574800}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &614548553
 GameObject:
@@ -6498,6 +6504,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1261217558}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1270518474 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7700100331726404424, guid: 77d6a2df2a66c3c40a226aa48b7ed2fe,
+    type: 3}
+  m_PrefabInstance: {fileID: 7700100330601703195}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1289397222
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8914,6 +8926,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4388393628175092, guid: ff1edffe5142a894a8a6ef7b4363a6c3,
     type: 3}
   m_PrefabInstance: {fileID: 1848127057}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1854441326 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 244854690547291179, guid: a6fbd120c22d20b4e8edff2e0c81a7fc,
+    type: 3}
+  m_PrefabInstance: {fileID: 244854690085564180}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1867064486
 GameObject:

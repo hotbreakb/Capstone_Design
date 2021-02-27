@@ -8,21 +8,23 @@ public class Timer : MonoBehaviour
     public float timeSpeed = 0.01f;
     private float totalTime = 0f;
     private float fills;
+    private float bt = 0.1f;
     public Image progressBar;
-    public Light Spotlight;
-    public Light Pointlight;
+    public GameObject Spotlight;
+    public GameObject Pointlight;
     public Light Fleshlight;
-    public float delayTime = 10.0f;
+    public float delayTime = 40.0f;
     public bool lightmanager = false;
 
     void Start()
     {
+        Fleshlight.enabled = false;
     }
 
 
     void Update()
     {
-        if (fills >= 0.5f && lightmanager == false) {
+        if (fills >= 0.4f && lightmanager == false) {
             LightManager();
         }
             
@@ -35,17 +37,40 @@ public class Timer : MonoBehaviour
     void LightManager()
     {
         lightmanager = true;
-        Fleshlight.enabled = true;
-        Spotlight.enabled = false;
-        Pointlight.enabled = false;
+        StartCoroutine(Blinking());
+        StartCoroutine(Blinktime());
+        bt += 0.2f;
+        StartCoroutine(Blinking());
+        StartCoroutine(Blinktime());
+        bt += 0.6f;
+        StartCoroutine(Blinking());
+        StartCoroutine(FleshLightOn());
         StartCoroutine(WaitForIt());
+    }
+    IEnumerator Blinking()
+    {
+        yield return new WaitForSeconds(bt);
+        Spotlight.SetActive(false);
+        Pointlight.SetActive(false);
+    }
+    IEnumerator FleshLightOn()
+    {
+        yield return new WaitForSeconds(1.2f);
+        Fleshlight.enabled = true;
+
     }
     IEnumerator WaitForIt()
     {
         yield return new WaitForSeconds(delayTime);
         Fleshlight.enabled = false ;
-        Spotlight.enabled = true;
-        Pointlight.enabled = true;
+        Spotlight.SetActive(true);
+        Pointlight.SetActive(true);
+    }
+    IEnumerator Blinktime()
+    {
+        yield return new WaitForSeconds(bt*2);
+        Spotlight.SetActive(true);
+        Pointlight.SetActive(true);
     }
 
 }
