@@ -29,7 +29,8 @@ public class Enemy : MonoBehaviour
 
 
 
-
+    bool flag = false;      // 기본 로직은 적이 정해진 장소로 이동하고 총을 쏘는 것이니 
+                            // 정해진 장소로 이동했을때만 총을 쏘도록 관리하는 bool
 
     private void Awake(){
        
@@ -40,7 +41,7 @@ public class Enemy : MonoBehaviour
     void Start(){
         for(int i=0; i<PosInfo.visited.Length; i++){
             if(!PosInfo.visited[i]){
-                transform.LookAt(PosInfo.shootingPos[i]);
+                //transform.LookAt(PosInfo.shootingPos[i]);
                 PosInfo.visited[i] = true;
                 animator.SetBool("isRun",true);
                 agent.SetDestination(PosInfo.shootingPos[i]);
@@ -56,18 +57,41 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
-        transform.LookAt(player.transform.position);
-        float random = Random.Range(0.0f, 0.4f);
+        if(!agent.pathPending){     // 목적지 도착하는지 여부
+            if(agent.remainingDistance<= agent.stoppingDistance){
+                animator.SetBool("isRun",false);
+                flag = true;
+            }
+        }
 
 
-        if (random > attackProbability)
-        {   
-            animator.SetBool("isShoot",true);
-            Shoot();
-        }
-        else{
-             animator.SetBool("isShoot",false);
-        }
+
+        // if(flag){           // 목적지 도착하고 놔서 총을 쏴야하니 flag로 관리
+        //     transform.LookAt(player.transform.position);
+        //     float random = Random.Range(0.0f, 0.4f);
+
+        //     if (random > attackProbability)
+        //     {   
+        //         animator.SetBool("isShoot",true);
+        //         Shoot();
+        //     }
+        //     else{
+        //         animator.SetBool("isShoot",false);
+        //     }
+        // }
+    
+
+            transform.LookAt(player.transform.position);
+            float random = Random.Range(0.0f, 0.4f);
+
+            if (random > attackProbability)
+            {   
+                animator.SetBool("isShoot",true);
+                Shoot();
+            }
+            else{
+                animator.SetBool("isShoot",false);
+            }
     }
 
     void Shoot()
