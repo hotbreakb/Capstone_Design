@@ -7384,6 +7384,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Laptop_white (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 160448, guid: fec0b93bb0c53f443bf3177dd2a03d4c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 450850, guid: fec0b93bb0c53f443bf3177dd2a03d4c, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -7899,7 +7903,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 145022, guid: 71d7c0c979d468641afeec46db205a00, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 460612, guid: 71d7c0c979d468641afeec46db205a00, type: 3}
       propertyPath: m_RootOrder
