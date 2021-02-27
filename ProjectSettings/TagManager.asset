@@ -12,6 +12,8 @@ TagManager:
   - Target
   - Chair
   - Tables
+  - pos1
+  - spawn
   layers:
   - Default
   - TransparentFX

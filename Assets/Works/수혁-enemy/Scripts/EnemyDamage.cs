@@ -18,10 +18,9 @@ public class EnemyDamage : MonoBehaviour
     
     public void UpdateAfterReceiveAttack(){
         curHp-=25;
-        Debug.Log("curHP" + curHp); 
-        // if(curHp ==0){
-        //     Destroy(gameObject);
-        // }
+        if(curHp ==0){
+            Destroy(gameObject);
+        }
         hpbar.rectTransform.localScale = new Vector3((float)curHp/(float)maxHp,1f,1f);
     }
 }
