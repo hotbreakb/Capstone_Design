@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
 
+    // 적 이동 관련된 것////////////////////////
+    private Transform _transform;
+    private Transform destinationTransform;    // 목적지 위치
+    private NavMeshAgent navMeshAgent;
 
-    
+    ///////////////////////////////////////////////
    
     Animator animator;
 
@@ -16,18 +20,43 @@ public class Enemy : MonoBehaviour
     [SerializeField] GameObject bulletSpawn;     // 총구( 총알의 발사 위치)
     [SerializeField] GameObject player;
 
+
     [Range(0.1f, 1.0f)]
     public float attackProbability = 0.5f; // 공격가능성
 
+
+    NavMeshAgent agent;
+
+
+
+
+
     private void Awake(){
+       
         animator = GetComponent<Animator>();
+        agent = GetComponent<NavMeshAgent>();
     }
+
+    void Start(){
+        for(int i=0; i<PosInfo.visited.Length; i++){
+            if(!PosInfo.visited[i]){
+                transform.LookAt(PosInfo.shootingPos[i]);
+                PosInfo.visited[i] = true;
+                animator.SetBool("isRun",true);
+                agent.SetDestination(PosInfo.shootingPos[i]);
+                break;
+              }
+        }
+    }
+
+
+
+
+
     // Update is called once per frame
     void Update()
-    {
+    {   
         transform.LookAt(player.transform.position);
-
-
         float random = Random.Range(0.0f, 0.4f);
 
 
