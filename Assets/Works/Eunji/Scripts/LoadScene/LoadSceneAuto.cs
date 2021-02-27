@@ -1,16 +1,18 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LoadSceneAuto : MonoBehaviour
 {
-    void Update()
+    public void LoadNextScene()
     {
-        Invoke("LoadNextScene", 2.0f);
-    }
-
-    void LoadNextScene()
-    {
+        StartCoroutine("timer");
         int index = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(index + 1);
+    }
+
+    IEnumerator timer()
+    {
+        yield return new WaitForSeconds(5.0f);
     }
 }
