@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,11 +7,11 @@ public class RemoveBullet : MonoBehaviour
     // 스파크 프리랩
     public GameObject sparkEffect;
 
-    private void OnTriggerEnter(Collider coll)
+    private void OnTriggerEnter(Collision coll)
     {
-        if (coll.tag == "Bullet")
+        if (coll.collider.tag == "Bullet")
         {
-            //ShowEffect(coll);
+            ShowEffect(coll);
             Destroy(coll.gameObject);
         }
     }
@@ -25,5 +25,6 @@ public class RemoveBullet : MonoBehaviour
 
         // 스파크 효과를 생성
         Instantiate(sparkEffect, contact.point, rot);
+     
     }
 }
