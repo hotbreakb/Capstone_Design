@@ -375,8 +375,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.5
-  m_Text: "\uC774 \uAC8C\uC784\uC740 \uD55C \uC190\uB9CC \uC0AC\uC6A9\uD560 \uC218
-    \uC788\uC73C\uB2C8 \uC720\uC758\uD574\uC8FC\uC2DC\uAE38 \uBC14\uB78D\uB2C8\uB2E4."
+  m_Text: "\uC774 \uAC8C\uC784\uC740 <color=red>\uD55C \uC190</color>\uB9CC \uC0AC\uC6A9\uD560
+    \uC218 \uC788\uC73C\uB2C8 \uC720\uC758\uD574\uC8FC\uC2DC\uAE38 \uBC14\uB78D\uB2C8\uB2E4."
 --- !u!222 &533380101
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -555,6 +555,7 @@ GameObject:
   - component: {fileID: 1033277972}
   - component: {fileID: 1033277971}
   - component: {fileID: 1033277970}
+  - component: {fileID: 1033277973}
   m_Layer: 5
   m_Name: DislikeBtn
   m_TagString: Untagged
@@ -579,8 +580,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 271, y: -150.76}
-  m_SizeDelta: {x: 138.71448, y: 34.730133}
+  m_AnchoredPosition: {x: 271.51, y: -150.25}
+  m_SizeDelta: {x: 137.69598, y: 35.74861}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1033277970
 MonoBehaviour:
@@ -662,6 +663,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1033277968}
   m_CullTransparentMesh: 0
+--- !u!95 &1033277973
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033277968}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a6639e3eb18195d47b8ff361056f440e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1243753967
 GameObject:
   m_ObjectHideFlags: 0
@@ -675,6 +695,7 @@ GameObject:
   - component: {fileID: 1243753970}
   - component: {fileID: 1243753969}
   - component: {fileID: 1243753972}
+  - component: {fileID: 1243753973}
   m_Layer: 5
   m_Name: LikeBtn
   m_TagString: Untagged
@@ -769,7 +790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -805,6 +826,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1363be8530dee2545bdfd1455bf5b364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1243753973
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243753967}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0367ba7423c1d4444aa105ecd27ca2c6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1445026976
 GameObject:
   m_ObjectHideFlags: 0
@@ -933,7 +973,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.9528302, g: 0.7734625, b: 0.39101997, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
