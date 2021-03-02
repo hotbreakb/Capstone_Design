@@ -266,6 +266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notConnected: {fileID: 1134718704}
+  circle: {fileID: 921110194}
 --- !u!1 &218502227
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,7 +371,7 @@ GameObject:
   - component: {fileID: 273794507}
   - component: {fileID: 273794506}
   m_Layer: 5
-  m_Name: Text
+  m_Name: NotConnected
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -689,6 +690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notConnected: {fileID: 0}
+  circle: {fileID: 0}
 --- !u!1 &921110190
 GameObject:
   m_ObjectHideFlags: 0
@@ -703,7 +705,7 @@ GameObject:
   - component: {fileID: 921110195}
   - component: {fileID: 921110194}
   m_Layer: 0
-  m_Name: circle
+  m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
