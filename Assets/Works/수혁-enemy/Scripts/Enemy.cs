@@ -24,40 +24,68 @@ public class Enemy : MonoBehaviour
     [Range(0.1f, 1.0f)]
     public float attackProbability = 0.5f; // 공격가능성
 
+    private readonly int hashOffset = Animator.StringToHash("offset");
+    private readonly int hashWalkSpeed = Animator.StringToHash("walkSpeed");
 
     NavMeshAgent agent;
 
+    // 이동 지점들을 저장히기 위한 List 타입 변수
+    public List<Transform> wayPoints;
+
+
+    private bool flag = false;
 
     private void Awake(){
        
         animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
+
+        animator.SetFloat(hashOffset, Random.Range(0.0f,1.0f));
+        animator.SetFloat(hashWalkSpeed, Random.Range(1.0f,1.2f));
     }
 
     void Start(){
-        for(int i=0; i<PosInfo.visited.Length; i++){
-            if(!PosInfo.visited[i]){
-                PosInfo.visited[i] = true;
-                animator.SetBool("isRun",true);
-                agent.SetDestination(PosInfo.shootingPos[i]);
-                break;
-              }
+
+        var group = GameObject.Find("SpawnPoint");
+
+        if(group  !=null){
+            group.GetComponentsInChildren<Transform>(wayPoints);
+            wayPoints.RemoveAt(0);      // 최상위 폴더 제거 
         }
+
+        MoveWayPoint();
+
+        // for(int i=0; i<PosInfo.visited.Length; i++){
+        //     if(!PosInfo.visited[i]){
+        //         PosInfo.visited[i] = true;
+        //         animator.SetBool("isRun",true);
+        //         agent.SetDestination(PosInfo.shootingPos[i]);
+        //         break;
+        //       }
+        // }
     }
 
 
 
-
+    private void MoveWayPoint(){ 
+        // 최단 거리 계산이 끝나지 않았으면  return 
+        if(agent.isPathStale) return;
+        animator.SetBool("isRun",true);
+        agent.destination = wayPoints[Random.Range(0,wayPoints.Count)].position;
+       
+    }
 
     // Update is called once per frame
     void Update()
-    {   
+    {       
         if(!agent.pathPending){     // 목적지 도착하는지 여부
             if(agent.remainingDistance<= agent.stoppingDistance){
                 animator.SetBool("isRun",false);
+                flag  = true;
             }
         }
 
+            if(flag){
             transform.LookAt(player.transform.position);
             float random = Random.Range(0.0f, 0.4f);
 
@@ -69,6 +97,8 @@ public class Enemy : MonoBehaviour
             else{
                 animator.SetBool("isShoot",false);
             }
+        }
+  
     }
 
     void Shoot()
