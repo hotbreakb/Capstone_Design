@@ -14,6 +14,7 @@ TagManager:
   - Tables
   - pos1
   - spawn
+  - TmpBullet
   layers:
   - Default
   - TransparentFX

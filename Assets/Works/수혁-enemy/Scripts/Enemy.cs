@@ -46,6 +46,10 @@ public class Enemy : MonoBehaviour
 
     void Start(){
 
+        
+
+
+
         var group = GameObject.Find("SpawnPoint");
 
         if(group  !=null){
@@ -54,6 +58,7 @@ public class Enemy : MonoBehaviour
         }
 
         MoveWayPoint();
+
 
         // for(int i=0; i<PosInfo.visited.Length; i++){
         //     if(!PosInfo.visited[i]){
@@ -110,6 +115,7 @@ public class Enemy : MonoBehaviour
     private void OnTriggerEnter(Collider coll){
         if(coll.tag == bulletTag){
             this.SendMessage("UpdateAfterReceiveAttack");
+            this.gameObject.GetComponent<Renderer>().material.color = Color.red;
         }
     }
     
