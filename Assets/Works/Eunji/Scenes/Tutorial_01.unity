@@ -132,8 +132,8 @@ GameObject:
   - component: {fileID: 132553668}
   - component: {fileID: 132553671}
   - component: {fileID: 132553670}
-  - component: {fileID: 132553669}
   - component: {fileID: 132553672}
+  - component: {fileID: 132553669}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
