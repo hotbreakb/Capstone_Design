@@ -6259,7 +6259,7 @@ MonoBehaviour:
   points: []
   enemy: {fileID: 7675805510432256503, guid: 59f8ce0afd37c3a4682a60fcb76e848d, type: 3}
   createTime: 2
-  maxEnemy: 10
+  maxEnemy: 2
   isGameOver: 0
 --- !u!4 &1208428193
 Transform:
