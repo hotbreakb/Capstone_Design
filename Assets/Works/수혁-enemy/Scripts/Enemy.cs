@@ -21,6 +21,11 @@ public class Enemy : MonoBehaviour
     [SerializeField] GameObject player;
 
 
+
+    private SkinnedMeshRenderer skin ;
+ 
+
+
     [Range(0.1f, 1.0f)]
     public float attackProbability = 0.5f; // 공격가능성
 
@@ -32,11 +37,10 @@ public class Enemy : MonoBehaviour
     // 이동 지점들을 저장히기 위한 List 타입 변수
     public List<Transform> wayPoints;
 
-
     private bool flag = false;
 
     private void Awake(){
-       
+        //skin = GameObject.Find("Soldier_mesh").GetComponent<SkinnedMeshRenderer>();
         animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
 
@@ -46,10 +50,6 @@ public class Enemy : MonoBehaviour
 
     void Start(){
 
-        
-
-
-
         var group = GameObject.Find("SpawnPoint");
 
         if(group  !=null){
@@ -58,16 +58,6 @@ public class Enemy : MonoBehaviour
         }
 
         MoveWayPoint();
-
-
-        // for(int i=0; i<PosInfo.visited.Length; i++){
-        //     if(!PosInfo.visited[i]){
-        //         PosInfo.visited[i] = true;
-        //         animator.SetBool("isRun",true);
-        //         agent.SetDestination(PosInfo.shootingPos[i]);
-        //         break;
-        //       }
-        // }
     }
 
 
@@ -108,14 +98,12 @@ public class Enemy : MonoBehaviour
 
     void Shoot()
     {
-
         Instantiate(bulletPrefab, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
     }
 
     private void OnTriggerEnter(Collider coll){
         if(coll.tag == bulletTag){
             this.SendMessage("UpdateAfterReceiveAttack");
-            this.gameObject.GetComponent<Renderer>().material.color = Color.red;
         }
     }
     
