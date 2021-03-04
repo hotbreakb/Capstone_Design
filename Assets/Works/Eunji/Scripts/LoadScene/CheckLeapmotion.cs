@@ -13,7 +13,7 @@ public class CheckLeapmotion : MonoBehaviour
     private void Start()
     {
         leapmotion = new Controller();
-        notConnected = GameObject.Find("NotConnected").GetComponent<Text>();
+        //notConnected = GameObject.Find("NotConnected").GetComponent<Text>();
         //circle = GameObject.Find("Circle").GetComponent<UnityEngine.UI.Image>();
 
         if (!leapmotion.IsConnected)
@@ -34,6 +34,7 @@ public class CheckLeapmotion : MonoBehaviour
         else
         {
             notConnected.gameObject.SetActive(true);
+            circle.gameObject.SetActive(false);
         }
     }
 
