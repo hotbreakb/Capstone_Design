@@ -20,7 +20,7 @@ public class PlayStart2 : MonoBehaviour
     {
         
     }
-    IEnumerator ChangeScale()
+    /*IEnumerator ChangeScale()
     {
         Space.transform.localScale = new Vector3(10, 10, 10);
         var group = GameObject.Find("PointLights");
@@ -29,5 +29,5 @@ public class PlayStart2 : MonoBehaviour
             group.GetComponentsInChildren<Light>(lights);
             lights.range
         }
-    }
+    }*/
 }

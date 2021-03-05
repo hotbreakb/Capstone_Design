@@ -1,0 +1,474 @@
+fileFormatVersion: 2
+guid: f3cd25b3bf53c4adaaf087d862e435e6
+ModelImporter:
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Rthumb
+  - first:
+      1: 100002
+    second: Rcalf
+  - first:
+      1: 100004
+    second: Lforearm
+  - first:
+      1: 100006
+    second: slade_mesh
+  - first:
+      1: 100008
+    second: Rforearm
+  - first:
+      1: 100010
+    second: Lthigh
+  - first:
+      1: 100012
+    second: Rweaponholder
+  - first:
+      1: 100014
+    second: stomach
+  - first:
+      1: 100016
+    second: pelvis
+  - first:
+      1: 100018
+    second: slade_meshLod2
+  - first:
+      1: 100020
+    second: head
+  - first:
+      1: 100022
+    second: neck
+  - first:
+      1: 100024
+    second: chest
+  - first:
+      1: 100026
+    second: Rfoot
+  - first:
+      1: 100028
+    second: Ribs
+  - first:
+      1: 100030
+    second: slade_meshLod1
+  - first:
+      1: 100032
+    second: Rthigh
+  - first:
+      1: 100034
+    second: Lfoot
+  - first:
+      1: 100036
+    second: Lthumb
+  - first:
+      1: 100038
+    second: Lwrist
+  - first:
+      1: 100040
+    second: Lfingers
+  - first:
+      1: 100042
+    second: Larm
+  - first:
+      1: 100044
+    second: Lshoulder
+  - first:
+      1: 100046
+    second: //RootNode
+  - first:
+      1: 100048
+    second: Rfingers
+  - first:
+      1: 100050
+    second: Rwrist
+  - first:
+      1: 100052
+    second: Rarm
+  - first:
+      1: 100054
+    second: Rshoulder
+  - first:
+      1: 100056
+    second: Lcalf
+  - first:
+      1: 100058
+    second: Hat_Target
+  - first:
+      4: 400000
+    second: Rthumb
+  - first:
+      4: 400002
+    second: Rcalf
+  - first:
+      4: 400004
+    second: Lforearm
+  - first:
+      4: 400006
+    second: slade_mesh
+  - first:
+      4: 400008
+    second: Rforearm
+  - first:
+      4: 400010
+    second: Lthigh
+  - first:
+      4: 400012
+    second: Rweaponholder
+  - first:
+      4: 400014
+    second: stomach
+  - first:
+      4: 400016
+    second: pelvis
+  - first:
+      4: 400018
+    second: slade_meshLod2
+  - first:
+      4: 400020
+    second: head
+  - first:
+      4: 400022
+    second: neck
+  - first:
+      4: 400024
+    second: chest
+  - first:
+      4: 400026
+    second: Rfoot
+  - first:
+      4: 400028
+    second: Ribs
+  - first:
+      4: 400030
+    second: slade_meshLod1
+  - first:
+      4: 400032
+    second: Rthigh
+  - first:
+      4: 400034
+    second: Lfoot
+  - first:
+      4: 400036
+    second: Lthumb
+  - first:
+      4: 400038
+    second: Lwrist
+  - first:
+      4: 400040
+    second: Lfingers
+  - first:
+      4: 400042
+    second: Larm
+  - first:
+      4: 400044
+    second: Lshoulder
+  - first:
+      4: 400046
+    second: //RootNode
+  - first:
+      4: 400048
+    second: Rfingers
+  - first:
+      4: 400050
+    second: Rwrist
+  - first:
+      4: 400052
+    second: Rarm
+  - first:
+      4: 400054
+    second: Rshoulder
+  - first:
+      4: 400056
+    second: Lcalf
+  - first:
+      4: 400058
+    second: Hat_Target
+  - first:
+      43: 4300000
+    second: slade_mesh
+  - first:
+      43: 4300002
+    second: slade_meshLod1
+  - first:
+      43: 4300004
+    second: slade_meshLod2
+  - first:
+      43: 4300006
+    second: assasin_mesh
+  - first:
+      43: 4300008
+    second: sherrif_mesh
+  - first:
+      43: 4300010
+    second: dancer_mesh
+  - first:
+      43: 4300012
+    second: beast_mesh
+  - first:
+      43: 4300014
+    second: widow_mesh
+  - first:
+      43: 4300016
+    second: toltech_mesh
+  - first:
+      43: 4300018
+    second: sara_mesh
+  - first:
+      43: 4300020
+    second: mutant_mesh
+  - first:
+      43: 4300022
+    second: toltech_meshLod1
+  - first:
+      43: 4300024
+    second: toltech_meshLod2
+  - first:
+      43: 4300026
+    second: sherrif_meshLod1
+  - first:
+      43: 4300028
+    second: sherrif_meshLod2
+  - first:
+      43: 4300030
+    second: assasin_meshLod1
+  - first:
+      43: 4300032
+    second: assasin_meshLod2
+  - first:
+      43: 4300034
+    second: beast_meshLod1
+  - first:
+      43: 4300036
+    second: beast_meshLod2
+  - first:
+      43: 4300038
+    second: mutant_meshLod1
+  - first:
+      43: 4300040
+    second: mutant_meshLod2
+  - first:
+      43: 4300042
+    second: sara_meshLod1
+  - first:
+      43: 4300044
+    second: sara_meshLod2
+  - first:
+      43: 4300046
+    second: widow_meshLod1
+  - first:
+      43: 4300048
+    second: widow_meshLod2
+  - first:
+      43: 4300050
+    second: dancer_meshLod1
+  - first:
+      43: 4300052
+    second: dancer_meshLod2
+  - first:
+      74: 7400002
+    second: Take 001
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      111: 11100000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: slade_mesh
+  - first:
+      137: 13700002
+    second: slade_meshLod2
+  - first:
+      137: 13700004
+    second: slade_meshLod1
+  - first:
+      41386430: 2186277476908879412
+    second: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 01 - Defaultd
+    second: {fileID: 2100000, guid: 1b7c6da276d564d30b27a2b8d1b9b5dd, type: 2}
+  materials:
+    materialImportMode: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths:
+    - pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 270
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: pelvis
+        weight: 1
+      - path: pelvis/Lthigh
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf
+        weight: 1
+      - path: pelvis/Lthigh/Lcalf/Lfoot
+        weight: 1
+      - path: pelvis/Rthigh
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf
+        weight: 1
+      - path: pelvis/Rthigh/Rcalf/Rfoot
+        weight: 1
+      - path: pelvis/stomach
+        weight: 1
+      - path: pelvis/stomach/Ribs
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Lshoulder/Larm/Lforearm/Lwrist/Lthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/neck/head/Hat_Target
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rfingers
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rthumb
+        weight: 1
+      - path: pelvis/stomach/Ribs/chest/Rshoulder/Rarm/Rforearm/Rwrist/Rweaponholder
+        weight: 1
+      - path: slade_mesh
+        weight: 1
+      - path: slade_meshLod1
+        weight: 1
+      - path: slade_meshLod2
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    fileIdsGeneration: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 0
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 0.01
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
