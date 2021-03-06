@@ -69,6 +69,10 @@ public class HandgunScriptLPFP : MonoBehaviour {
 	[Tooltip("The bullet model inside the mag, not used for all weapons.")]
 	public SkinnedMeshRenderer bulletInMagRenderer;
 
+	[Header("BulletHole Settings")]
+	public Sprite[] woodDecals;
+	public GameObject bulletHolePrefab;
+
 	[Header("Grenade Settings")]
 	public float grenadeSpawnDelay = 0.35f;
 
@@ -336,6 +340,31 @@ public class HandgunScriptLPFP : MonoBehaviour {
 		Instantiate(Prefabs.casingPrefab,
 			Spawnpoints.casingSpawnPoint.transform.position,
 			Spawnpoints.casingSpawnPoint.transform.rotation);
+
+
+		Vector3 impactPoint = CastRay();
+		if (impactPoint != Vector3.zero) bullet.transform.LookAt(impactPoint);
+	}
+
+	private Vector3 CastRay()
+	{
+		int x = Screen.width / 2;
+		int y = Screen.height / 2;
+
+		RaycastHit hit;
+		int layerMask = (-1) - (1 << LayerMask.NameToLayer("Bullet"));  // Everything에서 Bullet 레이어만 제외하고 충돌 체크함
+
+		if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, layerMask))
+		{
+			GameObject bulletHole = Instantiate(bulletHolePrefab, hit.point + hit.normal * 0.0001f, Quaternion.identity);
+			bulletHole.transform.LookAt(hit.point + hit.normal);
+			bulletHole.GetComponent<SpriteRenderer>().sprite = woodDecals[UnityEngine.Random.Range(0, woodDecals.Length)];
+
+			return hit.point;
+		}
+
+		return Vector3.zero;
+
 	}
 
 	private void movePlayer()
