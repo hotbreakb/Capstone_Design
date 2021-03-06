@@ -70,6 +70,7 @@ public class HandgunScriptLPFP : MonoBehaviour {
 	public SkinnedMeshRenderer bulletInMagRenderer;
 
 	[Header("BulletHole Settings")]
+	public Sprite[] glassDecals;
 	public Sprite[] woodDecals;
 	public GameObject bulletHolePrefab;
 
@@ -358,7 +359,7 @@ public class HandgunScriptLPFP : MonoBehaviour {
 		{
 			GameObject bulletHole = Instantiate(bulletHolePrefab, hit.point + hit.normal * 0.0001f, Quaternion.identity);
 			bulletHole.transform.LookAt(hit.point + hit.normal);
-			bulletHole.GetComponent<SpriteRenderer>().sprite = woodDecals[UnityEngine.Random.Range(0, woodDecals.Length)];
+			bulletHole.GetComponent<SpriteRenderer>().sprite = glassDecals[UnityEngine.Random.Range(0, woodDecals.Length)];
 
 			return hit.point;
 		}

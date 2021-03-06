@@ -9422,9 +9422,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114919995911110234, guid: c24fed9fa91f7634fbc8e5e12405008e,
         type: 3}
+      propertyPath: glassDecal
+      value: 
+      objectReference: {fileID: 21300000, guid: c6849db5284508743b853b733e119929,
+        type: 3}
+    - target: {fileID: 114919995911110234, guid: c24fed9fa91f7634fbc8e5e12405008e,
+        type: 3}
       propertyPath: bulletForce
       value: 70
       objectReference: {fileID: 0}
+    - target: {fileID: 114919995911110234, guid: c24fed9fa91f7634fbc8e5e12405008e,
+        type: 3}
+      propertyPath: windowDecal
+      value: 
+      objectReference: {fileID: 21300000, guid: c6849db5284508743b853b733e119929,
+        type: 3}
     - target: {fileID: 114919995911110234, guid: c24fed9fa91f7634fbc8e5e12405008e,
         type: 3}
       propertyPath: bulletHolePrefab
@@ -9444,6 +9456,11 @@ PrefabInstance:
     - target: {fileID: 114919995911110234, guid: c24fed9fa91f7634fbc8e5e12405008e,
         type: 3}
       propertyPath: woodDecals.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114919995911110234, guid: c24fed9fa91f7634fbc8e5e12405008e,
+        type: 3}
+      propertyPath: glassDecals.Array.size
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114919995911110234, guid: c24fed9fa91f7634fbc8e5e12405008e,
@@ -9475,6 +9492,36 @@ PrefabInstance:
       propertyPath: woodDecals.Array.data[4]
       value: 
       objectReference: {fileID: 21300000, guid: 8485dedda0700f04cb11163eb0b3860e,
+        type: 3}
+    - target: {fileID: 114919995911110234, guid: c24fed9fa91f7634fbc8e5e12405008e,
+        type: 3}
+      propertyPath: glassDecals.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: b4cb3b34f4f736f4dbe176bfb2750723,
+        type: 3}
+    - target: {fileID: 114919995911110234, guid: c24fed9fa91f7634fbc8e5e12405008e,
+        type: 3}
+      propertyPath: glassDecals.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 7aaf59a674472c1458dbdea35b82a6cc,
+        type: 3}
+    - target: {fileID: 114919995911110234, guid: c24fed9fa91f7634fbc8e5e12405008e,
+        type: 3}
+      propertyPath: glassDecals.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: c6849db5284508743b853b733e119929,
+        type: 3}
+    - target: {fileID: 114919995911110234, guid: c24fed9fa91f7634fbc8e5e12405008e,
+        type: 3}
+      propertyPath: glassDecals.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9aeaf66dae9784e49acdca6cd57fb321,
+        type: 3}
+    - target: {fileID: 114919995911110234, guid: c24fed9fa91f7634fbc8e5e12405008e,
+        type: 3}
+      propertyPath: glassDecals.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 2014504607e31f7449e48c4fe2f821ee,
         type: 3}
     - target: {fileID: 136351756376160448, guid: c24fed9fa91f7634fbc8e5e12405008e,
         type: 3}
@@ -12141,17 +12188,17 @@ PrefabInstance:
     - target: {fileID: 1821259977873324492, guid: 60d4e2522be519e4682d72bcf90762ab,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.1
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 1821259977873324492, guid: 60d4e2522be519e4682d72bcf90762ab,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.1
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 1821259977873324492, guid: 60d4e2522be519e4682d72bcf90762ab,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.1
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 1821259977873324492, guid: 60d4e2522be519e4682d72bcf90762ab,
         type: 3}
