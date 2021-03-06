@@ -5,16 +5,14 @@ using UnityEngine;
 public class PlayStart2 : MonoBehaviour
 {
     public float changeTime = 20.0f;
-    public GameObject Space;
+    public GameObject Player;
+    public GameObject TmpPlayer;
+    public GameObject Enemy;
+    public GameObject bullet;
+    public GameObject bulletCase;
     public GameObject desk;
     public GameObject labtop;
-    //public Transform Tspace;
-    public Light light1;
-    public Light light2;
-    public Light light3;
-    public Light light4;
-    public Light light5;
-    public Light light6;
+    public GameObject grenade;
 
 
 
@@ -30,18 +28,16 @@ public class PlayStart2 : MonoBehaviour
     }
     void Changes()
     {
-        Space.transform.localScale = new Vector3(10, 10, 10);
-        ChangeLight(light1);
-        ChangeLight(light2);
-        ChangeLight(light3);
-        ChangeLight(light4);
-        ChangeLight(light5);
-        ChangeLight(light6);
+        Player.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+        Enemy.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+        TmpPlayer.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+        bullet.transform.localScale = new Vector3(0.004f, 0.004f, 0.004f);
+        bulletCase.transform.localScale = new Vector3(0.11f, 0.11f, 0.11f);
+        //desk.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+        //labtop.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+        grenade.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+
 
     }
-    void ChangeLight(Light light)
-    {
-        light.range = 90.0f;
-        light.intensity = 7.0f;
-    }
+
 }
