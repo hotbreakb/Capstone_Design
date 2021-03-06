@@ -353,18 +353,16 @@ public class HandgunScriptLPFP : MonoBehaviour
 
     private Vector3 CastRay()
     {
-        int x = Screen.width / 2;
-        int y = Screen.height / 2;
-
         RaycastHit hit;
         int exceptBulletlayerMask = (-1) - (1 << LayerMask.NameToLayer("Bullet"));  // Everything에서 Bullet 레이어만 제외하고 충돌 체크함
 
-        //int wallslayerMask = 1 << LayerMask.NameToLayer("Walls");
-
+        // Check forward from Player's position except Bullet
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, exceptBulletlayerMask))
         {
 
             GameObject bulletHole = Instantiate(bulletHolePrefab, hit.point + hit.normal * 0.0001f, Quaternion.identity);
+
+            // BulletHole appear in the direction of the object.
             bulletHole.transform.LookAt(hit.point + hit.normal);
 
             if (hit.transform.tag == "Tables")
@@ -374,7 +372,7 @@ public class HandgunScriptLPFP : MonoBehaviour
             }
             else if(hit.transform.tag == "Walls")
             {
-                bulletHole.GetComponent<SpriteRenderer>().sprite = glassDecals[UnityEngine.Random.Range(0, woodDecals.Length)];
+                bulletHole.GetComponent<SpriteRenderer>().sprite = glassDecals[UnityEngine.Random.Range(0, glassDecals.Length)];
 
             }
 
