@@ -15,65 +15,12 @@ public class MoveAgent : MonoBehaviour
     //NavMeshAgent 컴포넌트를 저장할 변수
     private NavMeshAgent agent;
 
-
-    private readonly float patrollSpeed = 1.5f;
-    private readonly float traceSpeed = 4.0f;
-
-    // 순찰 여부를 판단하는 변수
-    private bool _patrolling;
-
-    public bool patrolling{
-        get{return _patrolling; }
-        set{
-            _patrolling = value;
-
-            if(_patrolling){
-                agent.speed = patrollSpeed;
-                MoveWayPoint();
-            }
-        }
-    }
-
-    // 추적 대상의 위치를 저장하는 변수
-
-    private Vector3 _traceTarget;
-
-    public Vector3 traceTarget{
-        get {return _traceTarget;}
-        set{
-            _traceTarget = value;
-            agent.speed = traceSpeed;
-            TraceTarget(_traceTarget);
-        }
-    }
-
-
-    public float speed{
-        get{return agent.velocity.magnitude;}
-        
-    }
-
-
-    void TraceTarget(Vector3 pos){
-        if(agent.isPathStale) return;
-
-        agent.destination = pos;
-        agent.isStopped = false;
-
-
-    }
-
-
-
-
-
-
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         agent.autoBraking = false;
-        agent.speed = patrollSpeed;
+
         var group = GameObject.Find("WayPointGroup");
         if(group != null)
         {
@@ -82,7 +29,6 @@ public class MoveAgent : MonoBehaviour
         }
         MoveWayPoint();
     }
-
 
     private void MoveWayPoint()
     {
@@ -93,30 +39,9 @@ public class MoveAgent : MonoBehaviour
         agent.destination = wayPoints[nextIdx].position;
         agent.isStopped = false;
     }
-
-
-    public void Stop(){
-        agent.isStopped = true;
-        // 바로 정지하기 위해 속도를 0으로 설정
-        agent.velocity = Vector3.zero;
-        _patrolling = false;
-
-    }
-
-
-
-
-
-
-
-
     // Update is called once per frame
     void Update()
-    {   
-        if(!_patrolling) return;
-
-
-
+    {
         //NavMeshAgent가 이동하고 있고 목적지에 도착했는지 여부를 계산
         if(agent.velocity.sqrMagnitude >= 0.2f * 0.2f && agent.remainingDistance <= 0.5f)
         {
