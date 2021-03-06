@@ -7,12 +7,30 @@ public class RemoveBullet : MonoBehaviour
     // 스파크 프리랩
     public GameObject sparkEffect;
 
+<<<<<<< Updated upstream
     private void OnTriggerEnter(Collider coll)
     {
         if (coll.tag == "Bullet")
         {
             //ShowEffect(coll);
             Destroy(coll.gameObject);
+=======
+    //private void OnTriggerEnter(Collision coll)
+    //{
+    //    if (coll.collider.tag == "Bullet")
+    //    {
+    //        ShowEffect(coll);
+    //        Destroy(coll.gameObject);
+    //    }
+    //}
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Bullet")
+        {
+            //ShowEffect(other);
+            Destroy(other.gameObject);
+>>>>>>> Stashed changes
         }
     }
 
