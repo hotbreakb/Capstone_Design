@@ -5,10 +5,16 @@ using UnityEngine;
 public class PlayStart2 : MonoBehaviour
 {
     public float changeTime = 20.0f;
-    public GameObject Space;
-    //public Transform Tspace;
-    public List<Light> lights;
-    
+    public GameObject Player;
+    public GameObject TmpPlayer;
+    public GameObject Enemy;
+    public GameObject bullet;
+    public GameObject bulletCase;
+    public GameObject desk;
+    public GameObject labtop;
+    public GameObject grenade;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -18,16 +24,20 @@ public class PlayStart2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Changes();
     }
-    /*IEnumerator ChangeScale()
+    void Changes()
     {
-        Space.transform.localScale = new Vector3(10, 10, 10);
-        var group = GameObject.Find("PointLights");
-        if (group != null)
-        {
-            group.GetComponentsInChildren<Light>(lights);
-            lights.range
-        }
-    }*/
+        Player.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+        Enemy.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+        TmpPlayer.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+        bullet.transform.localScale = new Vector3(0.004f, 0.004f, 0.004f);
+        bulletCase.transform.localScale = new Vector3(0.11f, 0.11f, 0.11f);
+        //desk.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+        //labtop.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+        grenade.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+
+
+    }
+
 }
