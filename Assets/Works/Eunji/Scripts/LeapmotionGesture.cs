@@ -75,7 +75,7 @@ public class LeapmotionGesture : MonoBehaviour
             //  1. Two straight fingers
             //  2. Hands moving from top to bottom
 
-            //Debug.Log(System.Math.Abs(handPalmPosition.x - prehandPalmPosition.x));
+            Debug.Log(System.Math.Abs(handPalmPosition.x - prehandPalmPosition.x));
 
             if (_extendedFingers == 2 && System.Math.Abs(handPalmPosition.y - prehandPalmPosition.y) > 5)
             {
