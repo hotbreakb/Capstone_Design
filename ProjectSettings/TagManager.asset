@@ -15,6 +15,7 @@ TagManager:
   - pos1
   - spawn
   - TmpBullet
+  - Walls
   layers:
   - Default
   - TransparentFX
