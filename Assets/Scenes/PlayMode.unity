@@ -2317,6 +2317,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 867177621}
     m_Modifications:
     - target: {fileID: 1888605489360206, guid: df387b72d9c75f24d88b9643672d3289, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1888605489360206, guid: df387b72d9c75f24d88b9643672d3289, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
+    - target: {fileID: 1888605489360206, guid: df387b72d9c75f24d88b9643672d3289, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
