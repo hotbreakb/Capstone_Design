@@ -8,11 +8,28 @@ public class RemoveBullet : MonoBehaviour
     public GameObject sparkEffect;
 
     private void OnTriggerEnter(Collision coll)
+
     {
         if (coll.collider.tag == "Bullet")
         {
             ShowEffect(coll);
             Destroy(coll.gameObject);
+            
+    //private void OnTriggerEnter(Collision coll)
+    //{
+    //    if (coll.collider.tag == "Bullet")
+    //    {
+    //        ShowEffect(coll);
+    //        Destroy(coll.gameObject);
+    //    }
+    //}
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Bullet")
+        {
+            //ShowEffect(other);
+            Destroy(other.gameObject);
         }
     }
 
