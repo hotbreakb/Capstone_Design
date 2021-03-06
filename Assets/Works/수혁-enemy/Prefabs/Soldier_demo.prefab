@@ -1137,7 +1137,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4832701385927097023}
   - component: {fileID: 4832701385917994339}
-  - component: {fileID: 2886494719948290045}
   m_Layer: 8
   m_Name: Soldier_demo
   m_TagString: Untagged
@@ -1180,19 +1179,3 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2886494719948290045
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4832701385927517919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af2700eb993105a4890ae42c2b24c886, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 8647728248663983466, guid: 196e099b2c3b0cf4e9c71eb822d74d52,
-    type: 3}
-  bulletSpawn: {fileID: 3082611029264345272}
-  player: {fileID: 6859436812543648438, guid: 64b56a8f4d0b9b049ba23f42b4479403, type: 3}

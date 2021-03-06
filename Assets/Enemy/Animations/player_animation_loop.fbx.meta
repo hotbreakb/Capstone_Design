@@ -1,234 +1,646 @@
 fileFormatVersion: 2
 guid: cd02ae58914a6794e801b533db3e70bf
 ModelImporter:
-  serializedVersion: 19
-  fileIDToRecycleName:
-    100000: Rthigh
-    100002: Lfoot
-    100004: Lcalf
-    100006: Lthigh
-    100010: Rweaponholder
-    100012: Rthumb
-    100014: Rfingers
-    100016: Rwrist
-    100018: Rforearm
-    100020: Rarm
-    100022: Rshoulder
-    100024: Lfingers
-    100026: Lthumb
-    100028: Lwrist
-    100030: Lforearm
-    100032: Larm
-    100034: Lshoulder
-    100036: head
-    100038: neck
-    100040: chest
-    100042: Ribs
-    100044: stomach
-    100046: pelvis
-    100050: Rcalf
-    100052: Rfoot
-    100054: //RootNode
-    100056: CameraTargetPos
-    100058: CameraTargetDir
-    400000: Rthigh
-    400002: Lfoot
-    400004: Lcalf
-    400006: Lthigh
-    400010: Rweaponholder
-    400012: Rthumb
-    400014: Rfingers
-    400016: Rwrist
-    400018: Rforearm
-    400020: Rarm
-    400022: Rshoulder
-    400024: Lfingers
-    400026: Lthumb
-    400028: Lwrist
-    400030: Lforearm
-    400032: Larm
-    400034: Lshoulder
-    400036: head
-    400038: neck
-    400040: chest
-    400042: Ribs
-    400044: stomach
-    400046: pelvis
-    400050: Rcalf
-    400052: Rfoot
-    400054: //RootNode
-    400056: CameraTargetPos
-    400058: CameraTargetDir
-    4300000: player_mesh
-    4300002: assrifleMesh002
-    4300004: Cube
-    4300006: w_snip01mesh
-    7400000: coverIdle
-    7400002: coverWalkL
-    7400004: coverIdleL
-    7400006: coverStrafeL
-    7400008: coverIdleCrouch
-    7400010: coverStrafeCrouchL
-    7400012: coverIdleCrouchL
-    7400014: coverStrafeCrouchR
-    7400016: coverWalkR
-    7400018: coverStrafeR
-    7400020: coverIdleR
-    7400022: coverIdleCrouchR
-    7400024: idle
-    7400026: runB
-    7400028: runF
-    7400030: runL
-    7400032: runR
-    7400034: walkB
-    7400036: walkF
-    7400038: walkL
-    7400040: walkR
-    7400042: Cover_shotR
-    7400044: Cover_blindshotR
-    7400046: coverAimCrouchL
-    7400048: coverAimIdleCrouch
-    7400050: coverAimIdleCrouchL
-    7400052: coverAimIdleCrouchR
-    7400054: coverAimIdleL
-    7400056: coverAimIdleR
-    7400058: coverIdleAimL
-    7400060: coverIdleAimR
-    7400062: coverAimLeftR
-    7400064: coverAimRightR
-    7400066: coverAimTopR
-    7400068: coverAimDownR
-    7400070: CoverStandIdleCenter
-    7400072: CoverStandWalkRight
-    7400074: CoverStandIdleRight
-    7400076: CoverStandStrafeRight
-    7400078: CoverCrouchIdleCenter
-    7400080: CoverCrouchStrafeRight
-    7400082: CoverCrouchIdleRight
-    7400084: CoverCrouchStrafeLeft
-    7400086: CoverStandWalkLeft
-    7400088: CoverStandStrafeLeft
-    7400090: CoverStandIdleLeft
-    7400092: CoverCrouchIdleLeft
-    7400094: Idle
-    7400096: RunB
-    7400098: RunF
-    7400100: RunL
-    7400102: RunR
-    7400104: WalkB
-    7400106: WalkF
-    7400108: WalkL
-    7400110: WalkR
-    7400112: CoverStandAimRightMaxL
-    7400114: CoverStandAimRightMaxR
-    7400116: CoverStandAimRightMaxU
-    7400118: CoverStandAimRightMaxD
-    7400120: CoverStandAimLeftMaxD
-    7400122: CoverStandAimLeftMaxU
-    7400124: CoveStandrAimLeftMaxL
-    7400126: CoverStandAimLeftMaxR
-    7400128: CoverCrouchAimRightMaxD
-    7400130: CoverCrouchAimRightMaxU
-    7400132: CoverCrouchAimRightMaxR
-    7400134: CoverCrouchAimRightMaxL
-    7400136: CoverCrouchAimLeftMaxD
-    7400138: CoverCrouchAimLeftMaxU
-    7400140: CoverCrouchAimLeftMaxL
-    7400142: CoveCrouchAimLeftMaxR
-    7400144: CoverCrouchAimCenterMaxU
-    7400146: CoverCrouchAimCenterMaxD
-    7400148: CoverCrouchAimCenterMaxL
-    7400150: CoverCrouchAimCenterMaxR
-    7400152: CoverStandAimLeftMaxL
-    7400154: CoverCrouchAimLeftMaxR
-    7400156: TurnR
-    7400158: TurnL
-    7400160: AimMaxD
-    7400162: AimMaxU
-    7400164: AimU
-    7400166: AimD
-    7400168: CoverStandEnter
-    7400170: CoverStandIdleRight 1
-    7400172: CoverCrouchIdleCenter 1
-    7400174: IdleDialog
-    7400176: WalkDialogF
-    7400178: WalkDialogB
-    7400180: WalkDialogL
-    7400182: WalkDialogR
-    7400184: CameraShakeLoop
-    7400186: SprintF
-    7400188: Fall
-    7400190: MenuIdle
-    7400192: AimU_bck
-    7400194: AimD_bck
-    7400196: Idle_camera
-    7400198: run_camera
-    7400200: RunF 1
-    7400202: Run_F
-    7400204: RunF_new
-    7400206: RunB 1
-    7400208: RunL 1
-    7400210: RunR 1
-    7400212: CoverStandIdleCenter 1
-    7400214: CoverStandIdleLeft 1
-    7400216: CoverCrouchStrafeRight 1
-    7400218: CoverCrouchStrafeLeft 1
-    7400220: CoverStandStrafeRight 1
-    7400222: CoverStandStrafeLeft 1
-    7400224: CoverStandStrafeRight 2
-    7400226: CoverStandStrafeLeft 2
-    7400228: CoverStandStrafeRight 3
-    7400230: CoverStandStrafeLeft 3
-    7400232: CoverStandStrafeRight 4
-    7400234: CoverStandStrafeLeft 4
-    7400236: CoverStandStrafeRight 5
-    7400238: CoverStandStrafeLeft 5
-    7400240: CoverStandStrafeRight 6
-    7400242: CoverStandStrafeLeft 6
-    7400244: Take 002
-    7400246: CoverCrouchStrafeLeft 2
-    7400248: CoverCrouchStrafeRight 2
-    7400250: CoverCrouchStrafeLeft 3
-    7400252: CoverCrouchStrafeRight 3
-    7400254: A
-    7400256: SprintF 1
-    7400258: SprintF 2
-    7400260: Idle 1
-    7400262: IdleFireRocket
-    7400264: RunFireRocket
-    7400266: CoverStandFireLeftRocket
-    7400268: CoverStandFireRightRocket
-    7400270: CoverCrouchFireLeftRocket
-    7400272: CoverCrouchFireCenterRocket
-    7400274: CoverCrouchFireRightRocket
-    7400276: CoverCrouchIdleLeft 1
-    7400278: CoverCrouchIdleRight 1
-    9500000: //RootNode
-    11100000: //RootNode
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Rthigh
+  - first:
+      1: 100002
+    second: Lfoot
+  - first:
+      1: 100004
+    second: Lcalf
+  - first:
+      1: 100006
+    second: Lthigh
+  - first:
+      1: 100010
+    second: Rweaponholder
+  - first:
+      1: 100012
+    second: Rthumb
+  - first:
+      1: 100014
+    second: Rfingers
+  - first:
+      1: 100016
+    second: Rwrist
+  - first:
+      1: 100018
+    second: Rforearm
+  - first:
+      1: 100020
+    second: Rarm
+  - first:
+      1: 100022
+    second: Rshoulder
+  - first:
+      1: 100024
+    second: Lfingers
+  - first:
+      1: 100026
+    second: Lthumb
+  - first:
+      1: 100028
+    second: Lwrist
+  - first:
+      1: 100030
+    second: Lforearm
+  - first:
+      1: 100032
+    second: Larm
+  - first:
+      1: 100034
+    second: Lshoulder
+  - first:
+      1: 100036
+    second: head
+  - first:
+      1: 100038
+    second: neck
+  - first:
+      1: 100040
+    second: chest
+  - first:
+      1: 100042
+    second: Ribs
+  - first:
+      1: 100044
+    second: stomach
+  - first:
+      1: 100046
+    second: pelvis
+  - first:
+      1: 100050
+    second: Rcalf
+  - first:
+      1: 100052
+    second: Rfoot
+  - first:
+      1: 100054
+    second: //RootNode
+  - first:
+      1: 100056
+    second: CameraTargetPos
+  - first:
+      1: 100058
+    second: CameraTargetDir
+  - first:
+      4: 400000
+    second: Rthigh
+  - first:
+      4: 400002
+    second: Lfoot
+  - first:
+      4: 400004
+    second: Lcalf
+  - first:
+      4: 400006
+    second: Lthigh
+  - first:
+      4: 400010
+    second: Rweaponholder
+  - first:
+      4: 400012
+    second: Rthumb
+  - first:
+      4: 400014
+    second: Rfingers
+  - first:
+      4: 400016
+    second: Rwrist
+  - first:
+      4: 400018
+    second: Rforearm
+  - first:
+      4: 400020
+    second: Rarm
+  - first:
+      4: 400022
+    second: Rshoulder
+  - first:
+      4: 400024
+    second: Lfingers
+  - first:
+      4: 400026
+    second: Lthumb
+  - first:
+      4: 400028
+    second: Lwrist
+  - first:
+      4: 400030
+    second: Lforearm
+  - first:
+      4: 400032
+    second: Larm
+  - first:
+      4: 400034
+    second: Lshoulder
+  - first:
+      4: 400036
+    second: head
+  - first:
+      4: 400038
+    second: neck
+  - first:
+      4: 400040
+    second: chest
+  - first:
+      4: 400042
+    second: Ribs
+  - first:
+      4: 400044
+    second: stomach
+  - first:
+      4: 400046
+    second: pelvis
+  - first:
+      4: 400050
+    second: Rcalf
+  - first:
+      4: 400052
+    second: Rfoot
+  - first:
+      4: 400054
+    second: //RootNode
+  - first:
+      4: 400056
+    second: CameraTargetPos
+  - first:
+      4: 400058
+    second: CameraTargetDir
+  - first:
+      43: 4300000
+    second: player_mesh
+  - first:
+      43: 4300002
+    second: assrifleMesh002
+  - first:
+      43: 4300004
+    second: Cube
+  - first:
+      43: 4300006
+    second: w_snip01mesh
+  - first:
+      74: 7400000
+    second: coverIdle
+  - first:
+      74: 7400002
+    second: coverWalkL
+  - first:
+      74: 7400004
+    second: coverIdleL
+  - first:
+      74: 7400006
+    second: coverStrafeL
+  - first:
+      74: 7400008
+    second: coverIdleCrouch
+  - first:
+      74: 7400010
+    second: coverStrafeCrouchL
+  - first:
+      74: 7400012
+    second: coverIdleCrouchL
+  - first:
+      74: 7400014
+    second: coverStrafeCrouchR
+  - first:
+      74: 7400016
+    second: coverWalkR
+  - first:
+      74: 7400018
+    second: coverStrafeR
+  - first:
+      74: 7400020
+    second: coverIdleR
+  - first:
+      74: 7400022
+    second: coverIdleCrouchR
+  - first:
+      74: 7400024
+    second: idle
+  - first:
+      74: 7400026
+    second: runB
+  - first:
+      74: 7400028
+    second: runF
+  - first:
+      74: 7400030
+    second: runL
+  - first:
+      74: 7400032
+    second: runR
+  - first:
+      74: 7400034
+    second: walkB
+  - first:
+      74: 7400036
+    second: walkF
+  - first:
+      74: 7400038
+    second: walkL
+  - first:
+      74: 7400040
+    second: walkR
+  - first:
+      74: 7400042
+    second: Cover_shotR
+  - first:
+      74: 7400044
+    second: Cover_blindshotR
+  - first:
+      74: 7400046
+    second: coverAimCrouchL
+  - first:
+      74: 7400048
+    second: coverAimIdleCrouch
+  - first:
+      74: 7400050
+    second: coverAimIdleCrouchL
+  - first:
+      74: 7400052
+    second: coverAimIdleCrouchR
+  - first:
+      74: 7400054
+    second: coverAimIdleL
+  - first:
+      74: 7400056
+    second: coverAimIdleR
+  - first:
+      74: 7400058
+    second: coverIdleAimL
+  - first:
+      74: 7400060
+    second: coverIdleAimR
+  - first:
+      74: 7400062
+    second: coverAimLeftR
+  - first:
+      74: 7400064
+    second: coverAimRightR
+  - first:
+      74: 7400066
+    second: coverAimTopR
+  - first:
+      74: 7400068
+    second: coverAimDownR
+  - first:
+      74: 7400070
+    second: CoverStandIdleCenter
+  - first:
+      74: 7400072
+    second: CoverStandWalkRight
+  - first:
+      74: 7400074
+    second: CoverStandIdleRight
+  - first:
+      74: 7400076
+    second: CoverStandStrafeRight
+  - first:
+      74: 7400078
+    second: CoverCrouchIdleCenter
+  - first:
+      74: 7400080
+    second: CoverCrouchStrafeRight
+  - first:
+      74: 7400082
+    second: CoverCrouchIdleRight
+  - first:
+      74: 7400084
+    second: CoverCrouchStrafeLeft
+  - first:
+      74: 7400086
+    second: CoverStandWalkLeft
+  - first:
+      74: 7400088
+    second: CoverStandStrafeLeft
+  - first:
+      74: 7400090
+    second: CoverStandIdleLeft
+  - first:
+      74: 7400092
+    second: CoverCrouchIdleLeft
+  - first:
+      74: 7400094
+    second: Idle
+  - first:
+      74: 7400096
+    second: RunB
+  - first:
+      74: 7400098
+    second: RunF
+  - first:
+      74: 7400100
+    second: RunL
+  - first:
+      74: 7400102
+    second: RunR
+  - first:
+      74: 7400104
+    second: WalkB
+  - first:
+      74: 7400106
+    second: WalkF
+  - first:
+      74: 7400108
+    second: WalkL
+  - first:
+      74: 7400110
+    second: WalkR
+  - first:
+      74: 7400112
+    second: CoverStandAimRightMaxL
+  - first:
+      74: 7400114
+    second: CoverStandAimRightMaxR
+  - first:
+      74: 7400116
+    second: CoverStandAimRightMaxU
+  - first:
+      74: 7400118
+    second: CoverStandAimRightMaxD
+  - first:
+      74: 7400120
+    second: CoverStandAimLeftMaxD
+  - first:
+      74: 7400122
+    second: CoverStandAimLeftMaxU
+  - first:
+      74: 7400124
+    second: CoveStandrAimLeftMaxL
+  - first:
+      74: 7400126
+    second: CoverStandAimLeftMaxR
+  - first:
+      74: 7400128
+    second: CoverCrouchAimRightMaxD
+  - first:
+      74: 7400130
+    second: CoverCrouchAimRightMaxU
+  - first:
+      74: 7400132
+    second: CoverCrouchAimRightMaxR
+  - first:
+      74: 7400134
+    second: CoverCrouchAimRightMaxL
+  - first:
+      74: 7400136
+    second: CoverCrouchAimLeftMaxD
+  - first:
+      74: 7400138
+    second: CoverCrouchAimLeftMaxU
+  - first:
+      74: 7400140
+    second: CoverCrouchAimLeftMaxL
+  - first:
+      74: 7400142
+    second: CoveCrouchAimLeftMaxR
+  - first:
+      74: 7400144
+    second: CoverCrouchAimCenterMaxU
+  - first:
+      74: 7400146
+    second: CoverCrouchAimCenterMaxD
+  - first:
+      74: 7400148
+    second: CoverCrouchAimCenterMaxL
+  - first:
+      74: 7400150
+    second: CoverCrouchAimCenterMaxR
+  - first:
+      74: 7400152
+    second: CoverStandAimLeftMaxL
+  - first:
+      74: 7400154
+    second: CoverCrouchAimLeftMaxR
+  - first:
+      74: 7400156
+    second: TurnR
+  - first:
+      74: 7400158
+    second: TurnL
+  - first:
+      74: 7400160
+    second: AimMaxD
+  - first:
+      74: 7400162
+    second: AimMaxU
+  - first:
+      74: 7400164
+    second: AimU
+  - first:
+      74: 7400166
+    second: AimD
+  - first:
+      74: 7400168
+    second: CoverStandEnter
+  - first:
+      74: 7400170
+    second: CoverStandIdleRight 1
+  - first:
+      74: 7400172
+    second: CoverCrouchIdleCenter 1
+  - first:
+      74: 7400174
+    second: IdleDialog
+  - first:
+      74: 7400176
+    second: WalkDialogF
+  - first:
+      74: 7400178
+    second: WalkDialogB
+  - first:
+      74: 7400180
+    second: WalkDialogL
+  - first:
+      74: 7400182
+    second: WalkDialogR
+  - first:
+      74: 7400184
+    second: CameraShakeLoop
+  - first:
+      74: 7400186
+    second: SprintF
+  - first:
+      74: 7400188
+    second: Fall
+  - first:
+      74: 7400190
+    second: MenuIdle
+  - first:
+      74: 7400192
+    second: AimU_bck
+  - first:
+      74: 7400194
+    second: AimD_bck
+  - first:
+      74: 7400196
+    second: Idle_camera
+  - first:
+      74: 7400198
+    second: run_camera
+  - first:
+      74: 7400200
+    second: RunF 1
+  - first:
+      74: 7400202
+    second: Run_F
+  - first:
+      74: 7400204
+    second: RunF_new
+  - first:
+      74: 7400206
+    second: RunB 1
+  - first:
+      74: 7400208
+    second: RunL 1
+  - first:
+      74: 7400210
+    second: RunR 1
+  - first:
+      74: 7400212
+    second: CoverStandIdleCenter 1
+  - first:
+      74: 7400214
+    second: CoverStandIdleLeft 1
+  - first:
+      74: 7400216
+    second: CoverCrouchStrafeRight 1
+  - first:
+      74: 7400218
+    second: CoverCrouchStrafeLeft 1
+  - first:
+      74: 7400220
+    second: CoverStandStrafeRight 1
+  - first:
+      74: 7400222
+    second: CoverStandStrafeLeft 1
+  - first:
+      74: 7400224
+    second: CoverStandStrafeRight 2
+  - first:
+      74: 7400226
+    second: CoverStandStrafeLeft 2
+  - first:
+      74: 7400228
+    second: CoverStandStrafeRight 3
+  - first:
+      74: 7400230
+    second: CoverStandStrafeLeft 3
+  - first:
+      74: 7400232
+    second: CoverStandStrafeRight 4
+  - first:
+      74: 7400234
+    second: CoverStandStrafeLeft 4
+  - first:
+      74: 7400236
+    second: CoverStandStrafeRight 5
+  - first:
+      74: 7400238
+    second: CoverStandStrafeLeft 5
+  - first:
+      74: 7400240
+    second: CoverStandStrafeRight 6
+  - first:
+      74: 7400242
+    second: CoverStandStrafeLeft 6
+  - first:
+      74: 7400244
+    second: Take 002
+  - first:
+      74: 7400246
+    second: CoverCrouchStrafeLeft 2
+  - first:
+      74: 7400248
+    second: CoverCrouchStrafeRight 2
+  - first:
+      74: 7400250
+    second: CoverCrouchStrafeLeft 3
+  - first:
+      74: 7400252
+    second: CoverCrouchStrafeRight 3
+  - first:
+      74: 7400254
+    second: A
+  - first:
+      74: 7400256
+    second: SprintF 1
+  - first:
+      74: 7400258
+    second: SprintF 2
+  - first:
+      74: 7400260
+    second: Idle 1
+  - first:
+      74: 7400262
+    second: IdleFireRocket
+  - first:
+      74: 7400264
+    second: RunFireRocket
+  - first:
+      74: 7400266
+    second: CoverStandFireLeftRocket
+  - first:
+      74: 7400268
+    second: CoverStandFireRightRocket
+  - first:
+      74: 7400270
+    second: CoverCrouchFireLeftRocket
+  - first:
+      74: 7400272
+    second: CoverCrouchFireCenterRocket
+  - first:
+      74: 7400274
+    second: CoverCrouchFireRightRocket
+  - first:
+      74: 7400276
+    second: CoverCrouchIdleLeft 1
+  - first:
+      74: 7400278
+    second: CoverCrouchIdleRight 1
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      111: 11100000
+    second: //RootNode
+  externalObjects: {}
   materials:
-    importMaterials: 0
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 3
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 3
     animationRotationError: 0.025
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 2
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
       name: CoverStandAimRightMaxL
       takeName: CoverStandAimRightMaxL
+      internalID: 0
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -313,6 +725,7 @@ ModelImporter:
     - serializedVersion: 16
       name: CoverStandAimRightMaxR
       takeName: CoverStandAimRightMaxR
+      internalID: 0
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -397,6 +810,7 @@ ModelImporter:
     - serializedVersion: 16
       name: CoverStandAimRightMaxU
       takeName: CoverStandAimRightMaxU
+      internalID: 0
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -481,6 +895,7 @@ ModelImporter:
     - serializedVersion: 16
       name: CoverStandAimRightMaxD
       takeName: CoverStandAimRightMaxD
+      internalID: 0
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -565,6 +980,7 @@ ModelImporter:
     - serializedVersion: 16
       name: CoverStandAimLeftMaxD
       takeName: CoverStandAimLeftMaxD
+      internalID: 0
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -649,6 +1065,7 @@ ModelImporter:
     - serializedVersion: 16
       name: CoverStandAimLeftMaxU
       takeName: CoverStandAimLeftMaxU
+      internalID: 0
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -733,6 +1150,7 @@ ModelImporter:
     - serializedVersion: 16
       name: CoverStandAimLeftMaxL
       takeName: CoverStandAimLeftMaxL
+      internalID: 0
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -817,6 +1235,7 @@ ModelImporter:
     - serializedVersion: 16
       name: CoverStandAimLeftMaxR
       takeName: CoverStandAimLeftMaxR
+      internalID: 0
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -901,6 +1320,7 @@ ModelImporter:
     - serializedVersion: 16
       name: CoverCrouchAimRightMaxD
       takeName: CoverCrouchAimRightMaxD
+      internalID: 0
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -985,6 +1405,7 @@ ModelImporter:
     - serializedVersion: 16
       name: CoverCrouchAimRightMaxU
       takeName: CoverCrouchAimRightMaxU
+      internalID: 0
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -1069,6 +1490,7 @@ ModelImporter:
     - serializedVersion: 16
       name: CoverCrouchAimRightMaxR
       takeName: CoverCrouchAimRightMaxR
+      internalID: 0
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -1153,6 +1575,7 @@ ModelImporter:
     - serializedVersion: 16
       name: CoverCrouchAimRightMaxL
       takeName: CoverCrouchAimRightMaxL
+      internalID: 0
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -1237,6 +1660,7 @@ ModelImporter:
     - serializedVersion: 16
       name: CoverCrouchAimLeftMaxL
       takeName: CoverCrouchAimLeftMaxL
+      internalID: 0
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -1321,6 +1745,7 @@ ModelImporter:
     - serializedVersion: 16
       name: CoverCrouchAimLeftMaxD
       takeName: CoverCrouchAimLeftMaxD
+      internalID: 0
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -1405,6 +1830,7 @@ ModelImporter:
     - serializedVersion: 16
       name: CoverCrouchAimLeftMaxU
       takeName: CoverCrouchAimLeftMaxU
+      internalID: 0
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -1489,6 +1915,7 @@ ModelImporter:
     - serializedVersion: 16
       name: CoverCrouchAimLeftMaxR
       takeName: CoverCrouchAimLeftMaxR
+      internalID: 0
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -1573,6 +2000,7 @@ ModelImporter:
     - serializedVersion: 16
       name: CoverCrouchAimCenterMaxR
       takeName: CoverCrouchAimCenterMaxR
+      internalID: 0
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -1657,6 +2085,7 @@ ModelImporter:
     - serializedVersion: 16
       name: CoverCrouchAimCenterMaxU
       takeName: CoverCrouchAimCenterMaxU
+      internalID: 0
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -1741,6 +2170,7 @@ ModelImporter:
     - serializedVersion: 16
       name: CoverCrouchAimCenterMaxD
       takeName: CoverCrouchAimCenterMaxD
+      internalID: 0
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -1825,6 +2255,7 @@ ModelImporter:
     - serializedVersion: 16
       name: CoverCrouchAimCenterMaxL
       takeName: CoverCrouchAimCenterMaxL
+      internalID: 0
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -1909,6 +2340,7 @@ ModelImporter:
     - serializedVersion: 16
       name: WalkF
       takeName: WalkF
+      internalID: 0
       firstFrame: 20
       lastFrame: 60
       wrapMode: 0
@@ -1993,6 +2425,7 @@ ModelImporter:
     - serializedVersion: 16
       name: WalkB
       takeName: WalkB
+      internalID: 0
       firstFrame: 23
       lastFrame: 63
       wrapMode: 0
@@ -2077,6 +2510,7 @@ ModelImporter:
     - serializedVersion: 16
       name: WalkL
       takeName: WalkL
+      internalID: 0
       firstFrame: 23
       lastFrame: 63
       wrapMode: 0
@@ -2161,6 +2595,7 @@ ModelImporter:
     - serializedVersion: 16
       name: WalkR
       takeName: WalkR
+      internalID: 0
       firstFrame: 23
       lastFrame: 63
       wrapMode: 0
@@ -2245,6 +2680,7 @@ ModelImporter:
     - serializedVersion: 16
       name: SprintF
       takeName: SprintF
+      internalID: 0
       firstFrame: 0
       lastFrame: 16
       wrapMode: 0
@@ -2329,6 +2765,7 @@ ModelImporter:
     - serializedVersion: 16
       name: CoverStandIdleCenter
       takeName: CoverStandIdleCenter
+      internalID: 0
       firstFrame: 0
       lastFrame: 50
       wrapMode: 0
@@ -2413,6 +2850,7 @@ ModelImporter:
     - serializedVersion: 16
       name: CoverStandIdleRight
       takeName: CoverStandIdleRight
+      internalID: 0
       firstFrame: 0
       lastFrame: 50
       wrapMode: 0
@@ -2497,6 +2935,7 @@ ModelImporter:
     - serializedVersion: 16
       name: CoverCrouchIdleLeft
       takeName: CoverCrouchIdleLeft
+      internalID: 0
       firstFrame: 0
       lastFrame: 50
       wrapMode: 0
@@ -2581,6 +3020,7 @@ ModelImporter:
     - serializedVersion: 16
       name: CoverCrouchIdleCenter
       takeName: CoverCrouchIdleCenter
+      internalID: 0
       firstFrame: 0
       lastFrame: 50
       wrapMode: 0
@@ -2665,6 +3105,7 @@ ModelImporter:
     - serializedVersion: 16
       name: CoverCrouchIdleRight
       takeName: CoverCrouchIdleRight
+      internalID: 0
       firstFrame: 0
       lastFrame: 50
       wrapMode: 0
@@ -2749,6 +3190,7 @@ ModelImporter:
     - serializedVersion: 16
       name: CoverCrouchStrafeRight
       takeName: CoverCrouchStrafeRight
+      internalID: 0
       firstFrame: 0
       lastFrame: 30
       wrapMode: 0
@@ -2833,6 +3275,7 @@ ModelImporter:
     - serializedVersion: 16
       name: CoverCrouchStrafeLeft
       takeName: CoverCrouchStrafeLeft
+      internalID: 0
       firstFrame: 0
       lastFrame: 30
       wrapMode: 0
@@ -2917,6 +3360,7 @@ ModelImporter:
     - serializedVersion: 16
       name: CoverStandStrafeLeft
       takeName: CoverStandStrafeLeft
+      internalID: 0
       firstFrame: 0
       lastFrame: 30
       wrapMode: 0
@@ -3001,6 +3445,7 @@ ModelImporter:
     - serializedVersion: 16
       name: CoverStandStrafeRight
       takeName: CoverStandStrafeRight
+      internalID: 0
       firstFrame: 0
       lastFrame: 30
       wrapMode: 0
@@ -3085,6 +3530,7 @@ ModelImporter:
     - serializedVersion: 16
       name: MenuIdle
       takeName: MenuIdle
+      internalID: 0
       firstFrame: 0
       lastFrame: 70
       wrapMode: 0
@@ -3169,6 +3615,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Idle
       takeName: Idle
+      internalID: 0
       firstFrame: 0
       lastFrame: 50
       wrapMode: 0
@@ -3253,6 +3700,7 @@ ModelImporter:
     - serializedVersion: 16
       name: AimU
       takeName: AimU
+      internalID: 0
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -3337,6 +3785,7 @@ ModelImporter:
     - serializedVersion: 16
       name: AimD
       takeName: AimD
+      internalID: 0
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -3421,6 +3870,7 @@ ModelImporter:
     - serializedVersion: 16
       name: RunF
       takeName: RunF
+      internalID: 0
       firstFrame: 0
       lastFrame: 20
       wrapMode: 0
@@ -3505,6 +3955,7 @@ ModelImporter:
     - serializedVersion: 16
       name: RunB
       takeName: RunB
+      internalID: 0
       firstFrame: 0
       lastFrame: 20
       wrapMode: 0
@@ -3589,6 +4040,7 @@ ModelImporter:
     - serializedVersion: 16
       name: RunL
       takeName: RunL
+      internalID: 0
       firstFrame: 2
       lastFrame: 22
       wrapMode: 0
@@ -3673,6 +4125,7 @@ ModelImporter:
     - serializedVersion: 16
       name: RunR
       takeName: RunR
+      internalID: 0
       firstFrame: 20
       lastFrame: 40
       wrapMode: 0
@@ -3757,6 +4210,7 @@ ModelImporter:
     - serializedVersion: 16
       name: CoverStandIdleLeft
       takeName: CoverStandIdleLeft
+      internalID: 0
       firstFrame: 0
       lastFrame: 50
       wrapMode: 0
@@ -3844,13 +4298,24 @@ ModelImporter:
     globalScale: 0.01
     meshCompression: 3
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
@@ -3860,9 +4325,14 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 4
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -3872,11 +4342,17 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 0.01
     rootMotionBoneName: 
     hasTranslationDoF: 0
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: f3cd25b3bf53c4adaaf087d862e435e6,
+    type: 3}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 2
   additionalBone: 0
   userData: 
   assetBundleName: 

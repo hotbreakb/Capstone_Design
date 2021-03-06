@@ -12,6 +12,10 @@ TagManager:
   - Target
   - Chair
   - Tables
+  - pos1
+  - spawn
+  - TmpBullet
+  - Walls
   layers:
   - Default
   - TransparentFX
@@ -25,7 +29,7 @@ TagManager:
   - Bullet
   - Enemy
   - Player
-  - 
+  - Desks
   - 
   - 
   - 

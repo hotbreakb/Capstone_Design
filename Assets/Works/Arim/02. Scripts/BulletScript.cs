@@ -48,6 +48,11 @@ public class BulletScript : MonoBehaviour {
 			//collider.GetComponent<Rigidbody>().AddForce(collider.transform.forward * throwForce);
 			//Destroy(gameObject);
 		}
+
+		if(other.tag == "Enemy"){
+			Destroy(gameObject);
+		}
+
 	}
 
 	//If the bullet collides with anything
