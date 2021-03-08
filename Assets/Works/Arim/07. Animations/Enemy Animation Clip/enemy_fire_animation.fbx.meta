@@ -313,7 +313,12 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     rigImportErrors: 
-    rigImportWarnings: 
+    rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Bone length in
+      copied configuration does not match position in animation file:\n\t'Lthigh'
+      : position error = 108.000923 mm\n\t'Lcalf' : position error = 378.498505 mm\n\t'Lfoot'
+      : position error = 412.132477 mm\n\t'Rthigh' : position error = 108.169151
+      mm\n\t'Rcalf' : position error = 377.367035 mm\n\t'Rfoot' : position error
+      = 412.098236 mm\n"
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
