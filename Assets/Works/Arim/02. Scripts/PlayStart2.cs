@@ -11,7 +11,7 @@ public class PlayStart2 : MonoBehaviour
     public GameObject bullet;
     public GameObject bulletCase;
     public GameObject desk;
-    public GameObject labtop;
+    //public GameObject labtop;
     public GameObject grenade;
 
 
@@ -33,7 +33,8 @@ public class PlayStart2 : MonoBehaviour
         TmpPlayer.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
         bullet.transform.localScale = new Vector3(0.004f, 0.004f, 0.004f);
         bulletCase.transform.localScale = new Vector3(0.11f, 0.11f, 0.11f);
-        //desk.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+        desk.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+        desk.transform.position = new Vector3(desk.transform.position.x, -1.53f, desk.transform.position.z);  
         //labtop.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
         grenade.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
 
