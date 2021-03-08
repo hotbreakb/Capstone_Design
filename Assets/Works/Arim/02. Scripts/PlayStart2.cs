@@ -15,17 +15,19 @@ public class PlayStart2 : MonoBehaviour
     public GameObject grenade;
 
 
+    //UI
+    public GameObject Eyeblinkpanel;
+
+
 
     // Start is called before the first frame update
     void Start()
     {
+        StartCoroutine(delay());
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        Changes();
-    }
+    
     void Changes()
     {
         Player.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
@@ -40,5 +42,18 @@ public class PlayStart2 : MonoBehaviour
 
 
     }
-
+    IEnumerator delay()
+    {
+        yield return StartCoroutine("EyeblinkNotAct");
+        yield return StartCoroutine("Changes");
+        yield return StartCoroutine("EyeblinkActive");
+    }
+    void EyeblinkActive()
+    {
+        Eyeblinkpanel.SetActive(true);
+    }
+    void EyeblinkNotAct()
+    {
+        Eyeblinkpanel.SetActive(false);
+    }
 }
