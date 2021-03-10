@@ -70,7 +70,7 @@ public class MoveAgent : MonoBehaviour
         agent.speed = patrollSpeed;
         // 자동으로 회전하는 기능을 비 활성화
         agent.updateRotation = false;
-        var group = GameObject.Find("WayPointGroup");
+        var group = GameObject.Find("WayPointGroup2");
         if(group != null)
         {
             group.GetComponentsInChildren<Transform>(wayPoints);
