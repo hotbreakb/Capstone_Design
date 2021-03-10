@@ -5261,7 +5261,6 @@ NavMeshAgent:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1949164659
   m_GameObject: {fileID: 1203341116}
   m_Enabled: 1
   m_AgentTypeID: 0
@@ -5291,12 +5290,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFire: 0
+  fireSfx: {fileID: 8300000, guid: 38b450e2adcb6f542acc8c1d423bd8dc, type: 3}
+--- !u!114 &1203341120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203341116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abeff1225e262d04e830e03292435d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   state: 0
   attackDist: 5
   traceDist: 10
   isDie: 0
-  fireSfx: {fileID: 8300000, guid: 38b450e2adcb6f542acc8c1d423bd8dc, type: 3}
---- !u!114 &1203341120
+--- !u!82 &1203341121
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
