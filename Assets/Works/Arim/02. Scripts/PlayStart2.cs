@@ -13,8 +13,6 @@ public class PlayStart2 : MonoBehaviour
     public GameObject desk;
     //public GameObject labtop;
     public GameObject grenade;
-    public GameObject Props;
-    public GameObject messProps;
 
 
     //UI
@@ -25,10 +23,7 @@ public class PlayStart2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Props.SetActive(true);
-        //messProps.SetActive(false);
         StartCoroutine(delay());
-        
     }
 
     // Update is called once per frame
@@ -41,7 +36,7 @@ public class PlayStart2 : MonoBehaviour
         bullet.transform.localScale = new Vector3(0.004f, 0.004f, 0.004f);
         bulletCase.transform.localScale = new Vector3(0.11f, 0.11f, 0.11f);
         desk.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
-        desk.transform.position = new Vector3(0.339f, -1.53f, desk.transform.position.z);  
+        desk.transform.position = new Vector3(desk.transform.position.x, -1.53f, desk.transform.position.z);  
         //labtop.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
         grenade.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
 
@@ -50,7 +45,6 @@ public class PlayStart2 : MonoBehaviour
     IEnumerator delay()
     {
         yield return StartCoroutine("EyeblinkNotAct");
-        yield return StartCoroutine("PropsAct");
         yield return StartCoroutine("Changes");
         yield return StartCoroutine("EyeblinkActive");
     }
@@ -61,9 +55,5 @@ public class PlayStart2 : MonoBehaviour
     void EyeblinkNotAct()
     {
         Eyeblinkpanel.SetActive(false);
-    }
-    void PropsAct() {
-        Props.SetActive(false);
-        messProps.SetActive(true);
     }
 }
