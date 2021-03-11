@@ -12,14 +12,22 @@ public class EnemyFire : MonoBehaviour
     private Transform enemyTr;
 
     private readonly int hashFire = Animator.StringToHash("Fire");
+    private readonly int hashReload = Animator.StringToHash("Reload");
 
     private float nextFire = 0.0f;
     private readonly float fireRate = 0.1f;
     private readonly float damping = 10.0f;
 
+    private readonly float reloadTime = 2.0f;
+    private readonly int maxBullet = 10;
+    private int currBullet = 10;
+    private bool isReload = false;
+    private WaitForSeconds wsReload;
+
+
     public bool isFire = false;
     public AudioClip fireSfx;
-
+    public AudioClip reloadSfx;
 
     public GameObject Bullet;
     public Transform firePos;
@@ -36,12 +44,14 @@ public class EnemyFire : MonoBehaviour
         enemyTr = GetComponent<Transform>();
         animator = GetComponent<Animator>();
         audio = GetComponent<AudioSource>();
+
+        wsReload = new WaitForSeconds(reloadTime);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(isFire){
+        if(!isReload && isFire){
             if(Time.time >= nextFire){
                 Fire();
                 nextFire = Time.time + fireRate + Random.Range(0.0f,0.3f);
@@ -56,11 +66,27 @@ public class EnemyFire : MonoBehaviour
     private void Fire(){
         animator.SetTrigger(hashFire);
         audio.PlayOneShot(fireSfx, 1.0f);
+        StartCoroutine(ShowMuzzleFlash());
+
+        isReload = (--currBullet % maxBullet ==0);
+
+        if(isReload){
+            StartCoroutine(Reloading());
+        }
 
         GameObject _bullet = Instantiate(Bullet, firePos.position, firePos.rotation);
         Destroy(_bullet, 3.0f);
     }
 
+    IEnumerator Reloading(){
+        muzzleFlash.enabled = false;
+        animator.SetTrigger(hashReload);
+        audio.PlayOneShot(reloadSfx, 1.0f);
+
+        yield return wsReload;
+        currBullet = maxBullet;
+        isReload = false;
+    }
 
     IEnumerator ShowMuzzleFlash(){
 
