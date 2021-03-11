@@ -38,7 +38,7 @@ public class LeapmotionGesture : MonoBehaviour
         {
             controller.StartConnection();
             Invoke("QuitGame", 10.0f); // 10초 이내 연결되지 않으면 스크립트 종료
-            Debug.Log("not connected");
+            // Debug.Log("not connected");
         }
         else
         {
@@ -75,7 +75,7 @@ public class LeapmotionGesture : MonoBehaviour
             //  1. Two straight fingers
             //  2. Hands moving from top to bottom
 
-            //Debug.Log(System.Math.Abs(handPalmPosition.x - prehandPalmPosition.x));
+            Debug.Log(System.Math.Abs(handPalmPosition.x - prehandPalmPosition.x));
 
             if (_extendedFingers == 2 && System.Math.Abs(handPalmPosition.y - prehandPalmPosition.y) > 5)
             {
