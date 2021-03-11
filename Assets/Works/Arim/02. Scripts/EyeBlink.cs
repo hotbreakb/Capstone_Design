@@ -8,6 +8,7 @@ public class EyeBlink : MonoBehaviour
     public RectTransform lowerBox;
     public float speed = 0.70f;
     public int blinkTimes = 3;
+    public float closeTime = 1.0f;
     public bool endClosing = false;
 
 
@@ -32,11 +33,13 @@ public class EyeBlink : MonoBehaviour
 
     void OnEnable()
     {
+        
         StartCoroutine(blink());
     }
 
     private IEnumerator blink()
     {
+        yield return new WaitForSeconds(closeTime);
         while (currentBlink <= blinkTimes)
         {
             endUpper = originalUpperPosition;

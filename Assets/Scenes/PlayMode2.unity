@@ -5252,6 +5252,7 @@ MonoBehaviour:
   lowerBox: {fileID: 738544620}
   speed: 0.4
   blinkTimes: 3
+  closeTime: 0.7
   endClosing: 0
 --- !u!224 &1219300539
 RectTransform:
@@ -5919,7 +5920,7 @@ PrefabInstance:
     - target: {fileID: 7772172163564693062, guid: c24fed9fa91f7634fbc8e5e12405008e,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8493750448813752426, guid: c24fed9fa91f7634fbc8e5e12405008e,
         type: 3}
