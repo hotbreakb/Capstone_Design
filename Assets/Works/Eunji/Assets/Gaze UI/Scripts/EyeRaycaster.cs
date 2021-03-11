@@ -52,13 +52,10 @@ public class EyeRaycaster : MonoBehaviour
         List<RaycastResult> raycastResults = new List<RaycastResult>();
         m_eventSystem.RaycastAll(m_pointerEvent, raycastResults);
 
-
-        
         // Detect selectable
         if (raycastResults.Count > 0)
         {
-            Debug.Log("if");
-            foreach (var result in raycastResults)
+            foreach(var result in raycastResults)
             {
                 var newSelectable = result.gameObject.GetComponentInParent<Selectable>();
 
@@ -75,9 +72,8 @@ public class EyeRaycaster : MonoBehaviour
         }
         else
         {
-            if (m_currentSelectable || m_excluded)
+            if(m_currentSelectable || m_excluded)
             {
-                Debug.Log("else");
                 Select(null, null);
             }
         }
