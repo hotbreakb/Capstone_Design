@@ -38,7 +38,7 @@ public class LeapmotionGesture : MonoBehaviour
         {
             controller.StartConnection();
             Invoke("QuitGame", 10.0f); // 10초 이내 연결되지 않으면 스크립트 종료
-            Debug.Log("not connected");
+            // Debug.Log("not connected");
         }
         else
         {

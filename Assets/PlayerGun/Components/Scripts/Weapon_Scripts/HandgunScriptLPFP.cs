@@ -75,6 +75,11 @@ public class HandgunScriptLPFP : MonoBehaviour
     public Sprite[] woodDecals;
     public GameObject bulletHolePrefab;
 
+    [Header("BulletSpark Settings")]
+    public GameObject metalSparkEffect;
+    public GameObject sandSparkEffect;
+    public GameObject woodSparkEffect;
+
     [Header("Grenade Settings")]
     public float grenadeSpawnDelay = 0.35f;
 
@@ -368,13 +373,20 @@ public class HandgunScriptLPFP : MonoBehaviour
             if (hit.transform.tag == "Tables")
             {
                 bulletHole.GetComponent<SpriteRenderer>().sprite = woodDecals[UnityEngine.Random.Range(0, woodDecals.Length)];
-
             }
             else if(hit.transform.tag == "Walls")
             {
                 bulletHole.GetComponent<SpriteRenderer>().sprite = glassDecals[UnityEngine.Random.Range(0, glassDecals.Length)];
-
             }
+            else if(hit.transform.tag == "Chair")
+            {
+                Instantiate(metalSparkEffect, hit.point + hit.normal * 0.0001f, Quaternion.identity);
+            }
+            else if(hit.transform.tag == "Stairs")
+            {
+                Instantiate(sandSparkEffect, hit.point + hit.normal * 0.0001f, Quaternion.identity);
+            }
+            
 
             return hit.point;
         }

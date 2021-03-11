@@ -16,6 +16,7 @@ TagManager:
   - spawn
   - TmpBullet
   - Walls
+  - Stairs
   layers:
   - Default
   - TransparentFX
