@@ -17,17 +17,26 @@ public class BulletScript : MonoBehaviour {
 	[Header("Impact Effect Prefabs")]
 	public Transform [] metalImpactPrefabs;
 
+	[Header("Shoot Force")]
+	[Tooltip("Minimum shoot force")]
+	public float minimumShootForce = 2500.0f;
+	[Tooltip("Maximum shoot force")]
+	public float maximumShootForce = 3000.0f;
+
+
 	[Header("Throw Force")]
 	[Tooltip("Minimum throw force")]
-	public float minimumForce = 1500.0f;
+	public float minimumThrowForce = 1500.0f;
 	[Tooltip("Maximum throw force")]
-	public float maximumForce = 2500.0f;
+	public float maximumThrowForce = 2500.0f;
+
+	private float shootForce;
 	private float throwForce;
 
 	private void Awake()
 	{
-		throwForce = Random.Range
-			(minimumForce, maximumForce);
+		shootForce = Random.Range(minimumShootForce, maximumShootForce);
+		throwForce = Random.Range(minimumThrowForce, maximumThrowForce);
 	}
 	private void Start () 
 	{
@@ -41,15 +50,16 @@ public class BulletScript : MonoBehaviour {
 			//Toggle "explode" on explosive barrel object
 			//collider.transform.gameObject.GetComponent<ExplosiveBarrelScript>().explode = true;
 			//Destroy bullet object
-			other.attachedRigidbody.AddForce(other.transform.forward * throwForce);
+			other.attachedRigidbody.AddForce(other.transform.forward * shootForce);
 			Debug.Log("Chair collider");
 			//GameObject chair = other.gameObject;
 			//chair.GetComponent<Rigidbody>().AddForce(other.transform.forward * throwForce);
 			//collider.GetComponent<Rigidbody>().AddForce(collider.transform.forward * throwForce);
 			//Destroy(gameObject);
 		}
+		if(other.tag == "Tables") other.attachedRigidbody.AddForce(other.transform.forward * shootForce);
 
-		if(other.tag == "Enemy"){
+		if (other.tag == "Enemy"){
 			Destroy(gameObject);
 		}
 

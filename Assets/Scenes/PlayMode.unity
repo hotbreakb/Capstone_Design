@@ -294,15 +294,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1ab24fae8c812e443853e3ed27941329, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.18, y: 2.82}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &58635479
@@ -6035,6 +6035,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 867177621}
     m_Modifications:
     - target: {fileID: 1762768221977736, guid: 87a2336a308ede1418d9df1d65749ffa, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1762768221977736, guid: 87a2336a308ede1418d9df1d65749ffa, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -8644,9 +8648,27 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 114919995911110234, guid: c24fed9fa91f7634fbc8e5e12405008e,
         type: 3}
+      propertyPath: sandSparkEffect
+      value: 
+      objectReference: {fileID: 1000012142692022, guid: a475880e7da0e9548aa05cb7933752cd,
+        type: 3}
+    - target: {fileID: 114919995911110234, guid: c24fed9fa91f7634fbc8e5e12405008e,
+        type: 3}
+      propertyPath: woodSparkEffect
+      value: 
+      objectReference: {fileID: 1000011190285628, guid: beb3acff7ab73944fb8f470f24d74ed3,
+        type: 3}
+    - target: {fileID: 114919995911110234, guid: c24fed9fa91f7634fbc8e5e12405008e,
+        type: 3}
       propertyPath: bulletHolePrefab
       value: 
       objectReference: {fileID: 54164765}
+    - target: {fileID: 114919995911110234, guid: c24fed9fa91f7634fbc8e5e12405008e,
+        type: 3}
+      propertyPath: metalSparkEffect
+      value: 
+      objectReference: {fileID: 1000010355441670, guid: 02a509a7fa70ed740ba4197e20c5d32d,
+        type: 3}
     - target: {fileID: 114919995911110234, guid: c24fed9fa91f7634fbc8e5e12405008e,
         type: 3}
       propertyPath: Prefabs.bulletPrefab
@@ -9112,16 +9134,32 @@ PrefabInstance:
     m_TransformParent: {fileID: 867177621}
     m_Modifications:
     - target: {fileID: 1065525026622090, guid: 00ba5523f40687b4582d63e7194e56f8, type: 3}
+      propertyPath: m_TagString
+      value: Stairs
+      objectReference: {fileID: 0}
+    - target: {fileID: 1065525026622090, guid: 00ba5523f40687b4582d63e7194e56f8, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1083117837449550, guid: 00ba5523f40687b4582d63e7194e56f8, type: 3}
+      propertyPath: m_TagString
+      value: Stairs
       objectReference: {fileID: 0}
     - target: {fileID: 1083117837449550, guid: 00ba5523f40687b4582d63e7194e56f8, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 1382956959818846, guid: 00ba5523f40687b4582d63e7194e56f8, type: 3}
+      propertyPath: m_TagString
+      value: Stairs
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382956959818846, guid: 00ba5523f40687b4582d63e7194e56f8, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722327817610300, guid: 00ba5523f40687b4582d63e7194e56f8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1722327817610300, guid: 00ba5523f40687b4582d63e7194e56f8, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -11603,6 +11641,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4714900603946898, guid: 122be4a0ea3c7f5408f5728f45b82146, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722944286221267863, guid: 122be4a0ea3c7f5408f5728f45b82146,
+        type: 3}
+      propertyPath: m_Convex
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
