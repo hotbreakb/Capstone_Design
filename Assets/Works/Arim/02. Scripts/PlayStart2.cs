@@ -27,6 +27,7 @@ public class PlayStart2 : MonoBehaviour
 
     [Header("UI")]
     public GameObject UI;
+    public GameObject labtopBar;
 
     //UI
     [Header("Eyeblink")]
@@ -43,6 +44,7 @@ public class PlayStart2 : MonoBehaviour
 
     private void Start()
     {
+        labtopBar.SetActive(false);
         Background.enabled = true;
         StartCoroutine(delay());
 
@@ -133,5 +135,6 @@ public class PlayStart2 : MonoBehaviour
     {
         yield return new WaitForSeconds(Time.deltaTime + 3f);
         UI.SetActive(true);
+        labtopBar.SetActive(true);
     }
 }

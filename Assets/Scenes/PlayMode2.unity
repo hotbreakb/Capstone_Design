@@ -9706,7 +9706,6 @@ GameObject:
   m_Component:
   - component: {fileID: 222653883}
   - component: {fileID: 222653882}
-  - component: {fileID: 222653884}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -9739,6 +9738,7 @@ MonoBehaviour:
   Bombs: {fileID: 633481150}
   Fires: {fileID: 1125432394}
   UI: {fileID: 66393264}
+  labtopBar: {fileID: 1356596153}
   Eyeblinkpanel: {fileID: 1374513645}
   Background: {fileID: 1129496937}
   fadeOutTime: 1
@@ -9758,25 +9758,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &222653884
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 222653881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0210c8aa2cac00248946c5fdae41bd19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeSpeed: 0.01
-  progressBar: {fileID: 2133897133}
-  Spotlight: {fileID: 988983191}
-  Pointlight: {fileID: 317804968}
-  Fleshlight: {fileID: 264707074}
-  delayTime: 20
-  lightmanager: 0
 --- !u!4 &238982475 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5232439099680456895, guid: 8ba9a61d3149d59499f0d33fa4815f38,
@@ -52072,7 +52053,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1125432395
 Transform:
   m_ObjectHideFlags: 0
@@ -53354,6 +53335,31 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5232439099783058932}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1356596153 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3700314536291348249, guid: 3ac2242119733b04d921d8ac96a869ee,
+    type: 3}
+  m_PrefabInstance: {fileID: 342641163}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1356596156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356596153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0210c8aa2cac00248946c5fdae41bd19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeSpeed: 0.01
+  progressBar: {fileID: 2133897133}
+  Spotlight: {fileID: 988983191}
+  Pointlight: {fileID: 317804968}
+  Fleshlight: {fileID: 264707074}
+  delayTime: 20
+  lightmanager: 0
 --- !u!4 &1358195771 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 415952, guid: c8515ebee271c0649b9db1321f3026a4,
@@ -64596,7 +64602,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 342641163}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1356596153}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
