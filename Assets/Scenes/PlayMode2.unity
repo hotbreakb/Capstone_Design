@@ -59551,6 +59551,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Point Light
       objectReference: {fileID: 0}
+    - target: {fileID: 8011870786135469357, guid: d5064cc6c8eddf142ac571c4f0c2bdf3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8011870786135469358, guid: d5064cc6c8eddf142ac571c4f0c2bdf3,
         type: 3}
       propertyPath: m_RootOrder
@@ -59610,6 +59615,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Range
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8011870786135470800, guid: d5064cc6c8eddf142ac571c4f0c2bdf3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8011870786135470800, guid: d5064cc6c8eddf142ac571c4f0c2bdf3,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8011870786135470800, guid: d5064cc6c8eddf142ac571c4f0c2bdf3,
         type: 3}
