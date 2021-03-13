@@ -119,7 +119,7 @@ public class PlayStart2 : MonoBehaviour
     }
     IEnumerator BombAct()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         Bombs.SetActive(true);
         Fires.SetActive(false);
         Canvas.SendMessage("Shake");
