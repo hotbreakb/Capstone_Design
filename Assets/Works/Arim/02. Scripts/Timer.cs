@@ -18,7 +18,7 @@ public class Timer : MonoBehaviour
 
     void Start()
     {
-        Fleshlight.enabled = false;
+        //Fleshlight.enabled = false;
     }
 
 
