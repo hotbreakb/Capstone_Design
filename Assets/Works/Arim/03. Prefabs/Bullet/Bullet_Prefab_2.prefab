@@ -4995,7 +4995,7 @@ GameObject:
   - component: {fileID: 7324513624747415134}
   - component: {fileID: 7317710312416638490}
   - component: {fileID: 7219578754150031970}
-  - component: {fileID: 7273982945639914746}
+  - component: {fileID: -9086345374292679312}
   m_Layer: 9
   m_Name: Bullet_Prefab_2
   m_TagString: Bullet
@@ -5155,7 +5155,7 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
---- !u!114 &7273982945639914746
+--- !u!114 &-9086345374292679312
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5164,16 +5164,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 7306073646899484480}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02ff3ea705a4a7244a59eef82e75c660, type: 3}
+  m_Script: {fileID: 11500000, guid: ba0315907feb0cb4ca327af52c6a16e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyAfter: 5
-  destroyOnImpact: 1
-  minDestroyTime: 10
-  maxDestroyTime: 10
-  metalImpactPrefabs:
-  - {fileID: 4458509032938956, guid: 79927c6543a058b4383885fac101fe2e, type: 3}
-  minimumShootForce: 2500
-  maximumShootForce: 3000
-  minimumThrowForce: 1500
-  maximumThrowForce: 2500
+  damage: 10
+  speed: 5000
