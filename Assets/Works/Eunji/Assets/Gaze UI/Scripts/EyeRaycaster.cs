@@ -46,7 +46,8 @@ public class EyeRaycaster : MonoBehaviour
 #if UNITY_EDITOR
             new Vector2(Screen.width / 2, Screen.height / 2);
 #else
-            new Vector2(XRSettings.eyeTextureWidth / 2, XRSettings.eyeTextureHeight / 2);
+            new Vector2(Screen.width / 2, Screen.height / 2);
+        // new Vector2(XRSettings.eyeTextureWidth / 2, XRSettings.eyeTextureHeight / 2);
 #endif
 
         List<RaycastResult> raycastResults = new List<RaycastResult>();
