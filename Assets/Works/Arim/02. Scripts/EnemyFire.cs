@@ -39,10 +39,7 @@ public class EnemyFire : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {   
-        muzzleFlash.enabled = false;
-
-
+    {
         playerTr = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         enemyTr = GetComponent<Transform>();
         animator = GetComponent<Animator>();
@@ -59,12 +56,11 @@ public class EnemyFire : MonoBehaviour
                 Fire();
                 nextFire = Time.time + fireRate + Random.Range(0.0f,0.3f);
             }
-            Quaternion rot = Quaternion.LookRotation(playerTr.position - enemyTr.position);
-            enemyTr.rotation = Quaternion.Slerp(enemyTr.rotation, rot, Time.deltaTime * damping);
         }
 
 
-
+        Quaternion rot = Quaternion.LookRotation(playerTr.position - enemyTr.position);
+        enemyTr.rotation = Quaternion.Slerp(enemyTr.rotation, rot, Time.deltaTime * damping);
     }
     
     private void Fire(){
