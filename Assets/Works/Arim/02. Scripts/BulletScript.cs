@@ -45,17 +45,8 @@ public class BulletScript : MonoBehaviour {
 	}
 
 	private void OnTriggerEnter(Collider other){    // 수혁 일단 지금 필요없음
-		//Debug.Log("other.tag : " + other.tag);
 		if(other.tag == "Chair"){
-			//Toggle "explode" on explosive barrel object
-			//collider.transform.gameObject.GetComponent<ExplosiveBarrelScript>().explode = true;
-			//Destroy bullet object
 			other.attachedRigidbody.AddForce(other.transform.forward * shootForce);
-			Debug.Log("Chair collider");
-			//GameObject chair = other.gameObject;
-			//chair.GetComponent<Rigidbody>().AddForce(other.transform.forward * throwForce);
-			//collider.GetComponent<Rigidbody>().AddForce(collider.transform.forward * throwForce);
-			//Destroy(gameObject);
 		}
 		if(other.tag == "Tables") other.attachedRigidbody.AddForce(other.transform.forward * shootForce);
 
