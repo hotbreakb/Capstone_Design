@@ -24,7 +24,6 @@ public class SC2EnemyDamage : MonoBehaviour
 
     private void OnCollisionEnter(Collision coll){
         if(coll.collider.tag  == bulletTag){
-            Debug.Log("성공");
             ShowBloodEffect(coll);
             Destroy(coll.gameObject);
             hp-= coll.gameObject.GetComponent<BulletCtrl>().damage;
