@@ -202,6 +202,80 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa26c514b9d019142affbe275f1f14b2, type: 3}
+--- !u!1001 &125164414
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1821259977873324492, guid: 60d4e2522be519e4682d72bcf90762ab,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821259977873324492, guid: 60d4e2522be519e4682d72bcf90762ab,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.030003434
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821259977873324492, guid: 60d4e2522be519e4682d72bcf90762ab,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.026730832
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821259977873324492, guid: 60d4e2522be519e4682d72bcf90762ab,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.9764307
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821259977873324492, guid: 60d4e2522be519e4682d72bcf90762ab,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821259977873324492, guid: 60d4e2522be519e4682d72bcf90762ab,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821259977873324492, guid: 60d4e2522be519e4682d72bcf90762ab,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821259977873324492, guid: 60d4e2522be519e4682d72bcf90762ab,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821259977873324492, guid: 60d4e2522be519e4682d72bcf90762ab,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821259977873324492, guid: 60d4e2522be519e4682d72bcf90762ab,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821259977873324492, guid: 60d4e2522be519e4682d72bcf90762ab,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4067647283635830648, guid: 60d4e2522be519e4682d72bcf90762ab,
+        type: 3}
+      propertyPath: m_Name
+      value: BulletHolePrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 4067647283635830648, guid: 60d4e2522be519e4682d72bcf90762ab,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 60d4e2522be519e4682d72bcf90762ab, type: 3}
 --- !u!4 &136357824 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5232439099646784052, guid: 8ba9a61d3149d59499f0d33fa4815f38,
@@ -4150,6 +4224,96 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5232439099783058932}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &964104556 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1986869707440648, guid: c24fed9fa91f7634fbc8e5e12405008e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1528713486}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &964104558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964104556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56ac14cb72efeb4b92cf5cb025a97c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gunCamera: {fileID: 0}
+  fovSpeed: 15
+  defaultFov: 40
+  aimFov: 16
+  weaponName: Handgun_01
+  weaponSway: 1
+  swayAmount: 0.02
+  maxSwayAmount: 0.06
+  swaySmoothValue: 10
+  sliderBackTimer: 1.58
+  autoReload: 0
+  autoReloadDelay: 0.15
+  ammo: 50
+  bulletForce: 70
+  showBulletInMagDelay: 10
+  bulletInMagRenderer: {fileID: 0}
+  glassDecals:
+  - {fileID: 21300000, guid: b4cb3b34f4f736f4dbe176bfb2750723, type: 3}
+  - {fileID: 21300000, guid: 7aaf59a674472c1458dbdea35b82a6cc, type: 3}
+  - {fileID: 21300000, guid: c6849db5284508743b853b733e119929, type: 3}
+  - {fileID: 21300000, guid: 9aeaf66dae9784e49acdca6cd57fb321, type: 3}
+  - {fileID: 21300000, guid: 2014504607e31f7449e48c4fe2f821ee, type: 3}
+  woodDecals:
+  - {fileID: 21300000, guid: 1ab24fae8c812e443853e3ed27941329, type: 3}
+  - {fileID: 21300000, guid: 8ee407e337251284d821cbdfbb93b9f0, type: 3}
+  - {fileID: 21300000, guid: 6da166aafcf6b01429be9c9a877d9352, type: 3}
+  - {fileID: 21300000, guid: a459ef67e75be1a4c8c686588d107b63, type: 3}
+  - {fileID: 21300000, guid: 8485dedda0700f04cb11163eb0b3860e, type: 3}
+  bulletHolePrefab: {fileID: 0}
+  metalSparkEffect: {fileID: 1000010355441670, guid: 02a509a7fa70ed740ba4197e20c5d32d,
+    type: 3}
+  sandSparkEffect: {fileID: 1000012142692022, guid: a475880e7da0e9548aa05cb7933752cd,
+    type: 3}
+  woodSparkEffect: {fileID: 1000011190285628, guid: beb3acff7ab73944fb8f470f24d74ed3,
+    type: 3}
+  grenadeSpawnDelay: 0.35
+  randomMuzzleflash: 1
+  maxRandomValue: 2
+  enableMuzzleflash: 1
+  muzzleParticles: {fileID: 0}
+  enableSparks: 1
+  sparkParticles: {fileID: 0}
+  minSparkEmission: 1
+  maxSparkEmission: 7
+  muzzleflashLight: {fileID: 0}
+  lightDuration: 0.02
+  mainAudioSource: {fileID: 0}
+  shootAudioSource: {fileID: 0}
+  timescaleText: {fileID: 0}
+  currentWeaponText: {fileID: 0}
+  currentAmmoText: {fileID: 0}
+  totalAmmoText: {fileID: 0}
+  Prefabs:
+    bulletPrefab: {fileID: 4879702113200764, guid: 082632409b7928a478b591ce8331c1af,
+      type: 3}
+    casingPrefab: {fileID: 4924048156253418, guid: b1995a53a949fac4db5722fc1df9efe4,
+      type: 3}
+    grenadePrefab: {fileID: 4191440083646698, guid: 7b04fe350ed10a741a1e245447860d9e,
+      type: 3}
+  Spawnpoints:
+    casingSpawnPoint: {fileID: 0}
+    bulletSpawnPoint: {fileID: 0}
+    grenadeSpawnPoint: {fileID: 0}
+  SoundClips:
+    shootSound: {fileID: 8300000, guid: 38b450e2adcb6f542acc8c1d423bd8dc, type: 3}
+    takeOutSound: {fileID: 8300000, guid: 2ae41e984ff1f3e4a840a1a46b6a8816, type: 3}
+    holsterSound: {fileID: 8300000, guid: 33a4a9bf1a1dbca4cb379a1118c6b20d, type: 3}
+    reloadSoundOutOfAmmo: {fileID: 8300000, guid: fee3a21f251a4914cabce25b13e7d2a8,
+      type: 3}
+    reloadSoundAmmoLeft: {fileID: 8300000, guid: b0d51244fd32fc647960320540b32f66,
+      type: 3}
+    aimSound: {fileID: 8300000, guid: acaebc89b98b82142bd2b24edb6081e4, type: 3}
 --- !u!1 &988983191 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6155417265878162801, guid: 3ac2242119733b04d921d8ac96a869ee,
@@ -5487,6 +5651,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5232439099783058932}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1393751617 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4067647283635830648, guid: 60d4e2522be519e4682d72bcf90762ab,
+    type: 3}
+  m_PrefabInstance: {fileID: 125164414}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1463283589 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5232439098456210033, guid: 8ba9a61d3149d59499f0d33fa4815f38,
@@ -5726,6 +5896,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114919995911110234, guid: c24fed9fa91f7634fbc8e5e12405008e,
         type: 3}
+      propertyPath: sandSparkEffect
+      value: 
+      objectReference: {fileID: 1000012142692022, guid: a475880e7da0e9548aa05cb7933752cd,
+        type: 3}
+    - target: {fileID: 114919995911110234, guid: c24fed9fa91f7634fbc8e5e12405008e,
+        type: 3}
+      propertyPath: woodSparkEffect
+      value: 
+      objectReference: {fileID: 1000011190285628, guid: beb3acff7ab73944fb8f470f24d74ed3,
+        type: 3}
+    - target: {fileID: 114919995911110234, guid: c24fed9fa91f7634fbc8e5e12405008e,
+        type: 3}
+      propertyPath: bulletHolePrefab
+      value: 
+      objectReference: {fileID: 1393751617}
+    - target: {fileID: 114919995911110234, guid: c24fed9fa91f7634fbc8e5e12405008e,
+        type: 3}
+      propertyPath: metalSparkEffect
+      value: 
+      objectReference: {fileID: 1000010355441670, guid: 02a509a7fa70ed740ba4197e20c5d32d,
+        type: 3}
+    - target: {fileID: 114919995911110234, guid: c24fed9fa91f7634fbc8e5e12405008e,
+        type: 3}
       propertyPath: Prefabs.bulletPrefab
       value: 
       objectReference: {fileID: 7311287253587059330, guid: fcd08a5cb8e9cd04c9c3e3feb0d02511,
@@ -5735,6 +5928,76 @@ PrefabInstance:
       propertyPath: showBulletInMagDelay
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114919995911110234, guid: c24fed9fa91f7634fbc8e5e12405008e,
+        type: 3}
+      propertyPath: woodDecals.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114919995911110234, guid: c24fed9fa91f7634fbc8e5e12405008e,
+        type: 3}
+      propertyPath: glassDecals.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114919995911110234, guid: c24fed9fa91f7634fbc8e5e12405008e,
+        type: 3}
+      propertyPath: woodDecals.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 1ab24fae8c812e443853e3ed27941329,
+        type: 3}
+    - target: {fileID: 114919995911110234, guid: c24fed9fa91f7634fbc8e5e12405008e,
+        type: 3}
+      propertyPath: woodDecals.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 8ee407e337251284d821cbdfbb93b9f0,
+        type: 3}
+    - target: {fileID: 114919995911110234, guid: c24fed9fa91f7634fbc8e5e12405008e,
+        type: 3}
+      propertyPath: woodDecals.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 6da166aafcf6b01429be9c9a877d9352,
+        type: 3}
+    - target: {fileID: 114919995911110234, guid: c24fed9fa91f7634fbc8e5e12405008e,
+        type: 3}
+      propertyPath: woodDecals.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: a459ef67e75be1a4c8c686588d107b63,
+        type: 3}
+    - target: {fileID: 114919995911110234, guid: c24fed9fa91f7634fbc8e5e12405008e,
+        type: 3}
+      propertyPath: woodDecals.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 8485dedda0700f04cb11163eb0b3860e,
+        type: 3}
+    - target: {fileID: 114919995911110234, guid: c24fed9fa91f7634fbc8e5e12405008e,
+        type: 3}
+      propertyPath: glassDecals.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: b4cb3b34f4f736f4dbe176bfb2750723,
+        type: 3}
+    - target: {fileID: 114919995911110234, guid: c24fed9fa91f7634fbc8e5e12405008e,
+        type: 3}
+      propertyPath: glassDecals.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 7aaf59a674472c1458dbdea35b82a6cc,
+        type: 3}
+    - target: {fileID: 114919995911110234, guid: c24fed9fa91f7634fbc8e5e12405008e,
+        type: 3}
+      propertyPath: glassDecals.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: c6849db5284508743b853b733e119929,
+        type: 3}
+    - target: {fileID: 114919995911110234, guid: c24fed9fa91f7634fbc8e5e12405008e,
+        type: 3}
+      propertyPath: glassDecals.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9aeaf66dae9784e49acdca6cd57fb321,
+        type: 3}
+    - target: {fileID: 114919995911110234, guid: c24fed9fa91f7634fbc8e5e12405008e,
+        type: 3}
+      propertyPath: glassDecals.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 2014504607e31f7449e48c4fe2f821ee,
+        type: 3}
     - target: {fileID: 136351756376160448, guid: c24fed9fa91f7634fbc8e5e12405008e,
         type: 3}
       propertyPath: m_Enabled

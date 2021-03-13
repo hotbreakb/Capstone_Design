@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 // ----- Low Poly FPS Pack Free Version -----
 public class HandgunScriptLPFP : MonoBehaviour
 {
+    private string currentSceneName;
 
     //Animator component attached to weapon
     Animator anim;
@@ -168,6 +170,8 @@ public class HandgunScriptLPFP : MonoBehaviour
 
     private void Start()
     {
+        currentSceneName = SceneManager.GetActiveScene().name;
+
         //Save the weapon name
         storedWeaponName = weaponName;
         //Get weapon name from string to text
@@ -361,8 +365,6 @@ public class HandgunScriptLPFP : MonoBehaviour
         RaycastHit hit;
         int exceptBulletlayerMask = (-1) - (1 << LayerMask.NameToLayer("Bullet"));  // Everything에서 Bullet 레이어만 제외하고 충돌 체크함
 
-        
-
         // Check forward from Player's position except Bullet
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, exceptBulletlayerMask))
         {
@@ -372,22 +374,30 @@ public class HandgunScriptLPFP : MonoBehaviour
             // BulletHole appear in the direction of the object.
             bulletHole.transform.LookAt(hit.point + hit.normal);
             
-            if (hit.transform.tag == "Tables")
+            if(currentSceneName == "PlayMode")
             {
-                bulletHole.GetComponent<SpriteRenderer>().sprite = woodDecals[UnityEngine.Random.Range(0, woodDecals.Length)];
+                if (hit.transform.tag == "Tables")
+                {
+                    bulletHole.GetComponent<SpriteRenderer>().sprite = woodDecals[UnityEngine.Random.Range(0, woodDecals.Length)];
+                }
+                else if (hit.transform.tag == "Walls" && hit.distance > 13f)
+                {
+                    bulletHole.GetComponent<SpriteRenderer>().sprite = glassDecals[UnityEngine.Random.Range(0, glassDecals.Length)];
+                }
+                else if (hit.transform.tag == "Chair")
+                {
+                    Instantiate(metalSparkEffect, hit.point + hit.normal * 0.0001f, Quaternion.identity);
+                }
+                else if (hit.transform.tag == "Stairs")
+                {
+                    Instantiate(sandSparkEffect, hit.point + hit.normal * 0.0001f, Quaternion.identity);
+                }
             }
-            else if(hit.transform.tag == "Walls" && hit.distance > 13f)
-            {
-                bulletHole.GetComponent<SpriteRenderer>().sprite = glassDecals[UnityEngine.Random.Range(0, glassDecals.Length)];
-            }
-            else if(hit.transform.tag == "Chair")
+            else
             {
                 Instantiate(metalSparkEffect, hit.point + hit.normal * 0.0001f, Quaternion.identity);
             }
-            else if(hit.transform.tag == "Stairs")
-            {
-                Instantiate(sandSparkEffect, hit.point + hit.normal * 0.0001f, Quaternion.identity);
-            }
+            
             
 
             return hit.point;
