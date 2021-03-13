@@ -5777,15 +5777,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1150622205528884, guid: 3fd52f4f6716b10439fa961f249c2f71, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1320191913564740, guid: 3fd52f4f6716b10439fa961f249c2f71, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1944702330841610, guid: 3fd52f4f6716b10439fa961f249c2f71, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4350522345345832, guid: 3fd52f4f6716b10439fa961f249c2f71, type: 3}
       propertyPath: m_RootOrder
@@ -10348,6 +10348,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fresh cola
       objectReference: {fileID: 0}
+    - target: {fileID: 1373866973648094, guid: 8cc7cead4b7c74b42a57223a97379f4f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4635043181699150, guid: 8cc7cead4b7c74b42a57223a97379f4f, type: 3}
       propertyPath: m_RootOrder
       value: 21
@@ -10404,6 +10408,10 @@ PrefabInstance:
     - target: {fileID: 1509301210327780, guid: bd7eb6089440a044fafb60deb167e38a, type: 3}
       propertyPath: m_Name
       value: Glasses
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509301210327780, guid: bd7eb6089440a044fafb60deb167e38a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4939684682810212, guid: bd7eb6089440a044fafb60deb167e38a, type: 3}
       propertyPath: m_RootOrder
@@ -10699,6 +10707,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Phone
       objectReference: {fileID: 0}
+    - target: {fileID: 1823922838071378, guid: 5862d415dd3f4704381b8056fda54b29, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4813959203698378, guid: 5862d415dd3f4704381b8056fda54b29, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -10755,6 +10767,10 @@ PrefabInstance:
     - target: {fileID: 1569975124075620, guid: af025fb8fd2b8a94d9fb2ee7fd3ef74b, type: 3}
       propertyPath: m_Name
       value: Pen (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1569975124075620, guid: af025fb8fd2b8a94d9fb2ee7fd3ef74b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4844425354846460, guid: af025fb8fd2b8a94d9fb2ee7fd3ef74b, type: 3}
       propertyPath: m_RootOrder
@@ -11254,6 +11270,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Book (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1233773951420344, guid: 122be4a0ea3c7f5408f5728f45b82146, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4714900603946898, guid: 122be4a0ea3c7f5408f5728f45b82146, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -11575,6 +11595,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Papers 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1595142037681774, guid: e3c16f3546704164281dc27c7f9f216f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4904202897777212, guid: e3c16f3546704164281dc27c7f9f216f, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -11632,6 +11656,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Book (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1233773951420344, guid: 122be4a0ea3c7f5408f5728f45b82146, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4714900603946898, guid: 122be4a0ea3c7f5408f5728f45b82146, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -11676,10 +11704,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 23710421527678542, guid: 122be4a0ea3c7f5408f5728f45b82146,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1722944286221267863, guid: 122be4a0ea3c7f5408f5728f45b82146,
         type: 3}
       propertyPath: m_Convex
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511347553197251374, guid: 122be4a0ea3c7f5408f5728f45b82146,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 122be4a0ea3c7f5408f5728f45b82146, type: 3}
@@ -12385,6 +12423,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Papers (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1957544525908076, guid: b7be9136d48d82744b075c87a0104c4e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4413107560741144, guid: b7be9136d48d82744b075c87a0104c4e, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -12441,6 +12483,10 @@ PrefabInstance:
     - target: {fileID: 1233773951420344, guid: 122be4a0ea3c7f5408f5728f45b82146, type: 3}
       propertyPath: m_Name
       value: Book
+      objectReference: {fileID: 0}
+    - target: {fileID: 1233773951420344, guid: 122be4a0ea3c7f5408f5728f45b82146, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4714900603946898, guid: 122be4a0ea3c7f5408f5728f45b82146, type: 3}
       propertyPath: m_RootOrder
