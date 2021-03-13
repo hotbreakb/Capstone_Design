@@ -75,8 +75,6 @@ public class MoveAgent : MonoBehaviour
         {
             group.GetComponentsInChildren<Transform>(wayPoints);
             wayPoints.RemoveAt(0);
-
-            nextIdx = Random.Range(0,wayPoints.Count);
         }
         MoveWayPoint();
     }
@@ -128,8 +126,7 @@ public class MoveAgent : MonoBehaviour
         if(agent.velocity.sqrMagnitude >= 0.2f * 0.2f && agent.remainingDistance <= 0.5f)
         {
             //다음 목적지의 배열 첨자를 계산
-            //nextIdx = ++nextIdx % wayPoints.Count;
-            nextIdx = Random.Range(0,wayPoints.Count);
+            nextIdx = ++nextIdx % wayPoints.Count;
             //다음 목적지로 이동 명령을 수행
             MoveWayPoint();
         }
