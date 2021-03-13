@@ -25,6 +25,5 @@ public class RemoveBullet : MonoBehaviour
 
     //    // 스파크 효과를 생성
     //    Instantiate(sparkEffect, contact.point, rot);
-     
     //}
 }
