@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1342706165602225668
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1342706165602225670}
+  - component: {fileID: 1342706165602225671}
+  m_Layer: 0
+  m_Name: SceneManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1342706165602225670
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342706165602225668}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -31.129253, y: -21.073421, z: -75.62459}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1342706165602225671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342706165602225668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1575f6b288a0634bbad3fd3fd224ac6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changeTime: 20
+  Player: {fileID: 0}
+  TmpPlayer: {fileID: 0}
+  Enemy: {fileID: 0}
+  bullet: {fileID: 1086664671600574, guid: 082632409b7928a478b591ce8331c1af, type: 3}
+  bulletCase: {fileID: 1492315059354262, guid: b1995a53a949fac4db5722fc1df9efe4, type: 3}
+  desk: {fileID: 0}
+  grenade: {fileID: 1948591290861370, guid: 7b04fe350ed10a741a1e245447860d9e, type: 3}
+  Props: {fileID: 0}
+  messProps: {fileID: 0}
+  Bombs: {fileID: 0}
+  Fires: {fileID: 0}
+  UI: {fileID: 0}
+  labtopBar: {fileID: 0}
+  Eyeblinkpanel: {fileID: 0}
+  Background: {fileID: 0}
+  fadeOutTime: 1
+  Canvas: {fileID: 0}
+  GunCamera: {fileID: 0}
