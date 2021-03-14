@@ -5,11 +5,19 @@ using UnityEngine;
 public class breakWindow : MonoBehaviour
 {
     // Start is called before the first frame update
-    Animator anim;
+    private Animator anim;
+
+    private void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("ontrigger");
-        anim.Play("Break");
+        if(anim != null)
+        {
+            Debug.Log("ontrigger");
+            anim.Play("Break");
+        }
     }
 }
