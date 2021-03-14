@@ -39,7 +39,8 @@ public class EnemyFire : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
+    {   
+        muzzleFlash.enabled = false;
         playerTr = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         enemyTr = GetComponent<Transform>();
         animator = GetComponent<Animator>();
