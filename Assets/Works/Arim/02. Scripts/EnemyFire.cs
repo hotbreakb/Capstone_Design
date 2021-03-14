@@ -57,11 +57,10 @@ public class EnemyFire : MonoBehaviour
                 Fire();
                 nextFire = Time.time + fireRate + Random.Range(0.0f,0.3f);
             }
-        }
-
-
+            
         Quaternion rot = Quaternion.LookRotation(playerTr.position - enemyTr.position);
         enemyTr.rotation = Quaternion.Slerp(enemyTr.rotation, rot, Time.deltaTime * damping);
+        }
     }
     
     private void Fire(){
