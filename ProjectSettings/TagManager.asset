@@ -17,6 +17,7 @@ TagManager:
   - TmpBullet
   - Walls
   - Stairs
+  - Window
   layers:
   - Default
   - TransparentFX

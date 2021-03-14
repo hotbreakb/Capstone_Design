@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 // ----- Low Poly FPS Pack Free Version -----
 public class HandgunScriptLPFP : MonoBehaviour
 {
+    private string currentSceneName;
 
     //Animator component attached to weapon
     Animator anim;
@@ -168,6 +170,8 @@ public class HandgunScriptLPFP : MonoBehaviour
 
     private void Start()
     {
+        currentSceneName = SceneManager.GetActiveScene().name;
+
         //Save the weapon name
         storedWeaponName = weaponName;
         //Get weapon name from string to text
@@ -369,23 +373,33 @@ public class HandgunScriptLPFP : MonoBehaviour
 
             // BulletHole appear in the direction of the object.
             bulletHole.transform.LookAt(hit.point + hit.normal);
-
-            if (hit.transform.tag == "Tables")
+            
+            if(currentSceneName == "PlayMode")
             {
-                bulletHole.GetComponent<SpriteRenderer>().sprite = woodDecals[UnityEngine.Random.Range(0, woodDecals.Length)];
+                
+                if (hit.transform.tag == "Tables")
+                {
+                    bulletHole.GetComponent<SpriteRenderer>().sprite = woodDecals[UnityEngine.Random.Range(0, woodDecals.Length)];
+                }
+                else if (hit.transform.tag == "Window")
+                {
+                    bool _isBroken = hit.transform.GetComponent<breakWindow>().isBroken;
+                    if(!_isBroken) bulletHole.GetComponent<SpriteRenderer>().sprite = glassDecals[UnityEngine.Random.Range(0, glassDecals.Length)];
+                }
+                else if (hit.transform.tag == "Chair")
+                {
+                    Instantiate(metalSparkEffect, hit.point + hit.normal * 0.0001f, Quaternion.identity);
+                }
+                else if (hit.transform.tag == "Stairs")
+                {
+                    Instantiate(sandSparkEffect, hit.point + hit.normal * 0.0001f, Quaternion.identity);
+                }
             }
-            else if(hit.transform.tag == "Walls")
-            {
-                bulletHole.GetComponent<SpriteRenderer>().sprite = glassDecals[UnityEngine.Random.Range(0, glassDecals.Length)];
-            }
-            else if(hit.transform.tag == "Chair")
+            else
             {
                 Instantiate(metalSparkEffect, hit.point + hit.normal * 0.0001f, Quaternion.identity);
             }
-            else if(hit.transform.tag == "Stairs")
-            {
-                Instantiate(sandSparkEffect, hit.point + hit.normal * 0.0001f, Quaternion.identity);
-            }
+            
             
 
             return hit.point;
