@@ -22,13 +22,9 @@ public class breakWindow : MonoBehaviour
 
             if(shootCount == maxShootCount && anim != null)
             {
-                Debug.Log("ontrigger");
                 anim.Play("Break", 0, 0f);
                 isBroken = true;
             }
         }
-        
-
-        Debug.Log(shootCount);
     }
 }

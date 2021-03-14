@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Leap;
 
 // ----- Low Poly FPS Pack Free Version -----
 public class HandgunScriptLPFP : MonoBehaviour
@@ -384,7 +385,11 @@ public class HandgunScriptLPFP : MonoBehaviour
                 else if (hit.transform.tag == "Window")
                 {
                     bool _isBroken = hit.transform.GetComponent<breakWindow>().isBroken;
-                    if(!_isBroken) bulletHole.GetComponent<SpriteRenderer>().sprite = glassDecals[UnityEngine.Random.Range(0, glassDecals.Length)];
+                    if (!_isBroken)
+                    {
+                        bulletHole.GetComponent<SpriteRenderer>().sprite = glassDecals[UnityEngine.Random.Range(0, glassDecals.Length)];
+                        StartCoroutine(destroyTimer(bulletHole));
+                    }
                 }
                 else if (hit.transform.tag == "Chair")
                 {
@@ -423,6 +428,12 @@ public class HandgunScriptLPFP : MonoBehaviour
         {
             anim.SetBool("Walk", false);
         }
+    }
+
+    private IEnumerator destroyTimer(GameObject bulletHole)
+    {
+        yield return new WaitForSeconds(2.0f);
+        Destroy(bulletHole);
     }
 
     private IEnumerator HandgunSliderBackDelay()
