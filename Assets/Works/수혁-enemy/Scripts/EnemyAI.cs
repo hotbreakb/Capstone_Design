@@ -94,6 +94,7 @@ public class EnemyAI : MonoBehaviour
                     break;
 
                 case State.DIE:
+                    this.gameObject.tag = "Untagged";
                     isDie = true;
                     enemyFire.isFire = false;
                     moveAgent.Stop();
