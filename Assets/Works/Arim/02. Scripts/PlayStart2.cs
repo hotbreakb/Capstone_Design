@@ -41,6 +41,8 @@ public class PlayStart2 : MonoBehaviour
     public GameObject Canvas;
     public GameObject GunCamera;
 
+    [Header("Enemy")]
+    public GameObject GameMgr;
 
     private void Start()
     {
@@ -135,6 +137,7 @@ public class PlayStart2 : MonoBehaviour
     {
         yield return new WaitForSeconds(Time.deltaTime + 3f);
         UI.SetActive(true);
+        GameMgr.SetActive(true);
         labtopBar.SetActive(true);
     }
 }
