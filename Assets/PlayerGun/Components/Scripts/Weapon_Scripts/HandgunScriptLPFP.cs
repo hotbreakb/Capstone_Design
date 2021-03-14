@@ -381,9 +381,10 @@ public class HandgunScriptLPFP : MonoBehaviour
                 {
                     bulletHole.GetComponent<SpriteRenderer>().sprite = woodDecals[UnityEngine.Random.Range(0, woodDecals.Length)];
                 }
-                else if (hit.transform.tag == "Walls" && hit.distance > 13f)
+                else if (hit.transform.tag == "Window")
                 {
-                    bulletHole.GetComponent<SpriteRenderer>().sprite = glassDecals[UnityEngine.Random.Range(0, glassDecals.Length)];
+                    bool _isBroken = hit.transform.GetComponent<breakWindow>().isBroken;
+                    if(!_isBroken) bulletHole.GetComponent<SpriteRenderer>().sprite = glassDecals[UnityEngine.Random.Range(0, glassDecals.Length)];
                 }
                 else if (hit.transform.tag == "Chair")
                 {

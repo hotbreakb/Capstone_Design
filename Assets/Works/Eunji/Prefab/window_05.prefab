@@ -7994,7 +7994,7 @@ GameObject:
   - component: {fileID: 3211797807500846873}
   m_Layer: 0
   m_Name: window_05
-  m_TagString: Untagged
+  m_TagString: Window
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8202,6 +8202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 836ea52c665f0104e86f71c37c604cf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxShootCount: 3
 --- !u!1 &8731603704197605530
 GameObject:
   m_ObjectHideFlags: 0

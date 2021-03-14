@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class breakWindow : MonoBehaviour
 {
-    // Start is called before the first frame update
     private Animator anim;
-    private bool isBroken = false;
+    public bool isBroken = false; /* Used in HandgunScript */
     public int maxShootCount = 3;
     private int shootCount = 0;
 
