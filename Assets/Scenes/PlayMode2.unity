@@ -4491,7 +4491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gunCamera: {fileID: 8927944}
-  shakeRange: 0.1
+  shakeRange: 0.3
   duration: 3
 --- !u!224 &738544620 stripped
 RectTransform:
