@@ -380,7 +380,6 @@ public class HandgunScriptLPFP : MonoBehaviour
                 if (hit.transform.tag == "Tables")
                 {
                     bulletHole.GetComponent<SpriteRenderer>().sprite = woodDecals[UnityEngine.Random.Range(0, woodDecals.Length)];
-                    Debug.Log("playmode");
                 }
                 else if (hit.transform.tag == "Walls" && hit.distance > 13f)
                 {
