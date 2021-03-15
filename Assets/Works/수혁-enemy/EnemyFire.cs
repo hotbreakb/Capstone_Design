@@ -15,7 +15,7 @@ public class EnemyFire : MonoBehaviour
     private readonly int hashReload = Animator.StringToHash("Reload");
 
     private float nextFire = 0.0f;
-    private readonly float fireRate = 0.1f;
+    private readonly float fireRate = 0.3f;
     private readonly float damping = 10.0f;
 
     private readonly float reloadTime = 2.0f;
@@ -55,7 +55,7 @@ public class EnemyFire : MonoBehaviour
         if(!isReload && isFire){
             if(Time.time >= nextFire){
                 Fire();
-                nextFire = Time.time + fireRate + Random.Range(0.0f,0.3f);
+                nextFire = Time.time + fireRate + Random.Range(0.0f,1.0f);  // 공속딜레이
             }
             
         Quaternion rot = Quaternion.LookRotation(playerTr.position - enemyTr.position);
