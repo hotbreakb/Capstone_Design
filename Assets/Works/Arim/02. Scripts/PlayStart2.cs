@@ -21,7 +21,9 @@ public class PlayStart2 : MonoBehaviour
     public GameObject Props;
     public GameObject messProps;
     public GameObject Labtop;
+    public GameObject newLabtop;
     public GameObject table;
+    public GameObject newtable;
 
 
     [Header("Bomb effect")]
@@ -121,6 +123,10 @@ public class PlayStart2 : MonoBehaviour
     void PropsAct()
     {
         Props.SetActive(false);
+        Labtop.SetActive(false);
+        table.SetActive(false);
+        newLabtop.SetActive(true);
+        newtable.SetActive(true);
         messProps.SetActive(true);
     }
     IEnumerator FireAct()
