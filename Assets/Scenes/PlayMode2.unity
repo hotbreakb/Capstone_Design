@@ -5148,9 +5148,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 586309187}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 28f521e9cc74da24995ad69493f5b173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _color: {r: 0.10679956, g: 0.13939697, b: 0.9056604, a: 1}
+  _radius: 0.1
 --- !u!1 &633481150 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8573506284078412670, guid: e6a4a62c648b80f4d997da81424f9c27,
