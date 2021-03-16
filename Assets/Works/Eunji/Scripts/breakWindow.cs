@@ -5,6 +5,8 @@ using UnityEngine;
 public class breakWindow : MonoBehaviour
 {
     private Animator anim;
+    private AudioSource breakAudioSource;
+
     public bool isBroken = false; /* Used in HandgunScript */
     public int maxShootCount = 3;
     private int shootCount = 0;
@@ -12,6 +14,7 @@ public class breakWindow : MonoBehaviour
     private void Start()
     {
         anim = GetComponent<Animator>();
+        breakAudioSource = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -22,13 +25,11 @@ public class breakWindow : MonoBehaviour
 
             if(shootCount == maxShootCount && anim != null)
             {
-                Debug.Log("ontrigger");
                 anim.Play("Break", 0, 0f);
+                breakAudioSource.Play();
+
                 isBroken = true;
             }
         }
-        
-
-        Debug.Log(shootCount);
     }
 }
