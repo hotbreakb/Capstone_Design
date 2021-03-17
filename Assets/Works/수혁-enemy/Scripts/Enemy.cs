@@ -83,7 +83,6 @@ public class Enemy : MonoBehaviour
             if(flag){
             transform.LookAt(player.transform.position);
             float random = Random.Range(0.0f, 0.4f);
-
             if (random > attackProbability)
             {   
                 animator.SetBool("isShoot",true);
