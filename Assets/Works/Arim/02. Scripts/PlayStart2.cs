@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class PlayStart2 : MonoBehaviour
 {
+    
 
     [Header("Change Size")]
     public float changeTime = 20.0f;
@@ -13,12 +15,15 @@ public class PlayStart2 : MonoBehaviour
     public GameObject Enemy;
     public GameObject bullet;
     public GameObject bulletCase;
-    public GameObject desk;
     public GameObject grenade;
 
     [Header("Change Props")]
     public GameObject Props;
     public GameObject messProps;
+    public GameObject Labtop;
+    public GameObject newLabtop;
+    public GameObject table;
+    public GameObject newtable;
 
 
     [Header("Bomb effect")]
@@ -41,6 +46,11 @@ public class PlayStart2 : MonoBehaviour
     public GameObject Canvas;
     public GameObject GunCamera;
 
+    [Header("Enemy")]
+    public GameObject GameMgr;
+
+    [Header("Audio")]
+    public GameObject AudioManager;
 
     private void Start()
     {
@@ -79,8 +89,10 @@ public class PlayStart2 : MonoBehaviour
         TmpPlayer.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
         bullet.transform.localScale = new Vector3(0.004f, 0.004f, 0.004f);
         bulletCase.transform.localScale = new Vector3(0.11f, 0.11f, 0.11f);
-        desk.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
-        desk.transform.position = new Vector3(0.339f, -1.53f, desk.transform.position.z);
+        Labtop.transform.localPosition = new Vector3(1.79f, -1.47f, -0.17f);
+        Labtop.transform.localRotation = Quaternion.Euler(new Vector3(0f, -38.419f, 0f));
+        table.transform.localPosition = new Vector3(-2.18f, -0.1561772f, -0.119f);
+        table.transform.localRotation = Quaternion.Euler(new Vector3(-65.07f, 66.911f, 69.79401f));
         grenade.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
         
 
@@ -111,6 +123,10 @@ public class PlayStart2 : MonoBehaviour
     void PropsAct()
     {
         Props.SetActive(false);
+        Labtop.SetActive(false);
+        table.SetActive(false);
+        newLabtop.SetActive(true);
+        newtable.SetActive(true);
         messProps.SetActive(true);
     }
     IEnumerator FireAct()
@@ -125,6 +141,8 @@ public class PlayStart2 : MonoBehaviour
         Bombs.SetActive(true);
         Fires.SetActive(false);
         Canvas.SendMessage("Shake");
+        AudioManager.SetActive(true);
+
     }
     void BombnotAct()
     {
@@ -135,6 +153,7 @@ public class PlayStart2 : MonoBehaviour
     {
         yield return new WaitForSeconds(Time.deltaTime + 3f);
         UI.SetActive(true);
+        GameMgr.SetActive(true);
         labtopBar.SetActive(true);
     }
 }

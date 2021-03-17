@@ -15,10 +15,19 @@ public class GameManager : MonoBehaviour
     // 게임종료 여부
     public bool isGameOver = false;
 
+    public static GameManager instance = null;
 
 
+    void Awake(){
+        if(instance == null){
+            instance = this;
+        }
+        else if(instance != this){
+            Destroy(this.gameObject);
+        }
 
-
+        DontDestroyOnLoad(this.gameObject);
+    }
 
 
 

@@ -41,8 +41,12 @@ public class EnemyAI : MonoBehaviour
     private readonly int hashMove = Animator.StringToHash("IsMove");
     private readonly int hashSpeed = Animator.StringToHash("Speed");
 
-
-
+    private readonly int hashDie = Animator.StringToHash("Die");
+    private readonly int hashDieIdx = Animator.StringToHash("DieIdx");
+    
+    private readonly int hashOffset = Animator.StringToHash("Offset");
+    
+    private readonly int hashWalkSpeed = Animator.StringToHash("WalkSpeed");
 
     private void Awake(){
         var player = GameObject.FindGameObjectWithTag("Player");
@@ -55,6 +59,9 @@ public class EnemyAI : MonoBehaviour
         enemyFire = GetComponent<EnemyFire>();
         ws = new WaitForSeconds(0.3f);
 
+
+        animator.SetFloat(hashOffset, Random.Range(0.0f,1.0f));
+        animator.SetFloat(hashWalkSpeed, Random.Range(1.0f,1.2f));
     }
 
     private void OnEnable(){
@@ -87,7 +94,15 @@ public class EnemyAI : MonoBehaviour
                     break;
 
                 case State.DIE:
+                    this.gameObject.tag = "Untagged";
+                    isDie = true;
+                    enemyFire.isFire = false;
                     moveAgent.Stop();
+                    int ran = Random.Range(0,3);
+                    Debug.Log(ran);
+                    animator.SetInteger(hashDieIdx,ran);
+                    animator.SetTrigger(hashDie);
+                    GetComponent<CapsuleCollider>().enabled = false;
                     break;
             }
         }

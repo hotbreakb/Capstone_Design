@@ -7,7 +7,7 @@ public class Fadeout : MonoBehaviour
     public GameObject gunCamera;
     Vector3 cameraPos;
 
-    [SerializeField] [Range(0.01f, 0.1f)] float shakeRange = 0.05f;
+    [SerializeField] [Range(0.01f, 0.3f)] float shakeRange = 0.05f;
     [SerializeField] [Range(0.1f, 4f)] float duration = 3f;
 
    
