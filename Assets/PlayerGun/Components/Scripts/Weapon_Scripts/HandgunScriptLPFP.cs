@@ -155,9 +155,17 @@ public class HandgunScriptLPFP : MonoBehaviour
     }
     public soundClips SoundClips;
 
+    /* ---- Leap Motion Action ---- */
     private bool _isShoot = false;
     private bool _isGrenade = false;
     private bool _isLoading = false;
+
+    private bool _isShootDown = false;
+    private bool _isGrenadeDown = false;
+
+    private float _ShootDelay = 0.2f;
+    private float _GrenadeDelay = 5.0f;
+    /* ---------------------------- */
 
     private void Awake()
     {
@@ -245,7 +253,7 @@ public class HandgunScriptLPFP : MonoBehaviour
     private void checkAction()
     {
         //Shooting 
-        if ((Input.GetMouseButtonDown(0) || _isShoot) && !outOfAmmo && !isReloading)
+        if (!_isShootDown && (Input.GetMouseButtonDown(0) || _isShoot) && !outOfAmmo && !isReloading)
         {
             anim.Play("Aim Fire", 0, 0f);
 
@@ -284,16 +292,25 @@ public class HandgunScriptLPFP : MonoBehaviour
             StartCoroutine(MuzzleFlashLight());
 
             makeBullet();
+
+            _isShootDown = true;
+
+            /* Cool Time */
+            StartCoroutine(shootTimer());
         }
         //Throw grenade when pressing G key
-        else if (Input.GetKeyDown(KeyCode.G) || _isGrenade)
+        else if (!_isGrenadeDown && (Input.GetKeyDown(KeyCode.G) || _isGrenade))
         {
             StartCoroutine(GrenadeSpawnDelay());
             //Play grenade throw animation
             anim.Play("GrenadeThrow", 0, 0.0f);
+            _isGrenadeDown = true;
+
+            /* Cool Time */
+            StartCoroutine(grenadeTimer());
         }
         //Reload 
-        else if (Input.GetKeyDown(KeyCode.R) || _isLoading)
+        else if (currentAmmo < 10 && (Input.GetKeyDown(KeyCode.R) || _isLoading))
         {
             //Reload
             Reload();
@@ -429,6 +446,15 @@ public class HandgunScriptLPFP : MonoBehaviour
         {
             anim.SetBool("Walk", false);
         }
+    }
+
+    private IEnumerator shootTimer(){
+        yield return new WaitForSeconds(_ShootDelay);
+        _isShootDown = false;
+    }
+    private IEnumerator grenadeTimer(){
+        yield return new WaitForSeconds(_GrenadeDelay);
+        _isGrenadeDown = false;
     }
 
     private IEnumerator destroyTimer(GameObject bulletHole)

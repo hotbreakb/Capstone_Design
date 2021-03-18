@@ -69,8 +69,6 @@ public class LeapmotionGesture : MonoBehaviour
 
             isShoot = false; isGrenade = false; isLoading = false;
 
-            StartCoroutine("timer");
-
             // [Conditions to 'Shoot']
             //  1. Two straight fingers
             //  2. Hands moving from top to bottom
@@ -99,11 +97,7 @@ public class LeapmotionGesture : MonoBehaviour
                 cube.GetComponent<MeshRenderer>().material.color = Color.black;
             }
 
-            // isShoot = false; isGrenade = false; isLoading = false;
-
-            //Debug.Log("isShoot: " + isShoot + " isGrenade" + isGrenade + "isLoading" + isLoading);
-            yield return new WaitForSeconds(1.0f);
-            //yield return null;
+            yield return null;
         } // end for
     }
 
@@ -130,18 +124,6 @@ public class LeapmotionGesture : MonoBehaviour
             if (digit.IsExtended)
                 extendedFingers++;
         }
-
-        //Debug.Log(extendedFingers);
         return extendedFingers;
-    }
-
-    IEnumerator timer()
-    {
-        int time = 0;
-        while (true)
-        {
-            time++;
-            yield return new WaitForSeconds(5.0f); // delay 2 seconds
-        }
     }
 }

@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: bb88e8d11dffc5749aa8a112748bd940, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 52d44e5692d0c134f9b2ed3abd21fb73, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.19612539, g: 0.07926821, b: 0.035391066, a: 1}
+  m_IndirectSpecularColor: {r: 0.6361782, g: 0.6631779, b: 0.70389575, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -151,7 +151,7 @@ PrefabInstance:
     - target: {fileID: 8999302182933925727, guid: 8c4d5c0e44fb4804c8b1bd5c00a64807,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.23
+      value: -13.25
       objectReference: {fileID: 0}
     - target: {fileID: 8999302182933925727, guid: 8c4d5c0e44fb4804c8b1bd5c00a64807,
         type: 3}
@@ -8363,7 +8363,7 @@ PrefabInstance:
     - target: {fileID: 8999302182933925727, guid: 8c4d5c0e44fb4804c8b1bd5c00a64807,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.3
+      value: -11.2
       objectReference: {fileID: 0}
     - target: {fileID: 8999302182933925727, guid: 8c4d5c0e44fb4804c8b1bd5c00a64807,
         type: 3}
@@ -8373,7 +8373,7 @@ PrefabInstance:
     - target: {fileID: 8999302182933925727, guid: 8c4d5c0e44fb4804c8b1bd5c00a64807,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.31
+      value: -8.24
       objectReference: {fileID: 0}
     - target: {fileID: 8999302182933925727, guid: 8c4d5c0e44fb4804c8b1bd5c00a64807,
         type: 3}
@@ -12256,6 +12256,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4019247697494930232, guid: 953b0ba5876b5334781a5b81b00b5264,
+        type: 3}
+      propertyPath: Dark
+      value: 
+      objectReference: {fileID: 2100000, guid: 60707ca12463be1488e1434aaf18a243, type: 2}
+    - target: {fileID: 4019247697494930232, guid: 953b0ba5876b5334781a5b81b00b5264,
+        type: 3}
+      propertyPath: Cloudy
+      value: 
+      objectReference: {fileID: 2100000, guid: 52d44e5692d0c134f9b2ed3abd21fb73, type: 2}
     - target: {fileID: 4019247697494930232, guid: 953b0ba5876b5334781a5b81b00b5264,
         type: 3}
       propertyPath: Spotlight
