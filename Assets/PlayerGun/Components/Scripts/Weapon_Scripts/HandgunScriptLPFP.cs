@@ -118,6 +118,7 @@ public class HandgunScriptLPFP : MonoBehaviour
     public Text currentWeaponText;
     public Text currentAmmoText;
     public Text totalAmmoText;
+    public GameObject ReloadinfoUI;
 
     [System.Serializable]
     public class prefabs
@@ -180,7 +181,7 @@ public class HandgunScriptLPFP : MonoBehaviour
     private void Start()
     {
         currentSceneName = SceneManager.GetActiveScene().name;
-
+        ReloadinfoUI.SetActive(false);
         //Save the weapon name
         storedWeaponName = weaponName;
         //Get weapon name from string to text
@@ -497,7 +498,7 @@ public class HandgunScriptLPFP : MonoBehaviour
         //Wait for set amount of time
         yield return new WaitForSeconds(autoReloadDelay);
 
-        if (outOfAmmo == true)
+        if (outOfAmmo == true )
         {
             //Play diff anim if out of ammo
             anim.Play("Reload Out Of Ammo", 0, 0f);
@@ -523,44 +524,58 @@ public class HandgunScriptLPFP : MonoBehaviour
     //Reload
     private void Reload()
     {
-
-        if (outOfAmmo == true)
+        if (currentAmmo < 10)
         {
-            //Play diff anim if out of ammo
-            anim.Play("Reload Out Of Ammo", 0, 0f);
-
-            mainAudioSource.clip = SoundClips.reloadSoundOutOfAmmo;
-            mainAudioSource.Play();
-
-            //If out of ammo, hide the bullet renderer in the mag
-            //Do not show if bullet renderer is not assigned in inspector
-            if (bulletInMagRenderer != null)
+            if (outOfAmmo == true)
             {
-                bulletInMagRenderer.GetComponent
-                <SkinnedMeshRenderer>().enabled = false;
-                //Start show bullet delay
-                StartCoroutine(ShowBulletInMag());
+                //Play diff anim if out of ammo
+                anim.Play("Reload Out Of Ammo", 0, 0f);
+
+                mainAudioSource.clip = SoundClips.reloadSoundOutOfAmmo;
+                mainAudioSource.Play();
+
+                //If out of ammo, hide the bullet renderer in the mag
+                //Do not show if bullet renderer is not assigned in inspector
+                if (bulletInMagRenderer != null)
+                {
+                    bulletInMagRenderer.GetComponent
+                    <SkinnedMeshRenderer>().enabled = false;
+                    //Start show bullet delay
+                    StartCoroutine(ShowBulletInMag());
+                }
             }
+            else
+            {
+                //Play diff anim if ammo left
+                anim.Play("Reload Ammo Left", 0, 0f);
+
+                mainAudioSource.clip = SoundClips.reloadSoundAmmoLeft;
+                mainAudioSource.Play();
+
+                //If reloading when ammo left, show bullet in mag
+                //Do not show if bullet renderer is not assigned in inspector
+                if (bulletInMagRenderer != null)
+                {
+                    bulletInMagRenderer.GetComponent
+                    <SkinnedMeshRenderer>().enabled = true;
+                }
+            }
+            //Restore ammo when reloading
+            currentAmmo = ammo;
+
+            outOfAmmo = false;
         }
         else
         {
-            //Play diff anim if ammo left
-            anim.Play("Reload Ammo Left", 0, 0f);
-
-            mainAudioSource.clip = SoundClips.reloadSoundAmmoLeft;
-            mainAudioSource.Play();
-
-            //If reloading when ammo left, show bullet in mag
-            //Do not show if bullet renderer is not assigned in inspector
-            if (bulletInMagRenderer != null)
-            {
-                bulletInMagRenderer.GetComponent
-                <SkinnedMeshRenderer>().enabled = true;
-            }
+            ReloadinfoUI.SetActive(true);
+            destroyUI(ReloadinfoUI);
         }
-        //Restore ammo when reloading
-        currentAmmo = ammo;
-        outOfAmmo = false;
+
+    }
+    public IEnumerator destroyUI(GameObject gameObject)
+    {
+        yield return new WaitForSeconds(1.5f);
+        gameObject.SetActive(false);
     }
 
     //Enable bullet in mag renderer after set amount of time
