@@ -4,11 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 public class SC2PlayerDamage : MonoBehaviour
 {
-    private const string bulletTag = "TmpBullet";
+ 
     private float initHp = 200.0f;
     private Color currColor;
     private readonly Color initColor = new Vector4(0, 1.0f, 0.0f, 1.0f);
-    public float currHP;
+    private float currHP;
 
     public Image bloodScreen;
     public Image hpBar;
@@ -18,13 +18,18 @@ public class SC2PlayerDamage : MonoBehaviour
     
 
     private void OnCollisionEnter(Collision collision){
+        //collision.transform.tag =="Bullet" ||
+        if(collision.transform.tag =="Enemy"){
+            Debug.Log(collision.transform.tag);
+            Debug.Log(currHP);
             StartCoroutine(ShowBloodScreen());
-            currHP -= 5.0f;
+            currHP -= 1.0f;
             DisPlayHpbar();
             if (currHP <= 0.0f) //플레이어 죽었을때
             {
                 PlayerDie();
             }
+        }
     }
     private void PlayerDie()
     {

@@ -15,9 +15,10 @@ GameObject:
   - component: {fileID: -5883257194641790835}
   - component: {fileID: 5987779741830253188}
   - component: {fileID: -4825697122909597241}
+  - component: {fileID: -5985549319237154894}
   m_Layer: 0
   m_Name: E_Bullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -239,3 +240,17 @@ ConstantForce:
   m_RelativeForce: {x: 0, y: 0, z: 0}
   m_Torque: {x: 0, y: 0, z: 0}
   m_RelativeTorque: {x: 0, y: 0, z: 0}
+--- !u!136 &-5985549319237154894
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946411191104889518}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.00511236
+  m_Height: 0.029011995
+  m_Direction: 1
+  m_Center: {x: -2.3283064e-10, y: 0.0015156623, z: 0.00000015762635}
