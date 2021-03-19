@@ -18,6 +18,7 @@ TagManager:
   - Walls
   - Stairs
   - Window
+  - hpItem
   layers:
   - Default
   - TransparentFX

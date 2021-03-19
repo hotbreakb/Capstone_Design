@@ -12,9 +12,15 @@ public class PlayerDamage : MonoBehaviour
     private Color currColor;
     private readonly Color initColor = new Vector4(0, 1.0f, 0.0f, 1.0f);
     public float currHP;
+    public bool hpitem = false;
 
     public Image bloodScreen;
     public Image hpBar;
+
+    [Header("HPItem")]
+    public GameObject HPItem;
+    public float destroyTime = 10f;
+
     //public delegate void PlayerDieHandler();
     //public static event PlayerDieHandler OnPlayerDie;
 
@@ -48,7 +54,7 @@ public class PlayerDamage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        HpItem();
     }
 
     IEnumerator ShowBloodScreen()
@@ -66,5 +72,28 @@ public class PlayerDamage : MonoBehaviour
             currColor.g = (currHP / initHp) * 2.0f;
         hpBar.color = currColor;
         hpBar.fillAmount = (currHP / initHp);
+    }
+
+    IEnumerator DestroyHpItem()
+    {
+        yield return new WaitForSeconds(destroyTime);
+        HPItem.SetActive(false);
+    }
+    void HpItem()
+    {
+        if ((hpitem == false) && (currHP == 50))
+        {
+            HPItem.SetActive(true);
+            hpitem = true;
+            StartCoroutine(DestroyHpItem());
+        }
+    }
+    public void Heal()
+    {
+        Debug.Log("Heal~~~~~~~~~~~~~~");
+        currHP += 50f;
+        AudioSource sound = GetComponent<AudioSource>();
+        sound.Play();
+
     }
 }
