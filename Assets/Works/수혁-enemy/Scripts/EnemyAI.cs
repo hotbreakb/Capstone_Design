@@ -37,7 +37,7 @@ public class EnemyAI : MonoBehaviour
 
 
     private EnemyFire enemyFire;
-
+    private EnemyMeleeAttack enemyMeleeAttack;  // 근접공격스크립트
 
     // 애니메이터 컨트롤러에 정의한 파라미터 해시값 미리 추출
     private readonly int hashMove = Animator.StringToHash("IsMove");
@@ -51,7 +51,7 @@ public class EnemyAI : MonoBehaviour
     private readonly int hashWalkSpeed = Animator.StringToHash("WalkSpeed");
 
     private SC2HpBar hp;    
-
+    
     private readonly int hashMeleeAttack = Animator.StringToHash("MeleeAttack");
     private readonly int hashMeleeAttackIdx = Animator.StringToHash("MeleeAttackIdx");
 
@@ -66,7 +66,7 @@ public class EnemyAI : MonoBehaviour
         enemyFire = GetComponent<EnemyFire>();
         ws = new WaitForSeconds(0.3f);
         hp = GetComponent<SC2HpBar>();
-
+        enemyMeleeAttack = GetComponent<EnemyMeleeAttack>();
         animator.SetFloat(hashOffset, Random.Range(0.0f,1.0f));
         animator.SetFloat(hashWalkSpeed, Random.Range(1.0f,1.2f));
     }
@@ -101,9 +101,12 @@ public class EnemyAI : MonoBehaviour
                     break;
                 case State.MELLE_ATTACK:
                     moveAgent.Stop();
+                    animator.SetBool(hashMove,false);
+                    
+                    if(enemyMeleeAttack.isMeleeAttack ==false) enemyMeleeAttack.isMeleeAttack = true;
                     //if(enemyFire.isFire==true) enemyFire.isFire = false;
-                    animator.SetTrigger(hashMeleeAttack);
-                    animator.SetInteger(hashMeleeAttackIdx,(Random.Range(1,4)));
+                    // animator.SetTrigger(hashMeleeAttack);
+                    // animator.SetInteger(hashMeleeAttackIdx,(Random.Range(1,4)));
                     break;
 
                 case State.MELLE_TRACE:
@@ -116,7 +119,7 @@ public class EnemyAI : MonoBehaviour
                 case State.DIE:
                     this.gameObject.tag = "Untagged";
                     isDie = true;
-                    enemyFire.isFire = false;
+                    enemyMeleeAttack.isMeleeAttack = false;                    
                     moveAgent.Stop();
                     int ran = Random.Range(0,3);
                     animator.SetInteger(hashDieIdx,ran);
@@ -135,11 +138,9 @@ public class EnemyAI : MonoBehaviour
             float dist = Vector3.Distance(playerTr.position, enemyTr.position);
 
 
-            if(state == State.MELLE_TRACE && dist <=1.1f){
+            if(state == State.MELLE_TRACE && dist <=0.7f){
                 state = State.MELLE_ATTACK;
             }
-
-
             else if (dist <=attackDist){
                 if(hp.curHp <= 33){
                     state = State.MELLE_TRACE;

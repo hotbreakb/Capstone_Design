@@ -32,6 +32,7 @@ public class SC2EnemyDamage : MonoBehaviour
             hp-= 34f;
             if(hp <=0.0f){
                 GetComponent<EnemyAI>().state = EnemyAI.State.DIE;
+                Debug.Log(GetComponent<EnemyAI>().state);
             }
         }
         
