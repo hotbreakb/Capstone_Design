@@ -311,7 +311,7 @@ public class HandgunScriptLPFP : MonoBehaviour
             StartCoroutine(grenadeTimer());
         }
         //Reload 
-        else if (currentAmmo < 10 && (Input.GetKeyDown(KeyCode.R) || _isLoading))
+        else if ((Input.GetKeyDown(KeyCode.R) || _isLoading))
         {
             //Reload
             Reload();
@@ -568,13 +568,13 @@ public class HandgunScriptLPFP : MonoBehaviour
         else
         {
             ReloadinfoUI.SetActive(true);
-            destroyUI(ReloadinfoUI);
+            StartCoroutine(destroyUI(ReloadinfoUI));
         }
 
     }
     public IEnumerator destroyUI(GameObject gameObject)
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(2f);
         gameObject.SetActive(false);
     }
 
