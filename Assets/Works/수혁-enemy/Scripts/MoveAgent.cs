@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -53,6 +53,14 @@ public class MoveAgent : MonoBehaviour
         get{return agent.velocity.magnitude;}
     }
     void TraceTarget(Vector3 pos){
+
+        if(agent.isPathStale) return;
+
+        agent.destination = pos;
+        agent.isStopped = false;
+    }
+
+    void MeleeTraceTarget(Vector3 pos){
 
         if(agent.isPathStale) return;
 
