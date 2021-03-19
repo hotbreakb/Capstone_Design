@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
-
-public class PlayerDamage : MonoBehaviour
+public class SC2PlayerDamage : MonoBehaviour
 {
     private const string bulletTag = "TmpBullet";
     private float initHp = 200.0f;
@@ -18,10 +15,9 @@ public class PlayerDamage : MonoBehaviour
     //public delegate void PlayerDieHandler();
     //public static event PlayerDieHandler OnPlayerDie;
 
-    private void OnTriggerEnter(Collider coll)
-    {
-        if (coll.tag == bulletTag)
-        {
+    
+
+    private void OnCollisionEnter(Collision collision){
             StartCoroutine(ShowBloodScreen());
             currHP -= 5.0f;
             DisPlayHpbar();
@@ -29,9 +25,7 @@ public class PlayerDamage : MonoBehaviour
             {
                 PlayerDie();
             }
-        }
     }
-
     private void PlayerDie()
     {
         Debug.Log("Player Die!!!");
@@ -68,3 +62,4 @@ public class PlayerDamage : MonoBehaviour
         hpBar.fillAmount = (currHP / initHp);
     }
 }
+
