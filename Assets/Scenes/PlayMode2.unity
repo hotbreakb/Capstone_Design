@@ -1301,6 +1301,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1601004731}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &210575129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210575128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed26c9151caf09c4a9f2f435d43d47a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isMeleeAttack: 0
 --- !u!114 &210575138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1313,6 +1326,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bebc8dba09ccc84d8f1d0e0ae1fc75d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHp: 100
+  curHp: 100
   hpbar: {fileID: 203691840}
 --- !u!1 &244462110 stripped
 GameObject:
@@ -1388,6 +1403,8 @@ MonoBehaviour:
   Fleshlight: {fileID: 264707074}
   delayTime: 20
   lightmanager: 0
+  Cloudy: {fileID: 0}
+  Dark: {fileID: 0}
 --- !u!114 &336726501 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4019247697494930234, guid: 953b0ba5876b5334781a5b81b00b5264,
@@ -7093,6 +7110,8 @@ MonoBehaviour:
   Fleshlight: {fileID: 264707074}
   delayTime: 20
   lightmanager: 0
+  Cloudy: {fileID: 0}
+  Dark: {fileID: 0}
 --- !u!4 &1358195771 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 415952, guid: c8515ebee271c0649b9db1321f3026a4,
