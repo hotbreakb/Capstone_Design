@@ -7332,6 +7332,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1739405013013354, guid: c24fed9fa91f7634fbc8e5e12405008e, type: 3}
+      propertyPath: m_TagString
+      value: spot
+      objectReference: {fileID: 0}
     - target: {fileID: 1809946769405066, guid: c24fed9fa91f7634fbc8e5e12405008e, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -7347,6 +7351,10 @@ PrefabInstance:
     - target: {fileID: 1986869707440648, guid: c24fed9fa91f7634fbc8e5e12405008e, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1986869707440648, guid: c24fed9fa91f7634fbc8e5e12405008e, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4225693047334556, guid: c24fed9fa91f7634fbc8e5e12405008e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7610,8 +7618,33 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 136351756376160448, guid: c24fed9fa91f7634fbc8e5e12405008e,
         type: 3}
+      propertyPath: m_Height
+      value: 1.5145926
+      objectReference: {fileID: 0}
+    - target: {fileID: 136351756376160448, guid: c24fed9fa91f7634fbc8e5e12405008e,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.28531003
+      objectReference: {fileID: 0}
+    - target: {fileID: 136351756376160448, guid: c24fed9fa91f7634fbc8e5e12405008e,
+        type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 136351756376160448, guid: c24fed9fa91f7634fbc8e5e12405008e,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.10872406
+      objectReference: {fileID: 0}
+    - target: {fileID: 136351756376160448, guid: c24fed9fa91f7634fbc8e5e12405008e,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -0.5427034
+      objectReference: {fileID: 0}
+    - target: {fileID: 136351756376160448, guid: c24fed9fa91f7634fbc8e5e12405008e,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0.0000014016163
       objectReference: {fileID: 0}
     - target: {fileID: 224431392762423736, guid: c24fed9fa91f7634fbc8e5e12405008e,
         type: 3}
@@ -8207,7 +8240,7 @@ PrefabInstance:
     - target: {fileID: 4119777332089324372, guid: c4312c974015ab84f97c829f0b58bbe2,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 210575138, guid: c4312c974015ab84f97c829f0b58bbe2, type: 3}
@@ -8252,7 +8285,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: 1.6
+  m_BaseOffset: 2.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!1 &1644398029 stripped
