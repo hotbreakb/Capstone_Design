@@ -17,7 +17,7 @@ public class MoveAgent : MonoBehaviour
     private Transform enemyTr;
 
     private readonly float patrollSpeed = 1.5f;
-    private readonly float traceSpeed = 4.0f;
+    private readonly float traceSpeed = 2.0f;
 
     private float damping = 1.0f;
 
