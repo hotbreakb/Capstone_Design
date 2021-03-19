@@ -5689,6 +5689,12 @@ MonoBehaviour:
   currHP: 0
   bloodScreen: {fileID: 1511933252}
   hpBar: {fileID: 1479514773}
+--- !u!4 &1014632205 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4297236428456405243, guid: 64b56a8f4d0b9b049ba23f42b4479403,
+    type: 3}
+  m_PrefabInstance: {fileID: 1014632202}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1014732367
 GameObject:
   m_ObjectHideFlags: 0
@@ -8212,6 +8218,21 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1528713486}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1606266738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606266737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98b7fa4d9b699ff47b436019dc0bd504, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currHP: 0
+  bloodScreen: {fileID: 1511933252}
+  hpBar: {fileID: 1479514773}
 --- !u!195 &1606266743
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -8682,12 +8703,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1924847178}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.0968165, y: -1.1815841, z: -1.26}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalPosition: {x: -16.539082, y: 2.6120794, z: -9.67}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 526449491}
-  m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_Father: {fileID: 1014632205}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1949164659
 GameObject:
