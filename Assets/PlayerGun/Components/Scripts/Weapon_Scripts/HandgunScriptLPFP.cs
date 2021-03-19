@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -311,24 +311,15 @@ public class HandgunScriptLPFP : MonoBehaviour
             StartCoroutine(grenadeTimer());
         }
         //Reload 
-        else if (Input.GetKeyDown(KeyCode.R) || _isLoading)
+        else if ((Input.GetKeyDown(KeyCode.R) || _isLoading))
         {
-            if (currentAmmo < 10)
-            {
-                //Reload
-                Reload();
+            //Reload
+            Reload();
 
-                if (!hasStartedSliderBack)
-                {
-                    hasStartedSliderBack = true;
-                    StartCoroutine(HandgunSliderBackDelay());
-                }
-            }
-
-            else
+            if (!hasStartedSliderBack)
             {
-                ReloadinfoUI.SetActive(true);
-                destroyUI(ReloadinfoUI);
+                hasStartedSliderBack = true;
+                StartCoroutine(HandgunSliderBackDelay());
             }
         }
 
@@ -401,10 +392,10 @@ public class HandgunScriptLPFP : MonoBehaviour
 
             // BulletHole appear in the direction of the object.
             bulletHole.transform.LookAt(hit.point + hit.normal);
-
-            if (currentSceneName == "PlayMode")
+            
+            if(currentSceneName == "PlayMode")
             {
-
+                
                 if (hit.transform.tag == "Tables")
                 {
                     bulletHole.GetComponent<SpriteRenderer>().sprite = woodDecals[UnityEngine.Random.Range(0, woodDecals.Length)];
@@ -432,8 +423,8 @@ public class HandgunScriptLPFP : MonoBehaviour
             {
                 Instantiate(metalSparkEffect, hit.point + hit.normal * 0.0001f, Quaternion.identity);
             }
-
-
+            
+            
 
             return hit.point;
         }
@@ -458,13 +449,11 @@ public class HandgunScriptLPFP : MonoBehaviour
         }
     }
 
-    private IEnumerator shootTimer()
-    {
+    private IEnumerator shootTimer(){
         yield return new WaitForSeconds(_ShootDelay);
         _isShootDown = false;
     }
-    private IEnumerator grenadeTimer()
-    {
+    private IEnumerator grenadeTimer(){
         yield return new WaitForSeconds(_GrenadeDelay);
         _isGrenadeDown = false;
     }
@@ -509,7 +498,7 @@ public class HandgunScriptLPFP : MonoBehaviour
         //Wait for set amount of time
         yield return new WaitForSeconds(autoReloadDelay);
 
-        if (outOfAmmo == true)
+        if (outOfAmmo == true )
         {
             //Play diff anim if out of ammo
             anim.Play("Reload Out Of Ammo", 0, 0f);
@@ -535,57 +524,57 @@ public class HandgunScriptLPFP : MonoBehaviour
     //Reload
     private void Reload()
     {
-        // if (currentAmmo < 10)
-        // {
-        if (outOfAmmo == true)
+        if (currentAmmo < 10)
         {
-            //Play diff anim if out of ammo
-            anim.Play("Reload Out Of Ammo", 0, 0f);
-
-            mainAudioSource.clip = SoundClips.reloadSoundOutOfAmmo;
-            mainAudioSource.Play();
-
-            //If out of ammo, hide the bullet renderer in the mag
-            //Do not show if bullet renderer is not assigned in inspector
-            if (bulletInMagRenderer != null)
+            if (outOfAmmo == true)
             {
-                bulletInMagRenderer.GetComponent
-                <SkinnedMeshRenderer>().enabled = false;
-                //Start show bullet delay
-                StartCoroutine(ShowBulletInMag());
+                //Play diff anim if out of ammo
+                anim.Play("Reload Out Of Ammo", 0, 0f);
+
+                mainAudioSource.clip = SoundClips.reloadSoundOutOfAmmo;
+                mainAudioSource.Play();
+
+                //If out of ammo, hide the bullet renderer in the mag
+                //Do not show if bullet renderer is not assigned in inspector
+                if (bulletInMagRenderer != null)
+                {
+                    bulletInMagRenderer.GetComponent
+                    <SkinnedMeshRenderer>().enabled = false;
+                    //Start show bullet delay
+                    StartCoroutine(ShowBulletInMag());
+                }
             }
+            else
+            {
+                //Play diff anim if ammo left
+                anim.Play("Reload Ammo Left", 0, 0f);
+
+                mainAudioSource.clip = SoundClips.reloadSoundAmmoLeft;
+                mainAudioSource.Play();
+
+                //If reloading when ammo left, show bullet in mag
+                //Do not show if bullet renderer is not assigned in inspector
+                if (bulletInMagRenderer != null)
+                {
+                    bulletInMagRenderer.GetComponent
+                    <SkinnedMeshRenderer>().enabled = true;
+                }
+            }
+            //Restore ammo when reloading
+            currentAmmo = ammo;
+
+            outOfAmmo = false;
         }
         else
         {
-            //Play diff anim if ammo left
-            anim.Play("Reload Ammo Left", 0, 0f);
-
-            mainAudioSource.clip = SoundClips.reloadSoundAmmoLeft;
-            mainAudioSource.Play();
-
-            //If reloading when ammo left, show bullet in mag
-            //Do not show if bullet renderer is not assigned in inspector
-            if (bulletInMagRenderer != null)
-            {
-                bulletInMagRenderer.GetComponent
-                <SkinnedMeshRenderer>().enabled = true;
-            }
+            ReloadinfoUI.SetActive(true);
+            StartCoroutine(destroyUI(ReloadinfoUI));
         }
-        //Restore ammo when reloading
-        currentAmmo = ammo;
-
-        outOfAmmo = false;
-        // }
-        // else
-        // {
-        //     ReloadinfoUI.SetActive(true);
-        //     destroyUI(ReloadinfoUI);
-        // }
 
     }
     public IEnumerator destroyUI(GameObject gameObject)
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(2f);
         gameObject.SetActive(false);
     }
 
