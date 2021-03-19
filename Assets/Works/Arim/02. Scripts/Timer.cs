@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,6 +14,13 @@ public class Timer : MonoBehaviour
     public Light Fleshlight;
     public float delayTime = 20.0f;
     public bool lightmanager = false;
+
+    /* ---- change Background --- */
+    public Material Cloudy;
+    public Material Dark;
+    private Color tintColorBlack = new Color(0, 0, 0, 128);
+    private Color tintColorGray = new Color(128, 128, 128, 128);
+    /* -------------------------- */
 
     void Start()
     {
@@ -37,6 +43,10 @@ public class Timer : MonoBehaviour
     void LightManager()
     {
         lightmanager = true;
+        RenderSettings.skybox = Dark;
+        // RenderSettings.skybox.SetColor("_Tint", tintColorBlack);
+        DynamicGI.UpdateEnvironment();
+
         StartCoroutine(Blinking());
         StartCoroutine(Blinktime());
         bt += 0.2f;
@@ -62,6 +72,10 @@ public class Timer : MonoBehaviour
     IEnumerator WaitForIt()
     {
         yield return new WaitForSeconds(delayTime);
+        RenderSettings.skybox = Cloudy;
+        // RenderSettings.skybox.SetColor("_Tint", tintColorGray);
+
+        DynamicGI.UpdateEnvironment();
         Fleshlight.enabled = false ;
         Spotlight.SetActive(true);
         Pointlight.SetActive(true);

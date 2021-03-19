@@ -30,7 +30,6 @@ public class PlayerDamage : MonoBehaviour
         {
             StartCoroutine(ShowBloodScreen());
             currHP -= 5.0f;
-//            Debug.Log("PlayerHP = " + currHP.ToString());
             DisPlayHpbar();
             if (currHP <= 0.0f) //플레이어 죽었을때
             {

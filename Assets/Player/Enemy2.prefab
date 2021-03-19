@@ -696,6 +696,7 @@ GameObject:
   - component: {fileID: 4119777330931731425}
   - component: {fileID: 481890294}
   - component: {fileID: 481890295}
+  - component: {fileID: 210575129}
   - component: {fileID: 210575138}
   m_Layer: 0
   m_Name: Enemy2
@@ -934,6 +935,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d16e75a5ec387cd468323a3a808ba4ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &210575129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4119777332089324372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed26c9151caf09c4a9f2f435d43d47a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isMeleeAttack: 0
 --- !u!114 &210575138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -946,7 +960,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bebc8dba09ccc84d8f1d0e0ae1fc75d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 50
+  maxHp: 100
+  curHp: 100
   hpbar: {fileID: 1671623334}
 --- !u!1001 &4119777332139872226
 PrefabInstance:
