@@ -697,6 +697,7 @@ GameObject:
   - component: {fileID: 481890294}
   - component: {fileID: 481890295}
   - component: {fileID: 210575129}
+  - component: {fileID: 3728171157529460094}
   - component: {fileID: 210575138}
   m_Layer: 0
   m_Name: Enemy2
@@ -906,7 +907,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
-  attackDist: 5
+  attackDist: 2
   traceDist: 10
   isDie: 0
 --- !u!136 &481890294
@@ -936,6 +937,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &210575129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4119777332089324372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed26c9151caf09c4a9f2f435d43d47a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isMeleeAttack: 0
+--- !u!114 &3728171157529460094
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

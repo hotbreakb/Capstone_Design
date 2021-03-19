@@ -104,9 +104,6 @@ public class EnemyAI : MonoBehaviour
                     animator.SetBool(hashMove,false);
                     
                     if(enemyMeleeAttack.isMeleeAttack ==false) enemyMeleeAttack.isMeleeAttack = true;
-                    //if(enemyFire.isFire==true) enemyFire.isFire = false;
-                    // animator.SetTrigger(hashMeleeAttack);
-                    // animator.SetInteger(hashMeleeAttackIdx,(Random.Range(1,4)));
                     break;
 
                 case State.MELLE_TRACE:
