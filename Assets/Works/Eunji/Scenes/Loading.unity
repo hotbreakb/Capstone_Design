@@ -707,6 +707,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   img: {fileID: 114451096}
   backgroundImg: {fileID: 1141004634}
+  backgroundGray: {fileID: 21300000, guid: 51106744a3fae6b4cb3abf3006549e1c, type: 3}
 --- !u!1 &281283133
 GameObject:
   m_ObjectHideFlags: 0
@@ -2470,7 +2471,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 51106744a3fae6b4cb3abf3006549e1c, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

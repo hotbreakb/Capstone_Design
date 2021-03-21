@@ -7,6 +7,8 @@ public class ImageFade : MonoBehaviour
     public Image img;
     public Image backgroundImg;
 
+    public Sprite backgroundGray;
+
     private void Start()
     {
         StartCoroutine(FadeImage(true));
@@ -18,8 +20,8 @@ public class ImageFade : MonoBehaviour
         if (fadeAway)
         {
             // Background is white.
-            backgroundImg.enabled = false;
-
+            //backgroundImg.enabled = false;
+            
             // fade from transparent to opaque
             // loop over 1 second
             for (float i = 0; i <= 1; i += Time.deltaTime)
@@ -40,7 +42,8 @@ public class ImageFade : MonoBehaviour
                 yield return null;
             }
 
-            backgroundImg.enabled = true;
+            backgroundImg.GetComponent<Image>().sprite = backgroundGray;
+            //backgroundImg.enabled = true;
             GameObject.Find("Canvas").GetComponent<CTTDemoManager>().TitlePlay();
         }
     }
