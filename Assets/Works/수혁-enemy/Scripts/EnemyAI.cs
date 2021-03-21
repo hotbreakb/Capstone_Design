@@ -55,7 +55,7 @@ public class EnemyAI : MonoBehaviour
     private readonly int hashMeleeAttack = Animator.StringToHash("MeleeAttack");
     private readonly int hashMeleeAttackIdx = Animator.StringToHash("MeleeAttackIdx");
 
-    
+    private float DieDelayTime = 10.0f;
 
     private void Awake(){
         var player = GameObject.FindGameObjectWithTag("Player");
@@ -126,6 +126,7 @@ public class EnemyAI : MonoBehaviour
                     animator.SetInteger(hashDieIdx,ran);
                     animator.SetTrigger(hashDie);
                     GetComponent<CapsuleCollider>().enabled = false;
+                    Destroy(gameObject,DieDelayTime);
                     break;
             }
         }
