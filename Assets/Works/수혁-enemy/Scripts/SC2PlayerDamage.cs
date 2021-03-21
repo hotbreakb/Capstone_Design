@@ -31,6 +31,17 @@ public class SC2PlayerDamage : MonoBehaviour
             }
         }
     }
+
+        public void AttackedByMelee(){
+            Debug.Log("?");
+            StartCoroutine(ShowBloodScreen());
+            currHP -= 1.0f;
+            DisPlayHpbar();
+            if (currHP <= 0.0f) //플레이어 죽었을때
+            {
+                PlayerDie();
+            }
+    }
     private void PlayerDie()
     {
         Debug.Log("Player Die!!!");
