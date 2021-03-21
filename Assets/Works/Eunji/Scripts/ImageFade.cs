@@ -9,9 +9,7 @@ public class ImageFade : MonoBehaviour
 
     private void Start()
     {
-        //backgroundImg.enabled = false;
         StartCoroutine(FadeImage(true));
-        //backgroundImg.enabled = true;
     }
 
     IEnumerator FadeImage(bool fadeAway)
@@ -19,6 +17,9 @@ public class ImageFade : MonoBehaviour
         
         if (fadeAway)
         {
+            // Background is white.
+            backgroundImg.enabled = false;
+
             // fade from transparent to opaque
             // loop over 1 second
             for (float i = 0; i <= 1; i += Time.deltaTime)
@@ -39,6 +40,7 @@ public class ImageFade : MonoBehaviour
                 yield return null;
             }
 
+            backgroundImg.enabled = true;
             GameObject.Find("Canvas").GetComponent<CTTDemoManager>().TitlePlay();
         }
     }
