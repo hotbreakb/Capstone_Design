@@ -165,7 +165,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 11444028}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 82af58794c979f04d87b016c1b89fbba, type: 3}
   m_Name: 
@@ -173,7 +173,7 @@ MonoBehaviour:
   points: []
   enemy: {fileID: 4119777332089324372, guid: c4312c974015ab84f97c829f0b58bbe2, type: 3}
   createTime: 2
-  maxEnemy: 10
+  maxEnemy: 5
   isGameOver: 0
 --- !u!1 &49439657 stripped
 GameObject:
@@ -6785,7 +6785,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1273765395313544, guid: c24fed9fa91f7634fbc8e5e12405008e, type: 3}
       propertyPath: m_Name
-      value: Handgun_01_FPSController (1)
+      value: Handgun_01_FPSController
       objectReference: {fileID: 0}
     - target: {fileID: 1273765395313544, guid: c24fed9fa91f7634fbc8e5e12405008e, type: 3}
       propertyPath: m_IsActive
@@ -7645,7 +7645,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98b7fa4d9b699ff47b436019dc0bd504, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currHP: 0
   bloodScreen: {fileID: 1511933252}
   hpBar: {fileID: 1479514773}
 --- !u!195 &1606266743

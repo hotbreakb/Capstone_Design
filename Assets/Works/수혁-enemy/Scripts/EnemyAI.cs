@@ -25,9 +25,9 @@ public class EnemyAI : MonoBehaviour
     public float attackDist = 5.0f;
     public float traceDist = 10.0f;
 
-
-
-
+    
+    private GameObject target;
+    private SC2PlayerDamage playerDamage;
     public bool isDie = false;
 
     private WaitForSeconds ws;
@@ -55,6 +55,8 @@ public class EnemyAI : MonoBehaviour
     private readonly int hashMeleeAttack = Animator.StringToHash("MeleeAttack");
     private readonly int hashMeleeAttackIdx = Animator.StringToHash("MeleeAttackIdx");
 
+    
+
     private void Awake(){
         var player = GameObject.FindGameObjectWithTag("Player");
 
@@ -66,6 +68,8 @@ public class EnemyAI : MonoBehaviour
         enemyFire = GetComponent<EnemyFire>();
         ws = new WaitForSeconds(0.3f);
         hp = GetComponent<SC2HpBar>();
+        target = GameObject.Find("Handgun_01_FPSController");
+        playerDamage = target.GetComponent<SC2PlayerDamage>();
         enemyMeleeAttack = GetComponent<EnemyMeleeAttack>();
         animator.SetFloat(hashOffset, Random.Range(0.0f,1.0f));
         animator.SetFloat(hashWalkSpeed, Random.Range(1.0f,1.2f));
@@ -102,7 +106,7 @@ public class EnemyAI : MonoBehaviour
                 case State.MELLE_ATTACK:
                     moveAgent.Stop();
                     animator.SetBool(hashMove,false);
-                    
+                    playerDamage.AttackedByMelee();
                     if(enemyMeleeAttack.isMeleeAttack ==false) enemyMeleeAttack.isMeleeAttack = true;
                     break;
 
