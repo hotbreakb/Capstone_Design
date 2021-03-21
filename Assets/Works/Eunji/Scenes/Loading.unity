@@ -310,7 +310,7 @@ RectTransform:
   m_GameObject: {fileID: 114451094}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.18, y: 0.2, z: 1}
+  m_LocalScale: {x: 0.175, y: 0.2, z: 1}
   m_Children: []
   m_Father: {fileID: 159023081}
   m_RootOrder: 1
@@ -465,6 +465,17 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114171041739272598, guid: fc2ad0cd842d6ac48b545a1bf04b2e07,
+        type: 3}
+      propertyPath: m_Text
+      value: Upload It!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114171041739272598, guid: fc2ad0cd842d6ac48b545a1bf04b2e07,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 0a0f067e0cc462b4794bffbe99a92dec,
+        type: 3}
     - target: {fileID: 224626237504306436, guid: fc2ad0cd842d6ac48b545a1bf04b2e07,
         type: 3}
       propertyPath: m_Pivot.x
@@ -682,7 +693,6 @@ MonoBehaviour:
   - {fileID: 746399911}
   - {fileID: 1914286157}
   currentPanelIndex: 1
-  nextPanelAnimator: {fileID: 0}
 --- !u!114 &159023083
 MonoBehaviour:
   m_ObjectHideFlags: 0
