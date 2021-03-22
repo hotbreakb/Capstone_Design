@@ -1634,7 +1634,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &746399912
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3351,7 +3351,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1023997329816958, guid: 8b5e499f6f9530e4494faf83b28e4c1e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1088682482823660, guid: 8b5e499f6f9530e4494faf83b28e4c1e, type: 3}
       propertyPath: m_IsActive
@@ -3367,6 +3367,16 @@ PrefabInstance:
       value: 'Upload
 
         It!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 114737133168476400, guid: 8b5e499f6f9530e4494faf83b28e4c1e,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114737133168476400, guid: 8b5e499f6f9530e4494faf83b28e4c1e,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114737133168476400, guid: 8b5e499f6f9530e4494faf83b28e4c1e,
         type: 3}
