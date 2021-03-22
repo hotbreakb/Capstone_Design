@@ -15,7 +15,6 @@ public class SC2EnemyDamage : MonoBehaviour
     void Start()
     {
         bloodEffect = Resources.Load<GameObject>("Big");
-
     }
 
     // Update is called once per frame
@@ -30,9 +29,10 @@ public class SC2EnemyDamage : MonoBehaviour
             ShowBloodEffect(coll);
             Destroy(coll.gameObject);
             this.SendMessage("UpdateAfterReceiveAttack");
-            hp-= coll.gameObject.GetComponent<BulletCtrl>().damage;
+            hp-= 34f;
             if(hp <=0.0f){
                 GetComponent<EnemyAI>().state = EnemyAI.State.DIE;
+                Debug.Log(GetComponent<EnemyAI>().state);
             }
         }
         

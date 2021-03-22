@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -17,7 +17,7 @@ public class MoveAgent : MonoBehaviour
     private Transform enemyTr;
 
     private readonly float patrollSpeed = 1.5f;
-    private readonly float traceSpeed = 4.0f;
+    private readonly float traceSpeed = 2.0f;
 
     private float damping = 1.0f;
 
@@ -53,6 +53,14 @@ public class MoveAgent : MonoBehaviour
         get{return agent.velocity.magnitude;}
     }
     void TraceTarget(Vector3 pos){
+
+        if(agent.isPathStale) return;
+
+        agent.destination = pos;
+        agent.isStopped = false;
+    }
+
+    void MeleeTraceTarget(Vector3 pos){
 
         if(agent.isPathStale) return;
 

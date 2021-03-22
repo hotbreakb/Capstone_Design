@@ -10,24 +10,11 @@ public class Bullet : MonoBehaviour
     [SerializeField] GameObject player;      // 나중에 플레이어 나오면 이거로 바꾸기
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        //var velocity = speed * transform.up;   // 앞쪽 방향 속도구하기
-  
-        //Rigidbody rigidbody = GetComponent<Rigidbody>();
-
-
-
-
-        //시작속도를 주기
-        //rigidbody.AddForce(velocity, ForceMode.VelocityChange); 
-    }
-
     // Update is called once per frame
     void Update()
     {
         transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+        
     
     }
 
