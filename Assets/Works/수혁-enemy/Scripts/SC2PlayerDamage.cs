@@ -18,12 +18,11 @@ public class SC2PlayerDamage : MonoBehaviour
     
 
     private void OnCollisionEnter(Collision collision){
-        //collision.transform.tag =="Bullet" ||
-        if(collision.transform.tag =="Enemy"){
+        if(collision.transform.tag =="Bullet" || collision.transform.tag =="Enemy"){
             Debug.Log(collision.transform.tag);
             Debug.Log(currHP);
             StartCoroutine(ShowBloodScreen());
-            currHP -= 1.0f;
+            currHP -= 5.0f;
             DisPlayHpbar();
             if (currHP <= 0.0f) //플레이어 죽었을때
             {
@@ -33,9 +32,8 @@ public class SC2PlayerDamage : MonoBehaviour
     }
 
         public void AttackedByMelee(){
-            Debug.Log("?");
             StartCoroutine(ShowBloodScreen());
-            currHP -= 1.0f;
+            currHP -= 5.0f;
             DisPlayHpbar();
             if (currHP <= 0.0f) //플레이어 죽었을때
             {
