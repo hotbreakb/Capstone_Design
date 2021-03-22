@@ -392,9 +392,6 @@ public class HandgunScriptLPFP : MonoBehaviour
             // BulletHole appear in the direction of the object.
             bulletHole.transform.LookAt(hit.point + hit.normal);
             
-            if(currentSceneName == "PlayMode")
-            {
-                
                 if (hit.transform.tag == "Tables")
                 {
                     bulletHole.GetComponent<SpriteRenderer>().sprite = woodDecals[UnityEngine.Random.Range(0, woodDecals.Length)];
@@ -417,11 +414,7 @@ public class HandgunScriptLPFP : MonoBehaviour
                 {
                     Instantiate(sandSparkEffect, hit.point + hit.normal * 0.0001f, Quaternion.identity);
                 }
-            }
-            else
-            {
-                Instantiate(metalSparkEffect, hit.point + hit.normal * 0.0001f, Quaternion.identity);
-            }
+            
             
             
 
