@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class breakWindow : MonoBehaviour
 {
+    private string SceneName;
+
     private Animator anim;
     private AudioSource breakAudioSource;
 
@@ -13,10 +15,13 @@ public class breakWindow : MonoBehaviour
 
     private void Start()
     {
+        SceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+
         anim = GetComponent<Animator>();
         breakAudioSource = GetComponent<AudioSource>();
     }
 
+    // In Playmode
     private void OnTriggerEnter(Collider other)
     {
         if (!isBroken)
@@ -24,6 +29,23 @@ public class breakWindow : MonoBehaviour
             shootCount++;
 
             if(shootCount == maxShootCount && anim != null)
+            {
+                anim.Play("Break", 0, 0f);
+                breakAudioSource.Play();
+
+                isBroken = true;
+            }
+        }
+    }
+
+    // In Playmode2
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (!isBroken)
+        {
+            shootCount++;
+
+            if (shootCount == maxShootCount && anim != null)
             {
                 anim.Play("Break", 0, 0f);
                 breakAudioSource.Play();
