@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 918513988}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: HPBarPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 918513987}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.23, z: 0}
+  m_LocalPosition: {x: 0.57, y: 2.23, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1659572948}
@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 1411846733}
   - component: {fileID: 1411846735}
   - component: {fileID: 1411846734}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: HPBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ RectTransform:
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1.2, y: 0.1}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &1411846735
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 1659572951}
   - component: {fileID: 1659572950}
   - component: {fileID: 1659572949}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -339,7 +339,7 @@ GameObject:
   - component: {fileID: 1671623333}
   - component: {fileID: 1671623335}
   - component: {fileID: 1671623334}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: HPFront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -364,7 +364,7 @@ RectTransform:
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1.2, y: 0.1}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &1671623335
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -696,6 +696,8 @@ GameObject:
   - component: {fileID: 4119777330931731425}
   - component: {fileID: 481890294}
   - component: {fileID: 481890295}
+  - component: {fileID: 210575129}
+  - component: {fileID: 3728171157529460094}
   - component: {fileID: 210575138}
   m_Layer: 0
   m_Name: Enemy2
@@ -905,7 +907,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
-  attackDist: 5
+  attackDist: 2
   traceDist: 10
   isDie: 0
 --- !u!136 &481890294
@@ -934,6 +936,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d16e75a5ec387cd468323a3a808ba4ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &210575129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4119777332089324372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed26c9151caf09c4a9f2f435d43d47a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isMeleeAttack: 0
+--- !u!114 &3728171157529460094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4119777332089324372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed26c9151caf09c4a9f2f435d43d47a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isMeleeAttack: 0
 --- !u!114 &210575138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -947,6 +975,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHp: 100
+  curHp: 100
   hpbar: {fileID: 1671623334}
 --- !u!1001 &4119777332139872226
 PrefabInstance:

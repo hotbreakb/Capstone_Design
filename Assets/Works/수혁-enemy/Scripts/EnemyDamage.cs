@@ -21,6 +21,6 @@ public class EnemyDamage : MonoBehaviour
         if(curHp ==0){
             Destroy(gameObject);
         }
-        hpbar.rectTransform.localScale = new Vector3((float)curHp/(float)maxHp,1f,1f);
+        hpbar.rectTransform.localScale = new Vector3(((float)curHp/(float)maxHp),1f,1f);
     }
 }

@@ -14,7 +14,7 @@ public class EnemyFire : MonoBehaviour
     private readonly int hashFire = Animator.StringToHash("Fire");
     private readonly int hashReload = Animator.StringToHash("Reload");
 
-    private float nextFire = 0.0f;
+    private float nextFire = 0.1f;
     private readonly float fireRate = 0.3f;
     private readonly float damping = 10.0f;
 

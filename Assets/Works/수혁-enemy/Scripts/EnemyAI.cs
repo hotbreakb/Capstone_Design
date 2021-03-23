@@ -8,6 +8,8 @@ public class EnemyAI : MonoBehaviour
         PATROL,
         TRACE,
         ATTACK,
+        MELLE_ATTACK,
+        MELLE_TRACE,
         DIE
     }
 
@@ -23,9 +25,9 @@ public class EnemyAI : MonoBehaviour
     public float attackDist = 5.0f;
     public float traceDist = 10.0f;
 
-
-
-
+    
+    private GameObject target;
+    private SC2PlayerDamage playerDamage;
     public bool isDie = false;
 
     private WaitForSeconds ws;
@@ -35,7 +37,7 @@ public class EnemyAI : MonoBehaviour
 
 
     private EnemyFire enemyFire;
-
+    private EnemyMeleeAttack enemyMeleeAttack;  // 근접공격스크립트
 
     // 애니메이터 컨트롤러에 정의한 파라미터 해시값 미리 추출
     private readonly int hashMove = Animator.StringToHash("IsMove");
@@ -48,6 +50,13 @@ public class EnemyAI : MonoBehaviour
     
     private readonly int hashWalkSpeed = Animator.StringToHash("WalkSpeed");
 
+    private SC2HpBar hp;    
+    
+    private readonly int hashMeleeAttack = Animator.StringToHash("MeleeAttack");
+    private readonly int hashMeleeAttackIdx = Animator.StringToHash("MeleeAttackIdx");
+
+    private float DieDelayTime = 10.0f;
+
     private void Awake(){
         var player = GameObject.FindGameObjectWithTag("Player");
 
@@ -58,8 +67,10 @@ public class EnemyAI : MonoBehaviour
         animator = GetComponent<Animator>();
         enemyFire = GetComponent<EnemyFire>();
         ws = new WaitForSeconds(0.3f);
-
-
+        hp = GetComponent<SC2HpBar>();
+        target = GameObject.Find("Handgun_01_FPSController");
+        playerDamage = target.GetComponent<SC2PlayerDamage>();
+        enemyMeleeAttack = GetComponent<EnemyMeleeAttack>();
         animator.SetFloat(hashOffset, Random.Range(0.0f,1.0f));
         animator.SetFloat(hashWalkSpeed, Random.Range(1.0f,1.2f));
     }
@@ -92,17 +103,30 @@ public class EnemyAI : MonoBehaviour
 
                     if(enemyFire.isFire == false) enemyFire.isFire = true;
                     break;
+                case State.MELLE_ATTACK:
+                    moveAgent.Stop();
+                    animator.SetBool(hashMove,false);
+                    playerDamage.AttackedByMelee();
+                    if(enemyMeleeAttack.isMeleeAttack ==false) enemyMeleeAttack.isMeleeAttack = true;
+                    break;
 
+                case State.MELLE_TRACE:
+                    enemyFire.isFire = false;
+                    moveAgent.traceTarget = playerTr.position;
+                    animator.SetBool(hashMove, true);
+                    break;
+
+                   
                 case State.DIE:
                     this.gameObject.tag = "Untagged";
                     isDie = true;
-                    enemyFire.isFire = false;
+                    enemyMeleeAttack.isMeleeAttack = false;                    
                     moveAgent.Stop();
                     int ran = Random.Range(0,3);
-                    Debug.Log(ran);
                     animator.SetInteger(hashDieIdx,ran);
                     animator.SetTrigger(hashDie);
                     GetComponent<CapsuleCollider>().enabled = false;
+                    Destroy(gameObject,DieDelayTime);
                     break;
             }
         }
@@ -111,10 +135,21 @@ public class EnemyAI : MonoBehaviour
         while(!isDie){
             if(state == State.DIE) yield break;
 
+            if(state == State.MELLE_ATTACK) yield break;    
+
             float dist = Vector3.Distance(playerTr.position, enemyTr.position);
 
-            if (dist <=attackDist){
-                state = State.ATTACK;
+
+            if(state == State.MELLE_TRACE && dist <=0.7f){
+                state = State.MELLE_ATTACK;
+            }
+            else if (dist <=attackDist){
+                if(hp.curHp <= 33){
+                    state = State.MELLE_TRACE;
+                }
+                else{
+                    state = State.ATTACK;
+                }
             }
             else if(dist <=traceDist){
                 state = State.TRACE;
