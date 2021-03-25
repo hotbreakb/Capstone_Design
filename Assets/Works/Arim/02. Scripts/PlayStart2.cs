@@ -17,6 +17,9 @@ public class PlayStart2 : MonoBehaviour
     public GameObject bulletCase;
     public GameObject grenade;
 
+     [Header("Windows")]
+     public GameObject[] Windows;
+
     [Header("Change Props")]
     public GameObject Props;
     public GameObject messProps;
@@ -57,8 +60,6 @@ public class PlayStart2 : MonoBehaviour
         labtopBar.SetActive(false);
         Background.enabled = true;
         StartCoroutine(delay());
-
-
     }
 
 
@@ -133,6 +134,7 @@ public class PlayStart2 : MonoBehaviour
     {
         yield return new WaitForSeconds(4f);
         Fires.SetActive(true);
+        brakeWindowinStart();
         
     }
     IEnumerator BombAct()
@@ -155,5 +157,12 @@ public class PlayStart2 : MonoBehaviour
         UI.SetActive(true);
         GameMgr.SetActive(true);
         labtopBar.SetActive(true);
+    }
+
+    void brakeWindowinStart(){
+        // yield return new WaitForSeconds(4f);
+        for(int i=0;i<Windows.Length;i++){
+            Windows[i].GetComponent<breakWindow>().breakAuto();
+        }
     }
 }
