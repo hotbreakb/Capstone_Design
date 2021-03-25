@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: bb88e8d11dffc5749aa8a112748bd940, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 368703c4bd78fb34b8959784ddb21cc8, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,13 +38,13 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.0017672422, g: 0.0017834865, b: 0.0017635503, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 1
+  m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -1357,8 +1357,6 @@ MonoBehaviour:
   Fleshlight: {fileID: 264707074}
   delayTime: 20
   lightmanager: 0
-  Cloudy: {fileID: 0}
-  Dark: {fileID: 0}
 --- !u!114 &336726501 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4019247697494930234, guid: 953b0ba5876b5334781a5b81b00b5264,
@@ -1396,7 +1394,7 @@ PrefabInstance:
     - target: {fileID: 357097854642806046, guid: 3ac2242119733b04d921d8ac96a869ee,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1525545774873600925, guid: 3ac2242119733b04d921d8ac96a869ee,
         type: 3}
@@ -1448,6 +1446,11 @@ PrefabInstance:
       propertyPath: m_Range
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 5424086536421270566, guid: 3ac2242119733b04d921d8ac96a869ee,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5537588534574667345, guid: 3ac2242119733b04d921d8ac96a869ee,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1456,7 +1459,7 @@ PrefabInstance:
     - target: {fileID: 5557286388797614200, guid: 3ac2242119733b04d921d8ac96a869ee,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5769765458832113030, guid: 3ac2242119733b04d921d8ac96a869ee,
         type: 3}
@@ -4108,6 +4111,11 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6104537614754115749, guid: 3ac2242119733b04d921d8ac96a869ee,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6104537614754115751, guid: 3ac2242119733b04d921d8ac96a869ee,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4313,6 +4321,11 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6104537615259696819, guid: 3ac2242119733b04d921d8ac96a869ee,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6104537615259696820, guid: 3ac2242119733b04d921d8ac96a869ee,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4327,6 +4340,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Intensity
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6104537615286355128, guid: 3ac2242119733b04d921d8ac96a869ee,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6104537615286355129, guid: 3ac2242119733b04d921d8ac96a869ee,
         type: 3}
@@ -4382,6 +4400,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Intensity
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6104537615349991842, guid: 3ac2242119733b04d921d8ac96a869ee,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6104537615349991844, guid: 3ac2242119733b04d921d8ac96a869ee,
         type: 3}
@@ -4472,6 +4495,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Intensity
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6104537615581629932, guid: 3ac2242119733b04d921d8ac96a869ee,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6104537615581629933, guid: 3ac2242119733b04d921d8ac96a869ee,
         type: 3}
@@ -4698,6 +4726,11 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6104537616199160319, guid: 3ac2242119733b04d921d8ac96a869ee,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6104537616202596375, guid: 3ac2242119733b04d921d8ac96a869ee,
         type: 3}
       propertyPath: m_Layer
@@ -4871,7 +4904,7 @@ PrefabInstance:
     - target: {fileID: 6364510999221242804, guid: 3ac2242119733b04d921d8ac96a869ee,
         type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6584656769597565055, guid: 3ac2242119733b04d921d8ac96a869ee,
         type: 3}
@@ -4881,7 +4914,7 @@ PrefabInstance:
     - target: {fileID: 6684409489863720888, guid: 3ac2242119733b04d921d8ac96a869ee,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7137391729445226949, guid: 3ac2242119733b04d921d8ac96a869ee,
         type: 3}
@@ -4961,7 +4994,7 @@ PrefabInstance:
     - target: {fileID: 9153883541530473502, guid: 3ac2242119733b04d921d8ac96a869ee,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3700314536291348245, guid: 3ac2242119733b04d921d8ac96a869ee, type: 3}
@@ -6807,8 +6840,6 @@ MonoBehaviour:
   Fleshlight: {fileID: 264707074}
   delayTime: 20
   lightmanager: 0
-  Cloudy: {fileID: 0}
-  Dark: {fileID: 0}
 --- !u!4 &1358195771 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 415952, guid: c8515ebee271c0649b9db1321f3026a4,
