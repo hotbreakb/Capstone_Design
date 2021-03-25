@@ -18,7 +18,8 @@ public class OneEneyAI : MonoBehaviour
     public State state = State.MOVE;
     private Animator animator;
     
-    private readonly int hashMove = Animator.StringToHash("CanMove");
+    private readonly int hashMove = Animator.StringToHash("canMove");
+    private readonly int hashSpeed = Animator.StringToHash("speed");
     private OneMoveAgent moveAgent;
     private void Awake(){
         var player = GameObject.Find("TmpPlayer");
@@ -49,6 +50,8 @@ public class OneEneyAI : MonoBehaviour
                     break;
 
                 case State.ATTACK:
+
+                    animator.SetBool(hashMove,false);
                     //moveAgent.Stop();
                     //animator.SetBool(hashMove, false);
 
@@ -71,5 +74,7 @@ public class OneEneyAI : MonoBehaviour
             }
         }
     }
-
+    void Update(){
+        animator.SetFloat(hashSpeed, moveAgent.speed);
+    }
 }
