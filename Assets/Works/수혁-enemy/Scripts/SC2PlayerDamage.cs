@@ -12,10 +12,15 @@ public class SC2PlayerDamage : MonoBehaviour
 
     public Image bloodScreen;
     public Image hpBar;
+
+    [Header("HPItem")]
+    public bool hpitem = false;
+    public GameObject HPItem;
+    public float destroyTime = 10f;
     //public delegate void PlayerDieHandler();
     //public static event PlayerDieHandler OnPlayerDie;
 
-    
+
 
     private void OnCollisionEnter(Collision collision){
         if(collision.transform.tag =="SC2EnemyBullet" || collision.transform.tag =="Enemy"){
@@ -56,7 +61,7 @@ public class SC2PlayerDamage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        HpItem();
     }
 
     IEnumerator ShowBloodScreen()
@@ -74,6 +79,28 @@ public class SC2PlayerDamage : MonoBehaviour
             currColor.g = (currHP / initHp) * 2.0f;
         hpBar.color = currColor;
         hpBar.fillAmount = (currHP / initHp);
+    }
+    public void Heal()
+    {
+        Debug.Log("Heal~~~~~~~~~~~~~~");
+        currHP += 50f;
+        AudioSource sound = GetComponent<AudioSource>();
+        sound.Play();
+
+    }
+    IEnumerator DestroyHpItem()
+    {
+        yield return new WaitForSeconds(destroyTime);
+        HPItem.SetActive(false);
+    }
+    void HpItem()
+    {
+        if ((hpitem == false) && (currHP == 50))
+        {
+            HPItem.SetActive(true);
+            hpitem = true;
+            StartCoroutine(DestroyHpItem());
+        }
     }
 }
 
