@@ -18,7 +18,7 @@ public class SC2PlayerDamage : MonoBehaviour
     
 
     private void OnCollisionEnter(Collision collision){
-        if(collision.transform.tag =="Bullet" || collision.transform.tag =="Enemy"){
+        if(collision.transform.tag =="SC2EnemyBullet" || collision.transform.tag =="Enemy"){
             Debug.Log(collision.transform.tag);
             Debug.Log(currHP);
             StartCoroutine(ShowBloodScreen());

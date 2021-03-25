@@ -24,7 +24,9 @@ public class OneMoveAgent : MonoBehaviour
         }
        MoveWayPoint(); 
     }
-
+    public float speed{
+        get{return agent.velocity.magnitude;}
+    }
     private void MoveWayPoint(){
         if(agent.isPathStale) return;
         idx = Random.Range(0,wayPoints.Count);
