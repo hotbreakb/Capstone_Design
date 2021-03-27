@@ -129,7 +129,8 @@ public class PlayStart2 : MonoBehaviour
     }
     IEnumerator ActInfoUI()
     {
-        anim.SetBool("Holster", true);
+        Player.transform.localPosition = new Vector3(-0.3677439f, -0.1275965f, -0.3491293f);
+
         yield return new WaitForSeconds(3f);
     }
     void EyeblinkActive()
