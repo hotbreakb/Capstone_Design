@@ -8,19 +8,19 @@ public class PlayStart2 : MonoBehaviour
 {
     
 
-    [Header("Change Size")]
+    [Header("Changes")]
     public float changeTime = 20.0f;
     public GameObject Player;
-    public GameObject TmpPlayer;
-    public GameObject Enemy;
     public GameObject bullet;
     public GameObject bulletCase;
     public GameObject grenade;
+    public GameObject Handgun;
+    Animator anim;
 
      [Header("Windows")]
      public GameObject[] Windows;
 
-    [Header("Change Props")]
+    [Header("Props")]
     public GameObject Props;
     public GameObject messProps;
     public GameObject Labtop;
@@ -36,6 +36,7 @@ public class PlayStart2 : MonoBehaviour
     [Header("UI")]
     public GameObject UI;
     public GameObject labtopBar;
+    public GameObject WordsUI;
 
     //UI
     [Header("Eyeblink")]
@@ -57,13 +58,19 @@ public class PlayStart2 : MonoBehaviour
 
     private void Start()
     {
+        Handgun.GetComponent<HandgunScriptLPFP>().enabled = false;
+        anim.SetBool("Holster", true);
         labtopBar.SetActive(false);
         Background.enabled = true;
         StartCoroutine(delay());
     }
 
+    private void Awake()
+    {
+        anim = Handgun.GetComponent<Animator>();
+    }
 
-    
+
     IEnumerator FadeOut()
     {
         yield return new WaitForSeconds(2f);
@@ -86,8 +93,6 @@ public class PlayStart2 : MonoBehaviour
     void Changes()
     {
         Player.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
-        Enemy.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
-        TmpPlayer.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
         bullet.transform.localScale = new Vector3(0.004f, 0.004f, 0.004f);
         bulletCase.transform.localScale = new Vector3(0.11f, 0.11f, 0.11f);
         Labtop.transform.localPosition = new Vector3(1.79f, -1.47f, -0.17f);
@@ -102,6 +107,9 @@ public class PlayStart2 : MonoBehaviour
     }
     IEnumerator delay()
     {
+
+        yield return StartCoroutine(ActWordsUI());
+        yield return StartCoroutine(ActInfoUI());
         yield return StartCoroutine(FireAct());
         yield return StartCoroutine(BombAct());
         yield return StartCoroutine(FadeOut());
@@ -111,6 +119,18 @@ public class PlayStart2 : MonoBehaviour
         yield return StartCoroutine("Changes");
         yield return StartCoroutine("EyeblinkActive");
         yield return StartCoroutine(UIAct());
+    }
+    IEnumerator ActWordsUI()
+    {
+        yield return new WaitForSeconds(3f);
+        WordsUI.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        WordsUI.SetActive(false);
+    }
+    IEnumerator ActInfoUI()
+    {
+        anim.SetBool("Holster", true);
+        yield return new WaitForSeconds(3f);
     }
     void EyeblinkActive()
     {
@@ -154,6 +174,8 @@ public class PlayStart2 : MonoBehaviour
     IEnumerator UIAct()
     {
         yield return new WaitForSeconds(Time.deltaTime + 3f);
+        anim.SetBool("Holster", false);
+        Handgun.GetComponent<HandgunScriptLPFP>().enabled = true;
         UI.SetActive(true);
         GameMgr.SetActive(true);
         labtopBar.SetActive(true);
