@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -23,9 +23,4 @@ public class SC2Bullet : MonoBehaviour
     }
 
 
-     void OnTriggerEnter(Collider other)
-    {
-        // other.SendMessage("OnHitBullet");       // 아림님 플레이어 코드 받고 그쪽에서도 OnHitBullet 메소드 만들기
-        Destroy(gameObject);
-    }
 }
