@@ -36,7 +36,6 @@ public class OneEnmeyFire : MonoBehaviour
     {   
   
         playerTr = GameObject.Find("TmpPlayer").GetComponent<Transform>();  
-        transform.LookAt(playerTr.position);
         //muzzleFlash.enabled = false;
         
 
@@ -48,9 +47,9 @@ public class OneEnmeyFire : MonoBehaviour
         Debug.Log(isFire);
         if(!isReload && isFire){
             if(Time.time >= nextFire){
-                animator.SetBool(hashFire,true);
+                animator.SetBool("isShoot",true);
                 Fire();
-                animator.SetBool(hashFire,false);
+                animator.SetBool("isShoot",false);;
                 nextFire = Time.time + fireRate + Random.Range(0.0f,1.0f);  // 공속딜레이
             }
         }

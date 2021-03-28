@@ -13,11 +13,10 @@ public class Enemy : MonoBehaviour
     ///////////////////////////////////////////////
    
     Animator animator;
-
+    private OneEnmeyFire oneEnmeyFire;
     private const string bulletTag = "Bullet";
 
-    [SerializeField] GameObject bulletPrefab;   // 총알 프리팹 (현재 총알에셋 없이 TmpBullet으로 대체)
-    [SerializeField] GameObject bulletSpawn;     // 총구( 총알의 발사 위치)
+ 
     [SerializeField] GameObject player;
 
 
@@ -40,6 +39,7 @@ public class Enemy : MonoBehaviour
     private bool flag = false;
 
     private void Awake(){
+        oneEnmeyFire = GetComponent<OneEnmeyFire>();
         //skin = GameObject.Find("Soldier_mesh").GetComponent<SkinnedMeshRenderer>();
         animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
@@ -82,23 +82,12 @@ public class Enemy : MonoBehaviour
 
             if(flag){
             transform.LookAt(player.transform.position);
-            float random = Random.Range(0.0f, 0.4f);
-            if (random > attackProbability)
-            {   
-                animator.SetBool("isShoot",true);
-                Shoot();
-            }
-            else{
-                animator.SetBool("isShoot",false);
-            }
+            oneEnmeyFire.isFire = true;
+
         }
   
     }
 
-    void Shoot()
-    {
-        Instantiate(bulletPrefab, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
-    }
 
     private void OnTriggerEnter(Collider coll){
         if(coll.tag == bulletTag){
