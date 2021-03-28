@@ -1,10 +1,13 @@
 ﻿using Kino;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance = null;
 
     // 적 캐릭터가 출현할 위치를 담을 배열
     public Transform[] points;
@@ -16,7 +19,8 @@ public class GameManager : MonoBehaviour
     // 게임종료 여부
     public bool isGameOver = false;
 
-    public static GameManager instance = null;
+    public TextMeshProUGUI YouWin;
+    public TextMeshProUGUI GameOver;
 
 
     void Awake(){
@@ -36,6 +40,9 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        if (YouWin.isActiveAndEnabled) YouWin.enabled = false;
+        if (GameOver.isActiveAndEnabled) GameOver.enabled = false;
+
         points = GameObject.Find("SpawnPoint").GetComponentsInChildren<Transform>();    // 위치정보 갖고옴
 
         if(points.Length > 0){
@@ -62,6 +69,7 @@ public class GameManager : MonoBehaviour
     /* ------------------------------------------------------------------------------- */
 
     public void playerWin() {
+        if (YouWin.isActiveAndEnabled) YouWin.enabled = true;
         GameObject.Find("Main Camera").GetComponent<PlayGlitchEffect>().Play();
         // You Win UI 띄우기
         // 좌물쇠 풀리는 모양
@@ -70,6 +78,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void playerLose() {
+        if (GameOver.isActiveAndEnabled) GameOver.enabled = true;
         GameObject.Find("Main Camera").GetComponent<PlayGlitchEffect>().Play();
         // Game over UI 띄우기
         // 자물쇠 모양으로 가서 안 풀린 거 보여주기
