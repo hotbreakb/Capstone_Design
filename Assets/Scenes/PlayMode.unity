@@ -2884,7 +2884,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHp: 50
-  hpbar: {fileID: 0}
+  hpbar: {fileID: 1213920566}
 --- !u!4 &481222114 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4714900603946898, guid: 122be4a0ea3c7f5408f5728f45b82146,
@@ -6676,6 +6676,18 @@ Transform:
   m_Father: {fileID: 1955625772}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1213920566 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2996235429224959572, guid: 59f8ce0afd37c3a4682a60fcb76e848d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1962763667}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1216371929
 PrefabInstance:
   m_ObjectHideFlags: 0
