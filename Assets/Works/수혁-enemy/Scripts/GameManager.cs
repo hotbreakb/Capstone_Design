@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Kino;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -61,14 +62,15 @@ public class GameManager : MonoBehaviour
     /* ------------------------------------------------------------------------------- */
 
     public void playerWin() {
+        GameObject.Find("Main Camera").GetComponent<PlayGlitchEffect>().Play();
         // You Win UI 띄우기
         // 좌물쇠 풀리는 모양
         // Start
         Debug.Log("player win");
-
     }
 
     public void playerLose() {
+        GameObject.Find("Main Camera").GetComponent<PlayGlitchEffect>().Play();
         // Game over UI 띄우기
         // 자물쇠 모양으로 가서 안 풀린 거 보여주기
         // restart

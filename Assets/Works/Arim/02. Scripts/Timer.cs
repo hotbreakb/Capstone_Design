@@ -37,7 +37,6 @@ public class Timer : MonoBehaviour
 
         if (progressBar.fillAmount == 1) {
             FindObjectOfType<GameManager>().playerWin();
-            Debug.Log("progress");
         }
             
         totalTime += Time.deltaTime;
