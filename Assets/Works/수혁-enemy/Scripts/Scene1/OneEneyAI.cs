@@ -22,8 +22,8 @@ public class OneEneyAI : MonoBehaviour
     private OneEnmeyFire enmeyFire;
 
 
-    private readonly int hashMove = Animator.StringToHash("canMove");
-    private readonly int hashSpeed = Animator.StringToHash("speed");
+    private readonly int hashMove = Animator.StringToHash("isRun");
+    private readonly int hashSpeed = Animator.StringToHash("walkSpeed");
     private OneMoveAgent moveAgent;
     private void Awake(){
         var player = GameObject.Find("TmpPlayer");
