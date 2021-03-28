@@ -1308,10 +1308,11 @@ GameObject:
   - component: {fileID: 7675805510441730635}
   - component: {fileID: 1094556660042894298}
   - component: {fileID: 1332799004931707477}
-  - component: {fileID: -7919603341156498134}
   - component: {fileID: 1680338091}
-  - component: {fileID: -5627685770653869981}
   - component: {fileID: 3671414459105753593}
+  - component: {fileID: 476377550}
+  - component: {fileID: 476377559}
+  - component: {fileID: 636406258345911237}
   m_Layer: 10
   m_Name: Enemy
   m_TagString: Enemy
@@ -1345,7 +1346,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7675805510432256503}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: fcb334eb247ae3e488abb081c847cf09, type: 3}
+  m_Avatar: {fileID: 9000000, guid: 3e2909f580f00cc418c9375668241467, type: 3}
   m_Controller: {fileID: 9100000, guid: eb85e715f64c2b742843e64a1a84a3e4, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
@@ -1385,20 +1386,6 @@ CapsuleCollider:
   m_Height: 3.4168217
   m_Direction: 1
   m_Center: {x: 0.07130504, y: 1.2084103, z: -0.3886212}
---- !u!114 &-7919603341156498134
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7675805510432256503}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 823ca7aeaab2ba943b873b227a1f14a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHp: 50
-  hpbar: {fileID: 2996235429224959572}
 --- !u!195 &1680338091
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1421,24 +1408,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &-5627685770653869981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7675805510432256503}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af2700eb993105a4890ae42c2b24c886, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 8647728248663983466, guid: 196e099b2c3b0cf4e9c71eb822d74d52,
-    type: 3}
-  bulletSpawn: {fileID: 239647741376151440}
-  player: {fileID: 4297236428456405247, guid: 64b56a8f4d0b9b049ba23f42b4479403, type: 3}
-  attackProbability: 0.397
-  wayPoints: []
 --- !u!23 &3671414459105753593
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1478,6 +1447,53 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &476377550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7675805510432256503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af2700eb993105a4890ae42c2b24c886, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 8647728248663983466, guid: 196e099b2c3b0cf4e9c71eb822d74d52,
+    type: 3}
+  bulletSpawn: {fileID: 239647741376151440}
+  player: {fileID: 0}
+  attackProbability: 0.5
+  wayPoints: []
+--- !u!114 &476377559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7675805510432256503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 823ca7aeaab2ba943b873b227a1f14a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: 50
+  hpbar: {fileID: 2996235429224959572}
+--- !u!114 &636406258345911237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7675805510432256503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f0235bb219bff047b1fbd98bb1630a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFire: 0
+  Bullet: {fileID: 8647728248663983466, guid: 196e099b2c3b0cf4e9c71eb822d74d52, type: 3}
+  bulletSpawn: {fileID: 239647741376151440}
 --- !u!1 &7675805510432256505
 GameObject:
   m_ObjectHideFlags: 0
