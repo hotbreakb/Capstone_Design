@@ -9,7 +9,7 @@ public class OneEnmeyFire : MonoBehaviour
     private Transform playerTr;
 
 
-    private readonly int hashFire = Animator.StringToHash("SC1Fire");
+    private readonly int hashFire = Animator.StringToHash("isShoot");
    // private readonly int hashReload = Animator.StringToHash("Reload");
 
     private float nextFire = 0.1f;
@@ -45,10 +45,12 @@ public class OneEnmeyFire : MonoBehaviour
     }
 
     void Update(){
+        Debug.Log(isFire);
         if(!isReload && isFire){
             if(Time.time >= nextFire){
-                animator.SetTrigger(hashFire);
+                animator.SetBool(hashFire,true);
                 Fire();
+                animator.SetBool(hashFire,false);
                 nextFire = Time.time + fireRate + Random.Range(0.0f,1.0f);  // 공속딜레이
             }
         }
