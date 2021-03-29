@@ -9,15 +9,14 @@ public class Healing : MonoBehaviour
     private const string bulletTag = "Bullet";
     // Start is called before the first frame update
     
-
-
-        private void OnCollisionEnter(Collision coll){
-        if(coll.collider.tag  == bulletTag){
-            Debug.Log("?");
+    private void OnTriggerEnter(Collider coll)
+    {
+        if (coll.tag == bulletTag)
+        {
             Player.SendMessage("Heal");
             HP.SetActive(false);
             Destroy(coll.gameObject);
+
         }
-        
     }
 }

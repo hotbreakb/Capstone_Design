@@ -25,7 +25,6 @@ public class Timer : MonoBehaviour
     void Start()
     {
         Fleshlight.enabled = false;
-        progressBar.fillAmount = 0;
     }
 
 
@@ -34,14 +33,11 @@ public class Timer : MonoBehaviour
         if (fills >= 0.4f && lightmanager == false) {
             LightManager();
         }
-
-        if (progressBar.fillAmount == 1) {
-            FindObjectOfType<GameManager>().playerWin();
-        }
             
         totalTime += Time.deltaTime;
         fills = totalTime * timeSpeed;
         progressBar.fillAmount = fills;
+
 
     }
     void LightManager()
