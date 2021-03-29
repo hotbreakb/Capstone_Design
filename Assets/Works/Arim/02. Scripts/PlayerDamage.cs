@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class PlayerDamage : MonoBehaviour
 {
     private const string bulletTag = "TmpBullet";
-    private float initHp = 15.0f;   /* 잠시 수정 */
+    private float initHp = 50.0f;   /* 잠시 수정 */
     private Color currColor;
     private readonly Color initColor = new Vector4(0, 1.0f, 0.0f, 1.0f);
     public float currHP;
@@ -45,7 +45,7 @@ public class PlayerDamage : MonoBehaviour
             currHP -= 5.0f;
             DisPlayHpbar();
 
-            if (currHP <= 5.0f) //플레이어 죽었을때
+            if (currHP <= 0.0f) //플레이어 죽었을때
             {
                 FindObjectOfType<GameManager>().playerLose();
             }

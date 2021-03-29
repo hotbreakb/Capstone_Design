@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class PlayGlitchEffect : MonoBehaviour
 {
-    private Animator anim;
+    private Animation anim;
 
+    private void Start()
+    {
+        anim = gameObject.GetComponent<Animation>();
+    }
     public void Play()
     {
-        anim.Play("GlitchEffect", 0, 0f);
+        anim.Play();
     }
 }

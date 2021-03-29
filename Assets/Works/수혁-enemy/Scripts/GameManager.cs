@@ -69,7 +69,7 @@ public class GameManager : MonoBehaviour
     /* ------------------------------------------------------------------------------- */
 
     public void playerWin() {
-        if (YouWin.isActiveAndEnabled) YouWin.enabled = true;
+        if (!YouWin.enabled) YouWin.enabled = true;
         GameObject.Find("Main Camera").GetComponent<PlayGlitchEffect>().Play();
         // You Win UI 띄우기
         // 좌물쇠 풀리는 모양
@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void playerLose() {
-        if (GameOver.isActiveAndEnabled) GameOver.enabled = true;
+        if(!GameOver.enabled) GameOver.enabled = true;
         GameObject.Find("Main Camera").GetComponent<PlayGlitchEffect>().Play();
         // Game over UI 띄우기
         // 자물쇠 모양으로 가서 안 풀린 거 보여주기
