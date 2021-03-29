@@ -8,7 +8,6 @@ public class TypingUI : MonoBehaviour
 {
 	Text txt;
 	string story;
-	public float speed = 0.055f;
 
 	void Awake()
 	{
@@ -25,7 +24,7 @@ public class TypingUI : MonoBehaviour
 		foreach (char c in story)
 		{
 			txt.text += c;
-			yield return new WaitForSeconds(speed);
+			yield return new WaitForSeconds(0.125f);
 		}
 	}
 }
