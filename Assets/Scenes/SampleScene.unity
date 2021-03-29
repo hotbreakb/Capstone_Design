@@ -121,94 +121,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &376172593
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1476056483440431035, guid: 34dfc8089b49da24b977c8d89f37b03b,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8199177536364185130, guid: 34dfc8089b49da24b977c8d89f37b03b,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: f58e740daf4d24a45a480b2a0041575a, type: 2}
-    - target: {fileID: 8199177536364185130, guid: 34dfc8089b49da24b977c8d89f37b03b,
-        type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8199177536371488150, guid: 34dfc8089b49da24b977c8d89f37b03b,
-        type: 3}
-      propertyPath: m_Name
-      value: RealEnemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 8199177536371911158, guid: 34dfc8089b49da24b977c8d89f37b03b,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8199177536371911158, guid: 34dfc8089b49da24b977c8d89f37b03b,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2.71
-      objectReference: {fileID: 0}
-    - target: {fileID: 8199177536371911158, guid: 34dfc8089b49da24b977c8d89f37b03b,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 8199177536371911158, guid: 34dfc8089b49da24b977c8d89f37b03b,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 8199177536371911158, guid: 34dfc8089b49da24b977c8d89f37b03b,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.16394094
-      objectReference: {fileID: 0}
-    - target: {fileID: 8199177536371911158, guid: 34dfc8089b49da24b977c8d89f37b03b,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.0031572143
-      objectReference: {fileID: 0}
-    - target: {fileID: 8199177536371911158, guid: 34dfc8089b49da24b977c8d89f37b03b,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.9862824
-      objectReference: {fileID: 0}
-    - target: {fileID: 8199177536371911158, guid: 34dfc8089b49da24b977c8d89f37b03b,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.018986482
-      objectReference: {fileID: 0}
-    - target: {fileID: 8199177536371911158, guid: 34dfc8089b49da24b977c8d89f37b03b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 2.0870001
-      objectReference: {fileID: 0}
-    - target: {fileID: 8199177536371911158, guid: 34dfc8089b49da24b977c8d89f37b03b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 198.88799
-      objectReference: {fileID: 0}
-    - target: {fileID: 8199177536371911158, guid: 34dfc8089b49da24b977c8d89f37b03b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0.71400005
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1967128516606621110, guid: 34dfc8089b49da24b977c8d89f37b03b, type: 3}
-    - {fileID: 1411980636663523236, guid: 34dfc8089b49da24b977c8d89f37b03b, type: 3}
-    - {fileID: 1967128517466230844, guid: 34dfc8089b49da24b977c8d89f37b03b, type: 3}
-    - {fileID: 1967128517466230821, guid: 34dfc8089b49da24b977c8d89f37b03b, type: 3}
-  m_SourcePrefab: {fileID: 100100000, guid: 34dfc8089b49da24b977c8d89f37b03b, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,7 +195,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 1, y: 0, z: -0, w: -0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -414,7 +326,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1288093505
