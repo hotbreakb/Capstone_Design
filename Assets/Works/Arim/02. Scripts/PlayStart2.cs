@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.AI;
 
 
 public class PlayStart2 : MonoBehaviour
@@ -37,6 +38,7 @@ public class PlayStart2 : MonoBehaviour
     public GameObject UI;
     public GameObject labtopBar;
     public GameObject WordsUI;
+    public GameObject Rule;
 
     //UI
     [Header("Eyeblink")]
@@ -53,24 +55,47 @@ public class PlayStart2 : MonoBehaviour
     [Header("Enemy")]
     public GameObject GameMgr;
 
+    [Header("PlayerMoveAgent")]
+    public GameObject goal;
+    private Transform goal_t;
+    private Transform player_t;
+    public float damping;
+    public bool isMove;
+
     [Header("Audio")]
     public GameObject AudioManager;
 
     private void Start()
     {
         Handgun.GetComponent<HandgunScriptLPFP>().enabled = false;
+        goal_t = goal.GetComponent<Transform>();
+        player_t = Player.GetComponent<Transform>();
         anim.SetBool("Holster", true);
         labtopBar.SetActive(false);
         Background.enabled = true;
         StartCoroutine(delay());
+        isMove = false;
     }
 
     private void Awake()
     {
         anim = Handgun.GetComponent<Animator>();
+
     }
 
-
+    private void Update()
+    {
+        if (isMove == true)
+        {
+            anim.SetBool("Run", true);
+            player_t.position = Vector3.Lerp(player_t.position, goal_t.position, 0.05f);
+            if(player_t.position == goal_t.position)
+            {
+                isMove = false;
+                anim.SetBool("Run", false);
+            }
+        }
+    }
     IEnumerator FadeOut()
     {
         yield return new WaitForSeconds(2f);
@@ -124,14 +149,32 @@ public class PlayStart2 : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
         WordsUI.SetActive(true);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
         WordsUI.SetActive(false);
+    }
+    
+
+    IEnumerator PlayerMoveAgent()
+    {
+        
+        isMove = true;
+        
+        yield return new WaitForSeconds(0f);
+        if (isMove == false)
+        {
+            
+            yield return null;
+        }
+
     }
     IEnumerator ActInfoUI()
     {
-        Player.transform.localPosition = new Vector3(-0.3677439f, -0.1275965f, -0.3491293f);
-
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
+        StartCoroutine(PlayerMoveAgent());
+        yield return new WaitForSeconds(1f);
+        Rule.SetActive(true);
+        yield return new WaitForSeconds(10.5f);
+        Rule.SetActive(false);
     }
     void EyeblinkActive()
     {
@@ -153,7 +196,7 @@ public class PlayStart2 : MonoBehaviour
     }
     IEnumerator FireAct()
     {
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(0f);
         Fires.SetActive(true);
         brakeWindowinStart();
         
