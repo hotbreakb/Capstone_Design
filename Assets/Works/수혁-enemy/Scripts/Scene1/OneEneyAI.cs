@@ -18,8 +18,12 @@ public class OneEneyAI : MonoBehaviour
     public State state = State.MOVE;
     private Animator animator;
     
-    private readonly int hashMove = Animator.StringToHash("canMove");
-    private readonly int hashSpeed = Animator.StringToHash("speed");
+
+    private OneEnmeyFire enmeyFire;
+
+
+    private readonly int hashMove = Animator.StringToHash("isRun");
+    private readonly int hashSpeed = Animator.StringToHash("walkSpeed");
     private OneMoveAgent moveAgent;
     private void Awake(){
         var player = GameObject.Find("TmpPlayer");
@@ -30,10 +34,11 @@ public class OneEneyAI : MonoBehaviour
         ws = new WaitForSeconds(0.3f);
         animator = GetComponent<Animator>();
         moveAgent = GetComponent<OneMoveAgent>();
+        enmeyFire = GetComponent<OneEnmeyFire>();
     }
 
     private void OnEnable(){
-    StartCoroutine(Action());
+        StartCoroutine(Action());
     }
 
     IEnumerator Action(){
@@ -53,9 +58,7 @@ public class OneEneyAI : MonoBehaviour
 
                     animator.SetBool(hashMove,false);
                     //moveAgent.Stop();
-                    //animator.SetBool(hashMove, false);
-
-                    //if(enemyFire.isFire == false) enemyFire.isFire = true;
+                    if(enmeyFire.isFire == false) enmeyFire.isFire = true;
                     break;
             
             
