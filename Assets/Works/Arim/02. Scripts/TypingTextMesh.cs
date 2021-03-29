@@ -1,18 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.UI;
 using UnityEngine;
 
-
-public class TypingUI : MonoBehaviour
+public class TypingTextMesh : MonoBehaviour
 {
-	Text txt;
+	public GameObject text;
+	TextMesh txt;
 	string story;
 	public float speed = 0.055f;
 
 	void Awake()
 	{
-		txt = GetComponent<Text>();
+		txt = text.GetComponent<TextMesh>();
 		story = txt.text;
 		txt.text = "";
 
