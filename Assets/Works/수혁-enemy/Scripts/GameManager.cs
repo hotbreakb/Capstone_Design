@@ -66,19 +66,20 @@ public class GameManager : MonoBehaviour
     /* ------------------------------------------------------------------------------- */
 
     public void playerWin() {
+        /* You Win UI 띄우기 */
         YouWin.gameObject.SetActive(true);
-        if (!YouWin.enabled) YouWin.enabled = true;
         GameObject.Find("Main Camera").GetComponent<PlayGlitchEffect>().Play();
-        // You Win UI 띄우기
+        
         // 좌물쇠 풀리는 모양
         // Start
         Debug.Log("player win");
     }
 
     public void playerLose() {
+        /* Game over UI 띄우기 */
         GameOver.gameObject.SetActive(true);
         GameObject.Find("Main Camera").GetComponent<PlayGlitchEffect>().Play();
-        // Game over UI 띄우기
+        
         // 자물쇠 모양으로 가서 안 풀린 거 보여주기
         // restart
         Debug.Log("player lose");
