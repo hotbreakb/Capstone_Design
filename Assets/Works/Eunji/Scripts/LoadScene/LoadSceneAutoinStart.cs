@@ -6,6 +6,6 @@ public class LoadSceneAutoinStart : MonoBehaviour
 {
     void Start()
     {
-        GetComponent<LoadSceneAuto>().LoadNextScene();  
+        GetComponent<LoadSceneAuto>().LoadMenu();  
     }
 }

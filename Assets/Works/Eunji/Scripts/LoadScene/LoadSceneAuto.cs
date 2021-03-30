@@ -20,19 +20,25 @@ public class LoadSceneAuto : MonoBehaviour
     // If Dislike Button is clicked, run the LoadGameScene() and go to 'Tutorial_07'.
     // Pass the Leapmotion Test
 
+
+    public void LoadMenu(){
+        
+        int index = SceneManager.GetActiveScene().buildIndex;
+        StartCoroutine(LoadMenuTimer(index));
+    }
+
     public void LoadNextScene()
     {
         int index = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(index + 1);
-        StartCoroutine("timer");
+        StartCoroutine(LoadNextSceneTimer(index));
     }
     
     public void LoadGameScene()
     {
         int index = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(index + 4); 
-        StartCoroutine("timer");
+        StartCoroutine(LoadGameSceneTimer(index));
     }
+
 
     public void GameStart() {
         SceneManager.LoadScene("Loading");
@@ -41,7 +47,24 @@ public class LoadSceneAuto : MonoBehaviour
     public void TutorialStart() {
         SceneManager.LoadScene("Tutorial_01");
     }
-    
+
+    IEnumerator LoadMenuTimer(int index)
+    {
+        yield return new WaitForSecondsRealtime(9.0f);
+        SceneManager.LoadScene(index + 1);
+    }
+
+    IEnumerator LoadNextSceneTimer(int index)
+    {
+        yield return new WaitForSeconds(2.0f);
+        SceneManager.LoadScene(index + 1);
+    }
+    IEnumerator LoadGameSceneTimer(int index)
+    {
+        yield return new WaitForSeconds(2.0f);
+        SceneManager.LoadScene(index + 4);
+    }
+
     public void QuitGame()
     {
         // save any game data here
@@ -54,9 +77,5 @@ public class LoadSceneAuto : MonoBehaviour
         Application.Quit();
 #endif
     }
-
-    IEnumerator timer()
-    {
-        yield return new WaitForSeconds(5.0f);
-    }
+    
 }
