@@ -272,7 +272,8 @@ GameObject:
   - component: {fileID: 1153025529860750171}
   - component: {fileID: 1153025529860750172}
   - component: {fileID: 1153025529860750173}
-  - component: {fileID: 1153025529860750174}
+  - component: {fileID: 455424444}
+  - component: {fileID: 455424445}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -307,10 +308,10 @@ Animator:
   m_GameObject: {fileID: 1153025529860849035}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: fcb334eb247ae3e488abb081c847cf09, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: eb85e715f64c2b742843e64a1a84a3e4, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -381,7 +382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHp: 50
-  hpbar: {fileID: 0}
+  hpbar: {fileID: 8045349288325086762}
 --- !u!114 &1153025529860750173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -395,9 +396,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFire: 0
-  Bullet: {fileID: 0}
-  bulletSpawn: {fileID: 0}
---- !u!114 &1153025529860750174
+  Bullet: {fileID: 8647728248663983466, guid: 196e099b2c3b0cf4e9c71eb822d74d52, type: 3}
+  bulletSpawn: {fileID: 4599435671443984864}
+--- !u!114 &455424444
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -406,11 +407,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1153025529860849035}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af2700eb993105a4890ae42c2b24c886, type: 3}
+  m_Script: {fileID: 11500000, guid: eda685809c7fbc545b26489ee6e469dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  attackProbability: 0.5
+  isDie: 0
+  state: 0
+--- !u!114 &455424445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153025529860849035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d4f3ec40ee88514b93e931e5cdcb3f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   wayPoints: []
 --- !u!1 &1153025529860849037
 GameObject:
@@ -1277,9 +1290,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5181407154665538025}
-  m_LocalRotation: {x: 0.0031572143, y: 0.9862824, z: -0.018986482, w: -0.16394094}
-  m_LocalPosition: {x: 0, y: 0, z: 1.062}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7624271279325674861}
   - {fileID: 5444254015129593501}
@@ -1288,7 +1301,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.154, y: 2.503}
+  m_AnchoredPosition: {x: 0, y: 2.8}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &6257989936994239754

@@ -15,12 +15,13 @@ public class EnemyDamage : MonoBehaviour
         hpbar.rectTransform.localScale = new Vector3(1f,1f,1f);
     }
 
-    
-    public void UpdateAfterReceiveAttack(){
+    private void OnTriggerEnter(Collider other){
+        if(other.tag=="Bullet"){
         curHp-=25;
         if(curHp ==0){
             Destroy(gameObject);
         }
         hpbar.rectTransform.localScale = new Vector3(((float)curHp/(float)maxHp),1f,1f);
+        }
     }
 }

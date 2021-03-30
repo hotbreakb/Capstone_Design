@@ -44,7 +44,7 @@ public class OneEnmeyFire : MonoBehaviour
     }
 
     void Update(){
-        Debug.Log(isFire);
+
         if(!isReload && isFire){
             if(Time.time >= nextFire){
                 animator.SetBool("isShoot",true);
@@ -56,6 +56,6 @@ public class OneEnmeyFire : MonoBehaviour
     }
     void Fire()
     {
-        Instantiate(Bullet, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
+        //Instantiate(Bullet, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
     }
 }
