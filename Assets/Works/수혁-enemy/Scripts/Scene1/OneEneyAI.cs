@@ -55,7 +55,7 @@ public class OneEneyAI : MonoBehaviour
                     break;
 
                 case State.ATTACK:
-
+                    transform.LookAt(playerTr);
                     animator.SetBool(hashMove,false);
                     //moveAgent.Stop();
                     if(enmeyFire.isFire == false) enmeyFire.isFire = true;
@@ -78,6 +78,6 @@ public class OneEneyAI : MonoBehaviour
         }
     }
     void Update(){
-        animator.SetFloat(hashSpeed, moveAgent.speed);
+        //animator.SetFloat(hashSpeed, moveAgent.speed);
     }
 }
