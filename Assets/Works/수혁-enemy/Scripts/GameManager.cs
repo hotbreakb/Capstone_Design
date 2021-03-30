@@ -34,10 +34,6 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
-
-
-    // Start is called before the first frame update
-
     void Start()
     {
         points = GameObject.Find("SpawnPoint").GetComponentsInChildren<Transform>();    // 위치정보 갖고옴
@@ -73,6 +69,7 @@ public class GameManager : MonoBehaviour
         // 좌물쇠 풀리는 모양
         // Start
         Debug.Log("player win");
+        Invoke("QuitGame", 2f);
     }
 
     public void playerLose() {
@@ -83,5 +80,19 @@ public class GameManager : MonoBehaviour
         // 자물쇠 모양으로 가서 안 풀린 거 보여주기
         // restart
         Debug.Log("player lose");
+        Invoke("QuitGame", 2f);
+    }
+
+    public void QuitGame()
+    {
+        // save any game data here
+#if UNITY_EDITOR
+        // Application.Quit() does not work in the editor so
+        // UnityEditor.EditorApplication.isPlaying need to be set to false to end the game
+
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
     }
 }

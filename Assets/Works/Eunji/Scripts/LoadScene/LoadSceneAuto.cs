@@ -35,11 +35,11 @@ public class LoadSceneAuto : MonoBehaviour
     }
 
     public void GameStart() {
-
+        SceneManager.LoadScene("Loading");
     }
 
     public void TutorialStart() {
-
+        SceneManager.LoadScene("Tutorial_01");
     }
     
     public void QuitGame()
