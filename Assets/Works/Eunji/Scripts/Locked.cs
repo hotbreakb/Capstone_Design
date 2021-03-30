@@ -8,6 +8,9 @@ public class Locked : MonoBehaviour
 
     void Start()
     {
+        anim = GetComponent<Animator>();
+        
+        if (anim == null) Debug.Log("null");
         if (FindObjectOfType<GameManager>().isPlayerWin) FadeOut();
         else anim.Play("LockedAnim");
     }
