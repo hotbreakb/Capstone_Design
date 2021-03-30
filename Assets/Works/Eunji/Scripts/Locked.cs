@@ -1,5 +1,6 @@
 ﻿using UnityEngine.UI;
 using UnityEngine;
+using System.Collections;
 
 public class Locked : MonoBehaviour
 {
@@ -9,18 +10,19 @@ public class Locked : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        img = GetComponent<Image>();
         
-        if (anim == null) Debug.Log("null");
-        if (FindObjectOfType<GameManager>().isPlayerWin) FadeOut();
-        else anim.Play("LockedAnim");
+        if (FindObjectOfType<GameManager>().isPlayerWin) StartCoroutine(FadeOut());
+        else anim.Play("LockAnim");
     }
 
-    void FadeOut()
+    IEnumerator FadeOut()
     {
         for (float i = 1; i >= 0; i -= Time.deltaTime)
         {
             // set color with i as alpha
             img.color = new Color(1, 1, 1, i);
+            yield return null;
         }
     }
 
