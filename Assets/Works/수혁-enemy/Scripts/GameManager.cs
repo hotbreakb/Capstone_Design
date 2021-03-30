@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -77,10 +78,15 @@ public class GameManager : MonoBehaviour
         GameOver.gameObject.SetActive(true);
         GameObject.Find("Main Camera").GetComponent<PlayGlitchEffect>().Play();
         
-        // 자물쇠 모양으로 가서 안 풀린 거 보여주기
         // restart
         Debug.Log("player lose");
-        Invoke("QuitGame", 2f);
+        StartCoroutine(playerLoseTimer());
+    }
+
+    IEnumerator playerLoseTimer(){
+        /* 자물쇠 모양으로 가서 안 풀린 거 보여주기 */
+        yield return new WaitForSecondsRealtime(2.0f);
+        SceneManager.LoadScene("Level");
     }
 
     public void QuitGame()
