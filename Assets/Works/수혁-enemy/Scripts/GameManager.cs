@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -19,8 +20,12 @@ public class GameManager : MonoBehaviour
     // 게임종료 여부
     public bool isGameOver = false;
 
+    /* ---------------------------------- */
+
     public TextMeshProUGUI YouWin;
     public TextMeshProUGUI GameOver;
+
+    public bool isPlayerWin = false;
 
 
     void Awake(){
@@ -33,10 +38,6 @@ public class GameManager : MonoBehaviour
 
         DontDestroyOnLoad(this.gameObject);
     }
-
-
-
-    // Start is called before the first frame update
 
     void Start()
     {
@@ -66,21 +67,44 @@ public class GameManager : MonoBehaviour
     /* ------------------------------------------------------------------------------- */
 
     public void playerWin() {
+        /* You Win UI 띄우기 */
         YouWin.gameObject.SetActive(true);
-        if (!YouWin.enabled) YouWin.enabled = true;
         GameObject.Find("Main Camera").GetComponent<PlayGlitchEffect>().Play();
-        // You Win UI 띄우기
+        
         // 좌물쇠 풀리는 모양
         // Start
         Debug.Log("player win");
+        Invoke("QuitGame", 2f);
+        isPlayerWin = true;
     }
 
     public void playerLose() {
+        /* Game over UI 띄우기 */
         GameOver.gameObject.SetActive(true);
         GameObject.Find("Main Camera").GetComponent<PlayGlitchEffect>().Play();
-        // Game over UI 띄우기
-        // 자물쇠 모양으로 가서 안 풀린 거 보여주기
+        
         // restart
         Debug.Log("player lose");
+        StartCoroutine(playerLoseTimer());
+        isPlayerWin = false;
+    }
+
+    IEnumerator playerLoseTimer(){
+        /* 자물쇠 모양으로 가서 안 풀린 거 보여주기 */
+        yield return new WaitForSecondsRealtime(2.0f);
+        SceneManager.LoadScene("Level");
+    }
+
+    public void QuitGame()
+    {
+        // save any game data here
+#if UNITY_EDITOR
+        // Application.Quit() does not work in the editor so
+        // UnityEditor.EditorApplication.isPlaying need to be set to false to end the game
+
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
     }
 }
