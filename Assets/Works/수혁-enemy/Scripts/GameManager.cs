@@ -20,8 +20,12 @@ public class GameManager : MonoBehaviour
     // 게임종료 여부
     public bool isGameOver = false;
 
+    /* ---------------------------------- */
+
     public TextMeshProUGUI YouWin;
     public TextMeshProUGUI GameOver;
+
+    public bool isPlayerWin = false;
 
 
     void Awake(){
@@ -71,6 +75,7 @@ public class GameManager : MonoBehaviour
         // Start
         Debug.Log("player win");
         Invoke("QuitGame", 2f);
+        isPlayerWin = true;
     }
 
     public void playerLose() {
@@ -81,6 +86,7 @@ public class GameManager : MonoBehaviour
         // restart
         Debug.Log("player lose");
         StartCoroutine(playerLoseTimer());
+        isPlayerWin = false;
     }
 
     IEnumerator playerLoseTimer(){
