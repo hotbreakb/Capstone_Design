@@ -5,10 +5,10 @@ using UnityEngine.UI;
 public class SC2PlayerDamage : MonoBehaviour
 {
  
-    private float initHp = 200.0f;
+    public float initHp = 200.0f;
     private Color currColor;
     private readonly Color initColor = new Vector4(0, 1.0f, 0.0f, 1.0f);
-    private float currHP;
+    public float currHP;
 
     public Image bloodScreen;
     public Image hpBar;
@@ -86,6 +86,8 @@ public class SC2PlayerDamage : MonoBehaviour
         Debug.Log("Heal~~~~~~~~~~~~~~");
         currHP += 50f;
         AudioSource sound = GetComponent<AudioSource>();
+        HPItem.SetActive(false);
+        Destroy(HPItem);
         sound.Play();
 
     }
