@@ -15,8 +15,8 @@ public class Healing : MonoBehaviour
         if(coll.collider.tag  == bulletTag){
             Debug.Log("?");
             Player.SendMessage("Heal");
-            HP.SetActive(false);
-            Destroy(coll.gameObject);
+            //HP.SetActive(false);
+            //Destroy(coll.gameObject);
         }
         
     }
