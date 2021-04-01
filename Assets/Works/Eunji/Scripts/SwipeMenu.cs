@@ -5,50 +5,42 @@ using UnityEngine.UI;
 public class SwipeMenu : MonoBehaviour
 {
     public GameObject scrollbar;
-    private float scroll_pos;
     private float distance;
-    private float[] pos;
+    private float posEnd;
 
-    private int levelSize = 6;
-    private bool _isClicked = false;
+    private int levelSize = 8;
+    private bool _rightClicked = false;
+    private bool _leftClicked = false;
     void Start()
     {
-        pos = new float[levelSize];
-        distance = 1f / (pos.Length - 1f);
-
-        for (int i = 0; i < pos.Length; i++)
-        {
-            pos[i] = distance * i;
-        }
+        distance = 1f / (levelSize - 1f);
+        posEnd = distance * (levelSize - 1) + 0.023f;
     }
 
     void Update()
     {
-        if (_isClicked)
+        if (_rightClicked)
         {
-            // scroll_pos = scrollbar.GetComponent<Scrollbar>().value;
-            scrollbar.GetComponent<Scrollbar>().value = Mathf.Lerp(scrollbar.GetComponent<Scrollbar>().value, pos[levelSize - 1], 0.01f);
+            scrollbar.GetComponent<Scrollbar>().value = Mathf.Lerp(scrollbar.GetComponent<Scrollbar>().value, posEnd, 0.03f);
             Invoke("TurnOff", 2f);
         }
-        else
-        {
-            // for (int i = 0; i < pos.Length; i++)
-            // {
-                // if (scroll_pos < pos[i] + (distance / 2) && scroll_pos > pos[i] - (distance / 2))
-                // {
-                    
-                // }
-            // }
+        else if(_leftClicked){
+            scrollbar.GetComponent<Scrollbar>().value = Mathf.Lerp(scrollbar.GetComponent<Scrollbar>().value, 0, 0.03f);
+            Invoke("TurnOff", 2f);
         }
-        
     }
 
-    public void IsClicked()
+    public void RightClicked()
     {
-        if (_isClicked == false) _isClicked = true;
+        if (_rightClicked == false) _rightClicked = true;
+    }
+
+    public void LeftClicked(){
+        if (_leftClicked == false) _leftClicked = true;
     }
 
     private void TurnOff() {
-        _isClicked = false;
+        _rightClicked = false;
+        _leftClicked = false;
     }
 }
