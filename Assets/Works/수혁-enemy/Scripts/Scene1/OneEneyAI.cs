@@ -22,9 +22,13 @@ public class OneEneyAI : MonoBehaviour
 
     private OneEnmeyFire enmeyFire;
 
-
+     private float DieDelayTime = 10.0f;
     private readonly int hashMove = Animator.StringToHash("isRun");
     private readonly int hashSpeed = Animator.StringToHash("walkSpeed");
+
+    private readonly int hashDieIdx = Animator.StringToHash("SC1DieIdx");
+
+    private readonly int hashDie = Animator.StringToHash("SC1Die");
     private OneMoveAgent moveAgent;
     private void Awake(){
         var player = GameObject.Find("TmpPlayer");
@@ -60,19 +64,16 @@ public class OneEneyAI : MonoBehaviour
                     animator.SetBool(hashMove,false);
                     if(enmeyFire.isFire == false) enmeyFire.isFire = true;
                     break;
-            
-            
-                   
+
                 case State.DIE:
                     this.gameObject.tag = "Untagged";
+                    enmeyFire.isFire = false;
                     isDie = true;
-                    //enemyMeleeAttack.isMeleeAttack = false;                    
-                    //moveAgent.Stop();
-                    //int ran = Random.Range(0,3);
-                    //animator.SetInteger(hashDieIdx,ran);
-                    //animator.SetTrigger(hashDie);
-                    //GetComponent<CapsuleCollider>().enabled = false;
-                    //Destroy(gameObject,DieDelayTime);
+                    int ran = Random.Range(1,5);
+                    animator.SetInteger(hashDieIdx,ran);
+                    animator.SetTrigger(hashDie);
+                    GetComponent<CapsuleCollider>().enabled = false;
+                    Destroy(gameObject,DieDelayTime);
                     break;
             }
         }
