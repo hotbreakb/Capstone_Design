@@ -8,6 +8,7 @@ public class OneMoveAgent : MonoBehaviour
     private OneEneyAI oneEneyAI;
     private NavMeshAgent agent;
 
+    private readonly float traceSpeed = 4.0f;
     private int idx;
     // Start is called before the first frame update
     void Start()
@@ -31,6 +32,7 @@ public class OneMoveAgent : MonoBehaviour
         if(agent.isPathStale) return;
         idx = Random.Range(0,wayPoints.Count);
         agent.destination = wayPoints[idx].position;
+        agent.speed = traceSpeed;
         oneEneyAI.state = OneEneyAI.State.MOVE;
         agent.isStopped = false;
     }

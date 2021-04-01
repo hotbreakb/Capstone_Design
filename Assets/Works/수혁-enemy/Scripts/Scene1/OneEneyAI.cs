@@ -48,7 +48,7 @@ public class OneEneyAI : MonoBehaviour
             switch(state){
                 case State.MOVE:
                     // 총알발사정지
-                    //enemyFire.isFire = false;
+                    enmeyFire.isFire = false;
                     //moveAgent.patrolling = true;
                     animator.SetBool(hashMove, true);
 
@@ -78,6 +78,7 @@ public class OneEneyAI : MonoBehaviour
         }
     }
     void Update(){
-        //animator.SetFloat(hashSpeed, moveAgent.speed);
+
+        animator.SetFloat(hashSpeed, moveAgent.speed);
     }
 }
