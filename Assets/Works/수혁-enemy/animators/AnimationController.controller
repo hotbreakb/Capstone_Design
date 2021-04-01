@@ -17,7 +17,7 @@ AnimatorState:
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
   m_Mirror: 0
-  m_SpeedParameterActive: 1
+  m_SpeedParameterActive: 0
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
@@ -84,7 +84,7 @@ AnimatorStateMachine:
     m_Position: {x: 640, y: 120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7043310351546256838}
-    m_Position: {x: 630, y: 20, z: 0}
+    m_Position: {x: 640, y: 20, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8096999366425127464}
     m_Position: {x: 640, y: 210, z: 0}
@@ -112,7 +112,7 @@ AnimatorController:
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
-    m_DefaultBool: 1
+    m_DefaultBool: 0
     m_Controller: {fileID: 0}
   - m_Name: offset
     m_Type: 1
