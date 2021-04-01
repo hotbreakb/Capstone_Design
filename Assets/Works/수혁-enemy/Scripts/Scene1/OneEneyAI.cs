@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class OneEneyAI : MonoBehaviour
-{
+{   
+        
         public enum State{
         MOVE,
         ATTACK,
@@ -57,7 +58,6 @@ public class OneEneyAI : MonoBehaviour
                 case State.ATTACK:
                     transform.LookAt(playerTr);
                     animator.SetBool(hashMove,false);
-                    //moveAgent.Stop();
                     if(enmeyFire.isFire == false) enmeyFire.isFire = true;
                     break;
             
