@@ -75,6 +75,8 @@ public class GameManager : MonoBehaviour
         // Start
         Debug.Log("player win");
         Invoke("QuitGame", 2f);
+        
+        GameObject.Find("Canvas").GetComponent<Locked>()._isPlayerWin = true;
         isPlayerWin = true;
     }
 
@@ -86,6 +88,8 @@ public class GameManager : MonoBehaviour
         // restart
         Debug.Log("player lose");
         StartCoroutine(playerLoseTimer());
+        
+        GameObject.Find("Canvas").GetComponent<Locked>()._isPlayerWin = false; /* using in UI Locked */
         isPlayerWin = false;
     }
 

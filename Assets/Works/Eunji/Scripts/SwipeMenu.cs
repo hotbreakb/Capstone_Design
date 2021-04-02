@@ -1,37 +1,46 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
+
 public class SwipeMenu : MonoBehaviour
 {
     public GameObject scrollbar;
+    private float distance;
+    private float posEnd;
 
-    public GameObject ArrawBtn;
-    private float scroll_pos;
-    private float[] pos;
+    private int levelSize = 8;
+    private bool _rightClicked = false;
+    private bool _leftClicked = false;
+    void Start()
+    {
+        distance = 1f / (levelSize - 1f);
+        posEnd = distance * (levelSize - 1) + 0.023f;
+    }
 
     void Update()
     {
-        pos = new float[transform.childCount];
-        float dis = 1f / (pos.Length - 1f);
-
-        for (int i = 0; i < pos.Length; i++)
+        if (_rightClicked)
         {
-            pos[i] = dis * i;
+            scrollbar.GetComponent<Scrollbar>().value = Mathf.Lerp(scrollbar.GetComponent<Scrollbar>().value, posEnd, 0.03f);
+            Invoke("TurnOff", 2f);
         }
+        else if(_leftClicked){
+            scrollbar.GetComponent<Scrollbar>().value = Mathf.Lerp(scrollbar.GetComponent<Scrollbar>().value, 0, 0.03f);
+            Invoke("TurnOff", 2f);
+        }
+    }
 
-        if (Input.GetMouseButton(0))
-        { // if arrow btn is clicked, the scroll is moved.
-            scroll_pos = scrollbar.GetComponent<Scrollbar>().value;
-        }
-        else
-        {
-            for (int i = 0; i < pos.Length; i++)
-            {
-                if (scroll_pos < pos[i] + (dis / 2) && scroll_pos > pos[i] - (dis / 2))
-                {
-                    scrollbar.GetComponent<Scrollbar>().value = Mathf.Lerp(scrollbar.GetComponent<Scrollbar>().value, pos[i], 0.1f);
-                }
-            }
-        }
+    public void RightClicked()
+    {
+        if (_rightClicked == false) _rightClicked = true;
+    }
+
+    public void LeftClicked(){
+        if (_leftClicked == false) _leftClicked = true;
+    }
+
+    private void TurnOff() {
+        _rightClicked = false;
+        _leftClicked = false;
     }
 }

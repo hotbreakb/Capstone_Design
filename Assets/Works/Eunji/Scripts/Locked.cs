@@ -6,13 +6,14 @@ public class Locked : MonoBehaviour
 {
     private Animator anim;
     private Image img;
+    public bool _isPlayerWin = true;
 
     void Start()
     {
         anim = GetComponent<Animator>();
         img = GetComponent<Image>();
         
-        if (FindObjectOfType<GameManager>().isPlayerWin) StartCoroutine(FadeOut());
+        if (_isPlayerWin) StartCoroutine(FadeOut());
         else anim.Play("LockAnim");
     }
 
