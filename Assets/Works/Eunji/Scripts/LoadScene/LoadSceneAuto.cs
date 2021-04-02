@@ -46,6 +46,7 @@ public class LoadSceneAuto : MonoBehaviour
 
     public void GameStart() {
         SceneManager.LoadScene("Loading");
+        // LoadGameScene()
     }
 
     public void TutorialStart() {

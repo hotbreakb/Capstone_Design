@@ -12,11 +12,16 @@ public class Locked : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         img = GetComponent<Image>();
-        
-        if (_isPlayerWin) StartCoroutine(FadeOut());
-        else {
+
+        if (_isPlayerWin)
+        {
+            StartCoroutine(FadeOut());
+            GameObject.Find("Canvas(2)").GetComponent<Restart>().playShow(true);
+        }
+        else
+        {
             anim.Play("LockAnim");
-            GameObject.Find("Canvas(2)").GetComponent<Restart>().playShow();
+            GameObject.Find("Canvas(2)").GetComponent<Restart>().playShow(false);
         }
     }
 
