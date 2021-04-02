@@ -11,17 +11,26 @@ public class EnemyDamage : MonoBehaviour
 
     public Image hpbar;
 
-    void awake(){
+    private OneEneyAI oneEneyAI;
+    private OneMoveAgent moveAgent;
+    void Awake(){
+        oneEneyAI = GetComponent<OneEneyAI>();
+        Debug.Log(oneEneyAI);
+        moveAgent = GetComponent<OneMoveAgent>();
+        Debug.Log("무ㅡ브");
+        Debug.Log(moveAgent);
         hpbar.rectTransform.localScale = new Vector3(1f,1f,1f);
     }
 
     private void OnTriggerEnter(Collider other){
         if(other.tag=="Bullet"){
         curHp-=25;
-        if(curHp ==0){
-            Destroy(gameObject);
-        }
         hpbar.rectTransform.localScale = new Vector3(((float)curHp/(float)maxHp),1f,1f);
+        Debug.Log(oneEneyAI);
+        if(curHp ==0){
+            oneEneyAI.state = OneEneyAI.State.DIE;
+            Debug.Log(oneEneyAI.state);
+        }
         }
     }
 }

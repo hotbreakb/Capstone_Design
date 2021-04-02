@@ -8,10 +8,16 @@ public class OneMoveAgent : MonoBehaviour
     private OneEneyAI oneEneyAI;
     private NavMeshAgent agent;
 
+    private readonly float traceSpeed = 4.0f;
     private int idx;
+
+    private float damping = 1.0f;
+
+    private Transform enemyTr;
     // Start is called before the first frame update
     void Start()
     {   
+        enemyTr = GetComponent<Transform>();
         oneEneyAI = GetComponent<OneEneyAI>();
         agent = GetComponent<NavMeshAgent>();
         agent.autoBraking = false;
@@ -31,6 +37,7 @@ public class OneMoveAgent : MonoBehaviour
         if(agent.isPathStale) return;
         idx = Random.Range(0,wayPoints.Count);
         agent.destination = wayPoints[idx].position;
+        agent.speed = traceSpeed;
         oneEneyAI.state = OneEneyAI.State.MOVE;
         agent.isStopped = false;
     }
@@ -45,6 +52,12 @@ public class OneMoveAgent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(agent.isStopped == false){
+            Quaternion rot = Quaternion.LookRotation(agent.desiredVelocity);
+            enemyTr.rotation = Quaternion.Slerp(enemyTr.rotation, rot, Time.deltaTime * damping);
+        }
+
+
             if(agent.velocity.sqrMagnitude >= 0.2f * 0.2f && agent.remainingDistance <= 0.5f)
         {
             agent.isStopped = true;
