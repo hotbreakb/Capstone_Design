@@ -4,6 +4,10 @@ using UnityEngine.SceneManagement;
 
 public class LoadSceneAuto : MonoBehaviour
 {
+    // ---- Start ----
+    // In Start Scene, it displayes INU logo and our title.
+    // After 9 seconds to start, Menu Scene is loaded. ( LoadMenu() )
+
     // ---- Tutorial_01 ----
     // If the Arrow Button is clicked, 'Tutorial_02' is loaded.
 

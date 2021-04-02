@@ -38,23 +38,6 @@ public class breakWindow : MonoBehaviour
         }
     }
 
-    // In Playmode2
-    /* private void OnCollisionEnter(Collision collision)
-    {
-        if (!isBroken)
-        {
-            shootCount++;
-
-            if (shootCount == maxShootCount && anim != null)
-            {
-                anim.Play("Break", 0, 0f);
-                breakAudioSource.Play();
-
-                isBroken = true;
-            }
-        }
-    }*/
-
     public void breakAuto()
     {
         anim.Play("Break", 0, 0f);
