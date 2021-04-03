@@ -66,6 +66,7 @@ public class OneEneyAI : MonoBehaviour
                     break;
 
                 case State.DIE:
+             
                     this.gameObject.tag = "Untagged";
                     enmeyFire.isFire = false;
                     isDie = true;
