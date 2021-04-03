@@ -11,6 +11,8 @@ public class Restart : MonoBehaviour
     public GameObject NoBtn;
 
     public void playShow(bool _isStart){
+        if(!GrayPanel || !RestartText || !YesBtn || !NoBtn) return;
+        
         StartCoroutine(show(_isStart));
     }
 
@@ -25,6 +27,8 @@ public class Restart : MonoBehaviour
     }
 
     public void hide() {
+        if(!GrayPanel || !RestartText || !YesBtn || !NoBtn) return;
+
         GrayPanel.SetActive(false);
         RestartText.gameObject.SetActive(false);
         YesBtn.SetActive(false);
