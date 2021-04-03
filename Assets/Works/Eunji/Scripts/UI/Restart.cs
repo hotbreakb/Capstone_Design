@@ -12,14 +12,14 @@ public class Restart : MonoBehaviour
 
     public void playShow(bool _isStart){
         if(!GrayPanel || !RestartText || !YesBtn || !NoBtn) return;
-        
+        Debug.Log("button");
         StartCoroutine(show(_isStart));
     }
 
     public IEnumerator show(bool _isStart) {
         if(_isStart) RestartText.text = "start?";
 
-        yield return new WaitForSecondsRealtime(1.3f);
+        yield return new WaitForSecondsRealtime(0.5f);
         GrayPanel.SetActive(true);
         RestartText.gameObject.SetActive(true);
         YesBtn.SetActive(true);
