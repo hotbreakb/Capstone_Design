@@ -10,6 +10,8 @@ public class LeapmotionGesture : MonoBehaviour
     public GameObject cube;
 
     /* AutomaticGunScriptLPFP.cs에서 사용하기 위해 public으로 선언 */
+
+    /*
     public bool isShoot = false;   // 총쏘기
     public bool isGrenade = false; // 수류탄
     public bool isLoading = false; // 장전
@@ -126,4 +128,5 @@ public class LeapmotionGesture : MonoBehaviour
         }
         return extendedFingers;
     }
+    */
 }
