@@ -15,10 +15,7 @@ public class EnemyDamage : MonoBehaviour
     private OneMoveAgent moveAgent;
     void Awake(){
         oneEneyAI = GetComponent<OneEneyAI>();
-        Debug.Log(oneEneyAI);
         moveAgent = GetComponent<OneMoveAgent>();
-        Debug.Log("무ㅡ브");
-        Debug.Log(moveAgent);
         hpbar.rectTransform.localScale = new Vector3(1f,1f,1f);
     }
 

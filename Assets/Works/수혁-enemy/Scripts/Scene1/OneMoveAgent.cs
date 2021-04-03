@@ -65,4 +65,7 @@ public class OneMoveAgent : MonoBehaviour
             oneEneyAI.state = OneEneyAI.State.ATTACK;
         }
     }
+    public void DieStop(){
+        agent.Stop();
+    }
 }
