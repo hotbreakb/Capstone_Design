@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class OneEnmeyFire : MonoBehaviour
-{
+{   
+    private AudioSource audio;
+    public AudioClip fireSfx;
+
     private Animator animator;
 
     private Transform playerTr;
@@ -38,7 +41,7 @@ public class OneEnmeyFire : MonoBehaviour
         playerTr = GameObject.Find("TmpPlayer").GetComponent<Transform>();  
         //muzzleFlash.enabled = false;
         
-
+        audio = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         wsReload = new WaitForSeconds(reloadTime);
     }
@@ -55,7 +58,9 @@ public class OneEnmeyFire : MonoBehaviour
         }
     }
     void Fire()
-    {   
+    {    
+        Debug.Log(audio);
+        audio.PlayOneShot(fireSfx, 1.0f);
         //Instantiate(Bullet, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
     }
 }
