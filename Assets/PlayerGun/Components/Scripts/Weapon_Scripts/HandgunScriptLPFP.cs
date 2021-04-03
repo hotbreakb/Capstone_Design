@@ -200,9 +200,9 @@ public class HandgunScriptLPFP : MonoBehaviour
     private void Update()
     {
 
-        _isShoot = GameObject.Find("HandModels").GetComponent<LeapmotionGesture>().isShoot;
-        _isGrenade = GameObject.Find("HandModels").GetComponent<LeapmotionGesture>().isGrenade;
-        _isLoading = GameObject.Find("HandModels").GetComponent<LeapmotionGesture>().isLoading;
+        _isShoot = FindObjectOfType<GameManager>().isShoot;
+        _isGrenade = FindObjectOfType<GameManager>().isGrenade;
+        _isLoading = FindObjectOfType<GameManager>().isLoading;
 
         if (!isReloading)
         {

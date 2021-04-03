@@ -210,7 +210,6 @@ GameObject:
   m_Component:
   - component: {fileID: 43861190}
   - component: {fileID: 43861192}
-  - component: {fileID: 43861191}
   m_Layer: 0
   m_Name: HandModels
   m_TagString: Untagged
@@ -234,22 +233,6 @@ Transform:
   m_Father: {fileID: 1321902298}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
---- !u!114 &43861191
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 43861189}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34f8f1a512f0e734bbd146dfc59c9ea5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cube: {fileID: 2013989132}
-  isShoot: 0
-  isGrenade: 0
-  isLoading: 0
 --- !u!114 &43861192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1878,6 +1861,10 @@ MonoBehaviour:
   createTime: 2
   maxEnemy: 10
   isGameOver: 0
+  cube: {fileID: 0}
+  isShoot: 0
+  isGrenade: 0
+  isLoading: 0
   YouWin: {fileID: 0}
   GameOver: {fileID: 0}
   isPlayerWin: 0

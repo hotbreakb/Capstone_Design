@@ -34,14 +34,12 @@ public class LoadSceneAuto : MonoBehaviour
     public void LoadNextScene()
     {
         int index = SceneManager.GetActiveScene().buildIndex;
-        Debug.Log("Build Index: " + index);
         StartCoroutine(LoadNextSceneTimer(index));
     }
     
     public void SkipTutorial()
     {
         int index = SceneManager.GetActiveScene().buildIndex;
-        Debug.Log("Skip");
         StartCoroutine(SkipTutorialTimer(index));
     }
 

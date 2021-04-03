@@ -8,13 +8,12 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-using System;
 
 // ----- Low Poly FPS Pack Free Version -----
 public class AutomaticGunScriptLPFP : MonoBehaviour
 {
 	//Use LeapmotionGesture.cs
-	LeapmotionGesture Leapmotion_guesture;
+	// LeapmotionGesture Leapmotion_guesture;	delete
 
 	//Animator component attached to weapon
 	Animator anim;
@@ -177,7 +176,7 @@ public class AutomaticGunScriptLPFP : MonoBehaviour
 		muzzleflashLight.enabled = false;
 
 		//Use LeapmotionGesture.cs
-		Leapmotion_guesture = GameObject.Find("HandModels").GetComponent<LeapmotionGesture>();
+		// Leapmotion_guesture = GameObject.Find("HandModels").GetComponent<LeapmotionGesture>(); delete
 	}
 
 	private void Start()
@@ -324,8 +323,6 @@ public class AutomaticGunScriptLPFP : MonoBehaviour
 		}
 		*/
 
-		Debug.Log("isShoot: " + Leapmotion_guesture.isShoot + " isGrenade" + Leapmotion_guesture.isGrenade + "isLoading" + Leapmotion_guesture.isLoading);
-
 		StartCoroutine("TakeAction");
 
 		//If out of ammo 남은 총알수가 0개면 자동 재장전. 
@@ -430,7 +427,7 @@ public class AutomaticGunScriptLPFP : MonoBehaviour
 		//AUtomatic fire
 		//Left click hold 
 		//----------------------Input.GetMouseButton(0) = 좌클릭 -> bool함수로 립모션이랑 연계필요 -------------------------------------
-		if ((Leapmotion_guesture.isShoot || Input.GetMouseButton(0)) && !outOfAmmo && !isReloading && !isInspecting && !isRunning)
+		if ((FindObjectOfType<GameManager>().isShoot || Input.GetMouseButton(0)) && !outOfAmmo && !isReloading && !isInspecting && !isRunning)
 		{
 			//Shoot automatic
 			if (Time.time - lastFired > 1 / fireRate)
@@ -524,7 +521,7 @@ public class AutomaticGunScriptLPFP : MonoBehaviour
 		//---------수류탄-------------------------------------------------------------------------------
 		// 립모션과 연계 필요
 		//Throw grenade when pressing G key
-		else if ((Leapmotion_guesture.isGrenade || Input.GetKeyDown(KeyCode.G)) && !isInspecting)
+		else if ((FindObjectOfType<GameManager>().isGrenade || Input.GetKeyDown(KeyCode.G)) && !isInspecting)
 		{
 			StartCoroutine(GrenadeSpawnDelay());
 			//Play grenade throw animation
@@ -532,7 +529,7 @@ public class AutomaticGunScriptLPFP : MonoBehaviour
 		}
 		// 키보드 R누르면 Reload 재장전---------------------------------------------------------------------------------------------------------------
 		//립모션과 연계 필요
-		else if ((Leapmotion_guesture.isLoading || Input.GetKeyDown(KeyCode.R)) && !isReloading && !isInspecting)
+		else if ((FindObjectOfType<GameManager>().isLoading || Input.GetKeyDown(KeyCode.R)) && !isReloading && !isInspecting)
 		{
 			//Reload
 			Reload();
