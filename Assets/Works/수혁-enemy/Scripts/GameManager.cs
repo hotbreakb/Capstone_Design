@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (cube)
+        if (cube || SceneManager.GetActiveScene().name == "Loading")
             StartCoroutine("checkHand");
     }
 
@@ -83,12 +83,15 @@ public class GameManager : MonoBehaviour
         if (!controller.IsConnected)
         {
             controller.StartConnection();
-            Invoke("QuitGame", 10.0f); // 10초 이내 연결되지 않으면 스크립트 종료
+            Invoke("QuitGame", 20.0f); // 20초 이내 연결되지 않으면 스크립트 종료
             // Debug.Log("not connected");
         }
         else
         {
             CancelInvoke("QuitGame");
+
+            if(SceneManager.GetActiveScene().name == "Loading")
+                SceneManager.LoadScene("PlayMode"); // 수정하기
         }
 
         Hand hand = new Hand();
