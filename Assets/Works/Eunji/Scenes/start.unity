@@ -2901,6 +2901,10 @@ MonoBehaviour:
   createTime: 2
   maxEnemy: 10
   isGameOver: 0
+  cube: {fileID: 0}
+  isShoot: 0
+  isGrenade: 0
+  isLoading: 0
   YouWin: {fileID: 0}
   GameOver: {fileID: 0}
   isPlayerWin: 0
@@ -3918,8 +3922,8 @@ GameObject:
   - component: {fileID: 1787412315}
   - component: {fileID: 1787412314}
   - component: {fileID: 1787412313}
-  - component: {fileID: 1787412311}
   - component: {fileID: 1787412312}
+  - component: {fileID: 1787412311}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera

@@ -6,20 +6,19 @@ using UnityEngine.UIElements;
 
 public class CheckLeapmotion : MonoBehaviour
 {
-    Controller leapmotion;
     public Text notConnected;
     public UnityEngine.UI.Image circle;
 
     private void Start()
     {
-        leapmotion = new Controller();
+        // leapmotion = new Controller();
         //notConnected = GameObject.Find("NotConnected").GetComponent<Text>();
         //circle = GameObject.Find("Circle").GetComponent<UnityEngine.UI.Image>();
 
-        if (!leapmotion.IsConnected)
-        {
-            leapmotion = new Controller(1);
-        }
+        // if (!leapmotion.IsConnected)
+        // {
+        //     leapmotion = new Controller(1);
+        // }
 
         notConnected.gameObject.SetActive(false);
         circle.gameObject.SetActive(false);
@@ -27,9 +26,10 @@ public class CheckLeapmotion : MonoBehaviour
 
     public void onClickLikeButton()
     {
+        Debug.Log("Click!");
         circle.gameObject.SetActive(true);
 
-        if (leapmotion.IsConnected)
+        if (FindObjectOfType<GameManager>().controller.IsConnected)
             Invoke("LoadNextScene", 2.0f);
         else
         {

@@ -24,6 +24,7 @@ public class breakWindow : MonoBehaviour
     // In Playmode
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Trigger");
         if (!isBroken)
         {
             shootCount++;

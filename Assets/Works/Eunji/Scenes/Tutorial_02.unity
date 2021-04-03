@@ -1051,6 +1051,10 @@ MonoBehaviour:
   createTime: 2
   maxEnemy: 10
   isGameOver: 0
+  cube: {fileID: 0}
+  isShoot: 0
+  isGrenade: 0
+  isLoading: 0
   YouWin: {fileID: 0}
   GameOver: {fileID: 0}
   isPlayerWin: 0

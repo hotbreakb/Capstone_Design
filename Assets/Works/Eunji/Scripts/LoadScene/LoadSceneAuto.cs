@@ -79,6 +79,7 @@ public class LoadSceneAuto : MonoBehaviour
 
         UnityEditor.EditorApplication.isPlaying = false;
 #else
+        System.Diagnostics.Process.GetCurrentProcess().Kill();
         Application.Quit();
 #endif
     }
