@@ -12,7 +12,7 @@ public class Locked : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         img = GetComponent<Image>();
-
+        
         if (_isPlayerWin)
         {
             StartCoroutine(FadeOut());

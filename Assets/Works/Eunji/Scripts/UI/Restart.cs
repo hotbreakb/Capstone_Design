@@ -7,11 +7,12 @@ public class Restart : MonoBehaviour
 {
     public GameObject GrayPanel;
     public TextMeshProUGUI RestartText;
-    public GameObject RestartBtn;
     public GameObject YesBtn;
     public GameObject NoBtn;
 
     public void playShow(bool _isStart){
+        if(!GrayPanel || !RestartText || !YesBtn || !NoBtn) return;
+        
         StartCoroutine(show(_isStart));
     }
 
@@ -20,14 +21,16 @@ public class Restart : MonoBehaviour
 
         yield return new WaitForSecondsRealtime(1.3f);
         GrayPanel.SetActive(true);
-        RestartBtn.SetActive(true);
+        RestartText.gameObject.SetActive(true);
         YesBtn.SetActive(true);
         NoBtn.SetActive(true);
     }
 
     public void hide() {
+        if(!GrayPanel || !RestartText || !YesBtn || !NoBtn) return;
+
         GrayPanel.SetActive(false);
-        RestartBtn.SetActive(false);
+        RestartText.gameObject.SetActive(false);
         YesBtn.SetActive(false);
         NoBtn.SetActive(false);
     }

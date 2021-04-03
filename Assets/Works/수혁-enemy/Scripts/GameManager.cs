@@ -28,11 +28,14 @@ public class GameManager : MonoBehaviour
     public bool isPlayerWin = false;
 
 
-    void Awake(){
-        if(instance == null){
+    void Awake()
+    {
+        if (instance == null)
+        {
             instance = this;
         }
-        else if(instance != this){
+        else if (instance != this)
+        {
             Destroy(this.gameObject);
         }
 
@@ -41,24 +44,33 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        if (!GameObject.Find("SpawnPoint")) return;
+
         points = GameObject.Find("SpawnPoint").GetComponentsInChildren<Transform>();    // 위치정보 갖고옴
 
-        if(points.Length > 0){
+        if (points.Length > 0)
+        {
             StartCoroutine(this.CreateEnemy());
         }
+
+
     }
 
-    IEnumerator CreateEnemy(){
-        while(!isGameOver){
+    IEnumerator CreateEnemy()
+    {
+        while (!isGameOver)
+        {
             int enemyCount = (int)GameObject.FindGameObjectsWithTag("Enemy").Length;
 
-            if(enemyCount < maxEnemy){
+            if (enemyCount < maxEnemy)
+            {
                 yield return new WaitForSeconds(createTime);
 
-                int idx = Random.Range(1,points.Length);
+                int idx = Random.Range(1, points.Length);
                 Instantiate(enemy, points[idx].position, points[idx].rotation);
             }
-            else{
+            else
+            {
                 yield return null;
             }
         }
@@ -66,49 +78,43 @@ public class GameManager : MonoBehaviour
 
     /* ------------------------------------------------------------------------------- */
 
-    public void playerWin() {
+    public void playerWin()
+    {
         /* You Win UI 띄우기 */
+        if (!YouWin) return;
+
         YouWin.gameObject.SetActive(true);
         GameObject.Find("Main Camera").GetComponent<PlayGlitchEffect>().Play();
-        
+
+
         // 좌물쇠 풀리는 모양
         // Start
         Debug.Log("player win");
-        Invoke("QuitGame", 2f);
-        
+        StartCoroutine(ShowLevelTimer());
+
         GameObject.Find("Canvas").GetComponent<Locked>()._isPlayerWin = true;
         isPlayerWin = true;
     }
 
-    public void playerLose() {
+    public void playerLose()
+    {
         /* Game over UI 띄우기 */
+        if (!GameOver) return;
+
         GameOver.gameObject.SetActive(true);
         GameObject.Find("Main Camera").GetComponent<PlayGlitchEffect>().Play();
-        
+
         // restart
         Debug.Log("player lose");
-        StartCoroutine(playerLoseTimer());
-        
+        StartCoroutine(ShowLevelTimer());
+
         GameObject.Find("Canvas").GetComponent<Locked>()._isPlayerWin = false; /* using in UI Locked */
         isPlayerWin = false;
     }
 
-    IEnumerator playerLoseTimer(){
-        /* 자물쇠 모양으로 가서 안 풀린 거 보여주기 */
+    IEnumerator ShowLevelTimer()
+    {
         yield return new WaitForSecondsRealtime(2.0f);
         SceneManager.LoadScene("Level");
-    }
-
-    public void QuitGame()
-    {
-        // save any game data here
-#if UNITY_EDITOR
-        // Application.Quit() does not work in the editor so
-        // UnityEditor.EditorApplication.isPlaying need to be set to false to end the game
-
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
-        Application.Quit();
-#endif
     }
 }
