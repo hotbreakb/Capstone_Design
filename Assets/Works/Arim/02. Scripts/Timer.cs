@@ -15,13 +15,6 @@ public class Timer : MonoBehaviour
     public float delayTime = 20.0f;
     public bool lightmanager = false;
 
-    /* ---- change Background --- */
-    //public Material Cloudy;
-    //public Material Dark;
-    //private Color tintColorBlack = new Color(0, 0, 0, 128);
-    //private Color tintColorGray = new Color(128, 128, 128, 128);
-    /* -------------------------- */
-
     void Start()
     {
         Fleshlight.enabled = false;
@@ -35,21 +28,26 @@ public class Timer : MonoBehaviour
             LightManager();
         }
 
-        if (progressBar.fillAmount == 1) {
-            FindObjectOfType<GameManager>().playerWin();
+        if (progressBar.fillAmount >= 1) {
+            // GoToGameManager();
+            enabled = false;
+        }
+        else
+        {    
+            totalTime += Time.deltaTime * 1; /* set up the speed */
+            fills = totalTime * timeSpeed;
+            progressBar.fillAmount = fills;
         }
             
-        totalTime += Time.deltaTime;
-        fills = totalTime * timeSpeed;
-        progressBar.fillAmount = fills;
 
+    }
+
+    void GoToGameManager(){
+        if(enabled == false) FindObjectOfType<GameManager>().playerWin();
     }
     void LightManager()
     {
         lightmanager = true;
-        //RenderSettings.skybox = Dark;
-        // RenderSettings.skybox.SetColor("_Tint", tintColorBlack);
-        //DynamicGI.UpdateEnvironment();
 
         StartCoroutine(Blinking());
         StartCoroutine(Blinktime());
@@ -76,10 +74,7 @@ public class Timer : MonoBehaviour
     IEnumerator WaitForIt()
     {
         yield return new WaitForSeconds(delayTime);
-        //RenderSettings.skybox = Cloudy;
-        // RenderSettings.skybox.SetColor("_Tint", tintColorGray);
 
-        //DynamicGI.UpdateEnvironment();
         Fleshlight.enabled = false ;
         Spotlight.SetActive(true);
         Pointlight.SetActive(true);

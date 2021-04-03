@@ -4,6 +4,10 @@ using UnityEngine.SceneManagement;
 
 public class LoadSceneAuto : MonoBehaviour
 {
+    // ---- Start ----
+    // In Start Scene, it displayes INU logo and our title.
+    // After 9 seconds to start, Menu Scene is loaded. ( LoadMenu() )
+
     // ---- Tutorial_01 ----
     // If the Arrow Button is clicked, 'Tutorial_02' is loaded.
 
@@ -30,18 +34,21 @@ public class LoadSceneAuto : MonoBehaviour
     public void LoadNextScene()
     {
         int index = SceneManager.GetActiveScene().buildIndex;
+        Debug.Log("Build Index: " + index);
         StartCoroutine(LoadNextSceneTimer(index));
     }
     
-    public void LoadGameScene()
+    public void SkipTutorial()
     {
         int index = SceneManager.GetActiveScene().buildIndex;
-        StartCoroutine(LoadGameSceneTimer(index));
+        Debug.Log("Skip");
+        StartCoroutine(SkipTutorialTimer(index));
     }
 
 
     public void GameStart() {
         SceneManager.LoadScene("Loading");
+        // LoadGameScene()
     }
 
     public void TutorialStart() {
@@ -59,7 +66,7 @@ public class LoadSceneAuto : MonoBehaviour
         yield return new WaitForSeconds(2.0f);
         SceneManager.LoadScene(index + 1);
     }
-    IEnumerator LoadGameSceneTimer(int index)
+    IEnumerator SkipTutorialTimer(int index)
     {
         yield return new WaitForSeconds(2.0f);
         SceneManager.LoadScene(index + 4);

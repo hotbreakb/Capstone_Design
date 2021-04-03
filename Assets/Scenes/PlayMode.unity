@@ -6751,57 +6751,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 736957199}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1208428191
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1208428193}
-  - component: {fileID: 1208428192}
-  m_Layer: 0
-  m_Name: GameMgr
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1208428192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1208428191}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82af58794c979f04d87b016c1b89fbba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  points: []
-  enemy: {fileID: 7675805510432256503, guid: 59f8ce0afd37c3a4682a60fcb76e848d, type: 3}
-  createTime: 2
-  maxEnemy: 2
-  isGameOver: 0
-  YouWin: {fileID: 582739689}
-  GameOver: {fileID: 1341959450}
-  isPlayerWin: 0
---- !u!4 &1208428193
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1208428191}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24.020607, y: 2.9038906, z: 10.786264}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1212731850
 GameObject:
   m_ObjectHideFlags: 0
@@ -7266,7 +7215,7 @@ RectTransform:
   - {fileID: 582739688}
   - {fileID: 1341959449}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -8553,6 +8502,7 @@ GameObject:
   - component: {fileID: 1414513179}
   - component: {fileID: 1414513178}
   - component: {fileID: 1414513177}
+  - component: {fileID: 1414513180}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -8606,8 +8556,28 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1414513180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414513176}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82af58794c979f04d87b016c1b89fbba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points: []
+  enemy: {fileID: 7675805510432256503, guid: 59f8ce0afd37c3a4682a60fcb76e848d, type: 3}
+  createTime: 2
+  maxEnemy: 2
+  isGameOver: 0
+  YouWin: {fileID: 582739689}
+  GameOver: {fileID: 1341959450}
+  isPlayerWin: 0
 --- !u!1001 &1431645673
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9230,7 +9200,7 @@ PrefabInstance:
     - target: {fileID: 1153025529860350443, guid: 59f8ce0afd37c3a4682a60fcb76e848d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 1153025529860350443, guid: 59f8ce0afd37c3a4682a60fcb76e848d,
         type: 3}
@@ -10140,7 +10110,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1716580005
 PrefabInstance:
@@ -11704,22 +11674,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1908335224}
   m_PrefabAsset: {fileID: 0}
---- !u!111 &1908335228
-Animation:
+--- !u!95 &1908335228
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1908335225}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: c92a929b1f32e4496b7427c82990427b, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: c92a929b1f32e4496b7427c82990427b, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4c5d0ae8bfe45b543ad8d3d29a44f992, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1908335229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12023,7 +11996,7 @@ Transform:
   - {fileID: 1445127324}
   - {fileID: 1212731851}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1959630241
 GameObject:
@@ -12055,7 +12028,7 @@ Transform:
   - {fileID: 162689512}
   - {fileID: 1618335429}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1960108458
 PrefabInstance:
@@ -13641,7 +13614,7 @@ PrefabInstance:
     - target: {fileID: 1153025529860350443, guid: 59f8ce0afd37c3a4682a60fcb76e848d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1153025529860350443, guid: 59f8ce0afd37c3a4682a60fcb76e848d,
         type: 3}
@@ -14618,7 +14591,7 @@ PrefabInstance:
     - target: {fileID: 4941288483073300832, guid: 430be5071c83adb4c9a7c6332f223240,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4941288483073300832, guid: 430be5071c83adb4c9a7c6332f223240,
         type: 3}
@@ -14830,7 +14803,7 @@ PrefabInstance:
     - target: {fileID: 1821259977873324492, guid: 60d4e2522be519e4682d72bcf90762ab,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1821259977873324492, guid: 60d4e2522be519e4682d72bcf90762ab,
         type: 3}
