@@ -6112,9 +6112,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cube: {fileID: 0}
-  isShoot: 0
-  isGrenade: 0
-  isLoading: 0
 --- !u!1 &986134200
 GameObject:
   m_ObjectHideFlags: 0
@@ -8575,6 +8572,10 @@ MonoBehaviour:
   createTime: 2
   maxEnemy: 2
   isGameOver: 0
+  cube: {fileID: 0}
+  isShoot: 0
+  isGrenade: 0
+  isLoading: 0
   YouWin: {fileID: 582739689}
   GameOver: {fileID: 1341959450}
   isPlayerWin: 0
