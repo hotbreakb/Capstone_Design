@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     public bool isGameOver = false;
 
     /* ----------- Leap Motion ---------- */
+    public Controller controller;
     private List<Finger> fingers;
     public GameObject cube;
     public bool isShoot = false;   // 총쏘기
@@ -72,7 +73,7 @@ public class GameManager : MonoBehaviour
 
     IEnumerator checkHand()
     {
-        Controller controller = new Controller(1);
+        controller = new Controller(1);
 
         if (controller == null)
         {
