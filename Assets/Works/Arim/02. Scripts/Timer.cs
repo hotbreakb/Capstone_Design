@@ -35,14 +35,22 @@ public class Timer : MonoBehaviour
             LightManager();
         }
 
-        if (progressBar.fillAmount == 1) {
-            FindObjectOfType<GameManager>().playerWin();
+        if (progressBar.fillAmount >= 1) {
+            GoToGameManager();
+            enabled = false;
+        }
+        else
+        {    
+            totalTime += Time.deltaTime * 10; /* set up the speed */
+            fills = totalTime * timeSpeed;
+            progressBar.fillAmount = fills;
         }
             
-        totalTime += Time.deltaTime;
-        fills = totalTime * timeSpeed;
-        progressBar.fillAmount = fills;
 
+    }
+
+    void GoToGameManager(){
+        if(enabled == false) FindObjectOfType<GameManager>().playerWin();
     }
     void LightManager()
     {

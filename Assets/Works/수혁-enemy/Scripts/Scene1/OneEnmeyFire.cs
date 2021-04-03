@@ -56,6 +56,6 @@ public class OneEnmeyFire : MonoBehaviour
     }
     void Fire()
     {   
-        Instantiate(Bullet, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
+        // Instantiate(Bullet, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
     }
 }

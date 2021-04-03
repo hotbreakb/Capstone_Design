@@ -12,7 +12,7 @@ public class Locked : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         img = GetComponent<Image>();
-
+        /*
         if (_isPlayerWin)
         {
             StartCoroutine(FadeOut());
@@ -22,7 +22,7 @@ public class Locked : MonoBehaviour
         {
             anim.Play("LockAnim");
             GameObject.Find("Canvas(2)").GetComponent<Restart>().playShow(false);
-        }
+        }*/
     }
 
     IEnumerator FadeOut()

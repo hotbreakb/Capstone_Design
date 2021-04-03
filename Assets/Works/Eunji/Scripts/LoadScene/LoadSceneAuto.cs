@@ -34,13 +34,15 @@ public class LoadSceneAuto : MonoBehaviour
     public void LoadNextScene()
     {
         int index = SceneManager.GetActiveScene().buildIndex;
+        Debug.Log("Build Index: " + index);
         StartCoroutine(LoadNextSceneTimer(index));
     }
     
-    public void LoadGameScene()
+    public void SkipTutorial()
     {
         int index = SceneManager.GetActiveScene().buildIndex;
-        StartCoroutine(LoadGameSceneTimer(index));
+        Debug.Log("Skip");
+        StartCoroutine(SkipTutorialTimer(index));
     }
 
 
@@ -64,7 +66,7 @@ public class LoadSceneAuto : MonoBehaviour
         yield return new WaitForSeconds(2.0f);
         SceneManager.LoadScene(index + 1);
     }
-    IEnumerator LoadGameSceneTimer(int index)
+    IEnumerator SkipTutorialTimer(int index)
     {
         yield return new WaitForSeconds(2.0f);
         SceneManager.LoadScene(index + 4);

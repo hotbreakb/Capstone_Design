@@ -772,7 +772,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1033277974}
-        m_MethodName: LoadGameScene
+        m_MethodName: SkipTutorial
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

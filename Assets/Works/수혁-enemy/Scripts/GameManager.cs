@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
         // 좌물쇠 풀리는 모양
         // Start
         Debug.Log("player win");
-        Invoke("QuitGame", 2f);
+        StartCoroutine(ShowLevelTimer());
         
         GameObject.Find("Canvas").GetComponent<Locked>()._isPlayerWin = true;
         isPlayerWin = true;
@@ -87,28 +87,14 @@ public class GameManager : MonoBehaviour
         
         // restart
         Debug.Log("player lose");
-        StartCoroutine(playerLoseTimer());
-        
+        StartCoroutine(ShowLevelTimer());
+
         GameObject.Find("Canvas").GetComponent<Locked>()._isPlayerWin = false; /* using in UI Locked */
         isPlayerWin = false;
     }
 
-    IEnumerator playerLoseTimer(){
-        /* 자물쇠 모양으로 가서 안 풀린 거 보여주기 */
+    IEnumerator ShowLevelTimer(){
         yield return new WaitForSecondsRealtime(2.0f);
         SceneManager.LoadScene("Level");
-    }
-
-    public void QuitGame()
-    {
-        // save any game data here
-#if UNITY_EDITOR
-        // Application.Quit() does not work in the editor so
-        // UnityEditor.EditorApplication.isPlaying need to be set to false to end the game
-
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
-        Application.Quit();
-#endif
     }
 }
