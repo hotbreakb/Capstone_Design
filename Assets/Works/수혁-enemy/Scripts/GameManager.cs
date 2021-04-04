@@ -65,6 +65,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
+
+    
+
     void Update()
     {
         if (cube || SceneManager.GetActiveScene().name == "Loading")
