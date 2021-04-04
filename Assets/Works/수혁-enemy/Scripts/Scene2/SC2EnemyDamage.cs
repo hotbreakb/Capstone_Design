@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 public class SC2EnemyDamage : MonoBehaviour
 {   
 
@@ -15,12 +12,6 @@ public class SC2EnemyDamage : MonoBehaviour
     void Start()
     {
         bloodEffect = Resources.Load<GameObject>("Big");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
 

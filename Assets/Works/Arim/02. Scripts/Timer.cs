@@ -24,26 +24,29 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
-        if (fills >= 0.4f && lightmanager == false) {
+        if (fills >= 0.4f && lightmanager == false)
+        {
             LightManager();
         }
 
-        if (progressBar.fillAmount >= 1) {
-            // GoToGameManager();
+        if (progressBar.fillAmount >= 1)
+        {
+            GoToGameManager();
             enabled = false;
         }
         else
-        {    
-            totalTime += Time.deltaTime * 1; /* set up the speed */
+        {
+            totalTime += Time.deltaTime * 10; /* set up the speed */
             fills = totalTime * timeSpeed;
             progressBar.fillAmount = fills;
         }
-            
+
 
     }
 
-    void GoToGameManager(){
-        if(enabled == false) FindObjectOfType<GameManager>().playerWin();
+    void GoToGameManager()
+    {
+        FindObjectOfType<GameManager>().playerWin();
     }
     void LightManager()
     {
@@ -75,13 +78,13 @@ public class Timer : MonoBehaviour
     {
         yield return new WaitForSeconds(delayTime);
 
-        Fleshlight.enabled = false ;
+        Fleshlight.enabled = false;
         Spotlight.SetActive(true);
         Pointlight.SetActive(true);
     }
     IEnumerator Blinktime()
     {
-        yield return new WaitForSeconds(bt*2);
+        yield return new WaitForSeconds(bt * 2);
         Spotlight.SetActive(true);
         Pointlight.SetActive(true);
     }
