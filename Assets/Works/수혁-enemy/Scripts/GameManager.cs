@@ -191,8 +191,8 @@ public class GameManager : MonoBehaviour
             if (enemyCount < maxEnemy)
             {
                 yield return new WaitForSeconds(createTime);
-
-                int idx = Random.Range(1, points.Length);
+           
+                int idx = Random.Range(1, points.Length);   
                 Instantiate(enemy, points[idx].position, points[idx].rotation);
             }
             else
