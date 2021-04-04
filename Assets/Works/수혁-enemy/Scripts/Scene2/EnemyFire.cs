@@ -1,5 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿#pragma warning disable CS0108
+#pragma warning disable CS0414
+
+using System.Collections;
 using UnityEngine;
 
 public class EnemyFire : MonoBehaviour

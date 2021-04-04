@@ -50,6 +50,17 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
+    public void SetForNewScene() {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
     void Start()
     {
         if (GameObject.FindGameObjectWithTag("Cube"))
@@ -84,6 +95,13 @@ public class GameManager : MonoBehaviour
         if (!controller.IsConnected)
         {
             controller.StartConnection();
+
+            if(SceneManager.GetActiveScene().name == "Loading"){
+SceneManager.LoadScene("PlayMode"); // 수정하기
+                FindObjectOfType<GameManager>().SetForNewScene();
+            }
+                
+
             Invoke("QuitGame", 20.0f); // 20초 이내 연결되지 않으면 스크립트 종료
             // Debug.Log("not connected");
         }
@@ -203,19 +221,13 @@ public class GameManager : MonoBehaviour
 
     public void playerWin()
     {
+        Debug.Log("win");
         /* You Win UI 띄우기 */
         if (!YouWin) return;
-
+        Debug.Log("true win");
         YouWin.gameObject.SetActive(true);
         GameObject.Find("Main Camera").GetComponent<PlayGlitchEffect>().Play();
-
-
-        // 좌물쇠 풀리는 모양
-        // Start
-        Debug.Log("player win");
         StartCoroutine(ShowLevelTimer());
-
-        GameObject.Find("Canvas").GetComponent<Locked>()._isPlayerWin = true;
         isPlayerWin = true;
     }
 
@@ -226,12 +238,7 @@ public class GameManager : MonoBehaviour
 
         GameOver.gameObject.SetActive(true);
         GameObject.Find("Main Camera").GetComponent<PlayGlitchEffect>().Play();
-
-        // restart
-        Debug.Log("player lose");
         StartCoroutine(ShowLevelTimer());
-
-        GameObject.Find("Canvas").GetComponent<Locked>()._isPlayerWin = false; /* using in UI Locked */
         isPlayerWin = false;
     }
 

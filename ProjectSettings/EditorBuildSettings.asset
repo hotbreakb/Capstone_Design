@@ -38,4 +38,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Works/Eunji/Scenes/Tutorial_07.unity
     guid: a7be92b41c8ae2e478c299d531b031a7
+  - enabled: 1
+    path: Assets/Scenes/PlayMode.unity
+    guid: bf4593ce605e8f5449e222e2e73f8d28
+  - enabled: 1
+    path: Assets/Scenes/PlayMode2.unity
+    guid: d5738862ceb7e594c88ba531ab732644
   m_configObjects: {}

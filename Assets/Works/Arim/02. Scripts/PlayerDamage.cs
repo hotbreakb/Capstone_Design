@@ -21,6 +21,8 @@ public class PlayerDamage : MonoBehaviour
     public GameObject HPItem;
     public float destroyTime = 10f;
 
+    private bool isUpdate = false;
+
     //public delegate void PlayerDieHandler();
     //public static event PlayerDieHandler OnPlayerDie;
 
@@ -30,11 +32,14 @@ public class PlayerDamage : MonoBehaviour
 
         hpBar.color = initColor;
         currColor = initColor;
+
+        isUpdate = true;
     }
 
     void Update()
     {
-        HpItem();
+        if(isUpdate)
+            HpItem();
     }
 
     private void OnTriggerEnter(Collider coll)
@@ -47,6 +52,7 @@ public class PlayerDamage : MonoBehaviour
 
             if (currHP <= 0.0f) //플레이어 죽었을때
             {
+                isUpdate = false;
                 FindObjectOfType<GameManager>().playerLose();
             }
             Debug.Log("HP : " + currHP);

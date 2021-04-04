@@ -12,7 +12,6 @@ public class Restart : MonoBehaviour
 
     public void playShow(bool _isStart){
         if(!GrayPanel || !RestartText || !YesBtn || !NoBtn) return;
-        Debug.Log("button");
         StartCoroutine(show(_isStart));
     }
 
