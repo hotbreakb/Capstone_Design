@@ -10,6 +10,7 @@ public class Playmode1_mgr : MonoBehaviour
     public GameObject UI;
     public GameObject Handgun;
     public GameObject Player;
+    public GameObject StartUI;
     Animator anim;
 
 
@@ -69,9 +70,14 @@ public class Playmode1_mgr : MonoBehaviour
         yield return new WaitForSeconds(3f);
         WordsUI.SetActive(false);
         RuleUI.SetActive(true);
-        yield return new WaitForSeconds(8f);
+        yield return new WaitForSeconds(7.5f);
         RuleUI.SetActive(false);
+        StartUI.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        StartUI.SetActive(false);
         Timebar.SetActive(true);
         UI.SetActive(true);
+        anim.SetBool("Holster", false);
+        Handgun.GetComponent<HandgunScriptLPFP>().enabled = true;
     }
 }
