@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -37,7 +37,7 @@ public class OneEnmeyFire : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {   
-  
+        
         playerTr = GameObject.Find("TmpPlayer").GetComponent<Transform>();  
         //muzzleFlash.enabled = false;
         
@@ -59,7 +59,6 @@ public class OneEnmeyFire : MonoBehaviour
     }
     void Fire()
     {    
-        Debug.Log(audio);
         audio.PlayOneShot(fireSfx, 1.0f);
         //Instantiate(Bullet, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
     }

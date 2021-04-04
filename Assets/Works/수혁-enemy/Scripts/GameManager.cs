@@ -76,6 +76,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
+
+    
+
     void Update()
     {
         if (cube || SceneManager.GetActiveScene().name == "Loading")
@@ -206,8 +209,8 @@ SceneManager.LoadScene("PlayMode"); // 수정하기
             if (enemyCount < maxEnemy)
             {
                 yield return new WaitForSeconds(createTime);
-
-                int idx = Random.Range(1, points.Length);
+           
+                int idx = Random.Range(1, points.Length);   
                 Instantiate(enemy, points[idx].position, points[idx].rotation);
             }
             else
