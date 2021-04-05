@@ -41,24 +41,15 @@ public class GameManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            Debug.Log("instance = null");
         }
         else if (instance != this)
         {
             Destroy(this.gameObject);
+            Debug.Log("instance != null");
         }
 
         DontDestroyOnLoad(this.gameObject);
-    }
-
-    public void SetForNewScene() {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else if (instance != this)
-        {
-            Destroy(this.gameObject);
-        }
     }
 
     void Start()
@@ -75,9 +66,6 @@ public class GameManager : MonoBehaviour
             StartCoroutine(this.CreateEnemy());
         }
     }
-
-
-    
 
     void Update()
     {
@@ -100,8 +88,7 @@ public class GameManager : MonoBehaviour
             controller.StartConnection();
 
             if(SceneManager.GetActiveScene().name == "Loading"){
-SceneManager.LoadScene("PlayMode"); // 수정하기
-                FindObjectOfType<GameManager>().SetForNewScene();
+                SceneManager.LoadScene("PlayMode"); // 수정하기
             }
                 
 
@@ -224,10 +211,8 @@ SceneManager.LoadScene("PlayMode"); // 수정하기
 
     public void playerWin()
     {
-        Debug.Log("win");
         /* You Win UI 띄우기 */
         if (!YouWin) return;
-        Debug.Log("true win");
         YouWin.gameObject.SetActive(true);
         GameObject.Find("Main Camera").GetComponent<PlayGlitchEffect>().Play();
         StartCoroutine(ShowLevelTimer());

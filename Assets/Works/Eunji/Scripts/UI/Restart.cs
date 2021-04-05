@@ -18,7 +18,7 @@ public class Restart : MonoBehaviour
     public IEnumerator show(bool _isStart) {
         if(_isStart) RestartText.text = "start?";
 
-        yield return new WaitForSecondsRealtime(0.5f);
+        yield return new WaitForSecondsRealtime(1.5f);
         GrayPanel.SetActive(true);
         RestartText.gameObject.SetActive(true);
         YesBtn.SetActive(true);

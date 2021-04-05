@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class LoadSceneAuto : MonoBehaviour
 {
+    /* Scene Manager */
+
     // ---- Start ----
     // In Start Scene, it displayes INU logo and our title.
     // After 9 seconds to start, Menu Scene is loaded. ( LoadMenu() )
@@ -43,36 +45,30 @@ public class LoadSceneAuto : MonoBehaviour
         StartCoroutine(SkipTutorialTimer(index));
     }
 
-
     public void GameStart() {
         SceneManager.LoadScene("Loading");
-        FindObjectOfType<GameManager>().SetForNewScene();
         // LoadGameScene()
     }
 
     public void TutorialStart() {
         SceneManager.LoadScene("Tutorial_01");
-        FindObjectOfType<GameManager>().SetForNewScene();
     }
 
     IEnumerator LoadMenuTimer(int index)
     {
         yield return new WaitForSecondsRealtime(9.0f);
         SceneManager.LoadScene(index + 1);
-        FindObjectOfType<GameManager>().SetForNewScene();
     }
 
     IEnumerator LoadNextSceneTimer(int index)
     {
         yield return new WaitForSeconds(2.0f);
         SceneManager.LoadScene(index + 1);
-        FindObjectOfType<GameManager>().SetForNewScene();
     }
     IEnumerator SkipTutorialTimer(int index)
     {
         yield return new WaitForSeconds(2.0f);
         SceneManager.LoadScene(index + 4);
-        FindObjectOfType<GameManager>().SetForNewScene();
     }
 
     public void QuitGame()
