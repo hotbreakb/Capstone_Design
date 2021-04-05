@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LoadSceneAutoInStart : MonoBehaviour
+public class LoadSceneAutoinStart : MonoBehaviour
 {
     void Start()
     {

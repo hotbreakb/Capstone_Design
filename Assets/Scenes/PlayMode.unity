@@ -8430,7 +8430,7 @@ MonoBehaviour:
   createTime: 2
   maxEnemy: 2
   isGameOver: 0
-  cube: {fileID: 0}
+  cube: {fileID: 1815564166}
   isShoot: 0
   isGrenade: 0
   isLoading: 0
