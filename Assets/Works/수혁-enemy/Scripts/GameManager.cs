@@ -41,13 +41,15 @@ public class GameManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            Debug.Log("instance = null");
         }
         else if (instance != this)
         {
             Destroy(this.gameObject);
+            Debug.Log("instance != null");
         }
 
-        // DontDestroyOnLoad(this.gameObject);
+        DontDestroyOnLoad(this.gameObject);
     }
 
     void Start()
