@@ -12394,6 +12394,7 @@ MonoBehaviour:
   currentWeaponText: {fileID: 114298771581177704}
   currentAmmoText: {fileID: 114466975427692326}
   totalAmmoText: {fileID: 114737827360417160}
+  ReloadinfoUI: {fileID: 0}
   Prefabs:
     bulletPrefab: {fileID: 4879702113200764, guid: 5953171a59c27394e9ad5cbb564affa8,
       type: 3}
@@ -12644,6 +12645,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 224550047390012680}
     m_Modifications:
+    - target: {fileID: 1708690009441456582, guid: 1e15451215c06854ebad802f0bc1cf95,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3713232003811280934, guid: 1e15451215c06854ebad802f0bc1cf95,
+        type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 8254521188213950338, guid: 1e15451215c06854ebad802f0bc1cf95,
         type: 3}
       propertyPath: m_Pivot.x
