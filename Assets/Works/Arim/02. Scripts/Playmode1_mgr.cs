@@ -11,6 +11,7 @@ public class Playmode1_mgr : MonoBehaviour
     public GameObject Handgun;
     public GameObject Player;
     public GameObject StartUI;
+    public GameObject EventSystem;
     Animator anim;
 
 
@@ -79,5 +80,7 @@ public class Playmode1_mgr : MonoBehaviour
         UI.SetActive(true);
         anim.SetBool("Holster", false);
         Handgun.GetComponent<HandgunScriptLPFP>().enabled = true;
+        EventSystem.GetComponent<GameManager>().enabled = true;
+
     }
 }
