@@ -9190,7 +9190,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1414513176}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 82af58794c979f04d87b016c1b89fbba, type: 3}
   m_Name: 
@@ -13198,6 +13198,7 @@ MonoBehaviour:
   Handgun: {fileID: 535386490}
   Player: {fileID: 1299783121}
   StartUI: {fileID: 1682370877}
+  EventSystem: {fileID: 1414513176}
   goal: {fileID: 315513017}
   damping: 0
   isMove: 0
