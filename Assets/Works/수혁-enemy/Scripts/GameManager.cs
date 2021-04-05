@@ -87,11 +87,11 @@ public class GameManager : MonoBehaviour
         {
             controller.StartConnection();
 
-            if(SceneManager.GetActiveScene().name == "Loading"){
-                SceneManager.LoadScene("PlayMode"); // 수정하기
-            }
+            // Build Test (Success)
+            // if(SceneManager.GetActiveScene().name == "Loading"){
+            //     SceneManager.LoadScene("PlayMode"); // 수정하기
+            // }
                 
-
             Invoke("QuitGame", 20.0f); // 20초 이내 연결되지 않으면 스크립트 종료
             // Debug.Log("not connected");
         }
