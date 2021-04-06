@@ -7,11 +7,11 @@ public class LoadSceneAutoInT07 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(gameStart());
+        StartCoroutine(loadingStart());
     }
 
-    IEnumerator gameStart(){
+    IEnumerator loadingStart(){
         yield return new WaitForSecondsRealtime(3.5f);
-        GetComponent<LoadSceneAuto>().GameStart();
+        GetComponent<LoadSceneAuto>().LoadingStart();
     }
 }
