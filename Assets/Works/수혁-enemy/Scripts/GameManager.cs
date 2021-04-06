@@ -10,22 +10,23 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
 
- 
+
     // 게임종료 여부
     public bool isGameOver = false;
 
     /* ----------- Leap Motion ---------- */
     public Controller controller;
     private List<Finger> fingers;
-    public GameObject cube;
+    private GameObject checkHandCube;
+    public bool isLeapMotionConnected;
     public bool isShoot = false;   // 총쏘기
     public bool isGrenade = false; // 수류탄
     public bool isLoading = false; // 장전
 
     /* -----------Player Win/Lose ---------- */
 
-    public TextMeshProUGUI YouWin;
-    public TextMeshProUGUI GameOver;
+    private TextMeshProUGUI YouWin;
+    private TextMeshProUGUI GameOver;
 
     public bool isPlayerWin = false;
 
@@ -35,12 +36,10 @@ public class GameManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            Debug.Log("instance = null");
         }
         else if (instance != this)
         {
             Destroy(this.gameObject);
-            Debug.Log("instance != null");
         }
 
         DontDestroyOnLoad(this.gameObject);
@@ -49,14 +48,23 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         if (GameObject.FindGameObjectWithTag("Cube"))
-            cube = GameObject.FindGameObjectWithTag("Cube");
+            checkHandCube = GameObject.FindGameObjectWithTag("checkHandCube");
 
+        if(GameObject.Find("YouWin")){
+            YouWin = GameObject.Find("YouWin").GetComponent<TextMeshProUGUI>();
+            Debug.Log("find win");
+        }
+            
+        if(GameObject.Find("GameOver")){
+            GameOver = GameObject.Find("GameOver").GetComponent<TextMeshProUGUI>();
+            Debug.Log("Find GameOver");
+        }
     }
 
     void Update()
     {
-        if (cube || SceneManager.GetActiveScene().name == "Loading")
-            StartCoroutine("checkHand");
+        // check Leap Motion connection
+        StartCoroutine("checkHand");
     }
 
     IEnumerator checkHand()
@@ -73,76 +81,74 @@ public class GameManager : MonoBehaviour
         {
             controller.StartConnection();
 
-            if(SceneManager.GetActiveScene().name == "Loading"){
-                SceneManager.LoadScene("PlayMode"); // 수정하기
-            }
-                
-
             Invoke("QuitGame", 20.0f); // 20초 이내 연결되지 않으면 스크립트 종료
-            // Debug.Log("not connected");
+            isLeapMotionConnected = false;
         }
         else
         {
             CancelInvoke("QuitGame");
+            isLeapMotionConnected = true;
 
-            if(SceneManager.GetActiveScene().name == "Loading")
-                SceneManager.LoadScene("PlayMode"); // 수정하기
+            // if(SceneManager.GetActiveScene().name == "Loading")
+            //     SceneManager.LoadScene("PlayMode"); // 수정하기
         }
 
-        Hand hand = new Hand();
-        Hand previous_hand = new Hand();
-
-        Vector handPalmPosition = new Vector();
-        Vector prehandPalmPosition = new Vector();
-
-        Frame frame = controller.Frame();           // The latest frame
-        Frame previous = controller.Frame(1);       // The previous frame
-
-        for (int h = 0; h < frame.Hands.Count; h++)
+        if (checkHandCube != null)
         {
-            hand = frame.Hands[0]; // 현재 나타나는 손
-            handPalmPosition = hand.PalmPosition;   // 현재 손의 위치
+            Hand hand = new Hand();
+            Hand previous_hand = new Hand();
 
-            if (!previous.Hands.Any()) continue;
-            previous_hand = previous.Hands[0]; // 이전 프레임에 나타나는 손
-            prehandPalmPosition = previous_hand.PalmPosition;   // 이전 프레임의 손의 위치
+            Vector handPalmPosition = new Vector();
+            Vector prehandPalmPosition = new Vector();
 
-            fingers = hand.Fingers; // 현재 손가락의 개수
+            Frame frame = controller.Frame();           // The latest frame
+            Frame previous = controller.Frame(1);       // The previous frame
 
-            int _extendedFingers = getExtendedFingers();    // 함수를 호출하여 펼쳐진 손가락의 개수를 확인한다
-
-            isShoot = false; isGrenade = false; isLoading = false;
-
-            // [Conditions to 'Shoot']
-            //  1. Two straight fingers
-            //  2. Hands moving from top to bottom
-
-            if (_extendedFingers == 2 && System.Math.Abs(handPalmPosition.y - prehandPalmPosition.y) > 5)
+            for (int h = 0; h < frame.Hands.Count; h++)
             {
-                cube.GetComponent<MeshRenderer>().material.color = Color.red;
-                isShoot = true;
-            }
-            // [Condition for changing weapons]
-            //  1. Hands moving from side to side (swipe)
-            else if (System.Math.Abs(handPalmPosition.x - prehandPalmPosition.x) > 10)
-            {
-                cube.GetComponent<MeshRenderer>().material.color = Color.green;
-                isGrenade = true;
-            }
-            // [Condition to Load]
-            //  1. Gripped left hand
-            else if (hand.GrabStrength == 1 && _extendedFingers == 0)
-            {
-                cube.GetComponent<MeshRenderer>().material.color = Color.yellow;
-                isLoading = true;
-            }
-            else
-            {
-                cube.GetComponent<MeshRenderer>().material.color = Color.black;
-            }
+                hand = frame.Hands[0]; // 현재 나타나는 손
+                handPalmPosition = hand.PalmPosition;   // 현재 손의 위치
 
+                if (!previous.Hands.Any()) continue;
+                previous_hand = previous.Hands[0]; // 이전 프레임에 나타나는 손
+                prehandPalmPosition = previous_hand.PalmPosition;   // 이전 프레임의 손의 위치
+
+                fingers = hand.Fingers; // 현재 손가락의 개수
+
+                int _extendedFingers = getExtendedFingers();    // 함수를 호출하여 펼쳐진 손가락의 개수를 확인한다
+
+                isShoot = false; isGrenade = false; isLoading = false;
+
+                // [Conditions to 'Shoot']
+                //  1. Two straight fingers
+                //  2. Hands moving from top to bottom
+
+                if (_extendedFingers == 2 && System.Math.Abs(handPalmPosition.y - prehandPalmPosition.y) > 5)
+                {
+                    checkHandCube.GetComponent<MeshRenderer>().material.color = Color.red;
+                    isShoot = true;
+                }
+                // [Condition for changing weapons]
+                //  1. Hands moving from side to side (swipe)
+                else if (System.Math.Abs(handPalmPosition.x - prehandPalmPosition.x) > 10)
+                {
+                    checkHandCube.GetComponent<MeshRenderer>().material.color = Color.green;
+                    isGrenade = true;
+                }
+                // [Condition to Load]
+                //  1. Gripped left hand
+                else if (hand.GrabStrength == 1 && _extendedFingers == 0)
+                {
+                    checkHandCube.GetComponent<MeshRenderer>().material.color = Color.yellow;
+                    isLoading = true;
+                }
+                else
+                {
+                    checkHandCube.GetComponent<MeshRenderer>().material.color = Color.black;
+                }
+            } // end for
             yield return null;
-        } // end for
+        } // end if
     }
 
     public void QuitGame()
