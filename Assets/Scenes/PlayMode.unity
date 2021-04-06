@@ -3803,7 +3803,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &582739688
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8343,7 +8343,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1341959449
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9243,12 +9243,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGameOver: 0
-  cube: {fileID: 1815564166}
+  isLeapMotionConnected: 0
   isShoot: 0
   isGrenade: 0
   isLoading: 0
-  YouWin: {fileID: 582739689}
-  GameOver: {fileID: 1341959450}
   isPlayerWin: 0
 --- !u!1 &1421616349
 GameObject:

@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     public Controller controller;
     private List<Finger> fingers;
     private GameObject checkHandCube;
-    public bool isLeapMotionConnected;
+    public bool isLeapMotionConnected = false;
     public bool isShoot = false;   // 총쏘기
     public bool isGrenade = false; // 수류탄
     public bool isLoading = false; // 장전
@@ -45,24 +45,32 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
-    void Start()
-    {
-        if (GameObject.FindGameObjectWithTag("Cube"))
-            checkHandCube = GameObject.FindGameObjectWithTag("checkHandCube");
-
-        if(GameObject.Find("YouWin")){
-            YouWin = GameObject.Find("YouWin").GetComponent<TextMeshProUGUI>();
-            Debug.Log("find win");
-        }
-            
-        if(GameObject.Find("GameOver")){
-            GameOver = GameObject.Find("GameOver").GetComponent<TextMeshProUGUI>();
-            Debug.Log("Find GameOver");
-        }
-    }
-
     void Update()
     {
+            if (checkHandCube == null && GameObject.FindGameObjectWithTag("Cube"))
+                checkHandCube = GameObject.FindGameObjectWithTag("Cube");
+
+            if (YouWin == null && GameObject.Find("YouWin"))
+            {
+                YouWin = GameObject.Find("YouWin").GetComponent<TextMeshProUGUI>();
+                YouWin.gameObject.SetActive(false);
+                Debug.Log("find win");
+            }
+            else
+            {
+                // Debug.Log("can't find win");
+            }
+
+            if (GameOver == null && GameObject.Find("GameOver"))
+            {
+                GameOver = GameObject.Find("GameOver").GetComponent<TextMeshProUGUI>();
+                GameOver.gameObject.SetActive(false);
+                Debug.Log("Find GameOver");
+            }
+            else
+            {
+                // Debug.Log("can't find GameOver");
+            }
         // check Leap Motion connection
         StartCoroutine("checkHand");
     }
@@ -176,12 +184,6 @@ public class GameManager : MonoBehaviour
         }
         return extendedFingers;
     }
-
-    /* ------------------------------------------------------------------------------- */
-
-
-
-    /* ------------------------------------------------------------------------------- */
 
     public void playerWin()
     {
