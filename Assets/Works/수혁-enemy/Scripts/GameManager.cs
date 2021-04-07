@@ -100,7 +100,7 @@ public class GameManager : MonoBehaviour
             // if(SceneManager.GetActiveScene().name == "Loading")
             //     SceneManager.LoadScene("PlayMode"); // 수정하기
         }
-
+        
         if (checkHandCube != null)
         {
             Hand hand = new Hand();

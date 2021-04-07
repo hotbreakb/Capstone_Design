@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.6, y: -95.2}
+  m_AnchoredPosition: {x: -0.6, y: -54.3}
   m_SizeDelta: {x: 162.84663, y: 127.26319}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &132553669
@@ -390,7 +390,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -3}
+  m_AnchoredPosition: {x: 0, y: 12.300003}
   m_SizeDelta: {x: 392.09998, y: 75.94484}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &286803551
@@ -1311,17 +1311,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82af58794c979f04d87b016c1b89fbba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points: []
-  enemy: {fileID: 0}
-  createTime: 2
-  maxEnemy: 10
   isGameOver: 0
-  cube: {fileID: 0}
+  isLeapMotionConnected: 0
   isShoot: 0
   isGrenade: 0
   isLoading: 0
-  YouWin: {fileID: 0}
-  GameOver: {fileID: 0}
   isPlayerWin: 0
 --- !u!1 &1340082407
 GameObject:
@@ -1357,7 +1351,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000085831, y: 68}
+  m_AnchoredPosition: {x: 0.0000085831, y: 83.3}
   m_SizeDelta: {x: 188.3996, y: 52.37552}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1340082409

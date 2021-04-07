@@ -20,19 +20,19 @@ public class ChangeCount : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        int index = SceneManager.GetActiveScene().buildIndex;
+        string SceneName = SceneManager.GetActiveScene().name;
 
-        switch (index)
+        switch (SceneName)
         {
-            case 3:
+            case "Tutorial_04":
                 {
                     mainColor = yellow; break;
                 }
-            case 4:
+            case "Tutorial_05":
                 {
                     mainColor = green; break;
                 }
-            case 5:
+            case "Tutorial_06":
                 {
                     mainColor = red; break;
                 }
