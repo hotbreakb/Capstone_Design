@@ -8204,7 +8204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBroken: 0
-  maxShootCount: 3
+  maxShootCount: 1
 --- !u!82 &8854889308230466348
 AudioSource:
   m_ObjectHideFlags: 0
