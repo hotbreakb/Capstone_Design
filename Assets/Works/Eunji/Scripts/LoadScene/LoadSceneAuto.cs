@@ -47,22 +47,6 @@ public class LoadSceneAuto : MonoBehaviour
 
     public void LoadingStart(){
         SceneManager.LoadScene("Loading");
-
-        // PlayMode2
-        if(FindObjectOfType<GameManager>().isPlayerWin) { 
-            if(GameObject.Find("Background(1)") && GameObject.Find("Background(2)")) {
-                GameObject.Find("Background(1)").SetActive(false);
-                GameObject.Find("Background(2)").SetActive(true);
-            }
-        }
-        // PlayMode
-        else
-        {
-            if(GameObject.Find("Background(1)") && GameObject.Find("Background(2)")) {
-                GameObject.Find("Background(1)").SetActive(true);
-                GameObject.Find("Background(2)").SetActive(false);
-            }
-        }
     }
 
     public void GameStart() {
@@ -94,11 +78,7 @@ public class LoadSceneAuto : MonoBehaviour
     IEnumerator PlayModeTimer()
     {
         yield return new WaitForSeconds(2.0f);
-
-        if(FindObjectOfType<GameManager>().isPlayerWin)
-            SceneManager.LoadScene("PlayMode2");
-        else
-            SceneManager.LoadScene("PlayMode");
+        SceneManager.LoadScene("PlayMode");
     }
 
     public void QuitGame()

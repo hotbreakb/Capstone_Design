@@ -7,8 +7,6 @@ public class Locked : MonoBehaviour
     private Animator anim;
     private Image img;
 
-    public Button Btn2;
-
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -18,13 +16,11 @@ public class Locked : MonoBehaviour
         {
             StartCoroutine(FadeOut());
             GameObject.Find("Canvas(2)").GetComponent<Restart>().playShow(true);
-            // Btn2.interactable = true;
         }
         else
         {
             anim.Play("LockAnim");
             GameObject.Find("Canvas(2)").GetComponent<Restart>().playShow(false);
-            // Btn2.interactable = false;
         }
     }
 
