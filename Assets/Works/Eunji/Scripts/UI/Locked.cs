@@ -15,12 +15,12 @@ public class Locked : MonoBehaviour
         if (FindObjectOfType<GameManager>().isPlayerWin)
         {
             StartCoroutine(FadeOut());
-            GameObject.Find("Canvas(2)").GetComponent<Restart>().playShow(true);
+            // GameObject.Find("Canvas(2)").GetComponent<Restart>().playShow(true);
         }
         else
         {
             anim.Play("LockAnim");
-            GameObject.Find("Canvas(2)").GetComponent<Restart>().playShow(false);
+            // GameObject.Find("Canvas(2)").GetComponent<Restart>().playShow(false);
         }
     }
 

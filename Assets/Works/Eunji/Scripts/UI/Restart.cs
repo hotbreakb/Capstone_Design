@@ -1,5 +1,5 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using TMPro;
 
@@ -10,22 +10,22 @@ public class Restart : MonoBehaviour
     public GameObject YesBtn;
     public GameObject NoBtn;
 
-    public void playShow(bool _isStart){
+    public void playShow(){
         if(!GrayPanel || !RestartText || !YesBtn || !NoBtn) return;
-        StartCoroutine(show(_isStart));
-    }
 
-    public IEnumerator show(bool _isStart) {
-        if(_isStart) RestartText.text = "start?";
-
-        yield return new WaitForSecondsRealtime(1.5f);
         GrayPanel.SetActive(true);
         RestartText.gameObject.SetActive(true);
         YesBtn.SetActive(true);
         NoBtn.SetActive(true);
+        // StartCoroutine(show(_isStart));
     }
 
+    // public IEnumerator show(bool _isStart) {
+    //     yield return null;
+    // }
+
     public void hide() {
+        Debug.Log("Hide");
         if(!GrayPanel || !RestartText || !YesBtn || !NoBtn) return;
 
         GrayPanel.SetActive(false);
