@@ -8,6 +8,7 @@ public class Restart : MonoBehaviour
     public GameObject GrayPanel;
     public TextMeshProUGUI RestartText;
     public GameObject YesBtn;
+    public GameObject YesBtn2;
     public GameObject NoBtn;
 
     public void playShow(){
@@ -16,6 +17,7 @@ public class Restart : MonoBehaviour
         GrayPanel.SetActive(true);
         RestartText.gameObject.SetActive(true);
         YesBtn.SetActive(true);
+        YesBtn2.SetActive(false);
         NoBtn.SetActive(true);
         // StartCoroutine(show(_isStart));
     }

@@ -5,43 +5,46 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Works/Eunji/Scenes/Start.unity
     guid: dfdda16993c873b4fa66997d4d32580b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Works/Eunji/Scenes/Menu.unity
     guid: 19ccf46f823d0e448a0f72a3850beb6b
-  - enabled: 1
-    path: Assets/Works/Eunji/Scenes/Loading.unity
-    guid: 74cc735d655b50746b3842087858cf66
   - enabled: 1
     path: Assets/Works/Eunji/Scenes/Level.unity
     guid: 6178aca985494bf49a92cdcf3dbf9ba7
   - enabled: 1
+    path: Assets/Works/Eunji/Scenes/Loading.unity
+    guid: 74cc735d655b50746b3842087858cf66
+  - enabled: 1
+    path: Assets/Works/Eunji/Scenes/Loading2.unity
+    guid: b07599197fea4ad4ea0a4840e28a1b26
+  - enabled: 0
     path: Assets/Works/Eunji/Scenes/Tutorial_01.unity
     guid: fbcb9e27ace7c92469a56724a90de48f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Works/Eunji/Scenes/Tutorial_02.unity
     guid: 4064a2712de6aa649b6625bfef3499b7
-  - enabled: 1
+  - enabled: 0
     path: Assets/Works/Eunji/Scenes/Tutorial_03.unity
     guid: f547e4b68748c404fa86920e7450ecf0
-  - enabled: 1
+  - enabled: 0
     path: Assets/Works/Eunji/Scenes/Tutorial_04.unity
     guid: 7dfb7ca991747354ab54ae8ab3e22b96
-  - enabled: 1
+  - enabled: 0
     path: Assets/Works/Eunji/Scenes/Tutorial_05.unity
     guid: bea44ed7178d41845aad013c9edc9249
-  - enabled: 1
+  - enabled: 0
     path: Assets/Works/Eunji/Scenes/Tutorial_06.unity
     guid: 834a4b8ae3e7b014a9bd91e46de0705e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Works/Eunji/Scenes/Tutorial_07.unity
     guid: a7be92b41c8ae2e478c299d531b031a7
   - enabled: 1
     path: Assets/Scenes/PlayMode.unity
     guid: bf4593ce605e8f5449e222e2e73f8d28
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/PlayMode2.unity
     guid: d5738862ceb7e594c88ba531ab732644
   m_configObjects: {}

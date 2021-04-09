@@ -48,9 +48,15 @@ public class LoadSceneAuto : MonoBehaviour
     public void LoadingStart(){
         SceneManager.LoadScene("Loading");
     }
+    public void LoadingStart_02(){
+        SceneManager.LoadScene("Loading2");
+    }
 
     public void GameStart() {
         StartCoroutine(PlayModeTimer());
+    }
+    public void GameStart2() {
+        StartCoroutine(PlayModeTimer2());
     }
 
     public void TutorialStart() {
@@ -79,6 +85,12 @@ public class LoadSceneAuto : MonoBehaviour
     {
         yield return new WaitForSeconds(2.0f);
         SceneManager.LoadScene("PlayMode");
+    }
+
+    IEnumerator PlayModeTimer2()
+    {
+        yield return new WaitForSeconds(2.0f);
+        SceneManager.LoadScene("PlayMode2");
     }
 
     public void QuitGame()
