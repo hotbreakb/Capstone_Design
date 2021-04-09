@@ -28,7 +28,10 @@ public class GameManager : MonoBehaviour
     private TextMeshProUGUI YouWin;
     private TextMeshProUGUI GameOver;
 
-    public bool isPlayerWin = false;
+    // public bool isPlayerWin = false;
+
+    public bool isPlayerWininFirst = false;
+    public bool isPlayerWininSecond = false;
 
 
     void Awake()
@@ -183,7 +186,10 @@ public class GameManager : MonoBehaviour
         YouWin.gameObject.SetActive(true);
         GameObject.Find("Main Camera").GetComponent<PlayGlitchEffect>().Play();
         StartCoroutine(ShowLevelTimer());
-        isPlayerWin = true;
+        
+        // isPlayerWin = true;
+        if (SceneManager.GetActiveScene().name == "PlayMode") isPlayerWininFirst = true;
+        else if(SceneManager.GetActiveScene().name == "PlayMode2") isPlayerWininSecond = true;
     }
 
     public void playerLose()
@@ -194,7 +200,10 @@ public class GameManager : MonoBehaviour
         GameOver.gameObject.SetActive(true);
         GameObject.Find("Main Camera").GetComponent<PlayGlitchEffect>().Play();
         StartCoroutine(ShowLevelTimer());
-        isPlayerWin = false;
+        
+        // isPlayerWin = false;
+        if (SceneManager.GetActiveScene().name == "PlayMode") isPlayerWininFirst = false;
+        else if(SceneManager.GetActiveScene().name == "PlayMode2") isPlayerWininSecond = false;
     }
 
     IEnumerator ShowLevelTimer()

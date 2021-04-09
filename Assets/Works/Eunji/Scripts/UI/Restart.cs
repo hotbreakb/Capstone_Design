@@ -2,6 +2,7 @@
 using UnityEngine.SceneManagement;
 using UnityEngine;
 using TMPro;
+using UnityEngine.EventSystems;
 
 public class Restart : MonoBehaviour
 {
@@ -12,6 +13,10 @@ public class Restart : MonoBehaviour
     public GameObject NoBtn;
 
     public void playShow(){
+        if(EventSystem.current.currentSelectedGameObject.name == "Btn2")
+            if(!(FindObjectOfType<GameManager>().isPlayerWininFirst))
+                return;
+
         if(!GrayPanel || !RestartText || !YesBtn || !NoBtn) return;
 
         GrayPanel.SetActive(true);
@@ -19,12 +24,8 @@ public class Restart : MonoBehaviour
         YesBtn.SetActive(true);
         YesBtn2.SetActive(false);
         NoBtn.SetActive(true);
-        // StartCoroutine(show(_isStart));
     }
 
-    // public IEnumerator show(bool _isStart) {
-    //     yield return null;
-    // }
 
     public void hide() {
         if(!GrayPanel || !RestartText || !YesBtn || !NoBtn) return;
