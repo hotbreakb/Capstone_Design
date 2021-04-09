@@ -7,9 +7,11 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [SerializeField] float speed = 1f; // 총알 속도
-    [SerializeField] GameObject player;      // 나중에 플레이어 나오면 이거로 바꾸기
+    private GameObject player;
 
-
+    void Awake(){
+        player = GameObject.Find("TmpPlayer");
+    }
     // Update is called once per frame
     void Update()
     {

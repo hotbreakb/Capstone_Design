@@ -60,7 +60,7 @@ public class OneEneyAI : MonoBehaviour
                     break;
 
                 case State.ATTACK:
-                    transform.LookAt(playerTr);
+                    
                     animator.SetBool(hashMove,false);
                     if(enmeyFire.isFire == false) enmeyFire.isFire = true;
                     break;
@@ -82,5 +82,8 @@ public class OneEneyAI : MonoBehaviour
     void Update(){
 
         animator.SetFloat(hashSpeed, moveAgent.speed);
+        if(state == State.ATTACK){
+            transform.LookAt(playerTr);
+        }
     }
 }
