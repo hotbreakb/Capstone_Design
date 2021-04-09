@@ -11,7 +11,8 @@ public class Playmode1_mgr : MonoBehaviour
     public GameObject Handgun;
     public GameObject Player;
     public GameObject StartUI;
-    public GameObject EventSystem;
+    //public GameObject EventSystem;
+    public GameObject enemySpawn;
     Animator anim;
 
 
@@ -80,7 +81,8 @@ public class Playmode1_mgr : MonoBehaviour
         UI.SetActive(true);
         anim.SetBool("Holster", false);
         Handgun.GetComponent<HandgunScriptLPFP>().enabled = true;
-        EventSystem.GetComponent<GameManager>().enabled = true;
+        enemySpawn.SetActive(true);
+        //EventSystem.GetComponent<GameManager>().enabled = true;
 
     }
 }
