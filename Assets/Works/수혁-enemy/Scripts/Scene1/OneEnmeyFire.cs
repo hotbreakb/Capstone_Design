@@ -39,7 +39,6 @@ public class OneEnmeyFire : MonoBehaviour
     void Start()
     {   
         enemyTr = GetComponent<Transform>();
-        playerTr = GameObject.Find("TmpPlayer").GetComponent<Transform>();  
         //muzzleFlash.enabled = false;
         
         audio = GetComponent<AudioSource>();
@@ -49,10 +48,10 @@ public class OneEnmeyFire : MonoBehaviour
 
     void Update(){
         if(!isReload && isFire){
-            //transform.LookAt(playerTr);
             if(Time.time >= nextFire){
+                animator.SetBool("isShoot",true);
                 Fire();
-                //animator.SetBool("isShoot",false);
+                animator.SetBool("isShoot",false);
                 nextFire = Time.time + fireRate + Random.Range(0.0f,1.0f);  // 공속딜레이
             }
         }
@@ -60,6 +59,6 @@ public class OneEnmeyFire : MonoBehaviour
     void Fire()
     {    
         audio.PlayOneShot(fireSfx, 1.0f);
-        //Instantiate(Bullet, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
+        Instantiate(Bullet, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
     }
 }
