@@ -37,6 +37,7 @@ public class Timer : MonoBehaviour
         else
         {
             totalTime += Time.deltaTime * 1; /* set up the speed */
+
             fills = totalTime * timeSpeed;
             progressBar.fillAmount = fills;
         }

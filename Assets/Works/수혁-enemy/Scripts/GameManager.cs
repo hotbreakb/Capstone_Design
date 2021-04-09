@@ -190,6 +190,7 @@ public class GameManager : MonoBehaviour
         // isPlayerWin = true;
         if (SceneManager.GetActiveScene().name == "PlayMode") isPlayerWininFirst = true;
         else if(SceneManager.GetActiveScene().name == "PlayMode2") isPlayerWininSecond = true;
+        Debug.Log("isPlayerWininFirst : " + isPlayerWininFirst);
     }
 
     public void playerLose()
