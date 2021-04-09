@@ -25,7 +25,6 @@ public class Restart : MonoBehaviour
     // }
 
     public void hide() {
-        Debug.Log("Hide");
         if(!GrayPanel || !RestartText || !YesBtn || !NoBtn) return;
 
         GrayPanel.SetActive(false);
