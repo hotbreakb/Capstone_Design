@@ -1344,6 +1344,7 @@ MonoBehaviour:
   GrayPanel: {fileID: 929746630}
   RestartText: {fileID: 448547096}
   YesBtn: {fileID: 3828755}
+  YesBtn2: {fileID: 1322104150}
   NoBtn: {fileID: 2146028351}
 --- !u!1 &283906689
 GameObject:
@@ -1671,6 +1672,7 @@ MonoBehaviour:
   GrayPanel: {fileID: 929746630}
   RestartText: {fileID: 448547096}
   YesBtn: {fileID: 3828755}
+  YesBtn2: {fileID: 0}
   NoBtn: {fileID: 2146028351}
 --- !u!1 &400105064
 GameObject:
@@ -2841,6 +2843,7 @@ MonoBehaviour:
   GrayPanel: {fileID: 929746630}
   RestartText: {fileID: 448547096}
   YesBtn: {fileID: 3828755}
+  YesBtn2: {fileID: 0}
   NoBtn: {fileID: 2146028351}
 --- !u!114 &824681646
 MonoBehaviour:
@@ -4106,6 +4109,7 @@ MonoBehaviour:
   GrayPanel: {fileID: 929746630}
   RestartText: {fileID: 448547096}
   YesBtn: {fileID: 1322104150}
+  YesBtn2: {fileID: 3828755}
   NoBtn: {fileID: 2146028351}
 --- !u!1 &1247186606
 GameObject:
@@ -5441,6 +5445,7 @@ MonoBehaviour:
   GrayPanel: {fileID: 1291095247}
   RestartText: {fileID: 576020964}
   YesBtn: {fileID: 943326960}
+  YesBtn2: {fileID: 0}
   NoBtn: {fileID: 1668134756}
 --- !u!114 &1668134759
 MonoBehaviour:
@@ -6346,6 +6351,7 @@ MonoBehaviour:
   GrayPanel: {fileID: 929746630}
   RestartText: {fileID: 448547096}
   YesBtn: {fileID: 3828755}
+  YesBtn2: {fileID: 0}
   NoBtn: {fileID: 2146028351}
 --- !u!114 &2146028354
 MonoBehaviour:
