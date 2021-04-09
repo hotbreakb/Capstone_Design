@@ -53,7 +53,7 @@ public class PlayStart2 : MonoBehaviour
     public GameObject GunCamera;
 
     [Header("Enemy")]
-    public GameObject GameMgr;
+    public GameObject enemySpawn;
 
     [Header("PlayerMoveAgent")]
     public GameObject goal;
@@ -221,7 +221,7 @@ public class PlayStart2 : MonoBehaviour
         anim.SetBool("Holster", false);
         Handgun.GetComponent<HandgunScriptLPFP>().enabled = true;
         UI.SetActive(true);
-        GameMgr.SetActive(true);
+        enemySpawn.SetActive(true);
         labtopBar.SetActive(true);
     }
 
