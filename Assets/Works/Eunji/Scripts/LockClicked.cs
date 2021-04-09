@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class LockClicked : MonoBehaviour
 {
     public void click(){
-        GetComponentInChildren<Locked>().playAnim();
+        GetComponentInChildren<PlayAnimInLock>().playAnim();
     }
 }
