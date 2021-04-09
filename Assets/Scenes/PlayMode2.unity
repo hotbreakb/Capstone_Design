@@ -1680,6 +1680,7 @@ MonoBehaviour:
   GrayPanel: {fileID: 911596562}
   RestartText: {fileID: 2021063931}
   YesBtn: {fileID: 1133462251}
+  YesBtn2: {fileID: 0}
   NoBtn: {fileID: 196410011}
 --- !u!114 &196410014
 MonoBehaviour:
@@ -5872,6 +5873,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3920142060072871382, guid: c88be6ac9f211994e85aaf76a1a82d0d,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.0035
+      objectReference: {fileID: 0}
+    - target: {fileID: 3920142060072871382, guid: c88be6ac9f211994e85aaf76a1a82d0d,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.0035
+      objectReference: {fileID: 0}
+    - target: {fileID: 3920142060072871383, guid: c88be6ac9f211994e85aaf76a1a82d0d,
+        type: 3}
+      propertyPath: m_FontSize
+      value: 130
+      objectReference: {fileID: 0}
     - target: {fileID: 3920142060072871385, guid: c88be6ac9f211994e85aaf76a1a82d0d,
         type: 3}
       propertyPath: fulltext.Array.data[0]
@@ -6677,6 +6693,7 @@ MonoBehaviour:
   GrayPanel: {fileID: 911596562}
   RestartText: {fileID: 2021063931}
   YesBtn: {fileID: 1133462251}
+  YesBtn2: {fileID: 0}
   NoBtn: {fileID: 196410011}
 --- !u!114 &971293086
 MonoBehaviour:
