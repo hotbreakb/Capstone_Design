@@ -11,6 +11,7 @@ public class OneEnmeyFire : MonoBehaviour
 
     private Transform playerTr;
 
+    private Transform enemyTr;
 
     private readonly int hashFire = Animator.StringToHash("isFire");
    // private readonly int hashReload = Animator.StringToHash("Reload");
@@ -37,7 +38,7 @@ public class OneEnmeyFire : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {   
-        
+        enemyTr = GetComponent<Transform>();
         playerTr = GameObject.Find("TmpPlayer").GetComponent<Transform>();  
         //muzzleFlash.enabled = false;
         
@@ -47,12 +48,11 @@ public class OneEnmeyFire : MonoBehaviour
     }
 
     void Update(){
-
         if(!isReload && isFire){
+            //transform.LookAt(playerTr);
             if(Time.time >= nextFire){
-                animator.SetBool("isShoot",true);   
                 Fire();
-                animator.SetBool("isShoot",false);
+                //animator.SetBool("isShoot",false);
                 nextFire = Time.time + fireRate + Random.Range(0.0f,1.0f);  // 공속딜레이
             }
         }
