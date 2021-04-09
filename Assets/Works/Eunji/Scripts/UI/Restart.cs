@@ -13,9 +13,9 @@ public class Restart : MonoBehaviour
     public GameObject NoBtn;
 
     public void playShow(){
-        if(EventSystem.current.currentSelectedGameObject.name == "Btn2")
+        /* if(EventSystem.current.currentSelectedGameObject.name == "Btn2")
             if(!(FindObjectOfType<GameManager>().isPlayerWininFirst))
-                return;
+                return; */
 
         if(!GrayPanel || !RestartText || !YesBtn || !NoBtn) return;
 

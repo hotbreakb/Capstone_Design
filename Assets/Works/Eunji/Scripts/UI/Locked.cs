@@ -4,7 +4,7 @@ using System.Collections;
 
 public class Locked : MonoBehaviour
 {
-    private Animator anim;
+    public Animator anim;
     private Image img;
 
     void Start()
@@ -15,7 +15,6 @@ public class Locked : MonoBehaviour
         if (FindObjectOfType<GameManager>().isPlayerWininFirst)
         {
             StartCoroutine(FadeOut());
-            Destroy(this);
         }
         else
         {
@@ -32,9 +31,4 @@ public class Locked : MonoBehaviour
             yield return null;
         }
     }
-
-    public void playAnim(){
-        anim.Play("LockAnim");
-    }
-
 }
