@@ -50,23 +50,18 @@ public class GameManager : MonoBehaviour
             if (checkHandCube == null && GameObject.FindGameObjectWithTag("Cube"))
                 checkHandCube = GameObject.FindGameObjectWithTag("Cube");
 
-
-            if(GameObject.Find("YouWin")) Debug.Log("GameObject find");
-
             if (YouWin == null && GameObject.Find("YouWin"))
             {
                 YouWin = GameObject.Find("YouWin").GetComponent<TextMeshProUGUI>();
                 YouWin.gameObject.SetActive(false);
-                Debug.Log("find win");
             }
 
             if (GameOver == null && GameObject.Find("GameOver"))
             {
                 GameOver = GameObject.Find("GameOver").GetComponent<TextMeshProUGUI>();
                 GameOver.gameObject.SetActive(false);
-                Debug.Log("Find GameOver");
             }
-            
+
         // check Leap Motion connection
         StartCoroutine("checkHand");
     }
