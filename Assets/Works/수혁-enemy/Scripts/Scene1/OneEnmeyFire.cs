@@ -49,15 +49,15 @@ public class OneEnmeyFire : MonoBehaviour
     void Update(){
         if(!isReload && isFire){
             if(Time.time >= nextFire){
-                animator.SetBool("isShoot",true);
+                animator.SetTrigger(hashFire);
                 Fire();
-                animator.SetBool("isShoot",false);
+                //animator.SetBool(hashFire,false);
                 nextFire = Time.time + fireRate + Random.Range(0.0f,1.0f);  // 공속딜레이
             }
         }
     }
     void Fire()
-    {    
+    {  
         audio.PlayOneShot(fireSfx, 1.0f);
         Instantiate(Bullet, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
     }
