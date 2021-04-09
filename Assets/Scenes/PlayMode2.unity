@@ -5872,6 +5872,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3920142060072871385, guid: c88be6ac9f211994e85aaf76a1a82d0d,
+        type: 3}
+      propertyPath: fulltext.Array.data[0]
+      value: "\uCD95\uD558\uB4DC\uB9BD\uB2C8\uB2E4"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3920142060072871385, guid: c88be6ac9f211994e85aaf76a1a82d0d,
+        type: 3}
+      propertyPath: fulltext.Array.data[1]
+      value: "\uACFC\uC81C\uB97C \uC81C\uCD9C\uD558\uC168\uAD70\uC694"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3920142060072871385, guid: c88be6ac9f211994e85aaf76a1a82d0d,
+        type: 3}
+      propertyPath: fulltext.Array.data[2]
+      value: "\uC0C8\uB85C\uC6B4 \uACFC\uC81C\uAC00"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3920142060072871385, guid: c88be6ac9f211994e85aaf76a1a82d0d,
+        type: 3}
+      propertyPath: fulltext.Array.data[3]
+      value: "\uB098\uC654\uC2B5\uB2C8\uB2E4"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3920142060072871385, guid: c88be6ac9f211994e85aaf76a1a82d0d,
+        type: 3}
+      propertyPath: fulltext.Array.data[5]
+      value: "\uC870\uC2EC\uD788 \uC81C\uCD9C\uD558\uC138\uC694!"
+      objectReference: {fileID: 0}
     - target: {fileID: 3920142061726974978, guid: c88be6ac9f211994e85aaf76a1a82d0d,
         type: 3}
       propertyPath: m_Name
@@ -8431,6 +8456,16 @@ PrefabInstance:
       propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 82168095860958118, guid: c24fed9fa91f7634fbc8e5e12405008e,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 82643139687027346, guid: c24fed9fa91f7634fbc8e5e12405008e,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 82766377412988528, guid: c24fed9fa91f7634fbc8e5e12405008e,
         type: 3}
       propertyPath: m_Enabled
@@ -10412,7 +10447,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2002117395
 Transform:
   m_ObjectHideFlags: 0
@@ -11510,6 +11545,11 @@ PrefabInstance:
       propertyPath: Background
       value: 
       objectReference: {fileID: 1129496937}
+    - target: {fileID: 1342706165602225671, guid: 67843b701d4e8c646804353528494793,
+        type: 3}
+      propertyPath: enemySpawn
+      value: 
+      objectReference: {fileID: 2002117394}
     - target: {fileID: 1342706165602225671, guid: 67843b701d4e8c646804353528494793,
         type: 3}
       propertyPath: AudioManager
