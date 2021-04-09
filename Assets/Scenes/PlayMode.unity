@@ -7592,7 +7592,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1329483694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12188,7 +12188,7 @@ MonoBehaviour:
   Handgun: {fileID: 535386490}
   Player: {fileID: 1299783121}
   StartUI: {fileID: 1682370877}
-  EventSystem: {fileID: 1414513176}
+  enemySpawn: {fileID: 1329483693}
   goal: {fileID: 315513017}
   damping: 0
   isMove: 0
