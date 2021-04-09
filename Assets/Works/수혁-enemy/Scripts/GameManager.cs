@@ -54,23 +54,14 @@ public class GameManager : MonoBehaviour
             {
                 YouWin = GameObject.Find("YouWin").GetComponent<TextMeshProUGUI>();
                 YouWin.gameObject.SetActive(false);
-                Debug.Log("find win");
-            }
-            else
-            {
-                // Debug.Log("can't find win");
             }
 
             if (GameOver == null && GameObject.Find("GameOver"))
             {
                 GameOver = GameObject.Find("GameOver").GetComponent<TextMeshProUGUI>();
                 GameOver.gameObject.SetActive(false);
-                Debug.Log("Find GameOver");
             }
-            else
-            {
-                // Debug.Log("can't find GameOver");
-            }
+
         // check Leap Motion connection
         StartCoroutine("checkHand");
     }

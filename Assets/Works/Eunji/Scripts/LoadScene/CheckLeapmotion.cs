@@ -8,17 +8,20 @@ public class CheckLeapmotion : MonoBehaviour
     public UnityEngine.UI.Image circle;
 
 
-    void Update(){
+    void Update()
+    {
         notConnected.gameObject.SetActive(false);
-        
-        if (FindObjectOfType<GameManager>().isLeapMotionConnected){
-            
-            if(SceneManager.GetActiveScene().name == "Loading")
+
+        if (FindObjectOfType<GameManager>().isLeapMotionConnected)
+        {
+            if (SceneManager.GetActiveScene().name == "Loading")
                 GetComponent<LoadSceneAuto>().GameStart();
-            else
+            else if (SceneManager.GetActiveScene().name == "Loading2")
+                GetComponent<LoadSceneAuto>().GameStart2();
+            else // Tutorial_02
                 GetComponent<LoadSceneAuto>().LoadNextScene();
         }
-            
+
         else
         {
             notConnected.gameObject.SetActive(true);

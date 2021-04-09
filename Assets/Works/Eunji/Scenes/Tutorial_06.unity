@@ -539,17 +539,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82af58794c979f04d87b016c1b89fbba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points: []
-  enemy: {fileID: 0}
-  createTime: 2
-  maxEnemy: 10
   isGameOver: 0
-  cube: {fileID: 0}
+  isLeapMotionConnected: 0
   isShoot: 0
   isGrenade: 0
   isLoading: 0
-  YouWin: {fileID: 0}
-  GameOver: {fileID: 0}
   isPlayerWin: 0
 --- !u!1 &730382589
 GameObject:
@@ -1784,7 +1778,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.05882353}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
