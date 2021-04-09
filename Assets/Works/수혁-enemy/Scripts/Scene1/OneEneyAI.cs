@@ -21,7 +21,7 @@ public class OneEneyAI : MonoBehaviour
     
 
     private OneEnmeyFire enmeyFire;
-
+    private readonly int hashFire = Animator.StringToHash("isFire");
      private float DieDelayTime = 10.0f;
     private readonly int hashMove = Animator.StringToHash("isRun");
     private readonly int hashSpeed = Animator.StringToHash("walkSpeed");
