@@ -12,15 +12,14 @@ public class Locked : MonoBehaviour
         anim = GetComponent<Animator>();
         img = GetComponent<Image>();
         
-        if (FindObjectOfType<GameManager>().isPlayerWin)
+        if (FindObjectOfType<GameManager>().isPlayerWininFirst)
         {
             StartCoroutine(FadeOut());
-            // GameObject.Find("Canvas(2)").GetComponent<Restart>().playShow(true);
+            Destroy(this);
         }
         else
         {
             anim.Play("LockAnim");
-            // GameObject.Find("Canvas(2)").GetComponent<Restart>().playShow(false);
         }
     }
 
@@ -32,6 +31,10 @@ public class Locked : MonoBehaviour
             img.color = new Color(1, 1, 1, i);
             yield return null;
         }
+    }
+
+    public void playAnim(){
+        anim.Play("LockAnim");
     }
 
 }
