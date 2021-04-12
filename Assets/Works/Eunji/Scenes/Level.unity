@@ -6005,12 +6005,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   axes: 0
-  sensitivityX: 15
-  sensitivityY: 15
-  minimumX: -360
-  maximumX: 360
-  minimumY: -60
-  maximumY: 60
+  sensitivityX: 10
+  sensitivityY: 10
+  minimumX: -45
+  maximumX: 45
+  minimumY: -25
+  maximumY: 25
   frameCounter: 20
 --- !u!1 &1837134320
 GameObject:
