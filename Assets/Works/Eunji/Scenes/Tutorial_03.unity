@@ -154,12 +154,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   axes: 0
-  sensitivityX: 15
-  sensitivityY: 15
+  sensitivityX: 10
+  sensitivityY: 10
   minimumX: -360
   maximumX: 360
-  minimumY: -60
-  maximumY: 60
+  minimumY: -40
+  maximumY: 40
   frameCounter: 20
 --- !u!114 &91442187
 MonoBehaviour:
@@ -720,6 +720,7 @@ MonoBehaviour:
   GrayPanel: {fileID: 796191293}
   RestartText: {fileID: 717192556}
   YesBtn: {fileID: 1058076658}
+  YesBtn2: {fileID: 0}
   NoBtn: {fileID: 566280436}
 --- !u!114 &566280439
 MonoBehaviour:
@@ -891,18 +892,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82af58794c979f04d87b016c1b89fbba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points: []
-  enemy: {fileID: 0}
-  createTime: 2
-  maxEnemy: 10
   isGameOver: 0
-  cube: {fileID: 0}
+  isLeapMotionConnected: 0
   isShoot: 0
   isGrenade: 0
   isLoading: 0
-  YouWin: {fileID: 0}
-  GameOver: {fileID: 0}
-  isPlayerWin: 0
+  isPlayerWininFirst: 0
+  isPlayerWininSecond: 0
 --- !u!1 &689237245
 GameObject:
   m_ObjectHideFlags: 0
@@ -1863,6 +1859,7 @@ MonoBehaviour:
   GrayPanel: {fileID: 796191293}
   RestartText: {fileID: 717192556}
   YesBtn: {fileID: 1058076658}
+  YesBtn2: {fileID: 0}
   NoBtn: {fileID: 566280436}
 --- !u!114 &1394605402
 MonoBehaviour:

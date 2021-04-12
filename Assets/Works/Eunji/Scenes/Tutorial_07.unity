@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 368703c4bd78fb34b8959784ddb21cc8, type: 2}
+  m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -248,8 +248,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 44.4, y: 63.8}
-  m_SizeDelta: {x: 35, y: 43}
+  m_AnchoredPosition: {x: 100, y: 63}
+  m_SizeDelta: {x: 70, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &264118252
 MonoBehaviour:
@@ -272,11 +272,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 10c1cc676caa13d40b32efb392608e71, type: 3}
-    m_FontSize: 40
+    m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
-    m_MaxSize: 40
+    m_MinSize: 1
+    m_MaxSize: 100
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -467,18 +467,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82af58794c979f04d87b016c1b89fbba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points: []
-  enemy: {fileID: 0}
-  createTime: 2
-  maxEnemy: 10
   isGameOver: 0
-  cube: {fileID: 0}
+  isLeapMotionConnected: 0
   isShoot: 0
   isGrenade: 0
   isLoading: 0
-  YouWin: {fileID: 0}
-  GameOver: {fileID: 0}
-  isPlayerWin: 0
+  isPlayerWininFirst: 0
+  isPlayerWininSecond: 0
 --- !u!1 &529502384
 GameObject:
   m_ObjectHideFlags: 0
@@ -804,12 +799,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -895,8 +890,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.9, y: 63.8}
-  m_SizeDelta: {x: 35, y: 43}
+  m_AnchoredPosition: {x: 0, y: 63}
+  m_SizeDelta: {x: 70, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &806006297
 Animator:
@@ -938,11 +933,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 10c1cc676caa13d40b32efb392608e71, type: 3}
-    m_FontSize: 40
+    m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
-    m_MaxSize: 40
+    m_MinSize: 1
+    m_MaxSize: 100
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1146,6 +1141,7 @@ MonoBehaviour:
   GrayPanel: {fileID: 459258789}
   RestartText: {fileID: 556845371}
   YesBtn: {fileID: 529502384}
+  YesBtn2: {fileID: 0}
   NoBtn: {fileID: 935316157}
 --- !u!114 &935316160
 MonoBehaviour:
@@ -1276,8 +1272,8 @@ Camera:
   m_GameObject: {fileID: 1048915587}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.2784314, g: 0.2784314, b: 0.2784314, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1613,8 +1609,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -39.5, y: 63.799988}
-  m_SizeDelta: {x: 35, y: 43}
+  m_AnchoredPosition: {x: -100, y: 63}
+  m_SizeDelta: {x: 70, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1496863509
 Animator:
@@ -1656,11 +1652,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 10c1cc676caa13d40b32efb392608e71, type: 3}
-    m_FontSize: 40
+    m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
-    m_MaxSize: 40
+    m_MinSize: 1
+    m_MaxSize: 100
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1731,6 +1727,7 @@ MonoBehaviour:
   GrayPanel: {fileID: 459258789}
   RestartText: {fileID: 556845371}
   YesBtn: {fileID: 529502384}
+  YesBtn2: {fileID: 0}
   NoBtn: {fileID: 935316157}
 --- !u!114 &1682984682
 MonoBehaviour:
@@ -1857,8 +1854,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -70}
-  m_SizeDelta: {x: 398.69507, y: 39.460114}
+  m_AnchoredPosition: {x: 0, y: -99}
+  m_SizeDelta: {x: 792.1211, y: 74.83423}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1699598989
 MonoBehaviour:
@@ -1881,11 +1878,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 10c1cc676caa13d40b32efb392608e71, type: 3}
-    m_FontSize: 35
+    m_FontSize: 70
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
-    m_MaxSize: 40
+    m_MinSize: 1
+    m_MaxSize: 100
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1

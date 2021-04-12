@@ -418,6 +418,7 @@ MonoBehaviour:
   GrayPanel: {fileID: 1878688311}
   RestartText: {fileID: 1035984174}
   YesBtn: {fileID: 1329961922}
+  YesBtn2: {fileID: 0}
   NoBtn: {fileID: 251088893}
 --- !u!114 &251088896
 MonoBehaviour:
@@ -643,6 +644,7 @@ MonoBehaviour:
   GrayPanel: {fileID: 1878688311}
   RestartText: {fileID: 1035984174}
   YesBtn: {fileID: 1329961922}
+  YesBtn2: {fileID: 0}
   NoBtn: {fileID: 251088893}
 --- !u!114 &548608055
 MonoBehaviour:
@@ -1741,7 +1743,8 @@ MonoBehaviour:
   isShoot: 0
   isGrenade: 0
   isLoading: 0
-  isPlayerWin: 0
+  isPlayerWininFirst: 0
+  isPlayerWininSecond: 0
 --- !u!1 &1095258041
 GameObject:
   m_ObjectHideFlags: 0
@@ -2208,12 +2211,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   axes: 0
-  sensitivityX: 15
-  sensitivityY: 15
+  sensitivityX: 10
+  sensitivityY: 10
   minimumX: -360
   maximumX: 360
-  minimumY: -60
-  maximumY: 60
+  minimumY: -40
+  maximumY: 40
   frameCounter: 20
 --- !u!114 &1619695565
 MonoBehaviour:
