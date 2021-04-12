@@ -21,7 +21,7 @@ public class OneEneyAI : MonoBehaviour
     
 
     private OneEnmeyFire enmeyFire;
-
+    private readonly int hashFire = Animator.StringToHash("isFire");
      private float DieDelayTime = 10.0f;
     private readonly int hashMove = Animator.StringToHash("isRun");
     private readonly int hashSpeed = Animator.StringToHash("walkSpeed");
@@ -30,7 +30,9 @@ public class OneEneyAI : MonoBehaviour
 
     private readonly int hashDie = Animator.StringToHash("SC1Die");
     private OneMoveAgent moveAgent;
+    private readonly float damping = 10.0f;
     private void Awake(){
+        
         var player = GameObject.Find("TmpPlayer");
 
         if(player != null) playerTr = player.GetComponent<Transform>();
@@ -60,7 +62,7 @@ public class OneEneyAI : MonoBehaviour
                     break;
 
                 case State.ATTACK:
-                    
+                    transform.LookAt(playerTr);
                     animator.SetBool(hashMove,false);
                     if(enmeyFire.isFire == false) enmeyFire.isFire = true;
                     break;
@@ -82,8 +84,5 @@ public class OneEneyAI : MonoBehaviour
     void Update(){
 
         animator.SetFloat(hashSpeed, moveAgent.speed);
-        if(state == State.ATTACK){
-            transform.LookAt(playerTr);
-        }
     }
 }
