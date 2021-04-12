@@ -8,7 +8,7 @@ public class OneMoveAgent : MonoBehaviour
     private OneEneyAI oneEneyAI;
     private NavMeshAgent agent;
 
-    private readonly float traceSpeed = 4.0f;
+    private readonly float traceSpeed = 6.0f;
     private int idx;
 
     private float damping = 1.0f;
