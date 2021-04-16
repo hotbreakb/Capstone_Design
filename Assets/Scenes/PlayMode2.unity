@@ -5529,7 +5529,7 @@ PrefabInstance:
     - target: {fileID: 3920142060072871385, guid: c88be6ac9f211994e85aaf76a1a82d0d,
         type: 3}
       propertyPath: fulltext.Array.data[5]
-      value: "\uC870\uC2EC\uD788 \uC81C\uCD9C\uD558\uC138\uC694!"
+      value: "\uC774\uBC88\uC5D0\uB3C4 \uC131\uACF5\uD558\uC138\uC694!"
       objectReference: {fileID: 0}
     - target: {fileID: 3920142061726974978, guid: c88be6ac9f211994e85aaf76a1a82d0d,
         type: 3}
