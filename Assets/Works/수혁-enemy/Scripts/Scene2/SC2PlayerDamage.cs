@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class SC2PlayerDamage : MonoBehaviour
 {
- 
+
     public float initHp = 200.0f;
     private Color currColor;
     private readonly Color initColor = new Vector4(0, 1.0f, 0.0f, 1.0f);
@@ -20,10 +20,11 @@ public class SC2PlayerDamage : MonoBehaviour
     //public delegate void PlayerDieHandler();
     //public static event PlayerDieHandler OnPlayerDie;
 
-
-
-    private void OnCollisionEnter(Collision collision){
-        if(collision.transform.tag =="SC2EnemyBullet" || collision.transform.tag =="Enemy"){
+    /* 총 공격 */
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.transform.tag == "SC2EnemyBullet" || collision.transform.tag == "Enemy")
+        {
             Debug.Log(collision.transform.tag);
             Debug.Log(currHP);
             StartCoroutine(ShowBloodScreen());
@@ -32,20 +33,25 @@ public class SC2PlayerDamage : MonoBehaviour
             if (currHP <= 0.0f) //플레이어 죽었을때
             {
                 PlayerDie();
+                FindObjectOfType<GameManager>().playerLose();
             }
         }
     }
 
-        public void AttackedByMelee(){
-            StartCoroutine(ShowBloodScreen());
-            currHP -= 5.0f;
-            Debug.Log(currHP);
-            DisPlayHpbar();
-            if (currHP <= 0.0f) //플레이어 죽었을때
-            {
-                PlayerDie();
-            }
+    /* 근접 공격 */
+    public void AttackedByMelee()
+    {
+        StartCoroutine(ShowBloodScreen());
+        currHP -= 5.0f;
+        Debug.Log(currHP);
+        DisPlayHpbar();
+        if (currHP <= 0.0f) //플레이어 죽었을때
+        {
+            PlayerDie();
+            FindObjectOfType<GameManager>().playerLose();
+        }
     }
+
     private void PlayerDie()
     {
         Debug.Log("Player Die!!!");
@@ -67,7 +73,7 @@ public class SC2PlayerDamage : MonoBehaviour
 
     IEnumerator ShowBloodScreen()
     {
-        bloodScreen.color = new Color(1, 0, 0,UnityEngine.Random.Range(0.2f, 0.3f));
+        bloodScreen.color = new Color(1, 0, 0, UnityEngine.Random.Range(0.2f, 0.3f));
         yield return new WaitForSeconds(0.1f);
         bloodScreen.color = Color.clear;
     }

@@ -6,6 +6,7 @@ public class Locked : MonoBehaviour
 {
     public Animator anim;
     private Image img;
+    private bool isFadeOut;
 
     void Start()
     {
