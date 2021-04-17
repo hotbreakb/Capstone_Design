@@ -141,6 +141,7 @@ public class GameManager : MonoBehaviour
                 // Debug.Log("y : " + (handPalmPosition.y - prehandPalmPosition.y));
                 //Debug.Log("z : " + (handPalmPosition.z - prehandPalmPosition.z));
 
+
                 if (_extendedFingers == 2 && System.Math.Abs(handPalmPosition.y - prehandPalmPosition.y) > 5)
                 {
                     checkHandCube.GetComponent<MeshRenderer>().material.color = Color.red;
@@ -216,9 +217,12 @@ public class GameManager : MonoBehaviour
     public void playerLose()
     {
         /* Game over UI 띄우기 */
+        Debug.Log("start the lose");
         if (!GameOver) return;
+
         audioSource.clip = LoseSound; //sound 효과음
         audioSource.Play();
+
         GameOver.gameObject.SetActive(true);
         GameObject.Find("Main Camera").GetComponent<PlayGlitchEffect>().Play();
         StartCoroutine(ShowLevelTimer());
