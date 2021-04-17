@@ -33,6 +33,12 @@ public class GameManager : MonoBehaviour
     public bool isPlayerWininFirst = false;
     public bool isPlayerWininSecond = false;
 
+    /* -----------Player Win/Lose ---------- */
+    [Header("Sound effect")]
+    public AudioSource audioSource;
+    public AudioClip WinSound;
+    public AudioClip LoseSound;
+
 
     void Awake()
     {
@@ -189,9 +195,12 @@ public class GameManager : MonoBehaviour
     {
         /* You Win UI 띄우기 */
         if (!YouWin) return;
+        audioSource.clip = WinSound; //sound 효과음
+        audioSource.Play();
         YouWin.gameObject.SetActive(true);
         GameObject.Find("Main Camera").GetComponent<PlayGlitchEffect>().Play();
         StartCoroutine(ShowLevelTimer());
+        
         
         // isPlayerWin = true;
         if (SceneManager.GetActiveScene().name == "PlayMode") isPlayerWininFirst = true;
@@ -203,7 +212,8 @@ public class GameManager : MonoBehaviour
     {
         /* Game over UI 띄우기 */
         if (!GameOver) return;
-
+        audioSource.clip = LoseSound; //sound 효과음
+        audioSource.Play();
         GameOver.gameObject.SetActive(true);
         GameObject.Find("Main Camera").GetComponent<PlayGlitchEffect>().Play();
         StartCoroutine(ShowLevelTimer());
