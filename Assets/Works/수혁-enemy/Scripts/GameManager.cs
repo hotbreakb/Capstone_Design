@@ -227,6 +227,8 @@ public class GameManager : MonoBehaviour
         GameObject.Find("Main Camera").GetComponent<PlayGlitchEffect>().Play();
         StartCoroutine(ShowLevelTimer());
 
+
+
         // isPlayerWin = false;
         if (SceneManager.GetActiveScene().name == "PlayMode") isPlayerWininFirst = false;
         else if (SceneManager.GetActiveScene().name == "PlayMode2") isPlayerWininSecond = false;
@@ -234,7 +236,8 @@ public class GameManager : MonoBehaviour
 
     IEnumerator ShowLevelTimer()
     {
-        yield return new WaitForSecondsRealtime(2.0f);
+        yield return new WaitForSecondsRealtime(5.0f);
         SceneManager.LoadScene("Level");
     }
+    
 }
