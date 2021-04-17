@@ -33,6 +33,13 @@ public class GameManager : MonoBehaviour
     public bool isPlayerWininFirst = false;
     public bool isPlayerWininSecond = false;
 
+    /* -----------Player Win/Lose ---------- */
+    [Header("Sound effect")]
+    private AudioSource audioSource;
+    public AudioClip WinSound;
+    public AudioClip LoseSound;
+
+
 
     void Awake()
     {
@@ -50,20 +57,24 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-            if (checkHandCube == null && GameObject.FindGameObjectWithTag("Cube"))
-                checkHandCube = GameObject.FindGameObjectWithTag("Cube");
+        if(audioSource == null && GameObject.Find("Sound"))
+        {
+            audioSource = GameObject.Find("Sound").GetComponent<AudioSource>();
+        }
+        if (checkHandCube == null && GameObject.FindGameObjectWithTag("Cube"))
+            checkHandCube = GameObject.FindGameObjectWithTag("Cube");
 
-            if (YouWin == null && GameObject.Find("YouWin"))
-            {
-                YouWin = GameObject.Find("YouWin").GetComponent<TextMeshProUGUI>();
-                YouWin.gameObject.SetActive(false);
-            }
+        if (YouWin == null && GameObject.Find("YouWin"))
+        {
+            YouWin = GameObject.Find("YouWin").GetComponent<TextMeshProUGUI>();
+            YouWin.gameObject.SetActive(false);
+        }
 
-            if (GameOver == null && GameObject.Find("GameOver"))
-            {
-                GameOver = GameObject.Find("GameOver").GetComponent<TextMeshProUGUI>();
-                GameOver.gameObject.SetActive(false);
-            }
+        if (GameOver == null && GameObject.Find("GameOver"))
+        {
+            GameOver = GameObject.Find("GameOver").GetComponent<TextMeshProUGUI>();
+            GameOver.gameObject.SetActive(false);
+        }
 
         // check Leap Motion connection
         StartCoroutine("checkHand");
@@ -94,7 +105,7 @@ public class GameManager : MonoBehaviour
             // if(SceneManager.GetActiveScene().name == "Loading")
             //     SceneManager.LoadScene("PlayMode"); // 수정하기
         }
-        
+
         if (checkHandCube != null)
         {
             Hand hand = new Hand();
@@ -190,13 +201,16 @@ public class GameManager : MonoBehaviour
     {
         /* You Win UI 띄우기 */
         if (!YouWin) return;
+        audioSource.clip = WinSound; //sound 효과음
+        audioSource.Play();
         YouWin.gameObject.SetActive(true);
         GameObject.Find("Main Camera").GetComponent<PlayGlitchEffect>().Play();
         StartCoroutine(ShowLevelTimer());
-        
+
+
         // isPlayerWin = true;
         if (SceneManager.GetActiveScene().name == "PlayMode") isPlayerWininFirst = true;
-        else if(SceneManager.GetActiveScene().name == "PlayMode2") isPlayerWininSecond = true;
+        else if (SceneManager.GetActiveScene().name == "PlayMode2") isPlayerWininSecond = true;
         Debug.Log("isPlayerWininFirst : " + isPlayerWininFirst);
     }
 
@@ -205,14 +219,17 @@ public class GameManager : MonoBehaviour
         /* Game over UI 띄우기 */
         Debug.Log("start the lose");
         if (!GameOver) return;
-        Debug.Log("in the start");
+
+        audioSource.clip = LoseSound; //sound 효과음
+        audioSource.Play();
+
         GameOver.gameObject.SetActive(true);
         GameObject.Find("Main Camera").GetComponent<PlayGlitchEffect>().Play();
         StartCoroutine(ShowLevelTimer());
-        
+
         // isPlayerWin = false;
         if (SceneManager.GetActiveScene().name == "PlayMode") isPlayerWininFirst = false;
-        else if(SceneManager.GetActiveScene().name == "PlayMode2") isPlayerWininSecond = false;
+        else if (SceneManager.GetActiveScene().name == "PlayMode2") isPlayerWininSecond = false;
     }
 
     IEnumerator ShowLevelTimer()
