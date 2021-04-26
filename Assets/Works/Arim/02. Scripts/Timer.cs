@@ -31,7 +31,7 @@ public class Timer : MonoBehaviour
 
         if (progressBar.fillAmount >= 1)
         {
-            GoToGameManager();
+            FindObjectOfType<GameManager>().playerWin();
             enabled = false;
         }
         else
@@ -43,10 +43,10 @@ public class Timer : MonoBehaviour
         }
     }
 
-    void GoToGameManager()
-    {
-        FindObjectOfType<GameManager>().playerWin();
-    }
+    // void GoToGameManager()
+    // {
+    //     FindObjectOfType<GameManager>().playerWin();
+    // }
     void LightManager()
     {
         lightmanager = true;

@@ -1836,7 +1836,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b5d83f5053304428ff53c2ac256ac7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLocked: 0
 --- !u!1 &448547095
 GameObject:
   m_ObjectHideFlags: 0
@@ -2375,10 +2374,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: stop
+  m_text: Quit
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 195704b69f19dff4f98efa4d799229cb, type: 2}
+  m_sharedMaterial: {fileID: -4590024554342098895, guid: 195704b69f19dff4f98efa4d799229cb,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2930,7 +2930,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b5d83f5053304428ff53c2ac256ac7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLocked: 0
 --- !u!1 &779708344
 GameObject:
   m_ObjectHideFlags: 0
@@ -3078,12 +3077,12 @@ GameObject:
   - component: {fileID: 824681646}
   - component: {fileID: 824681645}
   m_Layer: 5
-  m_Name: stopBtn
+  m_Name: quitBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &824681644
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3113,14 +3112,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 824681643}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d545df36387697840b3a62962dd21632, type: 3}
+  m_Script: {fileID: 11500000, guid: 1363be8530dee2545bdfd1455bf5b364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GrayPanel: {fileID: 929746630}
-  RestartText: {fileID: 448547096}
-  YesBtn: {fileID: 3828755}
-  YesBtn2: {fileID: 0}
-  NoBtn: {fileID: 2146028351}
 --- !u!114 &824681646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3165,8 +3159,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 824681645}
-        m_MethodName: playShow
-        m_Mode: 6
+        m_MethodName: QuitGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4668,7 +4662,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b5d83f5053304428ff53c2ac256ac7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLocked: 0
 --- !u!1 &1247186606
 GameObject:
   m_ObjectHideFlags: 0
@@ -5870,7 +5863,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b5d83f5053304428ff53c2ac256ac7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLocked: 0
 --- !u!1 &1495275337
 GameObject:
   m_ObjectHideFlags: 0
@@ -6790,7 +6782,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b5d83f5053304428ff53c2ac256ac7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLocked: 0
 --- !u!1 &1975198151
 GameObject:
   m_ObjectHideFlags: 0
@@ -7111,6 +7102,8 @@ MonoBehaviour:
   isLoading: 0
   isPlayerWininFirst: 0
   isPlayerWininSecond: 0
+  WinSound: {fileID: 0}
+  LoseSound: {fileID: 0}
 --- !u!1 &2146028351
 GameObject:
   m_ObjectHideFlags: 0
