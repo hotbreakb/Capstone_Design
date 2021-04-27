@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class PlayerDamage : MonoBehaviour
 {
     private const string bulletTag = "TmpBullet";
-    private float initHp = 200f;   /* 잠시 수정 */
+    private float initHp = 300f;   /* 잠시 수정 */
     private Color currColor;
     private readonly Color initColor = new Vector4(0, 1.0f, 0.0f, 1.0f);
     public float currHP;
@@ -38,8 +38,7 @@ public class PlayerDamage : MonoBehaviour
 
     void Update()
     {
-        if(isUpdate)
-            HpItem();
+        HpItem();
     }
 
     private void OnTriggerEnter(Collider coll)
@@ -52,7 +51,7 @@ public class PlayerDamage : MonoBehaviour
 
             if (currHP <= 0.0f) //플레이어 죽었을때
             {
-                isUpdate = false;
+                GetComponent<Collider>().enabled = false;
                 FindObjectOfType<GameManager>().playerLose();
             }
         }
