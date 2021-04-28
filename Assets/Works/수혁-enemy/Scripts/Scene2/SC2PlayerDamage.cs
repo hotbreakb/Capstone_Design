@@ -17,6 +17,8 @@ public class SC2PlayerDamage : MonoBehaviour
     public bool hpitem = false;
     public GameObject HPItem;
     public float destroyTime = 10f;
+
+    private string EnemyTag = "Enemy";
     //public delegate void PlayerDieHandler();
     //public static event PlayerDieHandler OnPlayerDie;
 
@@ -55,6 +57,12 @@ public class SC2PlayerDamage : MonoBehaviour
     private void PlayerDie()
     {
         Debug.Log("Player Die!!!");
+
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag(EnemyTag);
+
+        for(int i=0; i<enemies.Length; i++){
+            enemies[i].SendMessage("OnPlayerDie", SendMessageOptions.DontRequireReceiver);
+        }
     }
     // Start is called before the first frame update
     void Start()

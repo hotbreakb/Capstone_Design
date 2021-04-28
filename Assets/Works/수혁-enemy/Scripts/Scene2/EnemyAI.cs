@@ -54,6 +54,7 @@ public class EnemyAI : MonoBehaviour
     
     private readonly int hashMeleeAttack = Animator.StringToHash("MeleeAttack");
     private readonly int hashMeleeAttackIdx = Animator.StringToHash("MeleeAttackIdx");
+    private readonly int hashDance = Animator.StringToHash("isDance");
 
     private float DieDelayTime = 10.0f;
 
@@ -131,6 +132,7 @@ public class EnemyAI : MonoBehaviour
             }
         }
     }
+
     IEnumerator CheckState(){
         while(!isDie){
             if(state == State.DIE) yield break;
@@ -170,5 +172,14 @@ public class EnemyAI : MonoBehaviour
     void Update()
     {
         animator.SetFloat(hashSpeed, moveAgent.speed);
+    }
+
+
+    public void OnPlayerDie(){
+        moveAgent.Stop();
+        enemyFire.isFire = false;
+        StopAllCoroutines();
+
+        animator.SetTrigger(hashDance);
     }
 }
