@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
     public AudioClip WinSound;
     public AudioClip LoseSound;
 
-    float counter = 0.5f;
+
 
     void Awake()
     {
@@ -101,8 +101,10 @@ public class GameManager : MonoBehaviour
         {
             CancelInvoke("QuitGame");
             isLeapMotionConnected = true;
+
+            // if(SceneManager.GetActiveScene().name == "Loading")
+            //     SceneManager.LoadScene("PlayMode"); // 수정하기
         }
-        Debug.Log(counter);
 
         if (checkHandCube != null)
         {
@@ -127,7 +129,7 @@ public class GameManager : MonoBehaviour
                 fingers = hand.Fingers; // 현재 손가락의 개수
 
                 int _extendedFingers = getExtendedFingers();    // 함수를 호출하여 펼쳐진 손가락의 개수를 확인한다
-                // Debug.Log("_extendedFingers: " + _extendedFingers);
+                Debug.Log("_extendedFingers: " + _extendedFingers);
 
                 isShoot = false; isGrenade = false; isLoading = false;
 
@@ -138,6 +140,7 @@ public class GameManager : MonoBehaviour
                 // Debug.Log("x : " + (handPalmPosition.x - prehandPalmPosition.x));
                 // Debug.Log("y : " + (handPalmPosition.y - prehandPalmPosition.y));
                 //Debug.Log("z : " + (handPalmPosition.z - prehandPalmPosition.z));
+
 
                 if (_extendedFingers == 2 && System.Math.Abs(handPalmPosition.y - prehandPalmPosition.y) > 5)
                 {
@@ -156,13 +159,8 @@ public class GameManager : MonoBehaviour
                 //  1. Gripped left hand
                 else if (hand.GrabStrength == 1 && _extendedFingers == 0)
                 {
-                    counter -= Time.deltaTime;
-                    if (counter < 0)
-                    {
-                        checkHandCube.GetComponent<MeshRenderer>().material.color = Color.yellow;
-                        isLoading = true;
-                        counter = 0.5f;
-                    }
+                    checkHandCube.GetComponent<MeshRenderer>().material.color = Color.yellow;
+                    isLoading = true;
                 }
                 else
                 {
@@ -209,8 +207,11 @@ public class GameManager : MonoBehaviour
         GameObject.Find("Main Camera").GetComponent<PlayGlitchEffect>().Play();
         StartCoroutine(ShowLevelTimer());
 
+
+        // isPlayerWin = true;
         if (SceneManager.GetActiveScene().name == "PlayMode") isPlayerWininFirst = true;
         else if (SceneManager.GetActiveScene().name == "PlayMode2") isPlayerWininSecond = true;
+        Debug.Log("isPlayerWininFirst : " + isPlayerWininFirst);
     }
 
     public void playerLose()
@@ -226,13 +227,16 @@ public class GameManager : MonoBehaviour
         GameObject.Find("Main Camera").GetComponent<PlayGlitchEffect>().Play();
         StartCoroutine(ShowLevelTimer());
 
+
+
+        // isPlayerWin = false;
         if (SceneManager.GetActiveScene().name == "PlayMode") isPlayerWininFirst = false;
         else if (SceneManager.GetActiveScene().name == "PlayMode2") isPlayerWininSecond = false;
     }
 
     IEnumerator ShowLevelTimer()
     {
-        yield return new WaitForSecondsRealtime(3.0f);
+        yield return new WaitForSecondsRealtime(5.0f);
         SceneManager.LoadScene("Level");
     }
     

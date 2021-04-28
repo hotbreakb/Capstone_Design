@@ -305,60 +305,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114171041739272598, guid: fc2ad0cd842d6ac48b545a1bf04b2e07,
         type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114171041739272598, guid: fc2ad0cd842d6ac48b545a1bf04b2e07,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114171041739272598, guid: fc2ad0cd842d6ac48b545a1bf04b2e07,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114171041739272598, guid: fc2ad0cd842d6ac48b545a1bf04b2e07,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114171041739272598, guid: fc2ad0cd842d6ac48b545a1bf04b2e07,
-        type: 3}
       propertyPath: m_FontData.m_Font
       value: 
       objectReference: {fileID: 12800000, guid: bede1f0d27b7fe64f97b0e40e3ab76d3,
         type: 3}
-    - target: {fileID: 114171041739272598, guid: fc2ad0cd842d6ac48b545a1bf04b2e07,
-        type: 3}
-      propertyPath: m_FontData.m_BestFit
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114171041739272598, guid: fc2ad0cd842d6ac48b545a1bf04b2e07,
-        type: 3}
-      propertyPath: m_FontData.m_RichText
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114171041739272598, guid: fc2ad0cd842d6ac48b545a1bf04b2e07,
-        type: 3}
-      propertyPath: m_FontData.m_AlignByGeometry
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114626948998326192, guid: fc2ad0cd842d6ac48b545a1bf04b2e07,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114626948998326192, guid: fc2ad0cd842d6ac48b545a1bf04b2e07,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114626948998326192, guid: fc2ad0cd842d6ac48b545a1bf04b2e07,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 224626237504306436, guid: fc2ad0cd842d6ac48b545a1bf04b2e07,
         type: 3}
       propertyPath: m_Pivot.x
@@ -4120,7 +4070,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
