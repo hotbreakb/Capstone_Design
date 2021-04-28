@@ -69,6 +69,7 @@ public class OneEneyAI : MonoBehaviour
 
                 case State.DIE:
                     this.gameObject.tag = "Untagged";
+                    moveAgent.Stop();
                     enmeyFire.isFire = false;
                     isDie = true;
                     int ran = Random.Range(1,5);

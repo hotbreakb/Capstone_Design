@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class PlayerDamage : MonoBehaviour
 {
     private const string bulletTag = "TmpBullet";
-    private float initHp = 50;   /* 잠시 수정 */
+    private float initHp = 200;   /* 잠시 수정 */
     private Color currColor;
     private readonly Color initColor = new Vector4(0, 1.0f, 0.0f, 1.0f);
     public float currHP;
