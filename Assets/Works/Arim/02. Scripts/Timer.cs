@@ -51,11 +51,13 @@ public class Timer : MonoBehaviour
             progressBar.fillAmount = fills;
         }
     }
+
     void AudioStart()
     {
         audioSound.clip = Sirensound;
         audioSound.Play();
     }
+
     void LightManager()
     {
         lightmanager = true;

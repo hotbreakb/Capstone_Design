@@ -69,11 +69,6 @@ public class LoadSceneAuto : MonoBehaviour
         SceneManager.LoadScene("Tutorial_01");
     }
 
-    public void LoadDevelopers()
-    {
-        SceneManager.LoadScene("Developers");
-    }
-
     IEnumerator LoadMenuTimer(int index)
     {
         yield return new WaitForSecondsRealtime(9.0f);
@@ -83,7 +78,7 @@ public class LoadSceneAuto : MonoBehaviour
     IEnumerator LoadMenuIfNotConnectedTimer()
     {
         yield return null;
-        SceneManager.LoadScene(1); // Menu
+        SceneManager.LoadScene(1);
     }
 
     IEnumerator LoadNextSceneTimer(int index)
