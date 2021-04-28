@@ -14,6 +14,8 @@ public class Timer : MonoBehaviour
     public Light Fleshlight;
     public float delayTime = 20.0f;
     public bool lightmanager = false;
+    public AudioSource audioSound;
+    public AudioClip Sirensound;
 
     void Start()
     {
@@ -24,9 +26,16 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
+        if (fills >= 0.3f && lightmanager == false)
+        {
+            AudioStart();
+        }
         if (fills >= 0.4f && lightmanager == false)
         {
             LightManager();
+            
+          
+
         }
 
         if (progressBar.fillAmount >= 1)
@@ -43,10 +52,12 @@ public class Timer : MonoBehaviour
         }
     }
 
-    // void GoToGameManager()
-    // {
-    //     FindObjectOfType<GameManager>().playerWin();
-    // }
+    void AudioStart()
+    {
+        audioSound.clip = Sirensound;
+        audioSound.Play();
+    }
+
     void LightManager()
     {
         lightmanager = true;
