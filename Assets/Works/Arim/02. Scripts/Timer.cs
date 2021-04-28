@@ -43,10 +43,6 @@ public class Timer : MonoBehaviour
         }
     }
 
-    // void GoToGameManager()
-    // {
-    //     FindObjectOfType<GameManager>().playerWin();
-    // }
     void LightManager()
     {
         lightmanager = true;
