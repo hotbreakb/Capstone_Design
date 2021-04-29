@@ -43,7 +43,8 @@ public class OneMoveAgent : MonoBehaviour
     }
     public void Stop(){
         agent.isStopped = true;
-
+        agent.updatePosition = false;
+        agent.updateRotation = false;
         // 바로 정지하기 위해 속도 0
         agent.velocity = Vector3.zero;
       
