@@ -22,7 +22,7 @@ public class EnemyAI : MonoBehaviour
     private Animator animator;
 
 
-    public float attackDist = 5.0f;
+    private float attackDist = 5f;
     public float traceDist = 10.0f;
 
     
@@ -121,6 +121,7 @@ public class EnemyAI : MonoBehaviour
                 case State.DIE:
                     this.gameObject.tag = "Untagged";
                     isDie = true;
+                    enemyFire.isFire = false;
                     enemyMeleeAttack.isMeleeAttack = false;                    
                     moveAgent.Stop();
                     int ran = Random.Range(0,3);
@@ -128,6 +129,7 @@ public class EnemyAI : MonoBehaviour
                     animator.SetTrigger(hashDie);
                     GetComponent<CapsuleCollider>().enabled = false;
                     Destroy(gameObject,DieDelayTime);
+                    Debug.Log("???");
                     break;
             }
         }
