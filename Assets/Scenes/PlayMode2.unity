@@ -5796,6 +5796,62 @@ PrefabInstance:
       propertyPath: fulltext.Array.data[5]
       value: "\uC774\uBC88\uC5D0\uB3C4 \uC131\uACF5\uD558\uC138\uC694!"
       objectReference: {fileID: 0}
+    - target: {fileID: 3920142060233390759, guid: c88be6ac9f211994e85aaf76a1a82d0d,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.57254905
+      objectReference: {fileID: 0}
+    - target: {fileID: 3920142060233390759, guid: c88be6ac9f211994e85aaf76a1a82d0d,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.8039216
+      objectReference: {fileID: 0}
+    - target: {fileID: 3920142060233390759, guid: c88be6ac9f211994e85aaf76a1a82d0d,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.8509804
+      objectReference: {fileID: 0}
+    - target: {fileID: 3920142061370301775, guid: c88be6ac9f211994e85aaf76a1a82d0d,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3920142061370301775, guid: c88be6ac9f211994e85aaf76a1a82d0d,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3920142061370301775, guid: c88be6ac9f211994e85aaf76a1a82d0d,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3920142061370301775, guid: c88be6ac9f211994e85aaf76a1a82d0d,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3920142061370301775, guid: c88be6ac9f211994e85aaf76a1a82d0d,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 428be711d1ff9014ab31f185147a9f77,
+        type: 3}
+    - target: {fileID: 3920142061370301775, guid: c88be6ac9f211994e85aaf76a1a82d0d,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3920142061370301775, guid: c88be6ac9f211994e85aaf76a1a82d0d,
+        type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3920142061370301775, guid: c88be6ac9f211994e85aaf76a1a82d0d,
+        type: 3}
+      propertyPath: m_FontData.m_LineSpacing
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3920142061726974978, guid: c88be6ac9f211994e85aaf76a1a82d0d,
         type: 3}
       propertyPath: m_Name
