@@ -69,7 +69,7 @@ public class PlayerDamage : MonoBehaviour
         Debug.Log("Player Die!!!");
 
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(EnemyTag);
-         
+
         for(int i=0; i<enemies.Length; i++){
             enemies[i].SendMessage("OnPlayerDie", SendMessageOptions.DontRequireReceiver);
         }
@@ -109,7 +109,7 @@ public class PlayerDamage : MonoBehaviour
     public void Heal()
     {
         Debug.Log("Heal~~~~~~~~~~~~~~");
-        currHP += 100f;
+        currHP += 50f;
         AudioSource sound = GetComponent<AudioSource>();
         sound.Play();
 
