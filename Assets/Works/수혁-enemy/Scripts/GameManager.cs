@@ -243,12 +243,6 @@ public class GameManager : MonoBehaviour
         GameObject.Find("Main Camera").GetComponent<PlayGlitchEffect>().Play();
     }
 
-    IEnumerator ShowGlitchEffect()
-    {
-        yield return new WaitForSecondsRealtime(2.0f);
-        GameObject.Find("Main Camera").GetComponent<PlayGlitchEffect>().Play();
-    }
-
     IEnumerator ShowLevelTimer()
     {
         yield return new WaitForSecondsRealtime(5.0f);
