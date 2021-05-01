@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Healing : MonoBehaviour
+public class Healing2 : MonoBehaviour
 {
     public GameObject Player;
     public GameObject HP;
@@ -11,7 +11,7 @@ public class Healing : MonoBehaviour
 
 
 
-    /*private void OnCollisionEnter(Collision coll)
+    private void OnCollisionEnter(Collision coll)
     {
         if (coll.collider.tag == bulletTag)
         {
@@ -20,15 +20,6 @@ public class Healing : MonoBehaviour
             //HP.SetActive(false);
             //Destroy(coll.gameObject);
         }
-    }*/
-    private void OnTriggerEnter(Collider coll)
-    {
-        if (coll.tag == bulletTag)
-        {
-            Debug.Log("?");
-            Player.SendMessage("Heal");
-            HP.SetActive(false);
-        }
-    }
 
+    }
 }
