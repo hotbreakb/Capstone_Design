@@ -1588,3 +1588,5 @@ MonoBehaviour:
   isLoading: 0
   isPlayerWininFirst: 0
   isPlayerWininSecond: 0
+  WinSound: {fileID: 0}
+  LoseSound: {fileID: 0}
