@@ -1686,7 +1686,7 @@ MonoBehaviour:
   progressBar: {fileID: 336726501}
   Spotlight: {fileID: 988983191}
   Pointlight: {fileID: 317804968}
-  Fleshlight: {fileID: 264707074}
+  Fleshlight: {fileID: 1965732678}
   delayTime: 20
   lightmanager: 0
   audioSound: {fileID: 336726503}
@@ -10353,7 +10353,7 @@ PrefabInstance:
     - target: {fileID: 8011870786135469357, guid: d5064cc6c8eddf142ac571c4f0c2bdf3,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8011870786135469358, guid: d5064cc6c8eddf142ac571c4f0c2bdf3,
         type: 3}
@@ -10418,7 +10418,7 @@ PrefabInstance:
     - target: {fileID: 8011870786135470800, guid: d5064cc6c8eddf142ac571c4f0c2bdf3,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8011870786135470800, guid: d5064cc6c8eddf142ac571c4f0c2bdf3,
         type: 3}
@@ -10432,6 +10432,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5064cc6c8eddf142ac571c4f0c2bdf3, type: 3}
+--- !u!1 &1965732678 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8011870786135469357, guid: d5064cc6c8eddf142ac571c4f0c2bdf3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1965732677}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2002117394
 GameObject:
   m_ObjectHideFlags: 0
