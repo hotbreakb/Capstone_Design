@@ -7665,7 +7665,7 @@ MonoBehaviour:
   isGrenade: 0
   isLoading: 0
   isPlayerWininFirst: 0
-  isPlayerWininSecond: 0
+  isPlayMode2Played: 0
   WinSound: {fileID: 8300000, guid: 24f4939d11061824cb03933878c35dde, type: 3}
   LoseSound: {fileID: 8300000, guid: 3c40076141efe3b468b2d8feeb1606a5, type: 3}
 --- !u!1 &1421616349
@@ -10085,8 +10085,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.55
-  m_Text: "\uC7AC\uC7A5\uC804\uC740 \uB0A8\uC740 \uCD1D\uC54C\uC774 \n10\uAC1C \uC774\uD558\uC5EC\uC57C
-    \uAC00\uB2A5\uD569\uB2C8\uB2E4"
+  m_Text: "\uC7AC\uC7A5\uC804\uC740 \uB0A8\uC740 \uCD1D\uC54C\uC774 \n10\uAC1C \uC774\uD558\uC77C
+    \uB54C \uAC00\uB2A5\uD569\uB2C8\uB2E4"
 --- !u!222 &1899626313
 CanvasRenderer:
   m_ObjectHideFlags: 0
