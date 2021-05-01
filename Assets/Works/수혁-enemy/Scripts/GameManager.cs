@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
     public AudioClip WinSound;
     public AudioClip LoseSound;
 
-
+    float counter = 0.5f;
 
     void Awake()
     {
@@ -159,8 +159,13 @@ public class GameManager : MonoBehaviour
                 //  1. Gripped left hand
                 else if (hand.GrabStrength == 1 && _extendedFingers == 0)
                 {
-                    checkHandCube.GetComponent<MeshRenderer>().material.color = Color.yellow;
-                    isLoading = true;
+                    counter -= Time.deltaTime;
+                    if (counter < 0)
+                    {
+                        checkHandCube.GetComponent<MeshRenderer>().material.color = Color.yellow;
+                        isLoading = true;
+                        counter = 0.5f;
+                    }
                 }
                 else
                 {
@@ -224,14 +229,19 @@ public class GameManager : MonoBehaviour
         audioSource.Play();
 
         GameOver.gameObject.SetActive(true);
-        GameObject.Find("Main Camera").GetComponent<PlayGlitchEffect>().Play();
+        StartCoroutine(ShowGlitchEffect());
         StartCoroutine(ShowLevelTimer());
-
 
 
         // isPlayerWin = false;
         if (SceneManager.GetActiveScene().name == "PlayMode") isPlayerWininFirst = false;
         else if (SceneManager.GetActiveScene().name == "PlayMode2") isPlayerWininSecond = false;
+    }
+
+    IEnumerator ShowGlitchEffect()
+    {
+        yield return new WaitForSecondsRealtime(2.0f);
+        GameObject.Find("Main Camera").GetComponent<PlayGlitchEffect>().Play();
     }
 
     IEnumerator ShowLevelTimer()

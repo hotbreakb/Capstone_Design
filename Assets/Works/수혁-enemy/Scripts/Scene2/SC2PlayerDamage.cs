@@ -5,9 +5,9 @@ using UnityEngine.UI;
 public class SC2PlayerDamage : MonoBehaviour
 {
 
-    //public float initHp = 200.0f;
+    public float initHp = 200.0f;
 
-    private float initHp = 11200.0f;
+    //private float initHp = 11200.0f;
     private Color currColor;
     private readonly Color initColor = new Vector4(0, 1.0f, 0.0f, 1.0f);
     //public float currHP;
