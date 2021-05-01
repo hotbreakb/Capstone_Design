@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     // public bool isPlayerWin = false;
 
     public bool isPlayerWininFirst = false;
-    public bool isPlayerWininSecond = false;
+    public bool isPlayMode2Played = false;
 
     /* -----------Player Win/Lose ---------- */
     [Header("Sound effect")]
@@ -215,8 +215,7 @@ public class GameManager : MonoBehaviour
 
         // isPlayerWin = true;
         if (SceneManager.GetActiveScene().name == "PlayMode") isPlayerWininFirst = true;
-        else if (SceneManager.GetActiveScene().name == "PlayMode2") isPlayerWininSecond = true;
-        Debug.Log("isPlayerWininFirst : " + isPlayerWininFirst);
+        else if (SceneManager.GetActiveScene().name == "PlayMode2") isPlayMode2Played = true;
     }
 
     public void playerLose()
@@ -235,7 +234,7 @@ public class GameManager : MonoBehaviour
 
         // isPlayerWin = false;
         if (SceneManager.GetActiveScene().name == "PlayMode") isPlayerWininFirst = false;
-        else if (SceneManager.GetActiveScene().name == "PlayMode2") isPlayerWininSecond = false;
+        else if (SceneManager.GetActiveScene().name == "PlayMode2") isPlayMode2Played = true;
     }
 
     IEnumerator ShowGlitchEffect()
