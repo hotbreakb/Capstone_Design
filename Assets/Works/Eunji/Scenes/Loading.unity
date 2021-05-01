@@ -755,7 +755,7 @@ MonoBehaviour:
   isGrenade: 0
   isLoading: 0
   isPlayerWininFirst: 0
-  isPlayerWininSecond: 0
+  isPlayMode2Played: 0
   WinSound: {fileID: 0}
   LoseSound: {fileID: 0}
 --- !u!1 &679852161
@@ -1010,7 +1010,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: It's <color=lightblue>Convention Center!</color>
+  m_text: It's <color=#00D8FF>Convention Center!</color>
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 195704b69f19dff4f98efa4d799229cb, type: 2}
   m_sharedMaterial: {fileID: -4590024554342098895, guid: 195704b69f19dff4f98efa4d799229cb,
