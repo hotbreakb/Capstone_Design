@@ -16,15 +16,12 @@ public class Tutorial04_Hand : MonoBehaviour
     {
         if (counter > 1.5f)
         {
-            Debug.Log("counter > 1.0f");
             // Rock
             counter -= Time.deltaTime;
         }
         else if(counter > 1.0f)
         {
-             Debug.Log("counter == 1.0f");
             image.sprite = Paper;
-            
             counter -= Time.deltaTime;
         }
         else
