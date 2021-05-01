@@ -229,14 +229,19 @@ public class GameManager : MonoBehaviour
         audioSource.Play();
 
         GameOver.gameObject.SetActive(true);
-        GameObject.Find("Main Camera").GetComponent<PlayGlitchEffect>().Play();
+        StartCoroutine(ShowGlitchEffect());
         StartCoroutine(ShowLevelTimer());
-
 
 
         // isPlayerWin = false;
         if (SceneManager.GetActiveScene().name == "PlayMode") isPlayerWininFirst = false;
         else if (SceneManager.GetActiveScene().name == "PlayMode2") isPlayerWininSecond = false;
+    }
+
+    IEnumerator ShowGlitchEffect()
+    {
+        yield return new WaitForSecondsRealtime(2.0f);
+        GameObject.Find("Main Camera").GetComponent<PlayGlitchEffect>().Play();
     }
 
     IEnumerator ShowLevelTimer()
