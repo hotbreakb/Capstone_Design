@@ -109,7 +109,7 @@ public class PlayerDamage : MonoBehaviour
     public void Heal()
     {
         Debug.Log("Heal~~~~~~~~~~~~~~");
-        currHP += 50f;
+        currHP += 100f;
         AudioSource sound = GetComponent<AudioSource>();
         sound.Play();
 
