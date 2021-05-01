@@ -13,16 +13,13 @@ public class Locked : MonoBehaviour
         anim = GetComponent<Animator>();
         img = GetComponent<Image>();
         
-        if (FindObjectOfType<GameManager>().isPlayerWininFirst)
-        {
+        if (FindObjectOfType<GameManager>().isPlayMode2Played)
+            img.color = new Color(1, 1, 1, 0);
+        else if (FindObjectOfType<GameManager>().isPlayerWininFirst)
             StartCoroutine(FadeOut());
-        }
         else
-        {
             anim.Play("LockAnim");
-        }
     }
-
     IEnumerator FadeOut()
     {
         for (float i = 1; i >= 0; i -= Time.deltaTime)
