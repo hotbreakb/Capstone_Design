@@ -22,7 +22,7 @@ public class EnemyAI : MonoBehaviour
     private Animator animator;
 
 
-    private float attackDist = 5f;
+    private float attackDist = 4f;
     public float traceDist = 10.0f;
 
     
@@ -105,9 +105,9 @@ public class EnemyAI : MonoBehaviour
                     if(enemyFire.isFire == false) enemyFire.isFire = true;
                     break;
                 case State.MELLE_ATTACK:
+                    
                     moveAgent.Stop();
                     animator.SetBool(hashMove,false);
-                    playerDamage.AttackedByMelee();
                     if(enemyMeleeAttack.isMeleeAttack ==false) enemyMeleeAttack.isMeleeAttack = true;
                     break;
 
@@ -129,7 +129,6 @@ public class EnemyAI : MonoBehaviour
                     animator.SetTrigger(hashDie);
                     GetComponent<CapsuleCollider>().enabled = false;
                     Destroy(gameObject,DieDelayTime);
-                    Debug.Log("???");
                     break;
             }
         }
