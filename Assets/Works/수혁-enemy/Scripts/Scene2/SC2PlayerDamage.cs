@@ -26,29 +26,42 @@ public class SC2PlayerDamage : MonoBehaviour
     //public delegate void PlayerDieHandler();
     //public static event PlayerDieHandler OnPlayerDie;
 
+
+
     /* 총 공격 */
-    private void OnCollisionEnter(Collision collision)
+    // private void OnCollisionEnter(Collision collision)
+    // {
+    //     if (collision.transform.tag == "SC2EnemyBullet")
+    //     {
+    //         StartCoroutine(ShowBloodScreen());
+    //         currHP -= 5.0f;
+    //         DisPlayHpbar();
+    //         if (currHP <= 0.0f) //플레이어 죽었을때
+    //         {
+    //             PlayerDie();
+    //             FindObjectOfType<GameManager>().playerLose();
+    //         }
+    //     }
+    // }
+
+    public void AttackedByBullet()
     {
-        if (collision.transform.tag == "SC2EnemyBullet" || collision.transform.tag == "Enemy")
+        StartCoroutine(ShowBloodScreen());
+        currHP -= 5.0f;
+        DisPlayHpbar();
+        if (currHP <= 0.0f) //플레이어 죽었을때
         {
- 
-            StartCoroutine(ShowBloodScreen());
-            currHP -= 5.0f;
-            DisPlayHpbar();
-            if (currHP <= 0.0f) //플레이어 죽었을때
-            {
-                PlayerDie();
-                FindObjectOfType<GameManager>().playerLose();
-            }
+            PlayerDie();
+            FindObjectOfType<GameManager>().playerLose();
         }
     }
+
 
     /* 근접 공격 */
     public void AttackedByMelee()
     {
         StartCoroutine(ShowBloodScreen());
         currHP -= 5.0f;
-    
         DisPlayHpbar();
         if (currHP <= 0.0f) //플레이어 죽었을때
         {
@@ -63,7 +76,8 @@ public class SC2PlayerDamage : MonoBehaviour
 
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(EnemyTag);
 
-        for(int i=0; i<enemies.Length; i++){
+        for (int i = 0; i < enemies.Length; i++)
+        {
             enemies[i].SendMessage("OnPlayerDie", SendMessageOptions.DontRequireReceiver);
         }
     }
@@ -101,7 +115,7 @@ public class SC2PlayerDamage : MonoBehaviour
     public void Heal()
     {
         Debug.Log("Heal~~~~~~~~~~~~~~");
-        currHP += 50f;
+        currHP += 100f;
         AudioSource sound = GetComponent<AudioSource>();
         HPItem.SetActive(false);
         Destroy(HPItem);
@@ -115,7 +129,7 @@ public class SC2PlayerDamage : MonoBehaviour
     }
     void HpItem()
     {
-        if ((hpitem == false) && (currHP == 50))
+        if ((hpitem == false) && (currHP <= 50))
         {
             HPItem.SetActive(true);
             hpitem = true;
@@ -123,4 +137,3 @@ public class SC2PlayerDamage : MonoBehaviour
         }
     }
 }
-
