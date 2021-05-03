@@ -334,7 +334,6 @@ MonoBehaviour:
   GrayPanel: {fileID: 1162517757}
   RestartText: {fileID: 1283225940}
   YesBtn: {fileID: 1145521761}
-  YesBtn2: {fileID: 0}
   NoBtn: {fileID: 761450062}
 --- !u!114 &256415629
 MonoBehaviour:
@@ -709,7 +708,6 @@ MonoBehaviour:
   GrayPanel: {fileID: 1162517757}
   RestartText: {fileID: 1283225940}
   YesBtn: {fileID: 1145521761}
-  YesBtn2: {fileID: 0}
   NoBtn: {fileID: 761450062}
 --- !u!114 &761450065
 MonoBehaviour:
@@ -989,8 +987,7 @@ MonoBehaviour:
   isShoot: 0
   isGrenade: 0
   isLoading: 0
-  isPlayerWininFirst: 0
-  isPlayerWininSecond: 0
+  isPlayerWin: 0
 --- !u!1001 &885018914
 PrefabInstance:
   m_ObjectHideFlags: 0
