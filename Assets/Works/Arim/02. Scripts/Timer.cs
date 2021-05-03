@@ -11,36 +11,27 @@ public class Timer : MonoBehaviour
     public Image progressBar;
     public GameObject Spotlight;
     public GameObject Pointlight;
-    public GameObject Fleshlight;
+    public Light Fleshlight;
     public float delayTime = 20.0f;
     public bool lightmanager = false;
-    public AudioSource audioSound;
-    public AudioClip Sirensound;
 
     void Start()
     {
-        Fleshlight.SetActive(false);
+        Fleshlight.enabled = false;
         progressBar.fillAmount = 0;
     }
 
 
     void Update()
     {
-        if (fills >= 0.3f && lightmanager == false)
-        {
-            AudioStart();
-        }
         if (fills >= 0.4f && lightmanager == false)
         {
             LightManager();
-            
-          
-
         }
 
         if (progressBar.fillAmount >= 1)
         {
-            FindObjectOfType<GameManager>().playerWin();
+            GoToGameManager();
             enabled = false;
         }
         else
@@ -52,12 +43,10 @@ public class Timer : MonoBehaviour
         }
     }
 
-    void AudioStart()
+    void GoToGameManager()
     {
-        audioSound.clip = Sirensound;
-        audioSound.Play();
+        FindObjectOfType<GameManager>().playerWin();
     }
-
     void LightManager()
     {
         lightmanager = true;
@@ -81,14 +70,14 @@ public class Timer : MonoBehaviour
     IEnumerator FleshLightOn()
     {
         yield return new WaitForSeconds(1.2f);
-        Fleshlight.SetActive(true);
+        Fleshlight.enabled = true;
 
     }
     IEnumerator WaitForIt()
     {
         yield return new WaitForSeconds(delayTime);
 
-        Fleshlight.SetActive(false);
+        Fleshlight.enabled = false;
         Spotlight.SetActive(true);
         Pointlight.SetActive(true);
     }

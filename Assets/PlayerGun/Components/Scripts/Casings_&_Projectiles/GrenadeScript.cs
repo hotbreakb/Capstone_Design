@@ -80,9 +80,6 @@ public class GrenadeScript : MonoBehaviour {
 		//Use overlapshere to check for nearby colliders
 		Collider[] colliders = Physics.OverlapSphere(explosionPos, radius);
 		foreach (Collider hit in colliders) {
-			if(hit.tag=="Enemy"){
-				hit.SendMessage("GrenadeAttack");
-			}
 			Rigidbody rb = hit.GetComponent<Rigidbody> ();
 
 			//Add force to nearby rigidbodies

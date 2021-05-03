@@ -39,8 +39,6 @@ public class ImageFade : MonoBehaviour
                 yield return null;
             }
 
-            img.color = new Color(1, 1, 1, 0);
-
             backgroundImg.GetComponent<Image>().sprite = backgroundGray;
             GameObject.Find("Canvas").GetComponent<CTTDemoManager>().TitlePlay();
         }
