@@ -1,15 +1,11 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
-using System.Collections;
 
 public class CheckLeapmotion : MonoBehaviour
 {
     public TextMeshProUGUI notConnected;
-    public TextMeshProUGUI number;
     public UnityEngine.UI.Image circle;
-
-    float counter = 5.0f;
 
 
     void Update()
@@ -30,17 +26,6 @@ public class CheckLeapmotion : MonoBehaviour
         {
             notConnected.gameObject.SetActive(true);
             circle.gameObject.SetActive(true);
-
-            if (counter > 0)
-            {
-                counter -= Time.deltaTime;
-                number.text = ((int)counter).ToString();
-            }
-            else
-            {
-                GetComponent<LoadSceneAuto>().QuitGame();
-                // SceneManager.LoadScene("Menu");
-            }
         }
     }
 }
