@@ -382,7 +382,7 @@ public class HandgunScriptLPFP : MonoBehaviour
     private Vector3 CastRay()
     {
         RaycastHit hit;
-        int exceptBulletlayerMask = (-1) - (1 << LayerMask.NameToLayer("Bullet"));  // Everything에서 Bullet 레이어만 제외하고 충돌 체크함
+        int exceptBulletlayerMask = (-1) - (1 << LayerMask.NameToLayer("Bullet")) - (1 << LayerMask.NameToLayer("Player"));  // Everything에서 Bullet 레이어만 제외하고 충돌 체크함
 
         // Check forward from Player's position except Bullet
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, exceptBulletlayerMask))
@@ -392,6 +392,8 @@ public class HandgunScriptLPFP : MonoBehaviour
 
             // BulletHole appear in the direction of the object.
             bulletHole.transform.LookAt(hit.point + hit.normal);
+
+            Debug.Log("hit.transform.tag: "+ hit.transform.tag);
             
                 if (hit.transform.tag == "Tables")
                 {
