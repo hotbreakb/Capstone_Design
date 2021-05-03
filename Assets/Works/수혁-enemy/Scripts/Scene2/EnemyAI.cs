@@ -22,7 +22,7 @@ public class EnemyAI : MonoBehaviour
     private Animator animator;
 
 
-    private float attackDist = 4f;
+    public float attackDist = 5.0f;
     public float traceDist = 10.0f;
 
     
@@ -54,7 +54,6 @@ public class EnemyAI : MonoBehaviour
     
     private readonly int hashMeleeAttack = Animator.StringToHash("MeleeAttack");
     private readonly int hashMeleeAttackIdx = Animator.StringToHash("MeleeAttackIdx");
-    private readonly int hashDance = Animator.StringToHash("isDance");
 
     private float DieDelayTime = 10.0f;
 
@@ -105,9 +104,9 @@ public class EnemyAI : MonoBehaviour
                     if(enemyFire.isFire == false) enemyFire.isFire = true;
                     break;
                 case State.MELLE_ATTACK:
-                    
                     moveAgent.Stop();
                     animator.SetBool(hashMove,false);
+                    playerDamage.AttackedByMelee();
                     if(enemyMeleeAttack.isMeleeAttack ==false) enemyMeleeAttack.isMeleeAttack = true;
                     break;
 
@@ -121,7 +120,6 @@ public class EnemyAI : MonoBehaviour
                 case State.DIE:
                     this.gameObject.tag = "Untagged";
                     isDie = true;
-                    enemyFire.isFire = false;
                     enemyMeleeAttack.isMeleeAttack = false;                    
                     moveAgent.Stop();
                     int ran = Random.Range(0,3);
@@ -133,7 +131,6 @@ public class EnemyAI : MonoBehaviour
             }
         }
     }
-
     IEnumerator CheckState(){
         while(!isDie){
             if(state == State.DIE) yield break;
@@ -173,14 +170,5 @@ public class EnemyAI : MonoBehaviour
     void Update()
     {
         animator.SetFloat(hashSpeed, moveAgent.speed);
-    }
-
-
-    public void OnPlayerDie(){
-        moveAgent.Stop();
-        enemyFire.isFire = false;
-        StopAllCoroutines();
-
-        animator.SetTrigger(hashDance);
     }
 }

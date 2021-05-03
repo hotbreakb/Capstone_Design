@@ -10,10 +10,14 @@ public class Healing : MonoBehaviour
     // Start is called before the first frame update
     
 
-    private void OnTriggerEnter(Collider coll)
-    {
-        Debug.Log("?");
-        Player.SendMessage("Heal");
-        HP.SetActive(false);
+
+        private void OnCollisionEnter(Collision coll){
+        if(coll.collider.tag  == bulletTag){
+            Debug.Log("?");
+            Player.SendMessage("Heal");
+            //HP.SetActive(false);
+            //Destroy(coll.gameObject);
+        }
+        
     }
 }
