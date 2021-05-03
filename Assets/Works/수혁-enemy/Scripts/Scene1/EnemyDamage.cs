@@ -19,7 +19,7 @@ public class EnemyDamage : MonoBehaviour
 
     private void OnTriggerEnter(Collider other){
         if(other.tag=="Bullet"){
-        curHp-=25;
+        curHp-=26;
         hpbar.rectTransform.localScale = new Vector3(((float)curHp/(float)maxHp),1f,1f);
         if(curHp <=0){
             oneEneyAI.state = OneEneyAI.State.DIE;
@@ -28,7 +28,7 @@ public class EnemyDamage : MonoBehaviour
     }
 
     private void GrenadeAttack(){
-        curHp-=50;
+        curHp-=51;
         hpbar.rectTransform.localScale = new Vector3(((float)curHp/(float)maxHp),1f,1f);
         oneEneyAI.state = OneEneyAI.State.DIE;
     }

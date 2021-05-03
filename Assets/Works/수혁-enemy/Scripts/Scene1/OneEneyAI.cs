@@ -68,6 +68,7 @@ public class OneEneyAI : MonoBehaviour
                     break;
 
                 case State.DIE:
+                    animator.SetBool(hashMove, false);
                     this.gameObject.tag = "Untagged";
                     moveAgent.Stop();
                     enmeyFire.isFire = false;
@@ -78,8 +79,7 @@ public class OneEneyAI : MonoBehaviour
                     GetComponent<CapsuleCollider>().enabled = false;
                     Destroy(gameObject,DieDelayTime);
                     break;
-                
-  
+
             }
         }
     }
