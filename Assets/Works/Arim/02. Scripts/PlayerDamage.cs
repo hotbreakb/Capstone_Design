@@ -43,7 +43,6 @@ public class PlayerDamage : MonoBehaviour
 
     void Update()
     {
-        if(isUpdate)
             HpItem();
     }
 
@@ -58,7 +57,7 @@ public class PlayerDamage : MonoBehaviour
             if (currHP <= 0.0f) //플레이어 죽었을때
             {   
                 PlayerDie();
-                isUpdate = false;
+                coll.enabled = false;
                 FindObjectOfType<GameManager>().playerLose();
             }
         }
