@@ -1,9 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Leap.Unity.Interaction;
+﻿using Leap.Unity.Interaction;
 using UnityEngine;
 using UnityEngine.Audio;
-using UnityEngine.UI;
 
 public class VolumeControl : MonoBehaviour
 {
