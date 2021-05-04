@@ -69,6 +69,10 @@ public class LoadSceneAuto : MonoBehaviour
         SceneManager.LoadScene("Tutorial_01");
     }
 
+    public void LoadSettings(){
+        SceneManager.LoadScene("Settings");
+    }
+
     IEnumerator LoadMenuTimer(int index)
     {
         yield return new WaitForSecondsRealtime(9.0f);

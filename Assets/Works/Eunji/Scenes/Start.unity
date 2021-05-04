@@ -551,7 +551,8 @@ AudioSource:
   m_GameObject: {fileID: 159023077}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -5482945904336345633, guid: 8df8576008a1cfd4d88636225dc4a3d1,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 1c2b246720c3cf04f9152b25e8f4acec, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -3000,7 +3001,7 @@ MonoBehaviour:
   isGrenade: 0
   isLoading: 0
   isPlayerWininFirst: 0
-  isPlayerWininSecond: 0
+  isPlayMode2Played: 0
   WinSound: {fileID: 0}
   LoseSound: {fileID: 0}
 --- !u!114 &1306666514
