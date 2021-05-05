@@ -208,7 +208,7 @@ public class GameManager : MonoBehaviour
         if (!YouWin) return;
         audioSource.clip = WinSound; //sound 효과음
         audioSource.Play();
-        YouWin.gameObject.SetActive(true);
+        YouWin.gameObject.SetActive(true); GameOver.gameObject.SetActive(false);
         GameObject.Find("Main Camera").GetComponent<PlayGlitchEffect>().Play();
         StartCoroutine(ShowLevelTimer());
 
@@ -221,13 +221,11 @@ public class GameManager : MonoBehaviour
     public void playerLose()
     {
         /* Game over UI 띄우기 */
-        Debug.Log("start the lose");
         if (!GameOver) return;
-
         audioSource.clip = LoseSound; //sound 효과음
         audioSource.Play();
 
-        GameOver.gameObject.SetActive(true);
+        GameOver.gameObject.SetActive(true); YouWin.gameObject.SetActive(false);
         StartCoroutine(ShowGlitchEffect());
         StartCoroutine(ShowLevelTimer());
 
