@@ -118,7 +118,7 @@ public class SC2PlayerDamage : MonoBehaviour
         currHP += 100f;
         AudioSource sound = GetComponent<AudioSource>();
         HPItem.SetActive(false);
-        Destroy(HPItem);
+        //Destroy(HPItem);
         sound.Play();
 
     }
