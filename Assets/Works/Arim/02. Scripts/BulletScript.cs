@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 // ----- Low Poly FPS Pack Free Version -----
@@ -17,19 +17,53 @@ public class BulletScript : MonoBehaviour {
 	[Header("Impact Effect Prefabs")]
 	public Transform [] metalImpactPrefabs;
 
+	[Header("Shoot Force")]
+	[Tooltip("Minimum shoot force")]
+	public float minimumShootForce = 2500.0f;
+	[Tooltip("Maximum shoot force")]
+	public float maximumShootForce = 3000.0f;
+
+
+	[Header("Throw Force")]
+	[Tooltip("Minimum throw force")]
+	public float minimumThrowForce = 1500.0f;
+	[Tooltip("Maximum throw force")]
+	public float maximumThrowForce = 2500.0f;
+
+	private float shootForce;
+	private float throwForce;
+
+	private void Awake()
+	{
+		shootForce = Random.Range(minimumShootForce, maximumShootForce);
+		throwForce = Random.Range(minimumThrowForce, maximumThrowForce);
+	}
 	private void Start () 
 	{
 		//Start destroy timer
 		StartCoroutine (DestroyAfter ());
 	}
 
+	private void OnTriggerEnter(Collider other){    // 수혁 일단 지금 필요없음
+		if(other.tag == "Chair"){
+			other.attachedRigidbody.AddForce(other.transform.forward * shootForce);
+		}
+		if(other.tag == "Tables") other.attachedRigidbody.AddForce(other.transform.forward * shootForce);
+
+		if (other.tag == "Enemy"){
+			Destroy(gameObject);
+		}
+
+	}
+
 	//If the bullet collides with anything
 	private void OnCollisionEnter (Collision collision) 
-	{
+	{	
+	
 		//If destroy on impact is false, start 
 		//coroutine with random destroy timer
 		if (!destroyOnImpact) 
-		{
+		{ 
 			StartCoroutine (DestroyTimer ());
 		}
 		//Otherwise, destroy bullet on impact
