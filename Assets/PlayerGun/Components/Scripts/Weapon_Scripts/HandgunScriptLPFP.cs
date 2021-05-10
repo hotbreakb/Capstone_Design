@@ -311,7 +311,7 @@ public class HandgunScriptLPFP : MonoBehaviour
             StartCoroutine(grenadeTimer());
         }
         //Reload 
-        else if ((Input.GetKeyDown(KeyCode.R) || _isLoading))
+        else if (Input.GetKeyDown(KeyCode.R) || _isLoading)
         {
             //Reload
             Reload();
@@ -519,7 +519,7 @@ public class HandgunScriptLPFP : MonoBehaviour
     //Reload
     private void Reload()
     {
-        if (currentAmmo < 10)
+        if (currentAmmo < 11)
         {
             if (outOfAmmo == true)
             {
