@@ -2,10 +2,11 @@
 using UnityEngine.SceneManagement;
 using TMPro;
 using System.Collections;
+using UnityEngine.UI;
 
 public class CheckLeapmotion : MonoBehaviour
 {
-    public TextMeshProUGUI notConnected;
+    public Text connect_2;
     public TextMeshProUGUI number;
     public UnityEngine.UI.Image circle;
 
@@ -14,10 +15,10 @@ public class CheckLeapmotion : MonoBehaviour
 
     void Update()
     {
-        notConnected.gameObject.SetActive(false);
-
         if (FindObjectOfType<GameManager>().isLeapMotionConnected)
         {
+            connect_2.text = "립모션이 연결되었습니다!";
+
             if (SceneManager.GetActiveScene().name == "Loading")
                 GetComponent<LoadSceneAuto>().GameStart();
             else if (SceneManager.GetActiveScene().name == "Loading2")
@@ -28,7 +29,6 @@ public class CheckLeapmotion : MonoBehaviour
 
         else
         {
-            notConnected.gameObject.SetActive(true);
             circle.gameObject.SetActive(true);
 
             if (counter > 0)
