@@ -142,7 +142,7 @@ public class GameManager : MonoBehaviour
                 // Debug.Log("y : " + (handPalmPosition.y - prehandPalmPosition.y));
                 //Debug.Log("z : " + (handPalmPosition.z - prehandPalmPosition.z));
 
-                Debug.Log("handPalmPosition.x - prehandPalmPosition.x : " + (handPalmPosition.x - prehandPalmPosition.x));
+                //Debug.Log("handPalmPosition.x - prehandPalmPosition.x : " + (handPalmPosition.x - prehandPalmPosition.x));
                 //Debug.Log("(handPalmPosition.y - prehandPalmPosition.y) : " + (handPalmPosition.y - prehandPalmPosition.y));
 
                 // 10 -> 3
@@ -154,7 +154,7 @@ public class GameManager : MonoBehaviour
                 }
                 // [Condition for changing weapons]
                 //  1. Hands moving from side to side (swipe)
-                else if ((handPalmPosition.x - prehandPalmPosition.x) > 3 // 8 -> 3
+                else if (_extendedFingers >= 4 && (handPalmPosition.x - prehandPalmPosition.x) > 3 // 8 -> 3
                     && (handPalmPosition.y - prehandPalmPosition.y) > 1) // 3 -> 1
                 {
                     checkHandCube.GetComponent<MeshRenderer>().material.color = Color.green;
