@@ -18,28 +18,30 @@ public class GameManager : MonoBehaviour
     public Controller controller;
     private List<Finger> fingers;
     private GameObject checkHandCube;
+    private bool[] UpAndDown = new bool[2] { false, false }; // [위로(아래로)] [아래로(위로)]
+    private float LoadingCounter = 0.5f;
+    private float ShootCounter = 0.1f;
     public bool isLeapMotionConnected = false;
     public bool isShoot = false;   // 총쏘기
     public bool isGrenade = false; // 수류탄
     public bool isLoading = false; // 장전
+    public bool isExtendedfingerThumbAndIndex = false;
 
     /* -----------Player Win/Lose ---------- */
 
     private TextMeshProUGUI YouWin;
     private TextMeshProUGUI GameOver;
 
-    // public bool isPlayerWin = false;
-
     public bool isPlayerWininFirst = false;
     public bool isPlayMode2Played = false;
 
-    /* -----------Player Win/Lose ---------- */
+    /* -----------Player Win/Lose Sound ---------- */
     [Header("Sound effect")]
     private AudioSource audioSource;
     public AudioClip WinSound;
     public AudioClip LoseSound;
 
-    float counter = 0.5f;
+
 
     void Awake()
     {
@@ -57,7 +59,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if(audioSource == null && GameObject.Find("Sound"))
+        if (audioSource == null && GameObject.Find("Sound"))
         {
             audioSource = GameObject.Find("Sound").GetComponent<AudioSource>();
         }
@@ -129,7 +131,6 @@ public class GameManager : MonoBehaviour
                 fingers = hand.Fingers; // 현재 손가락의 개수
 
                 int _extendedFingers = getExtendedFingers();    // 함수를 호출하여 펼쳐진 손가락의 개수를 확인한다
-                Debug.Log("_extendedFingers: " + _extendedFingers);
 
                 isShoot = false; isGrenade = false; isLoading = false;
 
@@ -142,15 +143,16 @@ public class GameManager : MonoBehaviour
                 //Debug.Log("z : " + (handPalmPosition.z - prehandPalmPosition.z));
 
 
-                if (_extendedFingers == 2 && System.Math.Abs(handPalmPosition.y - prehandPalmPosition.y) > 5)
+                if (_extendedFingers == 2 && isExtendedfingerThumbAndIndex && (handPalmPosition.y - prehandPalmPosition.y) > 5)
                 {
                     checkHandCube.GetComponent<MeshRenderer>().material.color = Color.red;
+                    isExtendedfingerThumbAndIndex = false;
                     isShoot = true;
                 }
                 // [Condition for changing weapons]
                 //  1. Hands moving from side to side (swipe)
-                else if (System.Math.Abs(handPalmPosition.x - prehandPalmPosition.x) > 10
-                    && System.Math.Abs(handPalmPosition.y - prehandPalmPosition.y) > 3)
+                else if ((handPalmPosition.x - prehandPalmPosition.x) > 10
+                    && (handPalmPosition.y - prehandPalmPosition.y) > 3)
                 {
                     checkHandCube.GetComponent<MeshRenderer>().material.color = Color.green;
                     isGrenade = true;
@@ -159,12 +161,12 @@ public class GameManager : MonoBehaviour
                 //  1. Gripped left hand
                 else if (hand.GrabStrength == 1 && _extendedFingers == 0)
                 {
-                    counter -= Time.deltaTime;
-                    if (counter < 0)
+                    LoadingCounter -= Time.deltaTime;
+                    if (LoadingCounter < 0)
                     {
                         checkHandCube.GetComponent<MeshRenderer>().material.color = Color.yellow;
+                        LoadingCounter = 0.5f;
                         isLoading = true;
-                        counter = 0.5f;
                     }
                 }
                 else
@@ -176,28 +178,22 @@ public class GameManager : MonoBehaviour
         } // end if
     }
 
-    public void QuitGame()
-    {
-        // save any game data here
-#if UNITY_EDITOR
-        // Application.Quit() does not work in the editor so
-        // UnityEditor.EditorApplication.isPlaying need to be set to false to end the game
-
-        //UnityEditor.EditorApplication.isPlaying = false;
-#else
-        Application.Quit();
-#endif
-    }
-
     private int getExtendedFingers()
     {
+        bool[] isShoot = new bool[2] { false, false }; // [Thumb: 엄지] [Index: 검지]
         int extendedFingers = 0;
 
         for (int f = 0; f < fingers.Count; f++)
         {
             Finger digit = fingers[f];
             if (digit.IsExtended)
+            {
+                if (digit.Type.ToString() == "TYPE_THUMB") isShoot[0] = true;
+                else if (digit.Type.ToString() == "TYPE_INDEX") isShoot[1] = true;
+
+                if (isShoot[0] == true && isShoot[1] == true) isExtendedfingerThumbAndIndex = true;
                 extendedFingers++;
+            }
         }
         return extendedFingers;
     }
@@ -246,5 +242,4 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSecondsRealtime(5.0f);
         SceneManager.LoadScene("Level");
     }
-    
 }
