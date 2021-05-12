@@ -143,7 +143,7 @@ public class GameManager : MonoBehaviour
                 //Debug.Log("z : " + (handPalmPosition.z - prehandPalmPosition.z));
 
 
-                if (_extendedFingers == 2 && isExtendedfingerThumbAndIndex && System.Math.Abs(handPalmPosition.y - prehandPalmPosition.y) > 5)
+                if (_extendedFingers == 2 && isExtendedfingerThumbAndIndex && (handPalmPosition.y - prehandPalmPosition.y) > 5)
                 {
                     checkHandCube.GetComponent<MeshRenderer>().material.color = Color.red;
                     isExtendedfingerThumbAndIndex = false;
@@ -151,8 +151,8 @@ public class GameManager : MonoBehaviour
                 }
                 // [Condition for changing weapons]
                 //  1. Hands moving from side to side (swipe)
-                else if (System.Math.Abs(handPalmPosition.x - prehandPalmPosition.x) > 10
-                    && System.Math.Abs(handPalmPosition.y - prehandPalmPosition.y) > 3)
+                else if ((handPalmPosition.x - prehandPalmPosition.x) > 10
+                    && (handPalmPosition.y - prehandPalmPosition.y) > 3)
                 {
                     checkHandCube.GetComponent<MeshRenderer>().material.color = Color.green;
                     isGrenade = true;
@@ -178,25 +178,6 @@ public class GameManager : MonoBehaviour
         } // end if
     }
 
-
-    private bool checkShootPosition(Vector handPalmPosition, Vector prehandPalmPosition)
-    {
-        Debug.Log("handPalmPosition.y - prehandPalmPosition.y : " + (handPalmPosition.y - prehandPalmPosition.y));
-
-        if ((handPalmPosition.y - prehandPalmPosition.y) > 0) UpAndDown[0] = true;
-        else if ((handPalmPosition.y - prehandPalmPosition.y) < 0) UpAndDown[1] = true;
-
-        Debug.Log("isShoot[0] : " + UpAndDown[0]);
-        Debug.Log("isShoot[1] : " + UpAndDown[1]);
-
-        if (UpAndDown[0] == true && UpAndDown[1] == true)
-        {
-            UpAndDown = new bool[] { false, false };
-            return true;
-        }
-        return false;
-    }
-
     private int getExtendedFingers()
     {
         bool[] isShoot = new bool[2] { false, false }; // [Thumb: 엄지] [Index: 검지]
@@ -213,9 +194,7 @@ public class GameManager : MonoBehaviour
                 if (isShoot[0] == true && isShoot[1] == true) isExtendedfingerThumbAndIndex = true;
                 extendedFingers++;
             }
-
         }
-
         return extendedFingers;
     }
 
