@@ -26,7 +26,6 @@ public class Tutorial04_Hand : MonoBehaviour
         }
         else
         {
-             Debug.Log("else");
             image.sprite = Rock;
             counter = 3.0f;
         }
