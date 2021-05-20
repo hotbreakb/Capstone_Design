@@ -9,6 +9,8 @@ public class MoveAgent : MonoBehaviour
     //순찰 지점들을 저장하기 위한 List 타입 변수
     public List<Transform> wayPoints;
 
+
+
     //다음 순찰 지점의 배열 Index
     public int nextIdx = 0;
 
@@ -23,6 +25,8 @@ public class MoveAgent : MonoBehaviour
 
     // 순찰 여부를 판단하는 변수
     private bool _patrolling;
+
+    
 
     // patrolling 프로퍼티 정의
     public bool patrolling{

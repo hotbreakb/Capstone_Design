@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-
+using System.Collections.Generic;
 public class Timer : MonoBehaviour
 {
     public float timeSpeed = 0.01f;
-    private float totalTime = 0f;
+
+      private float totalTime = 0f;
     private float fills;
     private float bt = 0.1f;
     public Image progressBar;
@@ -17,10 +18,13 @@ public class Timer : MonoBehaviour
     public AudioSource audioSound;
     public AudioClip Sirensound;
 
+    public bool flag = true;
+   private GameObject[] enemy;
     void Start()
     {
         Fleshlight.SetActive(false);
-        progressBar.fillAmount = 0;
+        progressBar.fillAmount = 0.5f;
+        flag = true;
     }
 
 
@@ -39,8 +43,15 @@ public class Timer : MonoBehaviour
         }
 
         if (progressBar.fillAmount >= 1)
-        {
+        {   
+            flag = false;
+            enemy = GameObject.FindGameObjectsWithTag("Enemy");
+       
+            for(int i=0; i<enemy.Length; i++){
+               Destroy(enemy[i]);
+            }
             FindObjectOfType<GameManager>().playerWin();
+   
             enabled = false;
         }
         else

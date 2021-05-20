@@ -15,9 +15,11 @@ public class EnemySpawn : MonoBehaviour
 
     public GameManager gameManager;
 
+    private Timer timer;
 
     void Awake(){
         gameManager = GameObject.Find("EventSystem").GetComponent<GameManager>();
+        timer = FindObjectOfType<Timer>();
     }
 
     // Start is called before the first frame update
@@ -45,7 +47,7 @@ public class EnemySpawn : MonoBehaviour
     IEnumerator CreateEnemy()
     {   
         Debug.Log(gameManager.isGameOver);
-        while (!gameManager.isGameOver)
+        while (!gameManager.isGameOver && timer.flag)
         {   
             int enemyCount = (int)GameObject.FindGameObjectsWithTag("Enemy").Length;
 
