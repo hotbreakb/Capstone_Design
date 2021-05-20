@@ -217,7 +217,6 @@ public class GameManager : MonoBehaviour
         // isPlayerWin = true;
         if (SceneManager.GetActiveScene().name == "PlayMode") isPlayerWininFirst = true;
         else if (SceneManager.GetActiveScene().name == "PlayMode2") isPlayMode2Played = true;
-        isPlayerWinFunRuned = true;
     }
 
     public void playerLose()
@@ -237,7 +236,6 @@ public class GameManager : MonoBehaviour
         // isPlayerWin = false;
         if (SceneManager.GetActiveScene().name == "PlayMode") isPlayerWininFirst = false;
         else if (SceneManager.GetActiveScene().name == "PlayMode2") isPlayMode2Played = true;
-        isPlayerLoseFunRuned = false;
     }
 
     IEnumerator ShowGlitchEffect()
