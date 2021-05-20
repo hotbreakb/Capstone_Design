@@ -27,13 +27,15 @@ public class LoadSceneAuto : MonoBehaviour
     // Pass the Leapmotion Test
 
 
-    public void LoadMenu(){
-        
+    public void LoadMenu()
+    {
+
         int index = SceneManager.GetActiveScene().buildIndex;
         StartCoroutine(LoadMenuTimer(index));
     }
 
-    public void LoadMenuIfNotConnected(){
+    public void LoadMenuIfNotConnected()
+    {
         // SceneManager.LoadScene("Menu");
         // SceneManager.LoadScene(1);
         StartCoroutine(LoadMenuIfNotConnectedTimer());
@@ -44,32 +46,45 @@ public class LoadSceneAuto : MonoBehaviour
         int index = SceneManager.GetActiveScene().buildIndex;
         StartCoroutine(LoadNextSceneTimer(index));
     }
-    
+
     public void SkipTutorial()
     {
         int index = SceneManager.GetActiveScene().buildIndex;
         StartCoroutine(SkipTutorialTimer(index));
     }
 
-    public void LoadingStart(){
+    public void LoadingStart()
+    {
         SceneManager.LoadScene("Loading");
+
+        /* Initialize before game starts */
+        FindObjectOfType<GameManager>().isPlayerWinFunRuned = false;
+        FindObjectOfType<GameManager>().isPlayerLoseFunRuned = false;
     }
-    public void LoadingStart_02(){
+    public void LoadingStart_02()
+    {
         SceneManager.LoadScene("Loading2");
+
+        FindObjectOfType<GameManager>().isPlayerWinFunRuned = false;
+        FindObjectOfType<GameManager>().isPlayerLoseFunRuned = false;
     }
 
-    public void GameStart() {
+    public void GameStart()
+    {
         StartCoroutine(PlayModeTimer());
     }
-    public void GameStart2() {
+    public void GameStart2()
+    {
         StartCoroutine(PlayModeTimer2());
     }
 
-    public void TutorialStart() {
+    public void TutorialStart()
+    {
         SceneManager.LoadScene("Tutorial_01");
     }
 
-    public void LoadSettings(){
+    public void LoadSettings()
+    {
         SceneManager.LoadScene("Settings");
     }
 
@@ -123,5 +138,5 @@ public class LoadSceneAuto : MonoBehaviour
         // Application.Quit();
 #endif
     }
-    
+
 }
