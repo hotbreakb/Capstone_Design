@@ -35,6 +35,9 @@ public class GameManager : MonoBehaviour
     public bool isPlayerWininFirst = false;
     public bool isPlayMode2Played = false;
 
+    public bool isPlayerWinFunRuned = false;
+    public bool isPlayerLoseFunRuned = false;
+
     /* -----------Player Win/Lose Sound ---------- */
     [Header("Sound effect")]
     private AudioSource audioSource;
@@ -103,9 +106,6 @@ public class GameManager : MonoBehaviour
         {
             CancelInvoke("QuitGame");
             isLeapMotionConnected = true;
-
-            // if(SceneManager.GetActiveScene().name == "Loading")
-            //     SceneManager.LoadScene("PlayMode"); // 수정하기
         }
 
         if (checkHandCube != null)
@@ -204,7 +204,9 @@ public class GameManager : MonoBehaviour
     public void playerWin()
     {
         /* You Win UI 띄우기 */
-        if (!YouWin) return;
+        if (!YouWin || isPlayerLoseFunRuned) return;
+        isPlayerWinFunRuned = true;
+
         audioSource.clip = WinSound; //sound 효과음
         audioSource.Play();
         YouWin.gameObject.SetActive(true); GameOver.gameObject.SetActive(false);
@@ -215,12 +217,15 @@ public class GameManager : MonoBehaviour
         // isPlayerWin = true;
         if (SceneManager.GetActiveScene().name == "PlayMode") isPlayerWininFirst = true;
         else if (SceneManager.GetActiveScene().name == "PlayMode2") isPlayMode2Played = true;
+        isPlayerWinFunRuned = true;
     }
 
     public void playerLose()
     {
         /* Game over UI 띄우기 */
-        if (!GameOver) return;
+        if (!GameOver || isPlayerWinFunRuned) return;
+        isPlayerLoseFunRuned = true;
+
         audioSource.clip = LoseSound; //sound 효과음
         audioSource.Play();
 
@@ -232,6 +237,7 @@ public class GameManager : MonoBehaviour
         // isPlayerWin = false;
         if (SceneManager.GetActiveScene().name == "PlayMode") isPlayerWininFirst = false;
         else if (SceneManager.GetActiveScene().name == "PlayMode2") isPlayMode2Played = true;
+        isPlayerLoseFunRuned = false;
     }
 
     IEnumerator ShowGlitchEffect()
@@ -244,5 +250,19 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(5.0f);
         SceneManager.LoadScene("Level");
+    }
+
+    public void QuitGame()
+    {
+        // save any game data here
+#if UNITY_EDITOR
+        // Application.Quit() does not work in the editor so
+        // UnityEditor.EditorApplication.isPlaying need to be set to false to end the game
+
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        System.Diagnostics.Process.GetCurrentProcess().Kill();
+        // Application.Quit();
+#endif
     }
 }
