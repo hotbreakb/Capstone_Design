@@ -199,6 +199,8 @@ public class HandgunScriptLPFP : MonoBehaviour
 
     private void Update()
     {
+        if (FindObjectOfType<GameManager>().isPlayerWinFunRuned
+            || FindObjectOfType<GameManager>().isPlayerLoseFunRuned) return;
 
         _isShoot = FindObjectOfType<GameManager>().isShoot;
         _isGrenade = FindObjectOfType<GameManager>().isGrenade;
@@ -226,7 +228,6 @@ public class HandgunScriptLPFP : MonoBehaviour
         AnimationCheck();
 
         checkAction();
-        movePlayer();
         checkAmmo();
     }
 
@@ -393,33 +394,33 @@ public class HandgunScriptLPFP : MonoBehaviour
             // BulletHole appear in the direction of the object.
             bulletHole.transform.LookAt(hit.point + hit.normal);
 
-            Debug.Log("hit.transform.tag: "+ hit.transform.tag);
-            
-                if (hit.transform.tag == "Tables")
+            Debug.Log("hit.transform.tag: " + hit.transform.tag);
+
+            if (hit.transform.tag == "Tables")
+            {
+                bulletHole.GetComponent<SpriteRenderer>().sprite = woodDecals[UnityEngine.Random.Range(0, woodDecals.Length)];
+                StartCoroutine(destroyTimer(bulletHole));
+            }
+            else if (hit.transform.tag == "Window")
+            {
+                bool _isBroken = hit.transform.GetComponent<breakWindow>().isBroken;
+                if (!_isBroken)
                 {
-                    bulletHole.GetComponent<SpriteRenderer>().sprite = woodDecals[UnityEngine.Random.Range(0, woodDecals.Length)];
+                    bulletHole.GetComponent<SpriteRenderer>().sprite = glassDecals[UnityEngine.Random.Range(0, glassDecals.Length)];
                     StartCoroutine(destroyTimer(bulletHole));
                 }
-                else if (hit.transform.tag == "Window")
-                {
-                    bool _isBroken = hit.transform.GetComponent<breakWindow>().isBroken;
-                    if (!_isBroken)
-                    {
-                        bulletHole.GetComponent<SpriteRenderer>().sprite = glassDecals[UnityEngine.Random.Range(0, glassDecals.Length)];
-                        StartCoroutine(destroyTimer(bulletHole));
-                    }
-                }
-                else if (hit.transform.tag == "Chair")
-                {
-                    Instantiate(metalSparkEffect, hit.point + hit.normal * 0.0001f, Quaternion.identity);
-                }
-                else if (hit.transform.tag == "Stairs")
-                {
-                    Instantiate(sandSparkEffect, hit.point + hit.normal * 0.0001f, Quaternion.identity);
-                }
-            
-            
-            
+            }
+            else if (hit.transform.tag == "Chair")
+            {
+                Instantiate(metalSparkEffect, hit.point + hit.normal * 0.0001f, Quaternion.identity);
+            }
+            else if (hit.transform.tag == "Stairs")
+            {
+                Instantiate(sandSparkEffect, hit.point + hit.normal * 0.0001f, Quaternion.identity);
+            }
+
+
+
 
             return hit.point;
         }
@@ -444,11 +445,13 @@ public class HandgunScriptLPFP : MonoBehaviour
         }
     }
 
-    private IEnumerator shootTimer(){
+    private IEnumerator shootTimer()
+    {
         yield return new WaitForSeconds(_ShootDelay);
         _isShootDown = false;
     }
-    private IEnumerator grenadeTimer(){
+    private IEnumerator grenadeTimer()
+    {
         yield return new WaitForSeconds(_GrenadeDelay);
         _isGrenadeDown = false;
     }
@@ -483,7 +486,6 @@ public class HandgunScriptLPFP : MonoBehaviour
 
     private IEnumerator AutoReload()
     {
-
         if (!hasStartedSliderBack)
         {
             hasStartedSliderBack = true;
@@ -493,7 +495,7 @@ public class HandgunScriptLPFP : MonoBehaviour
         //Wait for set amount of time
         yield return new WaitForSeconds(autoReloadDelay);
 
-        if (outOfAmmo == true )
+        if (outOfAmmo == true)
         {
             //Play diff anim if out of ammo
             anim.Play("Reload Out Of Ammo", 0, 0f);
