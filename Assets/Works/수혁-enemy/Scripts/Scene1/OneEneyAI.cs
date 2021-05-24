@@ -31,6 +31,8 @@ public class OneEneyAI : MonoBehaviour
     private readonly int hashDie = Animator.StringToHash("SC1Die");
     private readonly int hashDance = Animator.StringToHash("isDance");
     private OneMoveAgent moveAgent;
+
+   
     private readonly float damping = 10.0f;
     private void Awake(){
         
