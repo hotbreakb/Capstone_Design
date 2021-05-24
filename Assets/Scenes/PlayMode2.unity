@@ -1928,7 +1928,6 @@ MonoBehaviour:
   lightmanager: 0
   audioSound: {fileID: 336726503}
   Sirensound: {fileID: 8300000, guid: 9b9d3023bbd39a9499d6048a39f6411c, type: 3}
-  flag: 1
 --- !u!114 &336726501 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4019247697494930234, guid: 953b0ba5876b5334781a5b81b00b5264,
@@ -9551,7 +9550,6 @@ MonoBehaviour:
   lightmanager: 0
   audioSound: {fileID: 0}
   Sirensound: {fileID: 0}
-  flag: 1
 --- !u!4 &1358195771 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 415952, guid: c8515ebee271c0649b9db1321f3026a4,
@@ -13325,7 +13323,6 @@ MonoBehaviour:
   enemy: {fileID: 4119777332089324372, guid: c4312c974015ab84f97c829f0b58bbe2, type: 3}
   maxEnemy: 10
   gameManager: {fileID: 745305217}
-  timerObject: {fileID: 336726498}
 --- !u!1 &2026650012
 GameObject:
   m_ObjectHideFlags: 0
