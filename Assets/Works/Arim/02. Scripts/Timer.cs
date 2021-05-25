@@ -6,7 +6,7 @@ public class Timer : MonoBehaviour
 {
     public float timeSpeed = 0.01f;
 
-      private float totalTime = 0f;
+    private float totalTime = 0f;
     private float fills;
     private float bt = 0.1f;
     public Image progressBar;
@@ -17,9 +17,9 @@ public class Timer : MonoBehaviour
     public bool lightmanager = false;
     public AudioSource audioSound;
     public AudioClip Sirensound;
-
     public bool flag = true;
-   private GameObject[] enemy;
+    private GameObject[] enemy;
+
     void Start()
     {
         Fleshlight.SetActive(false);
@@ -37,26 +37,27 @@ public class Timer : MonoBehaviour
         if (fills >= 0.4f && lightmanager == false)
         {
             LightManager();
-            
-          
+
+
 
         }
 
         if (progressBar.fillAmount >= 1)
-        {   
+        {
             flag = false;
             enemy = GameObject.FindGameObjectsWithTag("Enemy");
-       
-            for(int i=0; i<enemy.Length; i++){
-               Destroy(enemy[i]);
+
+            for (int i = 0; i < enemy.Length; i++)
+            {
+                Destroy(enemy[i]);
             }
             FindObjectOfType<GameManager>().playerWin();
-   
+
             enabled = false;
         }
         else
         {
-            totalTime += Time.deltaTime * 1; /* set up the speed */
+            totalTime += Time.deltaTime * 15; /* set up the speed */
 
             fills = totalTime * timeSpeed;
             progressBar.fillAmount = fills;

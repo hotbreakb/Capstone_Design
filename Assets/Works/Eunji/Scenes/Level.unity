@@ -6043,7 +6043,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6d3050ee62079874fa1e340d884ae68d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b153fe7e62357bf47b9b7763f0741f22, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7100,8 +7100,11 @@ MonoBehaviour:
   isShoot: 0
   isGrenade: 0
   isLoading: 0
+  isExtendedfingerThumbAndIndex: 0
   isPlayerWininFirst: 0
   isPlayMode2Played: 0
+  isPlayerWinFunRuned: 0
+  isPlayerLoseFunRuned: 0
   WinSound: {fileID: 0}
   LoseSound: {fileID: 0}
 --- !u!1 &2146028351
