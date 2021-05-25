@@ -1,6 +1,6 @@
 # upload_it
-캡스톤 디자인 졸업작품 프로젝트
-<br>
+Graduation Project
+<br><br>
 
 ## 1. Start
 We made the __VR FPS GAME__ as a graduation work of _Incheon National University_.\
@@ -22,10 +22,9 @@ There are three movements.\
 (1) Shooting (2) Throwing grenades (3) Loading
 <br> <br>
 
-![Tutorial01_gif](https://user-images.githubusercontent.com/64337152/117120228-0b563780-adce-11eb-8d80-d1e84a86a5e4.gif)
-![Tutorial02_gif](https://user-images.githubusercontent.com/64337152/117120234-0d1ffb00-adce-11eb-80fe-15ce24aa6d66.gif)
-![Tutorial03_gif](https://user-images.githubusercontent.com/64337152/117120235-0d1ffb00-adce-11eb-8132-12ff78864127.gif)
-![Tutorial04_gif](https://user-images.githubusercontent.com/64337152/117120237-0db89180-adce-11eb-8050-556c33730ee2.gif)
+![shoot_me](https://user-images.githubusercontent.com/64337152/119484146-aec4b780-bd90-11eb-8323-1e44e369c4f3.gif)
+![grenade_me](https://user-images.githubusercontent.com/64337152/119484153-b1271180-bd90-11eb-8677-9aad27454964.gif)
+![loading_me](https://user-images.githubusercontent.com/64337152/119484161-b2583e80-bd90-11eb-85b1-c4131a7d2dd0.gif)
 
 
 ## 4. Level
@@ -45,9 +44,11 @@ Make sure Leap Motion is connected to the PC.
 
 
 ## 6. PlayMode
-<br> <br>
+![Playmode1_gif](https://user-images.githubusercontent.com/64337152/119485404-fdbf1c80-bd91-11eb-96ae-63e3e66bf0b9.gif)
+![Playmode2_gif](https://user-images.githubusercontent.com/64337152/119484890-6d80d780-bd91-11eb-9275-8f0eff664682.gif)
 
-### Please click on the link below to watch the video.
+---
+### Please click the link to watch the video.
 
 [![Video Label](https://user-images.githubusercontent.com/64337152/119480985-2abd0080-bd8d-11eb-9b2b-5a3b46a78d42.png)](https://youtu.be/F3Gg0mobEaY)
 [![notion_logo2](https://user-images.githubusercontent.com/64337152/119482310-af5c4e80-bd8e-11eb-824b-4a06e67238c9.png)](https://www.notion.so/eunasoo/7ca8fae052d747e2ab617dd3b57171df)
