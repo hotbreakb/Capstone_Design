@@ -48,4 +48,5 @@ Make sure Leap Motion is connected to the PC.
 <br> <br>
 
 ### Please click on the link below to watch the video.
+https://youtu.be/F3Gg0mobEaY
 https://www.notion.so/eunasoo/7ca8fae052d747e2ab617dd3b57171df
