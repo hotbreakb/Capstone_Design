@@ -1777,7 +1777,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 400105069}
-        m_MethodName: click
+        m_MethodName: playAnim
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1833,9 +1833,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 400105064}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12b5d83f5053304428ff53c2ac256ac7, type: 3}
+  m_Script: {fileID: 11500000, guid: cac7dd4f68ae38f4da038f6c65f76ba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 2031282679}
+  ComingSoon: {fileID: 1442173591}
 --- !u!1 &448547095
 GameObject:
   m_ObjectHideFlags: 0
@@ -2221,7 +2223,6 @@ GameObject:
   - component: {fileID: 686740160}
   - component: {fileID: 686740159}
   - component: {fileID: 686740161}
-  - component: {fileID: 686740162}
   m_Layer: 5
   m_Name: Lock
   m_TagString: Untagged
@@ -2304,20 +2305,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &686740162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 686740157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cac7dd4f68ae38f4da038f6c65f76ba4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 686740161}
-  ComingSoon: {fileID: 945915906}
 --- !u!1 &701733852
 GameObject:
   m_ObjectHideFlags: 0
@@ -2598,7 +2585,6 @@ GameObject:
   - component: {fileID: 740997283}
   - component: {fileID: 740997282}
   - component: {fileID: 740997284}
-  - component: {fileID: 740997285}
   m_Layer: 5
   m_Name: Lock
   m_TagString: Untagged
@@ -2681,20 +2667,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &740997285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 740997280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cac7dd4f68ae38f4da038f6c65f76ba4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 740997284}
-  ComingSoon: {fileID: 732172773}
 --- !u!1 &740999884
 GameObject:
   m_ObjectHideFlags: 0
@@ -2871,7 +2843,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 747888252}
-        m_MethodName: click
+        m_MethodName: playAnim
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2927,9 +2899,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 747888247}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12b5d83f5053304428ff53c2ac256ac7, type: 3}
+  m_Script: {fileID: 11500000, guid: cac7dd4f68ae38f4da038f6c65f76ba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 740997284}
+  ComingSoon: {fileID: 732172773}
 --- !u!1 &779708344
 GameObject:
   m_ObjectHideFlags: 0
@@ -5804,7 +5778,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1485574541}
-        m_MethodName: click
+        m_MethodName: playAnim
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5860,9 +5834,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1485574536}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12b5d83f5053304428ff53c2ac256ac7, type: 3}
+  m_Script: {fileID: 11500000, guid: cac7dd4f68ae38f4da038f6c65f76ba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 1495275341}
+  ComingSoon: {fileID: 1111315584}
 --- !u!1 &1495275337
 GameObject:
   m_ObjectHideFlags: 0
@@ -5875,7 +5851,6 @@ GameObject:
   - component: {fileID: 1495275340}
   - component: {fileID: 1495275339}
   - component: {fileID: 1495275341}
-  - component: {fileID: 1495275342}
   m_Layer: 5
   m_Name: Lock
   m_TagString: Untagged
@@ -5958,20 +5933,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1495275342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1495275337}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cac7dd4f68ae38f4da038f6c65f76ba4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 1495275341}
-  ComingSoon: {fileID: 1111315584}
 --- !u!1 &1561618296
 GameObject:
   m_ObjectHideFlags: 0
@@ -6723,7 +6684,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1888308558}
-        m_MethodName: click
+        m_MethodName: playAnim
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6779,9 +6740,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1888308553}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12b5d83f5053304428ff53c2ac256ac7, type: 3}
+  m_Script: {fileID: 11500000, guid: cac7dd4f68ae38f4da038f6c65f76ba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 686740161}
+  ComingSoon: {fileID: 945915906}
 --- !u!1 &1975198151
 GameObject:
   m_ObjectHideFlags: 0
@@ -6883,7 +6846,6 @@ GameObject:
   - component: {fileID: 2031282678}
   - component: {fileID: 2031282677}
   - component: {fileID: 2031282679}
-  - component: {fileID: 2031282680}
   m_Layer: 5
   m_Name: Lock
   m_TagString: Untagged
@@ -6966,20 +6928,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2031282680
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2031282675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cac7dd4f68ae38f4da038f6c65f76ba4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 2031282679}
-  ComingSoon: {fileID: 1442173591}
 --- !u!1 &2093947543
 GameObject:
   m_ObjectHideFlags: 0
