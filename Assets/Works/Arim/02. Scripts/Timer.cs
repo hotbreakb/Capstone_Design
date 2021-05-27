@@ -13,7 +13,7 @@ public class Timer : MonoBehaviour
     public GameObject Spotlight;
     public GameObject Pointlight;
     public GameObject Fleshlight;
-    public float delayTime = 20.0f;
+    public float delayTime;
     public bool lightmanager = false;
     public AudioSource audioSound;
     public AudioClip Sirensound;

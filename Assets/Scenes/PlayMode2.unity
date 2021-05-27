@@ -1919,12 +1919,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0210c8aa2cac00248946c5fdae41bd19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeSpeed: 0.01
+  timeSpeed: 0.02
   progressBar: {fileID: 336726501}
   Spotlight: {fileID: 988983191}
   Pointlight: {fileID: 317804968}
   Fleshlight: {fileID: 1965732678}
-  delayTime: 20
+  delayTime: 10
   lightmanager: 0
   audioSound: {fileID: 336726503}
   Sirensound: {fileID: 8300000, guid: 9b9d3023bbd39a9499d6048a39f6411c, type: 3}
@@ -13076,6 +13076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34f8f1a512f0e734bbd146dfc59c9ea5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fingers: []
   cube: {fileID: 0}
 --- !u!114 &1949164662
 MonoBehaviour:
