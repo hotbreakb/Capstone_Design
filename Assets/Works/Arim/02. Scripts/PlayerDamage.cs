@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,14 +24,14 @@ public class PlayerDamage : MonoBehaviour
     private bool isUpdate = false;
 
     private OneEneyAI oneEneyAI;
-
+    private GameObject enemySpawn;
     private String EnemyTag = "Enemy";
     //public delegate void PlayerDieHandler();
     //public static event PlayerDieHandler OnPlayerDie;
 
     void Start()
     {   
-
+        enemySpawn = GameObject.Find("SpawnScript");
 
         currHP = initHp;
 
@@ -42,7 +42,11 @@ public class PlayerDamage : MonoBehaviour
     }
 
     void Update()
-    {
+    {   
+        if(enemySpawn == null){
+            enemySpawn = GameObject.Find("SpawnScript");
+        }
+
             HpItem();
     }
 
@@ -56,6 +60,7 @@ public class PlayerDamage : MonoBehaviour
 
             if (currHP <= 0.0f) //플레이어 죽었을때
             {   
+                Destroy(enemySpawn);
                 PlayerDie();
                 coll.enabled = false;
                 FindObjectOfType<GameManager>().playerLose();
