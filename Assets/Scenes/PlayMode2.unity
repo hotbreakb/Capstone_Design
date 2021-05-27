@@ -10884,6 +10884,12 @@ MonoBehaviour:
   _horizontalShake: 0
   _colorDrift: 0
   _shader: {fileID: 4800000, guid: da33272284ea24f208f36998880990be, type: 3}
+--- !u!82 &1528713493 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 82766377412988528, guid: c24fed9fa91f7634fbc8e5e12405008e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1528713486}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1528713494 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4750437436705306, guid: c24fed9fa91f7634fbc8e5e12405008e,
@@ -11128,8 +11134,8 @@ MonoBehaviour:
   hpitem: 0
   HPItem: {fileID: 120766924}
   destroyTime: 10
-  healsound: {fileID: 0}
-  audiosource: {fileID: 0}
+  healsound: {fileID: 8300000, guid: e82ccf1666ced6748a436346256d1310, type: 3}
+  audiosource: {fileID: 1528713493}
 --- !u!195 &1606266743
 NavMeshAgent:
   m_ObjectHideFlags: 0
