@@ -154,7 +154,7 @@ public class GameManager : MonoBehaviour
                 }
                 // [Condition for changing weapons]
                 //  1. Hands moving from side to side (swipe)
-                else if (_extendedFingers >= 4 && (handPalmPosition.x - prehandPalmPosition.x) > 5 // 8 -> 3
+                else if (_extendedFingers >= 4 && (handPalmPosition.x - prehandPalmPosition.x) > 5 // 8 -> 5
                     && (handPalmPosition.y - prehandPalmPosition.y) > 1) // 3 -> 1
                 {
                     checkHandCube.GetComponent<MeshRenderer>().material.color = Color.green;
