@@ -103,7 +103,7 @@ public class PlayerDamage : MonoBehaviour
     }
     void HpItem()
     {
-        if ((hpitem == false) && (currHP == 50))
+        if ((hpitem == false) && (currHP == 75))
         {
             HPItem.SetActive(true);
             hpitem = true;
