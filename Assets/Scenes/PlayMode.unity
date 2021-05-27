@@ -13823,7 +13823,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1959630241}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 84f27014f4a85e447abfd4fc4cb7ff96, type: 3}
@@ -16174,6 +16174,11 @@ PrefabInstance:
       propertyPath: Spotlight
       value: 
       objectReference: {fileID: 2041881030}
+    - target: {fileID: 4019247697494930232, guid: 953b0ba5876b5334781a5b81b00b5264,
+        type: 3}
+      propertyPath: timeSpeed
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 4019247697494930232, guid: 953b0ba5876b5334781a5b81b00b5264,
         type: 3}
       propertyPath: Fleshlight

@@ -10929,7 +10929,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1585254216}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 84f27014f4a85e447abfd4fc4cb7ff96, type: 3}
@@ -11128,6 +11128,8 @@ MonoBehaviour:
   hpitem: 0
   HPItem: {fileID: 120766924}
   destroyTime: 10
+  healsound: {fileID: 0}
+  audiosource: {fileID: 0}
 --- !u!195 &1606266743
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -13076,8 +13078,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34f8f1a512f0e734bbd146dfc59c9ea5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fingers: []
-  cube: {fileID: 0}
 --- !u!114 &1949164662
 MonoBehaviour:
   m_ObjectHideFlags: 0

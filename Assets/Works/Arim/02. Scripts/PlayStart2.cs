@@ -133,7 +133,7 @@ public class PlayStart2 : MonoBehaviour
     IEnumerator delay()
     {
 
-        yield return StartCoroutine(ActWordsUI());
+        //yield return StartCoroutine(ActWordsUI());
         yield return StartCoroutine(ActInfoUI());
         yield return StartCoroutine(FireAct());
         yield return StartCoroutine(BombAct());
@@ -171,10 +171,10 @@ public class PlayStart2 : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         StartCoroutine(PlayerMoveAgent());
-        yield return new WaitForSeconds(1f);
-        Rule.SetActive(true);
-        yield return new WaitForSeconds(10.5f);
-        Rule.SetActive(false);
+        //yield return new WaitForSeconds(1f);
+        //Rule.SetActive(true);
+        //yield return new WaitForSeconds(10.5f);
+        //Rule.SetActive(false);
     }
     void EyeblinkActive()
     {

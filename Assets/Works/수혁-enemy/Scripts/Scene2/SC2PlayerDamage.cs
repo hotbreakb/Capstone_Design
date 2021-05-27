@@ -21,7 +21,8 @@ public class SC2PlayerDamage : MonoBehaviour
     public bool hpitem = false;
     public GameObject HPItem;
     public float destroyTime = 10f;
-
+    public AudioClip healsound;
+    public AudioSource audiosource;
     private string EnemyTag = "Enemy";
     //public delegate void PlayerDieHandler();
     //public static event PlayerDieHandler OnPlayerDie;
@@ -115,11 +116,11 @@ public class SC2PlayerDamage : MonoBehaviour
     public void Heal()
     {
         Debug.Log("Heal~~~~~~~~~~~~~~");
-        currHP += 100f;
-        AudioSource sound = GetComponent<AudioSource>();
+        currHP += 50f;
+        audiosource.clip = healsound;
+        audiosource.Play();
         HPItem.SetActive(false);
-        //Destroy(HPItem);
-        sound.Play();
+        //Destroy(HPItem)
 
     }
     IEnumerator DestroyHpItem()
