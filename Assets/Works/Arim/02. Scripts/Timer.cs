@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 public class Timer : MonoBehaviour
 {
-    public float timeSpeed = 0.01f;
+    public float timeSpeed;
 
     private float totalTime = 0f;
     private float fills;
