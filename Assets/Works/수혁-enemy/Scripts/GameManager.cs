@@ -209,7 +209,8 @@ public class GameManager : MonoBehaviour
 
         audioSource.clip = WinSound; //sound 효과음
         audioSource.Play();
-        YouWin.gameObject.SetActive(true); GameOver.gameObject.SetActive(false);
+        YouWin.gameObject.SetActive(true); 
+        GameOver.gameObject.SetActive(false);
         GameObject.Find("Main Camera").GetComponent<PlayGlitchEffect>().Play();
         StartCoroutine(ShowLevelTimer());
 

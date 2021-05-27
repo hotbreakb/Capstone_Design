@@ -51,7 +51,12 @@ public class EnemySpawn : MonoBehaviour
         while (!gameManager.isGameOver && timer.flag)
         {   
             int enemyCount = (int)GameObject.FindGameObjectsWithTag("Enemy").Length;
+            if (enemyCount == 0)
+            {
 
+                int idx = Random.Range(1, points.Length);
+                Instantiate(enemy, points[idx].position, points[idx].rotation);
+            }
             if (enemyCount < maxEnemy)
             {
                 yield return new WaitForSeconds(createTime);

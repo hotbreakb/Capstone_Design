@@ -65,17 +65,19 @@ public class Playmode1_mgr : MonoBehaviour
     }
     IEnumerator Delay()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f); // ------------
+        //yield return new WaitForSeconds(3f);
         //WordsUI.SetActive(true);
         //yield return new WaitForSeconds(3f);
         StartCoroutine(PlayerMoveAgent());
-        yield return new WaitForSeconds(3f);
+        //yield return new WaitForSeconds(3f);
         //WordsUI.SetActive(false);
         //RuleUI.SetActive(true);
         //yield return new WaitForSeconds(7.5f);
         //RuleUI.SetActive(false);
         StartUI.SetActive(true);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1f); // ------------
+        //yield return new WaitForSeconds(1f);
         StartUI.SetActive(false);
         Timebar.SetActive(true);
         UI.SetActive(true);
