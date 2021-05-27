@@ -20,8 +20,13 @@ public class Timer : MonoBehaviour
     public bool flag = true;
     private GameObject[] enemy;
 
+    private GameObject enemySpawn;
+
     void Start()
-    {
+    {   
+        enemySpawn = GameObject.Find("SpawnScript");
+
+
         Fleshlight.SetActive(false);
         progressBar.fillAmount = 0.5f;
         flag = true;
@@ -29,7 +34,13 @@ public class Timer : MonoBehaviour
 
 
     void Update()
-    {
+    {   
+        if(enemySpawn == null){
+            enemySpawn = GameObject.Find("SpawnScript");
+        }
+
+        Debug.Log(enemySpawn);
+
         if (fills >= 0.3f && lightmanager == false)
         {
             AudioStart();
@@ -51,6 +62,7 @@ public class Timer : MonoBehaviour
             {
                 Destroy(enemy[i]);
             }
+            Destroy(enemySpawn);
             FindObjectOfType<GameManager>().playerWin();
 
             enabled = false;
